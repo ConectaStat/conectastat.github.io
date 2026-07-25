@@ -1,0 +1,15 @@
+---
+title: "Oportunidades"
+subtitle: "Editais internos e oportunidades de estudo."
+title-block-banner: true
+listing:
+  id: lista-oportunidades
+  contents: posts
+  sort: "date desc"
+  template: ../_assets/cards.ejs
+  image-placeholder: ../images/post-placeholder.svg
+  feed: true
+---
+
+::: {#lista-oportunidades}
+:::

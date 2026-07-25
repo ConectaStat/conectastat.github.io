@@ -3,14 +3,13 @@ title: "Eventos"
 subtitle: "Seminários, palestras, minicursos e defesas."
 title-block-banner: true
 listing:
+  id: lista-eventos
   contents: posts
   sort: "date desc"
-  type: grid
-  grid-columns: 3
+  template: ../_assets/cards.ejs
   image-placeholder: ../images/post-placeholder.svg
-  categories: false
-  sort-ui: false
-  filter-ui: false
   feed: true
-  fields: [image, title, description, date]
 ---
+
+::: {#lista-eventos}
+:::
