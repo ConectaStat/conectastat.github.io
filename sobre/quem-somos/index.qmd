@@ -27,7 +27,7 @@ da Universidade**: a comunicação oficial do departamento continua em
   profissional e por que ela está no centro da ciência de dados;
 - **[Nossos Cursos](../../cursos/graduacao/index.qmd)**: a graduação e a
   pós-graduação em Estatística da UFLA;
-- **[Projetos](../../projetos/ensino/index.qmd)**: as frentes de ensino,
+- **[Projetos](../../O_que_fazemos/ensino/index.qmd)**: as frentes de ensino,
   pesquisa e extensão do departamento, com seus editais abertos;
 - **[Ações](../../acoes/revista-cientifica/index.qmd)**: a revista científica,
   a assessoria e consultoria estatística e a agenda de

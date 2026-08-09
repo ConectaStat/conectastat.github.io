@@ -22,9 +22,6 @@ listing:
 
 <!-- TODO (ver README.md): imagem/selo "aberto" vs. "encerrado" nos cards. -->
 
-Editais e chamadas ligados aos projetos de extensão, do mais recente ao mais
-antigo.
-
 ```{=html}
 <div class="projetos-acoes" id="projetos-acoes">
   <div class="busca-projetos">

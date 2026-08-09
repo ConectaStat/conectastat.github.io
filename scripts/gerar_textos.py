@@ -115,21 +115,18 @@ ORDEM = [
     ("Nossos Cursos › Graduação", "cursos/graduacao/index.qmd", []),
     ("Nossos Cursos › Pós-Graduação", "cursos/pos-graduacao/index.qmd", []),
     ("Nossos Cursos › Pós-Graduação › Painel dos Egressos", "cursos/pos-graduacao/egressos/index.qmd", []),
-    ("Projetos › Ensino", "projetos/ensino/index.qmd", ["topicos-ensino"]),
-    ("Projetos › Ensino › Organização e Apresentação de Dados", "projetos/ensino/organizacao-e-apresentacao-de-dados/index.qmd", []),
-    ("Projetos › Ensino › Softwares", "projetos/ensino/softwares/index.qmd", []),
-    ("Projetos › Ensino › Materiais", "projetos/ensino/materiais/index.qmd", []),
-    ("Projetos › Ensino › Editais", "projetos/ensino/editais/index.qmd", []),
-    ("Projetos › Pesquisa", "projetos/pesquisa/index.qmd", ["topicos-pesquisa"]),
-    ("Projetos › Pesquisa › Núcleos de Pesquisa", "projetos/pesquisa/nucleos/index.qmd", []),
-    ("Projetos › Pesquisa › Núcleos › NLIN", "projetos/pesquisa/nucleos/nlin/index.qmd", []),
-    ("Projetos › Pesquisa › Núcleos › GPS", "projetos/pesquisa/nucleos/gps/index.qmd", []),
-    ("Projetos › Pesquisa › Núcleos › ST", "projetos/pesquisa/nucleos/st/index.qmd", []),
-    ("Projetos › Pesquisa › Editais", "projetos/pesquisa/editais/index.qmd", []),
-    ("Projetos › Extensão", "projetos/extensao/index.qmd", ["topicos-extensao"]),
-    ("Projetos › Extensão › Ações de Extensão", "projetos/extensao/acoes/index.qmd", []),
-    ("Projetos › Extensão › Editais", "projetos/extensao/editais/index.qmd", []),
+    ("O Que Fazemos › Pesquisa", "O_que_fazemos/pesquisa/index.qmd", ["grupos-pesquisa"]),
+    ("O Que Fazemos › Pesquisa › Editais", "O_que_fazemos/pesquisa/editais/index.qmd", []),
+    ("O Que Fazemos › Ensino", "O_que_fazemos/ensino/index.qmd", ["topicos-ensino"]),
+    ("O Que Fazemos › Ensino › Organização e Apresentação de Dados", "O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd", []),
+    ("O Que Fazemos › Ensino › Softwares", "O_que_fazemos/ensino/softwares/index.qmd", []),
+    ("O Que Fazemos › Ensino › Materiais", "O_que_fazemos/ensino/materiais/index.qmd", []),
+    ("O Que Fazemos › Ensino › Editais", "O_que_fazemos/ensino/editais/index.qmd", []),
+    ("O Que Fazemos › Extensão", "O_que_fazemos/extensao/index.qmd", ["projetos-extensao", "topicos-extensao"]),
+    ("O Que Fazemos › Extensão › Ações de Extensão", "O_que_fazemos/extensao/acoes/index.qmd", []),
+    ("O Que Fazemos › Extensão › Editais", "O_que_fazemos/extensao/editais/index.qmd", []),
     ("Ações › Revista Científica", "acoes/revista-cientifica/index.qmd", []),
+    ("Ações › Nossos Livros", "acoes/livros/index.qmd", ["livros"]),
     ("Ações › Assessoria e Consultoria Estatística", "assessoria/index.qmd", []),
     ("Ações › Laboratório de Análises de Dados (LAD)", "acoes/lad/index.qmd", []),
     ("Ações › Cursos e Eventos (arquivo)", "eventos/index.qmd", []),
@@ -227,9 +224,13 @@ home/
 │   └── pos-graduacao/
 │       ├── index.qmd ───────────── Pós-Graduação
 │       └── egressos/index.qmd ──── Painel dos Egressos
-├── projetos/
+├── O_que_fazemos/
+│   ├── pesquisa/
+│   │   ├── index.qmd ───────────── Projetos e grupos de pesquisa (+ cards)
+│   │   └── editais/index.qmd ───── Editais de Pesquisa
 │   ├── ensino/
-│   │   ├── index.qmd ───────────── Projetos de Ensino (+ cards de tópico)
+│   │   ├── index.qmd ───────────── Projetos de ensino, softwares e
+│   │   │                           materiais didáticos (+ cards)
 │   │   ├── organizacao-e-apresentacao-de-dados/
 │   │   │   ├── index.qmd ───────── Organização e Apresentação de Dados
 │   │   │   ├── enviar.qmd ──────── Envie seu projeto
@@ -237,14 +238,9 @@ home/
 │   │   ├── softwares/index.qmd ─── Softwares (sem conteúdo ainda)
 │   │   ├── materiais/index.qmd ─── Materiais (sem conteúdo ainda)
 │   │   └── editais/index.qmd ───── Editais de Ensino
-│   ├── pesquisa/
-│   │   ├── index.qmd ───────────── Projetos de Pesquisa (+ cards)
-│   │   ├── nucleos/
-│   │   │   ├── index.qmd ───────── Núcleos de Pesquisa
-│   │   │   └── nlin/ gps/ st/ ──── um index.qmd por núcleo
-│   │   └── editais/index.qmd ───── Editais de Pesquisa
 │   └── extensao/
-│       ├── index.qmd ───────────── Projetos de Extensão (+ cards)
+│       ├── index.qmd ───────────── Projetos e grupos de extensão (+ cards)
+│       ├── acoes/index.qmd ─────── Ações de Extensão
 │       └── editais/index.qmd ───── Editais de Extensão
 │
 ├── oportunidades/  ┐  cada uma com:
@@ -260,10 +256,9 @@ home/
 # ---- home
 L.append("## 1. Página inicial\n")
 L.append("```\nindex.qmd\n├── hero .................. slogan + ilustração\n"
-         "├── disclaimer ............ abaixo da hero\n"
          "├── o projeto ............. texto de apresentação\n"
+         "├── em destaque ........... carrossel (notícias + cursos/eventos)\n"
          "├── oportunidades ......... carrossel\n"
-         "├── cursos e eventos ...... carrossel\n"
          "└── onde estamos .......... mapa + endereço\n```\n")
 for titulo, texto in blocos_home():
     L.append(f"\n### {titulo}\n")

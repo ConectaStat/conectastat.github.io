@@ -1,0 +1,21 @@
+---
+title: "R-Ladies Lavras"
+description: "Capítulo lavrense da comunidade R-Ladies global."
+author: "Izabela Regina Cardoso de Oliveira"
+image: capa.svg
+marca: true
+title-block-banner: true
+body-classes: cs-banner-densidades
+page-layout: article
+sidebar: false
+toc: false
+---
+
+O R-Ladies Lavras é um capítulo da comunidade R-Ladies global que tem o
+objetivo de promover a participação de mulheres e minorias de gênero na
+comunidade de usuários da linguagem de programação R. Isso é feito por meio de
+diversas ações, como realização de eventos técnicos e sociais, treinamentos,
+oficinas e grupos de estudos, voltados para qualquer pessoa que deseja avançar
+os conhecimentos em R.
+
+[Saiba mais »](https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2308){target="_blank"}

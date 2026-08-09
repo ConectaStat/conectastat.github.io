@@ -5,9 +5,15 @@
 // tem dois botões de compra (Editora UFLA sempre; Amazon quando `amazon` vier
 // preenchido no item, senão um botão desativado de "em breve"). Por isso a
 // classe cs-cards-livros: com dois links por card, o truque de esticar
-// .cs-card-btn sobre o card inteiro não serve mais (ver scss).
+// .cs-card-btn sobre o card inteiro não serve mais (ver scss). Livro sem
+// `amazon` sai só com o botão da Editora: um "em breve" que nunca chega
+// promete o que ninguém prometeu.
 // Atenção: sem indentação e com tags inline abertas e fechadas na mesma
-// linha, porque o Pandoc reprocessa este HTML como markdown.
+// linha, porque o Pandoc reprocessa este HTML como markdown. Dentro do <p>
+// dos botões isso é mais rígido ainda: um `if` que não emite nada deixa a
+// linha vazia, e linha vazia dentro de um bloco HTML o Pandoc lê como
+// parágrafo novo - fecha o <p> e joga os botões para fora do container.
+// Por isso o link da Amazon é condicionado NA MESMA linha do da Editora.
 const normaliza = (p) => p.replace(/\\/g, "/").replace(/\.qmd$/, ".html");
 %>
 <div class="cs-cards cs-cards-grid cs-cards-livros">
@@ -18,8 +24,7 @@ const normaliza = (p) => p.replace(/\\/g, "/").replace(/\.qmd$/, ".html");
 <h3 class="cs-card-title"><%= item.title %></h3>
 <% if (item.description) { %><p class="cs-card-desc"><%= item.description %></p><% } %>
 <p class="cs-card-action cs-card-action-livro">
-<a class="cs-card-btn" href="<%- normaliza(item.path) %>" target="_blank" rel="noopener">Comprar na Editora UFLA</a>
-<% if (item.amazon) { %><a class="cs-card-btn" href="<%- item.amazon %>" target="_blank" rel="noopener">Comprar na Amazon</a><% } else { %><span class="cs-card-btn cs-card-btn-disabled">Em breve na Amazon</span><% } %>
+<a class="cs-card-btn" href="<%- normaliza(item.path) %>" target="_blank" rel="noopener">Comprar na Editora UFLA</a><% if (item.amazon) { %> <a class="cs-card-btn" href="<%- item.amazon %>" target="_blank" rel="noopener">Comprar na Amazon</a><% } %>
 </p>
 </div>
 <% } %>

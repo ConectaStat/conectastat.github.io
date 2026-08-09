@@ -1,0 +1,21 @@
+---
+title: "PyLadies Lavras"
+description: "Capítulo lavrense da comunidade PyLadies global."
+author: "Izabela Regina Cardoso de Oliveira"
+image: capa.png
+marca: true
+title-block-banner: true
+body-classes: cs-banner-ogiva
+page-layout: article
+sidebar: false
+toc: false
+---
+
+O PyLadies Lavras é um capítulo da comunidade PyLadies global que tem o
+objetivo de promover a participação de mulheres e minorias de gênero na
+comunidade de usuários da linguagem de programação Python. Isso é feito por
+meio de diversas ações, como realização de eventos técnicos e sociais,
+treinamentos, oficinas e grupos de estudos, voltados para qualquer pessoa que
+deseja avançar os conhecimentos em Python.
+
+[Saiba mais »](https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2309){target="_blank"}

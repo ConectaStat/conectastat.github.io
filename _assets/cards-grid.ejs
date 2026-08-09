@@ -4,16 +4,25 @@
 // de Projetos). Atenção: sem indentação e com tags inline abertas e fechadas
 // na mesma linha, porque o Pandoc reprocessa este HTML como markdown.
 // Sobre o normaliza(), veja o comentário do cards.ejs.
+//
+// Cards de grupos de pesquisa e de projetos de extensão apontam para o site
+// do próprio grupo, fora daqui: nesses o botão muda de rótulo ("Mais
+// informações", não "Leia mais", que promete um texto nosso) e abre em outra
+// aba, para não tirar o visitante do site no meio da navegação. O `externo`
+// do item força esse tratamento quando o link é interno mas leva a outro
+// domínio por redirecionamento.
 const normaliza = (p) => p.replace(/\\/g, "/").replace(/\.qmd$/, ".html");
+const ehExterno = (item) => item.externo || /^https?:\/\//.test(item.path || "");
 %>
 <div class="cs-cards cs-cards-grid">
 <% for (const item of items) { %>
 <div class="cs-card">
-<% if (item.image) { %><div class="cs-card-thumb"><img src="<%- item.image %>" alt="" loading="lazy"/></div><% } %>
+<% if (item.image) { %><div class="<%= item.marca ? "cs-card-thumb-logo" : "cs-card-thumb" %>"><img src="<%- item.image %>" alt="" loading="lazy"/></div><% } %>
 <% if (item.date) { %><p class="cs-card-date"><%= item.date %></p><% } %>
+<% if (item.author) { %><p class="cs-card-date"><%= item.author %></p><% } %>
 <h3 class="cs-card-title"><%= item.title %></h3>
 <% if (item.description) { %><p class="cs-card-desc"><%= item.description %></p><% } %>
-<p class="cs-card-action"><a class="cs-card-btn" href="<%- normaliza(item.path) %>">Leia mais</a></p>
+<% if (ehExterno(item)) { %><p class="cs-card-action"><a class="cs-card-btn" href="<%- normaliza(item.path) %>" target="_blank" rel="noopener">Mais informações</a></p><% } else { %><p class="cs-card-action"><a class="cs-card-btn" href="<%- normaliza(item.path) %>">Leia mais</a></p><% } %>
 </div>
 <% } %>
 </div>

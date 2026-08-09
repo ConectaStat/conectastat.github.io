@@ -9,4 +9,4 @@ categories: [Eventos, Cursos]
 Curso de extensão de introdução ao **R**, ambiente livre e gratuito amplamente
 utilizado para análise estatística, modelagem e visualização de dados.
 
-[Saiba mais no site do DES/UFLA »](https://des.ufla.br/cursos-e-palestras/125-curso-de-extensao-introducao-ao-software-r)
+[Saiba mais »](https://des.ufla.br/cursos-e-palestras/125-curso-de-extensao-introducao-ao-software-r)

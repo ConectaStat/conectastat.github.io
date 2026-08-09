@@ -1,0 +1,22 @@
+---
+title: "Núcleo de Estudos em Estatística e Aprendizado de Máquina (nSTATs)"
+description: "Estatística, Ciência de Dados e Aprendizado de Máquina."
+author: "Coordenação: Geraldo Magela da Cruz Pereira"
+image: capa.png
+marca: true
+title-block-banner: true
+body-classes: cs-banner-rede
+page-layout: article
+sidebar: false
+toc: false
+---
+
+O nSTATs visa construir, compartilhar e aprimorar conhecimentos em
+Estatística, Ciência de Dados e Aprendizado de Máquina, por meio de atividades
+colaborativas e interdisciplinares voltadas para a qualificação científica,
+técnica e profissional. O núcleo possui forte caráter extensionista,
+promovendo cursos, oficinas, palestras, seminários e eventos. Reúne estudantes
+de graduação e pós-graduação, docentes e profissionais interessados no
+desenvolvimento e aplicação de métodos estatísticos e inteligência artificial.
+
+[Saiba mais »](https://des.ufla.br/nucleos-de-estudo/8-institucional/140-nucleo-de-estudos-em-estatistica-e-aprendizado-de-maquina){target="_blank"}

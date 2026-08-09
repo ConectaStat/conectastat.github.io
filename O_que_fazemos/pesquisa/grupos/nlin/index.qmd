@@ -1,0 +1,20 @@
+---
+title: "Núcleo de Estudos em Regressão Não Linear Aplicada (NLIN)"
+description: "Modelos de regressão não linear aplicados às mais diversas áreas."
+author: "Coordenação: Tales Jesus Fernandes"
+image: capa.jpg
+marca: true
+title-block-banner: true
+body-classes: cs-banner-naolinear
+page-layout: article
+sidebar: false
+toc: false
+---
+
+O NLIN foi fundado em 2017 por iniciativa de pós-graduandos: estudantes que
+estão desenvolvendo suas teses e dissertações com temas relacionados ao uso de
+modelos de regressão não linear aplicados nas mais diversas áreas, como curvas
+de crescimento, cinética de secagem de alimentos, processos de mineralização e
+curvas de lactação.
+
+[Saiba mais »](https://des.ufla.br/nucleos-de-estudo/8-institucional/37-nucleo-de-estudos-em-regressao-nao-linear-aplicada){target="_blank"}

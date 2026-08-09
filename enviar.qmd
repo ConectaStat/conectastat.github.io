@@ -7,13 +7,13 @@ page-layout: article
 sidebar: false
 toc: false
 aliases:
-  - /projetos/ensino/organizacao-e-apresentacao-de-dados/enviar.html
+  - /O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/enviar.html
 ---
 
 ## Como funciona
 
 Este formulário publica em **Projetos › Ensino › [Organização e Apresentação de
-Dados](projetos/ensino/organizacao-e-apresentacao-de-dados/index.qmd)**, a
+Dados](O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd)**, a
 seção dos projetos de análise feitos pelos estudantes da graduação. É o único
 caminho automatizado do site.
 

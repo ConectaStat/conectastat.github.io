@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 315" role="img" aria-label="Quadro de escola com um gráfico de dispersão e uma reta ajustada">
+  <rect width="560" height="315" fill="#f7f9f8"/>
+  <!-- Quadro-negro: a estatística chegando à sala de aula -->
+  <rect x="96" y="58" width="368" height="182" rx="8" fill="none" stroke="#0d5488" stroke-width="2.6" stroke-opacity=".55"/>
+  <g transform="translate(96,58)" fill="none" stroke="#0d5488" stroke-width="2">
+    <line x1="46" y1="26" x2="46" y2="146" stroke-opacity=".5"/>
+    <line x1="46" y1="146" x2="326" y2="146" stroke-opacity=".5"/>
+    <line x1="60" y1="132" x2="312" y2="44" stroke="#1a8a4c" stroke-width="2.8" stroke-opacity=".85" stroke-dasharray="7 6"/>
+  </g>
+  <g transform="translate(96,58)" fill="#ffffff" stroke="#1a8a4c" stroke-width="2.4">
+    <circle cx="76" cy="128" r="5.5"/><circle cx="118" cy="112" r="5.5"/><circle cx="156" cy="104" r="5.5"/>
+    <circle cx="196" cy="86" r="5.5"/><circle cx="238" cy="74" r="5.5"/><circle cx="286" cy="52" r="5.5"/>
+  </g>
+  <!-- Base do quadro -->
+  <line x1="120" y1="252" x2="440" y2="252" stroke="#0d5488" stroke-width="4" stroke-opacity=".35" stroke-linecap="round"/>
+</svg>

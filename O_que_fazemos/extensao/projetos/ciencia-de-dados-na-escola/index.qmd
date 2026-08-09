@@ -1,0 +1,24 @@
+---
+title: "Ciência de dados na escola"
+description: "Trilha formativa de Ciência de Dados para o Ensino Médio."
+author: "Izabela Regina Cardoso de Oliveira"
+image: capa.svg
+title-block-banner: true
+body-classes: cs-banner-dispersao
+page-layout: article
+sidebar: false
+toc: false
+---
+
+Esse projeto de extensão está vinculado ao projeto "Ciência de Dados e o
+Pioneirismo Feminino: Uma Trilha Formativa com Abordagem STEAM", financiado
+pela FAPEMIG no âmbito da chamada nº 013/2024 e com duração entre 04/08/2025 e
+03/08/2028. O projeto foi inspirado nas contribuições de Florence Nightingale
+(1820-1910), que revolucionou o atendimento hospitalar em sua época por meio
+do uso adequado de dados de saúde. Remetendo ao impacto de seu trabalho na era
+vitoriana, propomos a criação de uma trilha formativa para o ensino de Ciência
+de Dados no Ensino Médio. O conteúdo abordará conceitos básicos de
+Estatística, Saúde Pública e Epidemiologia, linguagens de programação e
+questões éticas relacionadas ao uso de dados.
+
+[Saiba mais »](https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2359){target="_blank"}

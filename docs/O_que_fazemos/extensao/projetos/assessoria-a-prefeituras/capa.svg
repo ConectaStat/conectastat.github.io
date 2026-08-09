@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 315" role="img" aria-label="Prédio público com um gráfico de indicadores ao lado">
+  <rect width="560" height="315" fill="#f7f9f8"/>
+  <!-- Prédio público: a estatística a serviço da gestão municipal -->
+  <g fill="none" stroke="#0d5488" stroke-width="2.6" stroke-opacity=".6">
+    <path d="M118 118 L196 74 L274 118" stroke-linejoin="round"/>
+    <line x1="112" y1="118" x2="280" y2="118"/>
+    <line x1="128" y1="130" x2="128" y2="216"/>
+    <line x1="162" y1="130" x2="162" y2="216"/>
+    <line x1="196" y1="130" x2="196" y2="216"/>
+    <line x1="230" y1="130" x2="230" y2="216"/>
+    <line x1="264" y1="130" x2="264" y2="216"/>
+    <line x1="112" y1="216" x2="280" y2="216"/>
+    <line x1="104" y1="230" x2="288" y2="230"/>
+  </g>
+  <!-- Indicadores ao lado: os dados que sustentam a decisão -->
+  <g transform="translate(318,74)" fill="none" stroke="#0d5488" stroke-width="2">
+    <line x1="0" y1="0" x2="0" y2="142" stroke-opacity=".5"/>
+    <line x1="0" y1="142" x2="176" y2="142" stroke-opacity=".5"/>
+    <rect x="18" y="96" width="26" height="46" stroke-opacity=".55"/>
+    <rect x="58" y="66" width="26" height="76" stroke-opacity=".55"/>
+    <rect x="98" y="40" width="26" height="102" stroke="#1a8a4c" stroke-width="2.8" stroke-opacity=".85"/>
+    <rect x="138" y="78" width="26" height="64" stroke-opacity=".55"/>
+  </g>
+</svg>
