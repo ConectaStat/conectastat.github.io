@@ -9,7 +9,9 @@ toc: false
 image: /images/logos/bjb-logo-quadrado.jpg
 ---
 
-## Sobre a revista
+::::: {.cs-revista-lado-a-lado}
+
+:::: {.cs-revista-texto}
 
 O Departamento de Estatística da UFLA é responsável pela publicação da
 **Brazilian Journal of Biometrics (BJB)**, revista oficial da [Região
@@ -20,21 +22,22 @@ O objetivo geral da BJB é publicar artigos de pesquisa originais que
 explorem, promovam e ampliem métodos de ciência de dados, estatística e
 matemática aplicados às ciências biológicas.
 
-::::: {.cs-revista-capa}
-```{=html}
-<img src="/images/logos/bjb-poster.jpg" alt="Capa do Brazilian Journal of Biometrics, com os logos da UFLA e da RBras" class="cs-poster-revista">
-```
+A BJB não cobra taxa de submissão nem de publicação: os modelos em Word e
+LaTeX estão disponíveis no [site da
+revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"}, e o envio
+de artigos é feito pelo [sistema de submissão da
+BJB](https://biometria.ufla.br/index.php/BBJ/login?source=%2Findex.php%2FBBJ%2Fsubmission){target="_blank"}.
 
 ::: {.button}
 [Conhecer a revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"}
 :::
+
+::::
+
+:::: {.cs-revista-capa}
+```{=html}
+<img src="/images/logos/bjb-poster.jpg" alt="Capa do Brazilian Journal of Biometrics, com os logos da UFLA e da RBras" class="cs-poster-revista">
+```
+::::
+
 :::::
-
-## Como submeter
-
-A BJB não cobra taxa de submissão nem de publicação.
-
-- **Templates**: os modelos em Word e LaTeX estão disponíveis no [site da
-  revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"};
-- **Submissão**: o envio de artigos é feito pelo [sistema de submissão da
-  BJB](https://biometria.ufla.br/index.php/BBJ/login?source=%2Findex.php%2FBBJ%2Fsubmission){target="_blank"}.

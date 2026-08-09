@@ -1,0 +1,23 @@
+---
+title: "Xadrez para Todos"
+description: "Prática e ensino do xadrez à comunidade lavrense."
+author: "Júlio Sílvio de Sousa Bueno Filho"
+image: capa.jpg
+title-block-banner: true
+body-classes: cs-banner-dendro
+page-layout: article
+sidebar: false
+toc: false
+---
+
+Este projeto de extensão visa promover a prática e o ensino do xadrez à
+comunidade lavrense por meio de oficinas, torneios e atividades lúdicas,
+conduzidas por estudantes extensionistas da Universidade Federal de Lavras. As
+ações serão realizadas na universidade, em escolas públicas e privadas, e, ou,
+em equipamentos públicos da prefeitura, como a Casa da Cultura e a CELT. O
+projeto tem como objetivo estimular o raciocínio lógico, a concentração, a
+inclusão social e o desenvolvimento cognitivo de crianças, jovens, adultos e
+idosos. O projeto também busca fortalecer o papel da universidade pública na
+promoção da cultura e educação não formal.
+
+[Saiba mais »](https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2391){target="_blank"}

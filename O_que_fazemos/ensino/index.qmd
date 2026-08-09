@@ -1,5 +1,5 @@
 ---
-title: "Projetos e materias de ensino"
+title: "Projetos de ensino, softwares e materiais didáticos"
 subtitle: "Iniciativas que fortalecem a formação em Estatística dentro e fora da sala de aula."
 title-block-banner: true
 body-classes: cs-banner-ogiva
@@ -9,13 +9,13 @@ toc: false
 # Duas listagens nesta página:
 #  1) `topicos-ensino`: cada item é um TÓPICO de ensino, exibido como card de
 #     manchete. Para criar um novo tópico, adicione um item aqui e, se ele
-#     tiver página própria, crie a pasta projetos/ensino/<topico>/index.qmd
+#     tiver página própria, crie a pasta O_que_fazemos/ensino/<topico>/index.qmd
 #     (use softwares/ ou materiais/ como modelo).
 #  2) `editais-ensino`: os editais em si, exibidos direto na página (mesmo
 #     rotator de cards da home), sem passar por um card intermediário. Só
 #     entram os posts de oportunidades/ com "Ensino" em categories - por
 #     isso o template-params abaixo, em vez do cards.ejs comum. A página
-#     projetos/ensino/editais/ continua existindo, com busca e com o botão
+#     O_que_fazemos/ensino/editais/ continua existindo, com busca e com o botão
 #     de envio, e é linkada logo abaixo da listagem.
 listing:
   - id: topicos-ensino
@@ -44,22 +44,18 @@ listing:
       - "../../oportunidades/posts/*/index.qmd"
 ---
 
-## Ensino no DES/UFLA
+::: {.listing-block}
 
-Além das disciplinas da graduação e da pós-graduação, o Departamento de
-Estatística desenvolve projetos de ensino que apoiam a aprendizagem e a
-permanência dos estudantes: monitorias, docência voluntária, cursos e
-oficinas, e produção de material didático aberto. Explore os tópicos abaixo:
+## Projetos, Softwares e Materiais
 
 ::: {#topicos-ensino}
 :::
 
+:::
+
 ::: {.listing-block .listing-editais}
 
-## Editais de Projetos de Ensino
-
-[Vagas de monitoria, docência voluntária e demais chamadas dos projetos de
-ensino, da mais recente à mais antiga]{.sec-sub}
+## Editais de Ensino
 
 ::: {#editais-ensino}
 :::

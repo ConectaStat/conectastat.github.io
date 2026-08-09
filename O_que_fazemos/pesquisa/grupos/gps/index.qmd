@@ -1,0 +1,20 @@
+---
+title: "Grupo de Pesquisa em Estatística Espacial (GPS)"
+description: "Estatística espacial e análise espacial aplicada."
+author: "Coordenação: João Domingos Scalon, Renato Ribeiro de Lima e Marcelo Silva de Oliveira"
+image: capa.png
+marca: true
+title-block-banner: true
+body-classes: cs-banner-variograma
+page-layout: article
+sidebar: false
+toc: false
+---
+
+O GPS foi criado em 2015 pelos professores João Domingos Scalon, Renato
+Ribeiro de Lima e Marcelo Silva de Oliveira, com o objetivo de aplicar e
+aprofundar técnicas de análise espacial. O grupo reúne professores, ex-alunos,
+pesquisadores externos, estudantes de pós-graduação e alunos de graduação,
+além de membros de diferentes áreas do conhecimento.
+
+[Saiba mais »](https://gean-damaceno.github.io/GPS){target="_blank"}

@@ -1,5 +1,5 @@
 ---
-title: "Projetos e Núcleos de pesquisa"
+title: "Projetos e grupos de pesquisa"
 subtitle: "A investigação científica desenvolvida no Departamento de Estatística da UFLA."
 title-block-banner: true
 body-classes: cs-banner-densidades
@@ -7,25 +7,30 @@ page-layout: article
 sidebar: false
 toc: false
 # Duas listagens nesta página:
-#  1) `topicos-pesquisa`: cada item é um TÓPICO de pesquisa, exibido como card
-#     de manchete. Para criar um novo tópico, adicione um item aqui e, se ele
-#     tiver página própria, crie a pasta projetos/pesquisa/<topico>/index.qmd
-#     (use nucleos/ como modelo).
+#  1) `grupos-pesquisa`: um card por GRUPO de pesquisa. Cada grupo tem página
+#     própria em grupos/<sigla>/, com a capa oficial (capa.*) na mesma pasta,
+#     uma introdução tirada do site do próprio grupo e, ao final, o link para
+#     lá. O card não leva direto para fora: quem chega pelo card lê a
+#     apresentação aqui e decide se quer ir ao site do grupo. Grupo novo =
+#     nova pasta em grupos/ + uma linha nesta lista. Marca (logo) na capa
+#     pede `logo: true` no front matter da página, senão a imagem é recortada
+#     em 16:9 como foto.
 #  2) `editais-pesquisa`: os editais em si, exibidos direto na página (mesmo
 #     rotator de cards da home), sem passar por um card intermediário. Só
 #     entram os posts de oportunidades/ com "Pesquisa" em categories - por
 #     isso o template-params abaixo, em vez do cards.ejs comum. A página
-#     projetos/pesquisa/editais/ continua existindo, com busca e com o botão
-#     de envio, e é linkada logo abaixo da listagem.
+#     pesquisa/editais/ continua existindo, com busca e com o botão de envio,
+#     e é linkada logo abaixo da listagem.
 listing:
-  - id: topicos-pesquisa
+  - id: grupos-pesquisa
     template: ../../_assets/cards-grid.ejs
     sort: false
     contents:
-      - title: "Núcleos de Pesquisa"
-        description: "NLIN, GPS e ST: os núcleos que reúnem docentes, pós-graduandos e graduandos em torno de temas da Estatística."
-        path: nucleos/index.html
-        image: ../../images/topicos/dendro.svg
+      - "grupos/nlin/index.qmd"
+      - "grupos/nstats/index.qmd"
+      - "grupos/estatistica-espacial/index.qmd"
+      - "grupos/series-temporais/index.qmd"
+      - "grupos/gps/index.qmd"
 
   - id: editais-pesquisa
     template: ../../_assets/cards-filtrado.ejs
@@ -36,34 +41,22 @@ listing:
       - "../../oportunidades/posts/*/index.qmd"
 ---
 
-## Pesquisa no DES/UFLA
+::: {.listing-block}
 
-Os docentes e estudantes do Departamento de Estatística desenvolvem projetos
-de pesquisa em métodos estatísticos e em aplicações, com destaque para:
+## Núcleos e Grupos de Pesquisa
 
-- **Modelos de regressão não lineares** aplicados ao crescimento de seres
-  vivos e a fenômenos agronômicos;
-- **Modelos mistos e experimentação agropecuária**;
-- **Estatística bayesiana e métodos computacionais**;
-- **Séries temporais** e modelos para dados de contagem;
-- **Estatística espacial e geoestatística**;
-- **Aprendizado de máquina e ciência de dados**.
+::: {#grupos-pesquisa}
+:::
 
-Explore os tópicos abaixo:
-
-::: {#topicos-pesquisa}
 :::
 
 ::: {.listing-block .listing-editais}
 
-## Editais de Projetos de Pesquisa
-
-[Iniciação científica e demais chamadas ligadas à pesquisa, da mais recente à
-mais antiga]{.sec-sub}
+## Editais de Pesquisa
 
 ::: {#editais-pesquisa}
 :::
 
-[Ver todos os editais de iniciação e pesquisa »](editais/index.qmd){.listing-mais}
+[Ver todos os editais de pesquisa »](editais/index.qmd){.listing-mais}
 
 :::

@@ -44,9 +44,13 @@ home/
 │   └── pos-graduacao/
 │       ├── index.qmd ───────────── Pós-Graduação
 │       └── egressos/index.qmd ──── Painel dos Egressos
-├── projetos/
+├── O_que_fazemos/
+│   ├── pesquisa/
+│   │   ├── index.qmd ───────────── Projetos e grupos de pesquisa (+ cards)
+│   │   └── editais/index.qmd ───── Editais de Pesquisa
 │   ├── ensino/
-│   │   ├── index.qmd ───────────── Projetos de Ensino (+ cards de tópico)
+│   │   ├── index.qmd ───────────── Projetos de ensino, softwares e
+│   │   │                           materiais didáticos (+ cards)
 │   │   ├── organizacao-e-apresentacao-de-dados/
 │   │   │   ├── index.qmd ───────── Organização e Apresentação de Dados
 │   │   │   ├── enviar.qmd ──────── Envie seu projeto
@@ -54,14 +58,9 @@ home/
 │   │   ├── softwares/index.qmd ─── Softwares (sem conteúdo ainda)
 │   │   ├── materiais/index.qmd ─── Materiais (sem conteúdo ainda)
 │   │   └── editais/index.qmd ───── Editais de Ensino
-│   ├── pesquisa/
-│   │   ├── index.qmd ───────────── Projetos de Pesquisa (+ cards)
-│   │   ├── nucleos/
-│   │   │   ├── index.qmd ───────── Núcleos de Pesquisa
-│   │   │   └── nlin/ gps/ st/ ──── um index.qmd por núcleo
-│   │   └── editais/index.qmd ───── Editais de Pesquisa
 │   └── extensao/
-│       ├── index.qmd ───────────── Projetos de Extensão (+ cards)
+│       ├── index.qmd ───────────── Projetos e grupos de extensão (+ cards)
+│       ├── acoes/index.qmd ─────── Ações de Extensão
 │       └── editais/index.qmd ───── Editais de Extensão
 │
 ├── oportunidades/  ┐  cada uma com:
@@ -78,10 +77,9 @@ home/
 ```
 index.qmd
 ├── hero .................. slogan + ilustração
-├── disclaimer ............ abaixo da hero
 ├── o projeto ............. texto de apresentação
+├── em destaque ........... carrossel (notícias + cursos/eventos)
 ├── oportunidades ......... carrossel
-├── cursos e eventos ...... carrossel
 └── onde estamos .......... mapa + endereço
 ```
 
@@ -93,29 +91,19 @@ index.qmd
 >
 
 
-### Disclaimer abaixo da hero
+### Seção da home: Em Destaque
 
-> Site de projeto vinculado ao Departamento de Estatística da UFLA. Este não é um site institucional da Universidade.
-
-
-### Seção da home: Notícias
-
-> Subtítulo: Destaques da Estatística na UFLA e no mundo
+> *(sem texto próprio: a página só exibe a listagem)*
 
 
 ### Seção da home: Oportunidades
 
-> Subtítulo: Editais internos e oportunidades de estudo
-
-
-### Seção da home: Cursos e Eventos
-
-> Subtítulo: Cursos, workshops e encontros da comunidade
+> *(sem texto próprio: a página só exibe a listagem)*
 
 
 ### Seção da home: Onde estamos
 
-> Subtítulo: Visite o Departamento de Estatística no campus da UFLA
+> *(sem texto próprio: a página só exibe a listagem)*
 
 
 ### Bloco do mapa (endereço)
@@ -135,7 +123,7 @@ index.qmd
 
 **Disclaimer (canto esquerdo):**
 
-> Site de projeto vinculado ao Departamento de Estatística da UFLA. Este não é um site institucional da Universidade.
+> Site de projeto de extensão vinculado ao Departamento de Estatística da UFLA. Este não é um site institucional da Universidade.
 
 **Ícones:** GitHub, Instagram e LinkedIn (os dois últimos ainda sem link).
 
@@ -217,18 +205,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > dados entre as **melhores e mais bem remuneradas profissões** da era digital,
 > com demanda muito superior à oferta de profissionais qualificados.
 >
-> ## A Estatística em um vídeo
->
-> Assista à apresentação do professor Júlio sobre a área e a atuação do
-> estatístico:
->
 > ## Estude Estatística na UFLA
->
-> O Departamento de Estatística da UFLA oferece formação completa na área,
-> da graduação à pós-graduação, além de
-> [assessoria e consultoria estatística](../assessoria/index.qmd) para a
-> comunidade acadêmica e a sociedade. São dois caminhos com focos
-> complementares:
 >
 > ### Graduação: foco em Ciência de Dados
 >
@@ -239,14 +216,14 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > extrair conhecimento de grandes volumes de dados. É o caminho de quem quer
 > partir de dados reais, chegar a modelos preditivos e ir muito além.
 >
-> ### Pós-graduação: foco em Ciências Agrárias
+> ### Pós-graduação: foco em Estatística e Experimentação Agropecuária
 >
 > O [Programa de Pós-Graduação em Estatística e Experimentação Agropecuária
 > (PPGEEA)](../cursos/pos-graduacao/index.qmd) oferece **mestrado** e
-> **doutorado** com tradição na interface entre a Estatística e as **ciências
-> agrárias**: planejamento e análise de experimentos, melhoramento genético e
-> agricultura de precisão. É a formação de quem transforma dados de campo, como
-> as safras de café da região de Lavras, em decisões com rigor científico.
+> **doutorado** com tradição em **estatística e experimentação agropecuária**:
+> planejamento e análise de experimentos, melhoramento genético e agricultura
+> de precisão. É a formação de quem transforma dados de campo, como as safras
+> de café da região de Lavras, em decisões com rigor científico.
 
 
 ### Nossos Cursos › Graduação
@@ -267,7 +244,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > pesquisa e órgãos públicos.
 >
 > Com uma ampla formação os alunos são expostos aos mais variados tipos de situações, alguns exemplos são os projetos de **Organização e Apresentação de Dados** em que cada aluno escolhe uma base de dados publica para desenvolver uma analise exploratória e desenvolver um relatório do assunto, isso tudo desde o primeiro período! Esses projetos podem ser visualizados
-> [aqui](../../projetos/ensino/organizacao-e-apresentacao-de-dados/index.qmd).
+> [aqui](../../O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd).
 >
 > ## Matriz curricular
 >
@@ -364,7 +341,10 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 
 **Texto da página:**
 
-> O UFLA abriga diversos [Programas de Pós-Graduação](https://prpg.ufla.br/mostrapg/pt-br/ultimas-noticias/82-programas-de-pos-graduacao), Mas o que trateremos aqui com maior afinidade sera o 
+> A UFLA abriga diversos [Programas de Pós-Graduação](https://prpg.ufla.br/mostrapg/pt-br/ultimas-noticias/82-programas-de-pos-graduacao),
+> e o [Painel de Perfil dos Ingressantes](https://paineis.ufla.br/pos-graduacao/120-painel/418-perfil-ingressantes-pos-graduacao-stricto-sensu){target="_blank"}
+> mostra quem entra no stricto sensu, por gênero, idade, região de origem e
+> formação. Aqui tratamos com maior afinidade o de
 > **Estatística e Experimentação Agropecuária (PPGEEA)**, com cursos de
 > **mestrado** e **doutorado**, formando pesquisadores e docentes com sólida
 > base teórica e forte vocação aplicada.
@@ -410,12 +390,13 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > | Estatística Bayesiana | Inferência bayesiana e métodos MCMC |
 > | Séries Temporais | Modelagem e previsão de dados temporais |
 >
-> A relação completa de disciplinas, docentes e projetos está no
-> [site do PRPG/UFLA](https://prpg.ufla.br/mostrapg/en/ppgs/icet-ufla/statistics-and-agricultural-experimentation-master-s-and-doctorate).
+> A relação completa de disciplinas, docentes e turmas está no
+> [portal do PPGEEA no SIGAA](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
 >
-> ## A Estatística e Experimentação Agropecuária em um vídeo
+> ## Projetos de pesquisa
 >
-> Assista à apresentação do professor Luiz Ricardo Nakamura sobre o curso.
+> Os projetos de pesquisa em andamento no programa são registrados e consultados
+> na [Pró-Reitoria de Pesquisa e Inovação (PRPI/UFLA)](https://prpi.ufla.br/projetos-de-pesquisa){target="_blank"}.
 >
 > ## Painel dos Egressos
 >
@@ -440,74 +421,168 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > e a formação continuada que seguiram após o curso.
 
 
-### Projetos › Ensino
+### O Que Fazemos › Pesquisa
+`O_que_fazemos/pesquisa/index.qmd`
 
-*(arquivo não encontrado: projetos/ensino/index.qmd)*
+**Título (aparece no banner):** Projetos e grupos de pesquisa
 
+**Subtítulo:** A investigação científica desenvolvida no Departamento de Estatística da UFLA.  
+*(hoje oculto no site; fica só no código)*
 
-### Projetos › Ensino › Organização e Apresentação de Dados
+**Texto da página:**
 
-*(arquivo não encontrado: projetos/ensino/organizacao-e-apresentacao-de-dados/index.qmd)*
-
-
-### Projetos › Ensino › Softwares
-
-*(arquivo não encontrado: projetos/ensino/softwares/index.qmd)*
-
-
-### Projetos › Ensino › Materiais
-
-*(arquivo não encontrado: projetos/ensino/materiais/index.qmd)*
+> ## Núcleos e Grupos de Pesquisa
+>
+> ## Editais de Pesquisa
+>
+> [Ver todos os editais de pesquisa »](editais/index.qmd){.listing-mais}
 
 
-### Projetos › Ensino › Editais
+### O Que Fazemos › Pesquisa › Editais
+`O_que_fazemos/pesquisa/editais/index.qmd`
 
-*(arquivo não encontrado: projetos/ensino/editais/index.qmd)*
+**Título (aparece no banner):** Editais de Projetos de Pesquisa
 
+**Subtítulo:** Iniciação científica e demais chamadas ligadas à pesquisa.  
+*(hoje oculto no site; fica só no código)*
 
-### Projetos › Pesquisa
+**Texto da página:**
 
-*(arquivo não encontrado: projetos/pesquisa/index.qmd)*
-
-
-### Projetos › Pesquisa › Núcleos de Pesquisa
-
-*(arquivo não encontrado: projetos/pesquisa/nucleos/index.qmd)*
+> *(sem texto próprio: a página só exibe a listagem)*
 
 
-### Projetos › Pesquisa › Núcleos › NLIN
+### O Que Fazemos › Ensino
+`O_que_fazemos/ensino/index.qmd`
 
-*(arquivo não encontrado: projetos/pesquisa/nucleos/nlin/index.qmd)*
+**Título (aparece no banner):** Projetos de ensino, softwares e materiais didáticos
+
+**Subtítulo:** Iniciativas que fortalecem a formação em Estatística dentro e fora da sala de aula.  
+*(hoje oculto no site; fica só no código)*
+
+**Texto da página:**
+
+> ## Projetos, Softwares e Materiais
+>
+> ## Editais de Ensino
+>
+> [Ver todos os editais »](editais/index.qmd){.listing-mais}
+
+**Cards de tópico desta página:**
+
+> **Organização e Apresentação de Dados**  
+> Projetos de análise de dados feitos pelos estudantes de primeiro período da graduação, do dado bruto ao relatório final.
+>
+> **Softwares**  
+> Aplicativos, pacotes e ferramentas computacionais desenvolvidos como apoio ao ensino de Estatística.
+>
+> **Materiais**  
+> Apostilas, tutoriais e recursos didáticos abertos produzidos pelo departamento.
+>
 
 
-### Projetos › Pesquisa › Núcleos › GPS
+### O Que Fazemos › Ensino › Organização e Apresentação de Dados
+`O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd`
 
-*(arquivo não encontrado: projetos/pesquisa/nucleos/gps/index.qmd)*
+**Título (aparece no banner):** Organização e Apresentação de Dados
 
+**Subtítulo:** Análises e projetos desenvolvidos pelos estudantes de Estatística da UFLA desde o primeiro período.  
+*(hoje oculto no site; fica só no código)*
 
-### Projetos › Pesquisa › Núcleos › ST
+**Texto da página:**
 
-*(arquivo não encontrado: projetos/pesquisa/nucleos/st/index.qmd)*
-
-
-### Projetos › Pesquisa › Editais
-
-*(arquivo não encontrado: projetos/pesquisa/editais/index.qmd)*
-
-
-### Projetos › Extensão
-
-*(arquivo não encontrado: projetos/extensao/index.qmd)*
+> Cada card abaixo é um projeto publicado: análises de dados reais feitas
+> pelos nossos estudantes, do dado bruto ao relatório final. Explore os
+> trabalhos e, quando estiver pronto, envie o seu.
 
 
-### Projetos › Extensão › Ações de Extensão
+### O Que Fazemos › Ensino › Softwares
+`O_que_fazemos/ensino/softwares/index.qmd`
 
-*(arquivo não encontrado: projetos/extensao/acoes/index.qmd)*
+**Título (aparece no banner):** Softwares
+
+**Subtítulo:** Aplicativos, pacotes e ferramentas computacionais de apoio ao ensino de Estatística.  
+*(hoje oculto no site; fica só no código)*
+
+**Texto da página:**
+
+> Ferramentas computacionais desenvolvidas nos projetos de ensino do
+> departamento. Os primeiros itens serão publicados em breve.
 
 
-### Projetos › Extensão › Editais
+### O Que Fazemos › Ensino › Materiais
+`O_que_fazemos/ensino/materiais/index.qmd`
 
-*(arquivo não encontrado: projetos/extensao/editais/index.qmd)*
+**Título (aparece no banner):** Materiais
+
+**Subtítulo:** Apostilas, tutoriais e recursos didáticos abertos de apoio às disciplinas.  
+*(hoje oculto no site; fica só no código)*
+
+**Texto da página:**
+
+> Materiais didáticos produzidos nos projetos de ensino do departamento.
+> Os primeiros itens serão publicados em breve.
+
+
+### O Que Fazemos › Ensino › Editais
+`O_que_fazemos/ensino/editais/index.qmd`
+
+**Título (aparece no banner):** Editais de Ensino e docência
+
+**Subtítulo:** Monitorias, docência voluntária e demais chamadas dos projetos de ensino.  
+*(hoje oculto no site; fica só no código)*
+
+**Texto da página:**
+
+> *(sem texto próprio: a página só exibe a listagem)*
+
+
+### O Que Fazemos › Extensão
+`O_que_fazemos/extensao/index.qmd`
+
+**Título (aparece no banner):** Projetos e grupos de extensão
+
+**Subtítulo:** A Estatística a serviço da comunidade: popularização da ciência e letramento estatístico.  
+*(hoje oculto no site; fica só no código)*
+
+**Texto da página:**
+
+> ## Projetos de Extensão
+>
+> ## Ações de Extensão
+>
+> [Ver as ações de extensão »](acoes/index.qmd){.listing-mais}
+>
+> ## Editais de Extensão
+>
+> [Ver todos os editais de extensão »](editais/index.qmd){.listing-mais}
+
+
+### O Que Fazemos › Extensão › Ações de Extensão
+`O_que_fazemos/extensao/acoes/index.qmd`
+
+**Título (aparece no banner):** Ações de Extensão
+
+**Subtítulo:** Cursos, palestras, parcerias e atividades levadas à comunidade.  
+*(hoje oculto no site; fica só no código)*
+
+**Texto da página:**
+
+> Atividades de extensão do Departamento de Estatística: cursos abertos,
+> palestras em escolas, parcerias com instituições e ações de divulgação
+> científica. As primeiras serão publicadas em breve.
+
+
+### O Que Fazemos › Extensão › Editais
+`O_que_fazemos/extensao/editais/index.qmd`
+
+**Título (aparece no banner):** Editais de Projetos de Extensão
+
+**Subtítulo:** Chamadas e editais ligados aos projetos de extensão.  
+*(hoje oculto no site; fica só no código)*
+
+**Texto da página:**
+
+> *(sem texto próprio: a página só exibe a listagem)*
 
 
 ### Ações › Revista Científica
@@ -520,8 +595,6 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 
 **Texto da página:**
 
-> ## Sobre a revista
->
 > O Departamento de Estatística da UFLA é responsável pela publicação da
 > **Brazilian Journal of Biometrics (BJB)**, revista oficial da [Região
 > Brasileira da Sociedade Internacional de Biometria
@@ -531,16 +604,26 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > explorem, promovam e ampliem métodos de ciência de dados, estatística e
 > matemática aplicados às ciências biológicas.
 >
+> A BJB não cobra taxa de submissão nem de publicação: os modelos em Word e
+> LaTeX estão disponíveis no [site da
+> revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"}, e o envio
+> de artigos é feito pelo [sistema de submissão da
+> BJB](https://biometria.ufla.br/index.php/BBJ/login?source=%2Findex.php%2FBBJ%2Fsubmission){target="_blank"}.
+>
 > [Conhecer a revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"}
->
-> ## Como submeter
->
-> A BJB não cobra taxa de submissão nem de publicação.
->
-> - **Templates**: os modelos em Word e LaTeX estão disponíveis no [site da
->   revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"};
-> - **Submissão**: o envio de artigos é feito pelo [sistema de submissão da
->   BJB](https://biometria.ufla.br/index.php/BBJ/login?source=%2Findex.php%2FBBJ%2Fsubmission){target="_blank"}.
+
+
+### Ações › Nossos Livros
+`acoes/livros/index.qmd`
+
+**Título (aparece no banner):** Nossos Livros
+
+**Subtítulo:** Livros publicados pela Editora UFLA e escritos por docentes do Departamento de Estatística.  
+*(hoje oculto no site; fica só no código)*
+
+**Texto da página:**
+
+> [Ver todos os títulos na Editora UFLA »](https://www.editoraufla.com.br/){target="_blank"}
 
 
 ### Ações › Assessoria e Consultoria Estatística
@@ -622,7 +705,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > ## Como funciona
 >
 > Este formulário publica em **Projetos › Ensino › [Organização e Apresentação de
-> Dados](projetos/ensino/organizacao-e-apresentacao-de-dados/index.qmd)**, a
+> Dados](O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd)**, a
 > seção dos projetos de análise feitos pelos estudantes da graduação. É o único
 > caminho automatizado do site.
 >
@@ -652,7 +735,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 ## 5. Conteúdo datado (posts já publicados)
 
 
-### Oportunidades: posts publicados (7)
+### Oportunidades: posts publicados (11)
 
 
 #### Edital Nº 006/2026 - Docência Voluntária - DES 2ºsem/2026
@@ -673,14 +756,23 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 >
 > [Ler o edital completo »](https://des.ufla.br/editais/139-edital-n-005-2026-selecao-de-monitores-remunerados-para-2-2026)
 
-#### Edital - Convocação de eleições para chefe e subchefe do DES (2026-2030)
-`oportunidades/posts/2026-05-22-edital-convocacao-de-eleicoes-para-chefe-e-subchefe-do-des-2026-2030/index.qmd`
+#### Edital PRPI Nº 03/2026 - PIBITI/CNPq
+`oportunidades/posts/2026-05-20-edital-prpi-no-03-2026-pibiti-cnpq/index.qmd`
 
-**Resumo (aparece no card):** O Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras, torna público o Edital de convocação para eleição de chefe e subchefe do DES (Quadriênio 2026-2030)
+**Resumo (aparece no card):** A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnico(a)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em prog...
 
-> O Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras, torna público o Edital de convocação para eleição de chefe e subchefe do DES (Quadriênio 2026-2030)
+> A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnico(a)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em prog...
 >
-> [Ler o edital completo »](https://des.ufla.br/editais/138-edital-eleicoes-chefe-e-subchefe-do-des)
+> [Ler o edital completo »](https://prpi.ufla.br/noticias-prpi/638-oportunidade-de-bolsa-it-aberto-edital-pibiti-cnpq)
+
+#### Edital PRPI Nº 02/2026 - PIBIC/CNPq
+`oportunidades/posts/2026-05-19-edital-prpi-no-02-2026-pibic-cnpq/index.qmd`
+
+**Resumo (aparece no card):** A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnicos(as)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em pr...
+
+> A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnicos(as)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em pr...
+>
+> [Ler o edital completo »](https://prpi.ufla.br/noticias-prpi/637-edital-pibic-cnpq-em-breve)
 
 #### Edital Nº 003/2026 - Seleção de monitores voluntários para 2026
 `oportunidades/posts/2026-05-06-edital-no-003-2026-selecao-de-monitores-voluntarios-para-2026/index.qmd`
@@ -690,6 +782,15 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > O Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.
 >
 > [Ler o edital completo »](https://des.ufla.br/editais/137-edital-n-003-2026-selecao-de-monitores-voluntarios-para-2026)
+
+#### Edital PRPI Nº 01/2026 - PIVIC/UFLA
+`oportunidades/posts/2026-03-18-edital-prpi-no-01-2026-pivic-ufla/index.qmd`
+
+**Resumo (aparece no card):** A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras torna público este edital e convida todos os servidores docentes, técnico-administrativos desta instituição e pesquisadores externos credenciados como docentes permanentes em programas de pós-graduação da UFLA, a parti...
+
+> A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras torna público este edital e convida todos os servidores docentes, técnico-administrativos desta instituição e pesquisadores externos credenciados como docentes permanentes em programas de pós-graduação da UFLA, a parti...
+>
+> [Ler o edital completo »](https://prpi.ufla.br/noticias-prpi/634-edital-prpi-n-01-2026-pivic-ufla-fluxo-continuo)
 
 #### Edital Nº 002/2026 - Seleção de monitores voluntários para 2026
 `oportunidades/posts/2026-03-18-edital-no-002-2026-selecao-de-monitores-voluntarios-para-2026/index.qmd`
@@ -718,6 +819,24 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 >
 > [Ler o edital completo »](https://des.ufla.br/editais/133-edital-n-003-2025-selecao-de-monitores-remunerados-para-2026)
 
+#### Edital PIBEEC 01/2025
+`oportunidades/posts/2025-10-31-edital-pibeec-01-2025/index.qmd`
+
+**Resumo (aparece no card):** A Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, ...
+
+> A Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, ...
+>
+> [Ler o edital completo »](https://proeec.ufla.br/editais/47-teste-prog-proj/659-edital-pibeec-01-2025)
+
+#### Edital PIBEC 07/2025
+`oportunidades/posts/2025-09-09-edital-pibec-07-2025/index.qmd`
+
+**Resumo (aparece no card):** A Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa nº 074, de 16 de março de 2023, torna p...
+
+> A Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa nº 074, de 16 de março de 2023, torna p...
+>
+> [Ler o edital completo »](https://proeec.ufla.br/editais/programa-institucional-de-bolsas-de-extensao/648-edital-pibec-07-2025)
+
 
 ### Cursos e Eventos: posts publicados (4)
 
@@ -731,7 +850,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > disciplinas e atividades de aperfeiçoamento em Estatística durante o período
 > de verão.
 >
-> [Saiba mais no site do DES/UFLA »](https://des.ufla.br/eventos/135-xvii-programa-de-verao-des-icet-ufla-2026)
+> [Saiba mais »](https://des.ufla.br/eventos/135-xvii-programa-de-verao-des-icet-ufla-2026)
 
 #### XVII Encontro Mineiro de Estatística (MGEST) 2025
 `eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/index.qmd`
@@ -742,7 +861,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > reúne profissionais, docentes e estudantes para a troca de conhecimento e a
 > divulgação de pesquisas na área de Estatística.
 >
-> [Saiba mais no site do DES/UFLA »](https://des.ufla.br/eventos/xvii-mgest-2025)
+> [Saiba mais »](https://des.ufla.br/eventos/xvii-mgest-2025)
 
 #### V Workshop em Data Science
 `eventos/posts/2025-05-20-v-workshop-data-science/index.qmd`
@@ -752,7 +871,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > O Workshop em Data Science promove discussões sobre métodos estatísticos,
 > aprendizado de máquina e aplicações de Ciência de Dados.
 >
-> [Saiba mais no site do DES/UFLA »](https://des.ufla.br/eventos/v-workshop-em-data-science)
+> [Saiba mais »](https://des.ufla.br/eventos/v-workshop-em-data-science)
 
 #### Curso de Extensão: Introdução ao Software R
 `eventos/posts/2024-09-01-curso-introducao-software-r/index.qmd`
@@ -762,7 +881,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 > Curso de extensão de introdução ao **R**, ambiente livre e gratuito amplamente
 > utilizado para análise estatística, modelagem e visualização de dados.
 >
-> [Saiba mais no site do DES/UFLA »](https://des.ufla.br/cursos-e-palestras/125-curso-de-extensao-introducao-ao-software-r)
+> [Saiba mais »](https://des.ufla.br/cursos-e-palestras/125-curso-de-extensao-introducao-ao-software-r)
 
 
 

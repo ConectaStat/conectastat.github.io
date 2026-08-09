@@ -55,12 +55,12 @@ para a fonte oficial.
 
 | O que é | Vai parar em | Quem publica |
 |---|---|---|
-| Uma análise feita na graduação | [Organização e Apresentação de Dados](../../projetos/ensino/organizacao-e-apresentacao-de-dados/index.qmd) | quem enviou, pelo [formulário](../../enviar.qmd) |
+| Uma análise feita na graduação | [Organização e Apresentação de Dados](../../O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd) | quem enviou, pelo [formulário](../../enviar.qmd) |
 | Um edital, chamada ou vaga | [Oportunidades](../../oportunidades/index.qmd) | a equipe |
 | Um evento, curso ou palestra | [Cursos e Eventos](../../eventos/index.qmd) | a equipe |
-| Um programa, pacote ou aplicativo | [Softwares](../../projetos/ensino/softwares/index.qmd) | a equipe |
-| Uma apostila, tutorial ou slides | [Materiais](../../projetos/ensino/materiais/index.qmd) | a equipe |
-| Uma ação de extensão | [Ações de Extensão](../../projetos/extensao/acoes/index.qmd) | a equipe |
+| Um programa, pacote ou aplicativo | [Softwares](../../O_que_fazemos/ensino/softwares/index.qmd) | a equipe |
+| Uma apostila, tutorial ou slides | [Materiais](../../O_que_fazemos/ensino/materiais/index.qmd) | a equipe |
+| Uma ação de extensão | [Ações de Extensão](../../O_que_fazemos/extensao/acoes/index.qmd) | a equipe |
 
 ## Achou um erro?
 

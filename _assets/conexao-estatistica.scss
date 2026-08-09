@@ -227,15 +227,6 @@ body { -webkit-font-smoothing: antialiased; }
       margin: 0;
     }
   }
-
-  // Disclaimer provisório logo abaixo da hero image
-  .hero-disclaimer {
-    margin: 0.7rem 0 0;
-    font-size: 0.72rem;
-    line-height: 1.5;
-    color: $muted;
-    text-align: center;
-  }
 }
 
 @keyframes hero-texto-entra {
@@ -386,6 +377,12 @@ body { -webkit-font-smoothing: antialiased; }
 //  SEÇÃO "O PROJETO" - título azul; texto/caixa estilizados no conexao-estatistica.css
 // =============================================================================
 .intro-block {
+  // Texto centrado: é o único parágrafo solto da home, entre a hero e os
+  // cards, e centrado ele lê como uma abertura, não como corpo de artigo.
+  text-align: center;
+  max-width: 62ch;
+  margin-inline: auto;
+
   h2 {
     font-size: clamp(1.5rem, 2.8vw, 2rem);
     font-weight: 700;
@@ -593,6 +590,36 @@ body { -webkit-font-smoothing: antialiased; }
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
+      margin: 0;
+    }
+  }
+
+  // Logo de grupo/projeto (Pesquisa e Extensão): a marca não pode ser
+  // recortada em 16:9 como uma foto - "GPS" pela metade não é o logo do GPS.
+  // Mesma caixa da thumb comum, mas a imagem encolhe inteira (contain) sobre
+  // um fundo neutro, e logo claro ou com transparência continua legível.
+  // O fundo é branco porque é o fundo que os logos oficiais já trazem: sobre
+  // cinza, cada um desenhava um retângulo branco visível dentro do card.
+  .cs-card-thumb-logo {
+    width: calc(100% + 3rem);
+    aspect-ratio: 16 / 9;
+    margin: -1.6rem -1.5rem 1rem;
+    border-radius: 11px 11px 0 0;
+    overflow: hidden;
+    border-bottom: 1px solid $hairline;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.1rem 1.4rem;
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
       margin: 0;
     }
   }
@@ -988,13 +1015,37 @@ body { -webkit-font-smoothing: antialiased; }
 // =============================================================================
 //  LOGO DE REVISTA - imagem de marca embutida no conteúdo (Revista Científica)
 // =============================================================================
-// Capa completa (retrato, com os logos da UFLA e da RBras) - única imagem
-// da página, grande o bastante para parecer uma revista de tamanho real,
-// com o botão "Conhecer a revista" logo abaixo, por isso os dois ficam
-// num bloco centralizado.
+// Capa completa (retrato, com os logos da UFLA e da RBras) ao lado do texto:
+// o texto de apresentação à esquerda, a revista à direita, como quem mostra
+// o exemplar enquanto fala dele. Em telas estreitas os dois empilham, com a
+// capa em cima - numa coluna só, a imagem é o que identifica a página.
+.cs-revista-lado-a-lado {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.cs-revista-texto {
+  min-width: 0;
+
+  > :first-child { margin-top: 0; }
+  > :last-child { margin-bottom: 0; }
+
+  @media (max-width: 767px) { order: 2; }
+}
+
 .cs-revista-capa {
   text-align: center;
-  margin-bottom: 1.5rem;
+  min-width: 0;
+
+  @media (max-width: 767px) { order: 1; }
 }
 
 .cs-poster-revista {

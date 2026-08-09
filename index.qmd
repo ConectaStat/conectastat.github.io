@@ -10,18 +10,18 @@ description: |
   ConectaStat - Ciência, Estatística e Sociedade. Departamento de Estatística da UFLA.
 image: /images/capa-social.png
 listing:
-  - id: noticias
-    contents: /noticias/posts
+  # "Em Destaque" reúne, num rotator só, as notícias e os cursos/eventos: são
+  # duas pastas de posts diferentes, mas para quem chega na home é tudo "o que
+  # está acontecendo agora", da data mais recente à mais antiga.
+  - id: destaques
+    contents:
+      - /noticias/posts
+      - /eventos/posts
     sort: "date desc"
     template: _assets/cards.ejs
 
   - id: oportunidades
     contents: /oportunidades/posts
-    sort: "date desc"
-    template: _assets/cards.ejs
-
-  - id: eventos
-    contents: /eventos/posts
     sort: "date desc"
     template: _assets/cards.ejs
 
@@ -48,11 +48,8 @@ toc: false
              alt="Ilustração da Serrinha da UFLA: casa histórica ao lado de um ipê-amarelo florido" />
       </div>
     </div>
-    <!-- Disclaimer provisório: será substituído pelo texto definitivo -->
-    <p class="hero-disclaimer">
-      Site de projeto vinculado ao Departamento de Estatística da UFLA.
-      Este não é um site institucional da Universidade.
-    </p>
+    <!-- O disclaimer do projeto vive só no rodapé (ver _quarto.yml): repetido
+         aqui no topo, roubava a entrada da home. -->
   </div>
 </div>
 ```
@@ -63,23 +60,21 @@ toc: false
 ::: {.content-container}
 ::: {.intro-block}
 
-Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](https://des.ufla.br/) da [Universidade Federal de Lavras](https://ufla.br/). Aqui conectamos Ciência, Estatística e Sociedade, tornando o conhecimento científico mais acessível, promovendo o letramento estatístico e aproximando a universidade da comunidade.
+Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](https://des.ufla.br/) da [Universidade Federal de Lavras](https://ufla.br/). Aqui conectamos Ciência, Estatística e Sociedade, tornando o conhecimento científico mais acessível, promovendo o letramento estatístico e aproximando a universidade da comunidade de Lavras e região.
 
 
 :::
 :::
 
 <!-- ============================================================= -->
-<!--  NOTÍCIAS - destaques da Estatística fora do ConectaStat      -->
+<!--  EM DESTAQUE - notícias e cursos/eventos no mesmo rotator     -->
 <!-- ============================================================= -->
 ::: {.content-container}
 ::: {.listing-block}
 
-## Notícias
+## Em Destaque
 
-[Destaques da Estatística na UFLA e no mundo]{.sec-sub}
-
-::: {#noticias}
+::: {#destaques}
 :::
 
 :::
@@ -93,25 +88,7 @@ Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](ht
 
 ## Oportunidades
 
-[Editais internos e oportunidades de estudo]{.sec-sub}
-
 ::: {#oportunidades}
-:::
-
-:::
-:::
-
-<!-- ============================================================= -->
-<!--  CURSOS E EVENTOS - manchetes rotativas                        -->
-<!-- ============================================================= -->
-::: {.content-container}
-::: {.listing-block}
-
-## Cursos e Eventos
-
-[Cursos, workshops e encontros da comunidade]{.sec-sub}
-
-::: {#eventos}
 :::
 
 :::
@@ -124,8 +101,6 @@ Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](ht
 ::: {.map-block}
 
 ## Onde estamos
-
-[Visite o Departamento de Estatística no campus da UFLA]{.sec-sub}
 
 ```{=html}
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"

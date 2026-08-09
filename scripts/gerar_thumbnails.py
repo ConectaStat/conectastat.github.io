@@ -10,6 +10,14 @@ hoje só uma seção entra, e o resto do site usa capa padrão fixa.
       Abre o relatório HTML embutido no post (iframe de relatorios/...) e
       fotografa o elemento mais colorido (gráfico, mapa, figura).
 
+  • Cursos e Eventos (modo "cartaz")
+      Todo curso e evento tem cartaz de divulgação. Basta soltar o arquivo
+      na pasta do post (cartaz.jpg, poster.png, ou qualquer imagem) que ele
+      vira a capa. O cartaz costuma ser quadrado ou em pé, e o card é 16:9:
+      recortar cortaria justamente o título e as datas, então o cartaz entra
+      inteiro, centralizado, sobre um fundo feito dele mesmo (a própria
+      imagem ampliada e desfocada). Não precisa de Chrome, só de Pillow.
+
 O modo "pagina" continua implementado e disponível: ele abre a página já
 renderizada em docs/, esconde navbar/rodapé e fotografa a melhor figura do
 corpo ou, na falta dela, o topo do texto. Nenhuma seção usa esse modo hoje,
@@ -47,13 +55,21 @@ import sys
 import time
 from pathlib import Path
 
+# Pillow e selenium são checados em separado: o modo "cartaz" só precisa do
+# Pillow, e seria bobagem deixar de gerar a capa de um evento porque a máquina
+# não tem Chrome/selenium para os modos que fotografam página.
 try:
-    from PIL import Image, ImageChops, ImageStat
+    from PIL import Image, ImageChops, ImageFilter, ImageStat
+    PIL_OK, ERRO_PIL = True, ""
+except ImportError as _e:
+    PIL_OK, ERRO_PIL = False, str(_e)
+
+try:
     from selenium import webdriver
     from selenium.webdriver.chrome.options import Options
-    DEPS_OK, ERRO_DEPS = True, ""
-except ImportError as _e:          # sem selenium/pillow o site ainda renderiza
-    DEPS_OK, ERRO_DEPS = False, str(_e)
+    SELENIUM_OK, ERRO_SELENIUM = True, ""
+except ImportError as _e:          # sem selenium o site ainda renderiza
+    SELENIUM_OK, ERRO_SELENIUM = False, str(_e)
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -66,20 +82,29 @@ if not SITE.is_absolute():
 
 # Seções do site que ganham capa automática (os posts ficam em <pasta>/posts/)
 #
-# Só a área de análises: ali a capa sai de um gráfico de verdade, feito pelo
-# estudante, e vale mais que qualquer desenho genérico. Oportunidades e Cursos
-# e Eventos saíram daqui: para elas o "melhor visual" era o retrato do próprio
-# texto da página, com o título repetido dentro da imagem e meio quadro em
-# branco. Essas duas usam a capa padrão azul (images/capa-padrao-azul.svg),
-# declarada como image-placeholder nas listagens.
+# Análises: a capa sai de um gráfico de verdade, feito pelo estudante, e vale
+# mais que qualquer desenho genérico. Cursos e Eventos: a capa é o cartaz de
+# divulgação do próprio evento, que sempre existe.
+#
+# Oportunidades continua fora: edital não tem cartaz nem gráfico, e o "melhor
+# visual" acabava sendo o retrato do próprio texto da página, com o título
+# repetido dentro da imagem e meio quadro em branco. Segue com a capa padrão
+# azul (images/capa-padrao-azul.svg), declarada como image-placeholder na
+# listagem.
 SECOES = [
-    {"pasta": "projetos/ensino/organizacao-e-apresentacao-de-dados", "modo": "relatorio"},
+    {"pasta": "O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados", "modo": "relatorio"},
+    {"pasta": "eventos", "modo": "cartaz"},
 ]
 
 LARGURA_THUMB, ALTURA_THUMB = 1200, 675          # 16:9, mesmo dos cards
 TAM_MINIMO = (300, 160)                          # menor elemento aceitável (px)
 NOTA_MINIMA = 4.0                                # colorfulness mínima p/ valer
 ESPERA_RENDER = 5                                # segundos p/ plotly/leaflet etc.
+
+# Modo "cartaz": arquivos que o script reconhece como cartaz do evento, e os
+# nomes que têm preferência quando a pasta tem mais de uma imagem.
+EXT_CARTAZ = (".jpg", ".jpeg", ".png", ".webp")
+NOMES_CARTAZ = ("cartaz", "poster", "capa", "banner", "arte", "flyer")
 
 # Elementos que costumam carregar os visuais de um documento Quarto
 SELETORES_VISUAIS = [
@@ -113,6 +138,56 @@ def acha_relatorio(texto_qmd: str, bundle: Path) -> Path | None:
         return candidato if candidato.exists() else None
     candidato = bundle / "relatorios" / "relatorio.html"
     return candidato if candidato.exists() else None
+
+
+def acha_cartaz(bundle: Path) -> Path | None:
+    """Descobre o cartaz do evento dentro da pasta do post.
+
+    Vale qualquer imagem solta na pasta - o thumbnail.png gerado por este
+    script fica de fora, senão a capa da execução anterior viraria a fonte
+    da próxima. Nomes conhecidos (cartaz, poster, capa...) passam na frente;
+    havendo empate, a maior imagem vence, que é a arte em tamanho cheio.
+    """
+    imagens = [p for p in sorted(bundle.iterdir())
+               if p.is_file()
+               and p.suffix.lower() in EXT_CARTAZ
+               and p.stem.lower() != "thumbnail"]
+    if not imagens:
+        return None
+    preferidos = [p for p in imagens
+                  if any(n in p.stem.lower() for n in NOMES_CARTAZ)]
+    return max(preferidos or imagens, key=lambda p: p.stat().st_size)
+
+
+def capa_cartaz(cartaz: Path) -> Image.Image | None:
+    """Modo 'cartaz': o cartaz inteiro, centralizado, sobre fundo dele mesmo.
+
+    Cartaz de evento é quadrado ou em pé e carrega o texto que interessa
+    (nome, datas, inscrições) espalhado por toda a arte: recortar em 16:9
+    cortaria justamente isso. Então a arte entra inteira ("contain") e a
+    sobra dos lados é preenchida com a própria imagem ampliada e desfocada -
+    o mesmo recurso de player de vídeo, que combina cores com qualquer
+    cartaz sem precisar escolher uma cor à mão.
+    """
+    try:
+        with Image.open(cartaz) as arq:
+            im = arq.convert("RGB")
+            im.load()
+    except Exception as e:
+        print(f"[!!] não abri o cartaz {cartaz.name}: {e}")
+        return None
+
+    # Fundo: a própria arte cobrindo o quadro inteiro, desfocada e suavizada
+    fundo = recorta_16x9(im.copy())
+    fundo = fundo.filter(ImageFilter.GaussianBlur(radius=28))
+    fundo = Image.blend(fundo, Image.new("RGB", fundo.size, (255, 255, 255)), 0.28)
+
+    # Frente: a arte inteira, o mais alta possível dentro do quadro
+    frente = im.copy()
+    frente.thumbnail((LARGURA_THUMB, ALTURA_THUMB), Image.LANCZOS)
+    fundo.paste(frente, ((LARGURA_THUMB - frente.width) // 2,
+                         (ALTURA_THUMB - frente.height) // 2))
+    return fundo
 
 
 def colorido(im: Image.Image) -> float:
@@ -288,10 +363,13 @@ def main() -> int:
                     help="regenera mesmo quem já tem image:")
     args = ap.parse_args([] if modo_auto else None)
 
-    if not DEPS_OK:
-        print(f"[!!] capas automáticas indisponíveis ({ERRO_DEPS}). "
-              f"Instale com: pip install selenium pillow")
+    if not PIL_OK:
+        print(f"[!!] capas automáticas indisponíveis ({ERRO_PIL}). "
+              f"Instale com: pip install pillow")
         return 0 if modo_auto else 1
+    if not SELENIUM_OK:
+        print(f"[--] sem selenium ({ERRO_SELENIUM}): só as capas de cartaz "
+              f"serão geradas. Instale com: pip install selenium")
 
     if modo_auto:
         print("[Capas automáticas] verificando posts sem thumbnail")
@@ -327,6 +405,27 @@ def gera_capas(args, modo_auto: bool) -> int:
                 if not modo_auto:
                     print(f"[ok] {nome}: já tem capa (image: no front matter)")
                 pulados += 1
+                continue
+
+            if secao["modo"] == "cartaz":
+                origem = acha_cartaz(bundle)
+                if origem is None:
+                    if not modo_auto:
+                        print(f"[--] {nome}: sem cartaz na pasta do post "
+                              f"(cartaz.jpg, poster.png...); fica com a capa padrão")
+                    continue
+                print(f"[..] {nome}: montando a capa a partir de {origem.name}...")
+                im = capa_cartaz(origem)
+                if im is None:
+                    continue
+                destino = bundle / "thumbnail.png"
+                im.save(destino, optimize=True)
+                insere_image_no_front_matter(post, "thumbnail.png")
+                print(f"[ok] {nome}: capa gerada em {destino.relative_to(RAIZ)}")
+                gerados += 1
+                continue
+
+            if not SELENIUM_OK:
                 continue
 
             if secao["modo"] == "relatorio":

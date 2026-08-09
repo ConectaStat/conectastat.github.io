@@ -89,7 +89,7 @@ website:
   page-footer:
     background: "#0a3f66"
     left: |
-      [Site de projeto vinculado ao Departamento de Estatística da UFLA. Este não é um site institucional da Universidade.]{.footer-disclaimer}
+      [Site de projeto de extensão vinculado ao Departamento de Estatística da UFLA. Este não é um site institucional da Universidade.]{.footer-disclaimer}
     center:
       - href: https://github.com/ConectaStat/conectastat.github.io
         icon: github

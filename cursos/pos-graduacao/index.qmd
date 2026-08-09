@@ -8,7 +8,10 @@ sidebar: false
 toc: false
 ---
 
-O UFLA abriga diversos [Programas de Pós-Graduação](https://prpg.ufla.br/mostrapg/pt-br/ultimas-noticias/82-programas-de-pos-graduacao), Mas o que trateremos aqui com maior afinidade sera o 
+A UFLA abriga diversos [Programas de Pós-Graduação](https://prpg.ufla.br/mostrapg/pt-br/ultimas-noticias/82-programas-de-pos-graduacao),
+e o [Painel de Perfil dos Ingressantes](https://paineis.ufla.br/pos-graduacao/120-painel/418-perfil-ingressantes-pos-graduacao-stricto-sensu){target="_blank"}
+mostra quem entra no stricto sensu, por gênero, idade, região de origem e
+formação. Aqui tratamos com maior afinidade o de
 **Estatística e Experimentação Agropecuária (PPGEEA)**, com cursos de
 **mestrado** e **doutorado**, formando pesquisadores e docentes com sólida
 base teórica e forte vocação aplicada.
@@ -56,12 +59,8 @@ Entre as disciplinas oferecidas regularmente estão:
 
 : {tbl-colwidths="[40,60]"}
 
-A relação completa de disciplinas, docentes e projetos está no
-[site do PRPG/UFLA](https://prpg.ufla.br/mostrapg/en/ppgs/icet-ufla/statistics-and-agricultural-experimentation-master-s-and-doctorate).
-
-## A Estatística e Experimentação Agropecuária em um vídeo
-
-Assista à apresentação do professor Luiz Ricardo Nakamura sobre o curso.
+A relação completa de disciplinas, docentes e turmas está no
+[portal do PPGEEA no SIGAA](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
 
 ```{=html}
 <div class="video-wrapper">
@@ -88,6 +87,11 @@ Assista à apresentação do professor Luiz Ricardo Nakamura sobre o curso.
 })();
 </script>
 ```
+
+## Projetos de pesquisa
+
+Os projetos de pesquisa em andamento no programa são registrados e consultados
+na [Pró-Reitoria de Pesquisa e Inovação (PRPI/UFLA)](https://prpi.ufla.br/projetos-de-pesquisa){target="_blank"}.
 
 ## Painel dos Egressos
 

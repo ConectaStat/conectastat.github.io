@@ -1,0 +1,25 @@
+---
+title: "OBE-UFLA: Sede Institucional da Olimpíada Brasileira de Estatística"
+description: "Sede regional da Olimpíada Brasileira de Estatística na UFLA."
+author: "Camilla Marques Barroso"
+image: capa.png
+marca: true
+title-block-banner: true
+body-classes: cs-banner-barras
+page-layout: article
+sidebar: false
+toc: false
+---
+
+A proposta consiste na implantação da sede institucional da Olimpíada
+Brasileira de Estatística na Universidade Federal de Lavras, atuando como
+ponto regional de articulação da olimpíada. A iniciativa envolve ações de
+divulgação junto às escolas, mobilização e orientação de estudantes e
+professores, apoio à participação nas etapas da competição e acompanhamento
+das atividades desenvolvidas. O projeto busca promover o letramento
+estatístico, estimular o interesse pela Estatística e pela Ciência de Dados e
+fortalecer a aproximação entre universidade e educação básica, contribuindo
+para a formação científica e para a disseminação do pensamento estatístico na
+região de Lavras e entorno.
+
+[Saiba mais »](https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2458){target="_blank"}

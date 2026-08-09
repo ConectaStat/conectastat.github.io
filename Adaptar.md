@@ -34,13 +34,19 @@ conectastat.github.io/
 │       ├── index.qmd
 │       └── egressos/index.qmd
 │
-├── projetos/
+├── O_que_fazemos/
 │   ├── ensino/
 │   │   ├── index.qmd
 │   │   ├── organizacao-e-apresentacao-de-dados/
-│   │   ├── softwares/  materiais/  editais/
-│   │   ├── pesquisa/   (nucleos/ com nlin, gps, st, e editais/)
-│   │   └── extensao/   (editais/)
+│   │   └── softwares/  materiais/  editais/
+│   ├── pesquisa/
+│   │   ├── index.qmd
+│   │   ├── grupos/     (uma pasta por núcleo ou grupo)
+│   │   └── editais/
+│   └── extensao/
+│       ├── index.qmd
+│       ├── projetos/   (uma pasta por projeto de extensão)
+│       └── acoes/  editais/
 │
 └── docs/                       saída do build, publicada pelo GitHub Pages
 ```
@@ -108,9 +114,11 @@ Nada além disso. Você nunca precisa editar o menu nem cadastrar o conteúdo em
 |---|---|
 | Edital, chamada, vaga de monitoria | `oportunidades/posts/` |
 | Evento, curso, workshop, palestra futura | `eventos/posts/` |
-| Projeto de análise feito por estudante | `projetos/ensino/organizacao-e-apresentacao-de-dados/posts/` |
-| Programa, pacote ou app do departamento | `projetos/ensino/softwares/posts/` |
-| Apostila, tutorial, material didático | `projetos/ensino/materiais/posts/` |
+| Projeto de análise feito por estudante | `O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/posts/` |
+| Programa, pacote ou app do departamento | `O_que_fazemos/ensino/softwares/posts/` |
+| Apostila, tutorial, material didático | `O_que_fazemos/ensino/materiais/posts/` |
+| Núcleo ou grupo de pesquisa | `O_que_fazemos/pesquisa/grupos/<sigla>/` |
+| Projeto de extensão | `O_que_fazemos/extensao/projetos/<slug>/` |
 
 ### Capas
 
@@ -131,7 +139,12 @@ Para trocar o desenho de uma seção inteira, edite o `image:` do `_metadata.yml
 
 Não use `image-placeholder:` nas listagens: o Quarto só o aplica nos templates nativos de grade, e as listagens de manchete deste site usam o `_assets/cards.ejs`, que não recebe as opções da listagem.
 
-Uma exceção: em Organização e Apresentação de Dados, um post sem `image:` ganha capa automática no próximo render completo, recortada de um gráfico do próprio relatório. Ali o desenho de verdade vale mais que a capa genérica. As demais seções não têm geração automática.
+Duas seções ganham capa automática no próximo render completo, quando o post não tem `image:`:
+
+- **Organização e Apresentação de Dados**: a capa sai recortada de um gráfico do próprio relatório. Ali o desenho de verdade vale mais que a capa genérica.
+- **Cursos e Eventos**: solte o cartaz de divulgação na pasta do post (`cartaz.jpg`, `poster.png`, ou qualquer imagem) que ele vira a capa. Cartaz costuma ser quadrado ou em pé, e o card é 16:9 - recortar cortaria justamente o título e as datas, então o cartaz entra inteiro, centralizado, sobre um fundo feito dele mesmo, ampliado e desfocado.
+
+As demais seções não têm geração automática.
 
 De cada capa existem duas versões: o `.svg`, que é o desenho editável, e o `.png` gerado a partir dele, que é o publicado. O PNG é obrigatório porque a mesma imagem serve de prévia quando alguém cola o link do post no WhatsApp, no LinkedIn ou no Telegram, e essas redes não leem SVG.
 
@@ -245,7 +258,7 @@ A sua decisão é um clique. Ao mesclar, o site republica sozinho e o crédito e
 Esta é a única área com anexos pesados. A pasta fica assim:
 
 ```
-projetos/ensino/organizacao-e-apresentacao-de-dados/posts/2026-08-12-nome-do-projeto/
+O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/posts/2026-08-12-nome-do-projeto/
 ├── index.qmd
 ├── thumbnail.png
 └── relatorios/
@@ -277,7 +290,7 @@ Três cuidados próprios desta área:
 Estas duas áreas ainda não têm conteúdo, então a pasta `posts/` **ainda não existe**. No primeiro item, crie-a junto:
 
 ```
-projetos/ensino/softwares/
+O_que_fazemos/ensino/softwares/
 ├── index.qmd
 └── posts/                          criar
     └── 2026-08-12-pacote-x/        criar
@@ -307,17 +320,20 @@ Estas mudam com pouca frequência e são editadas direto no arquivo, sem criar p
 
 **Páginas de texto.** Estatística, Assessoria e Consultoria, Revista Científica, Graduação, Pós-Graduação e Painel dos Egressos: abra o `index.qmd` da pasta correspondente e edite o texto.
 
-**Núcleo de pesquisa novo.** Crie `projetos/pesquisa/nucleos/<sigla>/index.qmd` copiando `nlin/`, `gps/` ou `st/`, e acrescente uma linha na listagem de `projetos/pesquisa/nucleos/index.qmd`:
+**Núcleo ou grupo de pesquisa novo.** Crie a pasta `O_que_fazemos/pesquisa/grupos/<sigla>/` copiando `nlin/` como modelo: dentro vão o `index.qmd` e a capa (`capa.png`, `capa.jpg` ou `capa.svg`) na mesma pasta. Depois acrescente uma linha na listagem do cabeçalho de `O_que_fazemos/pesquisa/index.qmd`:
 
 ```yaml
-  contents:
-    - "nlin/index.qmd"
-    - "gps/index.qmd"
-    - "st/index.qmd"
-    - "nova-sigla/index.qmd"
+    contents:
+      - "grupos/nlin/index.qmd"
+      - "grupos/nstats/index.qmd"
+      - "grupos/nova-sigla/index.qmd"
 ```
 
-**Tópico novo em Projetos** (Ensino, Pesquisa ou Extensão). Crie a pasta do tópico com seu `index.qmd` e acrescente um item na lista do cabeçalho de `projetos/<área>/index.qmd`, sempre antes do item de Editais, que fica por último:
+No `index.qmd` do grupo, `description:` é uma linha curta (é o que aparece no card), o corpo traz o texto do próprio grupo e o último parágrafo é o link `[Saiba mais »](url){target="_blank"}`. Se a capa for um logotipo, acrescente `marca: true` no cabeçalho: sem isso a imagem é recortada em 16:9 como foto, e logo cortado ao meio deixa de ser logo. O campo se chama `marca` e não `logo` porque `logo` é reservado pelo Quarto.
+
+**Projeto de extensão novo.** Mesma receita, em `O_que_fazemos/extensao/projetos/<slug>/`, com `author:` trazendo o docente responsável, e a linha correspondente em `O_que_fazemos/extensao/index.qmd`.
+
+**Tópico novo em Projetos** (Ensino, Pesquisa ou Extensão). Crie a pasta do tópico com seu `index.qmd` e acrescente um item na lista do cabeçalho de `O_que_fazemos/<área>/index.qmd`, sempre antes do item de Editais, que fica por último:
 
 ```yaml
     - title: "Nome do tópico"
@@ -339,7 +355,7 @@ aliases:
 
 ### Requisitos
 
-Para editar textos, nada. Para renderizar na sua máquina, o [Quarto](https://quarto.org/docs/get-started/) 1.4 ou superior. Para as capas automáticas, também Python 3 com `selenium` e `pillow` e o Google Chrome instalado, tudo opcional: sem eles o site renderiza normalmente e o post fica com a capa padrão.
+Para editar textos, nada. Para renderizar na sua máquina, o [Quarto](https://quarto.org/docs/get-started/) 1.4 ou superior. Para as capas automáticas, também Python 3 com `pillow`; a capa a partir do cartaz precisa só disso. A capa recortada de gráfico do relatório precisa ainda de `selenium` e do Google Chrome. Tudo opcional: sem essas peças o site renderiza normalmente e o post fica com a capa padrão.
 
 ```bash
 quarto preview     # trabalha com recarga automática
@@ -356,11 +372,11 @@ O `_quarto.yml` registra três scripts Python que rodam sozinhos a cada `quarto 
 
 | Quando | Script | O que faz |
 |---|---|---|
-| antes | `scripts/gerar_thumbnails.py` | recorta a capa de um gráfico do relatório, só em Organização e Apresentação de Dados |
+| antes | `scripts/gerar_thumbnails.py` | recorta a capa de um gráfico do relatório (Organização e Apresentação de Dados) e monta a capa a partir do cartaz (Cursos e Eventos) |
 | depois | `scripts/ajustar_titulos.py` | ajusta o separador dos títulos e normaliza os redirecionamentos |
 | depois | `scripts/gerar_textos.py` | refaz o `TEXTOS.md`, o mapa de textos usado na revisão editorial |
 
-Só o primeiro tem requisitos extras (Chrome e as bibliotecas Python). Os outros dois usam apenas a biblioteca padrão.
+Só o primeiro tem requisitos extras (`pillow` sempre; Chrome e `selenium` apenas para a capa tirada do relatório). Os outros dois usam apenas a biblioteca padrão.
 
 Além desses, três workflows cuidam do repositório sozinhos:
 

@@ -1,0 +1,16 @@
+---
+title: "Núcleo de Estudos em Estatística Espacial"
+description: "Análise de dados com dependência espacial."
+image: capa.svg
+title-block-banner: true
+body-classes: cs-banner-variograma
+page-layout: article
+sidebar: false
+toc: false
+---
+
+Um dos núcleos de estudo do Departamento de Estatística da UFLA, dedicado à
+análise de dados com dependência espacial.
+
+A página do núcleo ainda não foi publicada no
+[site do DES](https://des.ufla.br/nucleos-de-estudo){target="_blank"}.

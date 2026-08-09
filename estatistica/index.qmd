@@ -40,10 +40,7 @@ Pesquisas de mercado apontam a carreira de estatístico e de cientista de
 dados entre as **melhores e mais bem remuneradas profissões** da era digital,
 com demanda muito superior à oferta de profissionais qualificados.
 
-## A Estatística em um vídeo
-
-Assista à apresentação do professor Júlio sobre a área e a atuação do
-estatístico:
+## Estude Estatística na UFLA
 
 ```{=html}
 <div class="video-wrapper">
@@ -71,14 +68,6 @@ estatístico:
 </script>
 ```
 
-## Estude Estatística na UFLA
-
-O Departamento de Estatística da UFLA oferece formação completa na área,
-da graduação à pós-graduação, além de
-[assessoria e consultoria estatística](../assessoria/index.qmd) para a
-comunidade acadêmica e a sociedade. São dois caminhos com focos
-complementares:
-
 ### Graduação: foco em Ciência de Dados
 
 Embora seja um **Bacharelado em Estatística**, o
@@ -88,11 +77,11 @@ estudante aprende programação, bancos de dados e aprendizado de máquina para
 extrair conhecimento de grandes volumes de dados. É o caminho de quem quer
 partir de dados reais, chegar a modelos preditivos e ir muito além.
 
-### Pós-graduação: foco em Ciências Agrárias
+### Pós-graduação: foco em Estatística e Experimentação Agropecuária
 
 O [Programa de Pós-Graduação em Estatística e Experimentação Agropecuária
 (PPGEEA)](../cursos/pos-graduacao/index.qmd) oferece **mestrado** e
-**doutorado** com tradição na interface entre a Estatística e as **ciências
-agrárias**: planejamento e análise de experimentos, melhoramento genético e
-agricultura de precisão. É a formação de quem transforma dados de campo, como
-as safras de café da região de Lavras, em decisões com rigor científico.
+**doutorado** com tradição em **estatística e experimentação agropecuária**:
+planejamento e análise de experimentos, melhoramento genético e agricultura
+de precisão. É a formação de quem transforma dados de campo, como as safras
+de café da região de Lavras, em decisões com rigor científico.

@@ -18,7 +18,7 @@ dados, modelagem estatística e ciência de dados em empresas, instituições de
 pesquisa e órgãos públicos.
 
 Com uma ampla formação os alunos são expostos aos mais variados tipos de situações, alguns exemplos são os projetos de **Organização e Apresentação de Dados** em que cada aluno escolhe uma base de dados publica para desenvolver uma analise exploratória e desenvolver um relatório do assunto, isso tudo desde o primeiro período! Esses projetos podem ser visualizados
-[aqui](../../projetos/ensino/organizacao-e-apresentacao-de-dados/index.qmd).
+[aqui](../../O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd).
 
 ## Matriz curricular
 
