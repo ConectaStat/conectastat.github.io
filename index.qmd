@@ -7,7 +7,7 @@ sidebar: false
 search: false
 repo-actions: false
 description: |
-  ConectaStat - Ciência, Estatística e Sociedade. Departamento de Estatística da UFLA.
+  ConectaStat - Ciência, Estatística e Sociedade.
 image: /images/capa-social.png
 listing:
   # "Em Destaque" reúne, num rotator só, as notícias e os cursos/eventos: são
