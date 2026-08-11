@@ -20,6 +20,10 @@ project:
   # então o Quarto já os copia junto; aqui ficam só os recursos de site.
   resources:
     - images/
+    # O Painel dos Egressos é um dashboard Quarto pronto (egressos.html mais
+    # os assets ao lado), embutido em cursos/pos-graduacao/egressos. Como não
+    # é .qmd, não entra no `render`: entra aqui, para ser copiado como está.
+    - cursos/pos-graduacao/dashboards/
 
 lang: pt
 
