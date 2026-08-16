@@ -1,8 +1,9 @@
 ---
-title: "ConectaStat: Ciência, Estatística e Conexão"
+title: "ConectaStat: Ciência, Estatística e Sociedade"
 description: "Popularização da ciência na área de estatística, em Lavras e região."
 author: "Izabela Regina Cardoso de Oliveira"
 image: capa.png
+marca: true
 title-block-banner: true
 body-classes: cs-banner-rede
 page-layout: article
@@ -21,4 +22,16 @@ universidade, projetos de extensão, um blog para postagens de Estatística,
 entre outros. No decorrer do projeto também serão criados perfis em redes
 sociais com o mesmo propósito.
 
-[Saiba mais »](https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2247){target="_blank"}
+```{=html}
+<div class="projeto-links">
+  <a href="https://www.instagram.com/estatistica.ufla/" target="_blank" rel="noopener">
+    <i class="bi bi-instagram"></i> @estatistica.ufla
+  </a>
+  <a href="https://github.com/ConectaStat" target="_blank" rel="noopener">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+  <a class="destaque" href="https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2247" target="_blank" rel="noopener">
+    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  </a>
+</div>
+```

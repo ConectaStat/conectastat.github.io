@@ -60,7 +60,7 @@ para a fonte oficial.
 | Um evento, curso ou palestra | [Cursos e Eventos](../../eventos/index.qmd) | a equipe |
 | Um programa, pacote ou aplicativo | [Softwares](../../O_que_fazemos/ensino/softwares/index.qmd) | a equipe |
 | Uma apostila, tutorial ou slides | [Materiais](../../O_que_fazemos/ensino/materiais/index.qmd) | a equipe |
-| Uma ação de extensão | [Ações de Extensão](../../O_que_fazemos/extensao/acoes/index.qmd) | a equipe |
+| Uma ação de extensão | [Encontros com a Comunidade](../../O_que_fazemos/extensao/acoes/index.qmd) | a equipe |
 
 ## Achou um erro?
 

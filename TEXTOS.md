@@ -29,7 +29,7 @@ home/
 ├── index.qmd ─────────────────── página inicial ................. §1
 │   ├── hero ........................ slogan sobre a ilustração
 │   ├── disclaimer .................. logo abaixo da hero
-│   ├── "O que é o Conexão…" ........ texto de apresentação
+│   ├── "O que é o ConectaStat…" .... texto de apresentação
 │   ├── oportunidades · cursos e eventos ..... carrosséis
 │   └── onde estamos ................ mapa + endereço
 ├── _quarto.yml ───────────────── rodapé e menu ................. §2 e §3
@@ -46,21 +46,19 @@ home/
 │       └── egressos/index.qmd ──── Painel dos Egressos
 ├── O_que_fazemos/
 │   ├── pesquisa/
-│   │   ├── index.qmd ───────────── Projetos e grupos de pesquisa (+ cards)
+│   │   ├── index.qmd ───────────── Pesquisa (+ cards)
 │   │   └── editais/index.qmd ───── Editais de Pesquisa
 │   ├── ensino/
-│   │   ├── index.qmd ───────────── Projetos de ensino, softwares e
-│   │   │                           materiais didáticos (+ cards)
+│   │   ├── index.qmd ───────────── Ensino (+ cards)
 │   │   ├── organizacao-e-apresentacao-de-dados/
 │   │   │   ├── index.qmd ───────── Organização e Apresentação de Dados
-│   │   │   ├── enviar.qmd ──────── Envie seu projeto
-│   │   │   └── posts/ ──────────── 5 projetos publicados ....... §5
+│   │   │   └── posts/ ──────────── projetos enviados ............ §5
 │   │   ├── softwares/index.qmd ─── Softwares (sem conteúdo ainda)
 │   │   ├── materiais/index.qmd ─── Materiais (sem conteúdo ainda)
 │   │   └── editais/index.qmd ───── Editais de Ensino
 │   └── extensao/
-│       ├── index.qmd ───────────── Projetos e grupos de extensão (+ cards)
-│       ├── acoes/index.qmd ─────── Ações de Extensão
+│       ├── index.qmd ───────────── Extensão (+ cards)
+│       ├── acoes/index.qmd ─────── Encontros com a Comunidade
 │       └── editais/index.qmd ───── Editais de Extensão
 │
 ├── oportunidades/  ┐  cada uma com:
@@ -78,7 +76,8 @@ home/
 index.qmd
 ├── hero .................. slogan + ilustração
 ├── o projeto ............. texto de apresentação
-├── em destaque ........... carrossel (notícias + cursos/eventos)
+├── em destaque ........... carrossel (notícias + cursos/eventos +
+│                           encontros com a comunidade)
 ├── oportunidades ......... carrossel
 └── onde estamos .......... mapa + endereço
 ```
@@ -136,7 +135,7 @@ index.qmd
 
 
 ```
-Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
+Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 
   A Estatística
   Nossos Cursos
@@ -424,7 +423,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 ### O Que Fazemos › Pesquisa
 `O_que_fazemos/pesquisa/index.qmd`
 
-**Título (aparece no banner):** Projetos e grupos de pesquisa
+**Título (aparece no banner):** Pesquisa
 
 **Subtítulo:** A investigação científica desenvolvida no Departamento de Estatística da UFLA.  
 *(hoje oculto no site; fica só no código)*
@@ -454,14 +453,14 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 ### O Que Fazemos › Ensino
 `O_que_fazemos/ensino/index.qmd`
 
-**Título (aparece no banner):** Projetos de ensino, softwares e materiais didáticos
+**Título (aparece no banner):** Ensino
 
 **Subtítulo:** Iniciativas que fortalecem a formação em Estatística dentro e fora da sala de aula.  
 *(hoje oculto no site; fica só no código)*
 
 **Texto da página:**
 
-> ## Projetos, Softwares e Materiais
+> ## Projetos de Ensino, Softwares e Materiais Didáticos
 >
 > ## Editais de Ensino
 >
@@ -539,7 +538,7 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 ### O Que Fazemos › Extensão
 `O_que_fazemos/extensao/index.qmd`
 
-**Título (aparece no banner):** Projetos e grupos de extensão
+**Título (aparece no banner):** Extensão
 
 **Subtítulo:** A Estatística a serviço da comunidade: popularização da ciência e letramento estatístico.  
 *(hoje oculto no site; fica só no código)*
@@ -548,28 +547,26 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 
 > ## Projetos de Extensão
 >
-> ## Ações de Extensão
->
-> [Ver as ações de extensão »](acoes/index.qmd){.listing-mais}
->
 > ## Editais de Extensão
 >
 > [Ver todos os editais de extensão »](editais/index.qmd){.listing-mais}
 
 
-### O Que Fazemos › Extensão › Ações de Extensão
+### O Que Fazemos › Extensão › Encontros com a Comunidade
 `O_que_fazemos/extensao/acoes/index.qmd`
 
-**Título (aparece no banner):** Ações de Extensão
+**Título (aparece no banner):** Encontros com a Comunidade
 
 **Subtítulo:** Cursos, palestras, parcerias e atividades levadas à comunidade.  
 *(hoje oculto no site; fica só no código)*
 
 **Texto da página:**
 
-> Atividades de extensão do Departamento de Estatística: cursos abertos,
+> Os encontros do Departamento de Estatística com a comunidade: cursos abertos,
 > palestras em escolas, parcerias com instituições e ações de divulgação
-> científica. As primeiras serão publicadas em breve.
+> científica. Cada encontro publicado aqui entra também no **Em Destaque** da
+> página inicial, junto com as notícias e os eventos. Os primeiros serão
+> publicados em breve.
 
 
 ### O Que Fazemos › Extensão › Editais
@@ -658,10 +655,6 @@ Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)
 >
 > ## Enquanto isso
 >
-> - Demandas de **apoio estatístico a pesquisas, projetos e organizações** seguem
->   pela página de [assessoria e consultoria
->   estatística](../../assessoria/index.qmd), que explica como o atendimento
->   funciona;
 > - Para falar com a equipe do departamento, veja [entre em
 >   contato](../../sobre/contato/index.qmd).
 

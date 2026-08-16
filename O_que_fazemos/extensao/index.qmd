@@ -1,5 +1,5 @@
 ---
-title: "Projetos e grupos de extensão"
+title: "Extensão"
 subtitle: "A Estatística a serviço da comunidade: popularização da ciência e letramento estatístico."
 title-block-banner: true
 body-classes: cs-banner-bolhas
@@ -48,14 +48,6 @@ listing:
 
 ::: {#projetos-extensao}
 :::
-
-:::
-
-::: {.listing-block .listing-editais}
-
-## Ações de Extensão
-
-[Ver as ações de extensão »](acoes/index.qmd){.listing-mais}
 
 :::
 

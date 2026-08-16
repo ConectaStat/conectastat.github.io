@@ -27,7 +27,7 @@ def perfil(login: str) -> dict:
     try:
         req = urllib.request.Request(
             f"https://api.github.com/users/{login}",
-            headers={"User-Agent": "conexao-estatistica-bot",
+            headers={"User-Agent": "conectastat-bot",
                      "Accept": "application/vnd.github+json"})
         d = json.loads(urllib.request.urlopen(req, timeout=30).read())
         return {"name": d.get("name") or d["login"],

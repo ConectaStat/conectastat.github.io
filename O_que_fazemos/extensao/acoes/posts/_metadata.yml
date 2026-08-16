@@ -1,4 +1,5 @@
-# Capa padrão dos posts de Ações de Extensão que não trazem imagem própria.
+# Capa padrão dos posts de Encontros com a Comunidade que não trazem imagem
+# própria.
 # O `image:` do front matter de um post vence esta linha.
 image: /images/capa-padrao.png
 

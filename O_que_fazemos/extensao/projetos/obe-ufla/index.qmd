@@ -22,4 +22,10 @@ fortalecer a aproximação entre universidade e educação básica, contribuindo
 para a formação científica e para a disseminação do pensamento estatístico na
 região de Lavras e entorno.
 
-[Saiba mais »](https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2458){target="_blank"}
+```{=html}
+<div class="projeto-links">
+  <a class="destaque" href="https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2458" target="_blank" rel="noopener">
+    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  </a>
+</div>
+```

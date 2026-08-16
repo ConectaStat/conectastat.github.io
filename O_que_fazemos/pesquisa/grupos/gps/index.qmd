@@ -17,4 +17,10 @@ aprofundar técnicas de análise espacial. O grupo reúne professores, ex-alunos
 pesquisadores externos, estudantes de pós-graduação e alunos de graduação,
 além de membros de diferentes áreas do conhecimento.
 
-[Saiba mais »](https://gean-damaceno.github.io/GPS){target="_blank"}
+```{=html}
+<div class="projeto-links">
+  <a class="destaque" href="https://gean-damaceno.github.io/GPS" target="_blank" rel="noopener">
+    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  </a>
+</div>
+```
