@@ -17,4 +17,10 @@ modelos de regressão não linear aplicados nas mais diversas áreas, como curva
 de crescimento, cinética de secagem de alimentos, processos de mineralização e
 curvas de lactação.
 
-[Saiba mais »](https://des.ufla.br/nucleos-de-estudo/8-institucional/37-nucleo-de-estudos-em-regressao-nao-linear-aplicada){target="_blank"}
+```{=html}
+<div class="projeto-links">
+  <a class="destaque" href="https://des.ufla.br/nucleos-de-estudo/8-institucional/37-nucleo-de-estudos-em-regressao-nao-linear-aplicada" target="_blank" rel="noopener">
+    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  </a>
+</div>
+```

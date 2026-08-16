@@ -1,5 +1,5 @@
 ---
-title: "Projetos e grupos de pesquisa"
+title: "Pesquisa"
 subtitle: "A investigação científica desenvolvida no Departamento de Estatística da UFLA."
 title-block-banner: true
 body-classes: cs-banner-densidades

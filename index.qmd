@@ -10,13 +10,16 @@ description: |
   ConectaStat - Ciência, Estatística e Sociedade.
 image: /images/capa-social.png
 listing:
-  # "Em Destaque" reúne, num rotator só, as notícias e os cursos/eventos: são
-  # duas pastas de posts diferentes, mas para quem chega na home é tudo "o que
-  # está acontecendo agora", da data mais recente à mais antiga.
+  # "Em Destaque" reúne, num rotator só, as notícias, os cursos/eventos e os
+  # encontros com a comunidade (extensão): são pastas de posts diferentes, mas
+  # para quem chega na home é tudo "o que está acontecendo agora", da data mais
+  # recente à mais antiga. Um encontro entra aqui pelas mesmas regras de uma
+  # notícia - basta ter title, description e date.
   - id: destaques
     contents:
       - /noticias/posts
       - /eventos/posts
+      - /O_que_fazemos/extensao/acoes/posts
     sort: "date desc"
     template: _assets/cards.ejs
 

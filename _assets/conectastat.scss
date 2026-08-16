@@ -374,7 +374,7 @@ body { -webkit-font-smoothing: antialiased; }
 }
 
 // =============================================================================
-//  SEÇÃO "O PROJETO" - título azul; texto/caixa estilizados no conexao-estatistica.css
+//  SEÇÃO "O PROJETO" - título azul; texto/caixa estilizados no conectastat.css
 // =============================================================================
 .intro-block {
   // Texto centrado: é o único parágrafo solto da home, entre a hero e os
@@ -1385,12 +1385,33 @@ body { -webkit-font-smoothing: antialiased; }
   }
 }
 
+// Apresentação do projeto: uma coluna de texto mais estreita que o corpo da
+// página (1050px deixa a linha longa demais para leitura corrida) e com
+// entrelinha maior, para o parágrafo não ficar espremido entre o banner e as
+// pílulas de link logo abaixo.
+.projeto-intro {
+  max-width: 64ch;
+  margin: 0.4rem 0 0;
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.1rem;
+  }
+
+  p:last-child { margin-bottom: 0; }
+}
+
 // Links secundários do projeto (apresentação, GitHub) - pílulas discretas
 .projeto-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   margin: 1.1rem 0 0;
+
+  // Depois de um bloco de apresentação as pílulas ganham respiro: coladas no
+  // parágrafo elas leem como continuação do texto, não como ações.
+  .projeto-intro + & { margin-top: 1.9rem; }
 
   a {
     display: inline-flex;
@@ -1411,6 +1432,21 @@ body { -webkit-font-smoothing: antialiased; }
     &:hover { border-color: $cs-green; color: $cs-green-dark !important; }
 
     .bi { font-size: 0.95rem; }
+  }
+
+  // Link principal da página (o registro oficial do projeto): mesma pílula,
+  // preenchida, para não competir de igual para igual com as redes sociais.
+  // Vem depois da regra genérica de `a` de propósito - é ela que sobrescreve.
+  a.destaque {
+    background: $cs-blue;
+    border-color: $cs-blue;
+    color: #ffffff !important;
+
+    &:hover {
+      background: $cs-green-dark;
+      border-color: $cs-green-dark;
+      color: #ffffff !important;
+    }
   }
 }
 

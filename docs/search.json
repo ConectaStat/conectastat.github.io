@@ -214,7 +214,7 @@
     "href": "acoes/lad/index.html#enquanto-isso",
     "title": "LAD",
     "section": "Enquanto isso",
-    "text": "Enquanto isso\n\nDemandas de apoio estatístico a pesquisas, projetos e organizações seguem pela página de assessoria e consultoria estatística, que explica como o atendimento funciona;\nPara falar com a equipe do departamento, veja entre em contato."
+    "text": "Enquanto isso\n\n\nPara falar com a equipe do departamento, veja entre em contato."
   },
   {
     "objectID": "O_que_fazemos/pesquisa/grupos/series-temporais/index.html",
@@ -228,7 +228,7 @@
     "href": "O_que_fazemos/pesquisa/grupos/nlin/index.html",
     "title": "Núcleo de Estudos em Regressão Não Linear Aplicada (NLIN)",
     "section": "",
-    "text": "O NLIN foi fundado em 2017 por iniciativa de pós-graduandos: estudantes que estão desenvolvendo suas teses e dissertações com temas relacionados ao uso de modelos de regressão não linear aplicados nas mais diversas áreas, como curvas de crescimento, cinética de secagem de alimentos, processos de mineralização e curvas de lactação.\nSaiba mais »"
+    "text": "O NLIN foi fundado em 2017 por iniciativa de pós-graduandos: estudantes que estão desenvolvendo suas teses e dissertações com temas relacionados ao uso de modelos de regressão não linear aplicados nas mais diversas áreas, como curvas de crescimento, cinética de secagem de alimentos, processos de mineralização e curvas de lactação.\n\n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/pesquisa/grupos/estatistica-espacial/index.html",
@@ -242,21 +242,21 @@
     "href": "O_que_fazemos/extensao/projetos/xadrez-para-todos/index.html",
     "title": "Xadrez para Todos",
     "section": "",
-    "text": "Este projeto de extensão visa promover a prática e o ensino do xadrez à comunidade lavrense por meio de oficinas, torneios e atividades lúdicas, conduzidas por estudantes extensionistas da Universidade Federal de Lavras. As ações serão realizadas na universidade, em escolas públicas e privadas, e, ou, em equipamentos públicos da prefeitura, como a Casa da Cultura e a CELT. O projeto tem como objetivo estimular o raciocínio lógico, a concentração, a inclusão social e o desenvolvimento cognitivo de crianças, jovens, adultos e idosos. O projeto também busca fortalecer o papel da universidade pública na promoção da cultura e educação não formal.\nSaiba mais »"
+    "text": "Este projeto de extensão visa promover a prática e o ensino do xadrez à comunidade lavrense por meio de oficinas, torneios e atividades lúdicas, conduzidas por estudantes extensionistas da Universidade Federal de Lavras. As ações serão realizadas na universidade, em escolas públicas e privadas, e, ou, em equipamentos públicos da prefeitura, como a Casa da Cultura e a CELT. O projeto tem como objetivo estimular o raciocínio lógico, a concentração, a inclusão social e o desenvolvimento cognitivo de crianças, jovens, adultos e idosos. O projeto também busca fortalecer o papel da universidade pública na promoção da cultura e educação não formal.\n\n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/extensao/projetos/pyladies-lavras/index.html",
     "href": "O_que_fazemos/extensao/projetos/pyladies-lavras/index.html",
     "title": "PyLadies Lavras",
     "section": "",
-    "text": "O PyLadies Lavras é um capítulo da comunidade PyLadies global que tem o objetivo de promover a participação de mulheres e minorias de gênero na comunidade de usuários da linguagem de programação Python. Isso é feito por meio de diversas ações, como realização de eventos técnicos e sociais, treinamentos, oficinas e grupos de estudos, voltados para qualquer pessoa que deseja avançar os conhecimentos em Python.\nSaiba mais »"
+    "text": "O PyLadies Lavras é um capítulo da comunidade PyLadies global que tem o objetivo de promover a participação de mulheres e minorias de gênero na comunidade de usuários da linguagem de programação Python. Isso é feito por meio de diversas ações, como realização de eventos técnicos e sociais, treinamentos, oficinas e grupos de estudos, voltados para qualquer pessoa que deseja avançar os conhecimentos em Python.\n\n\n  \n     @pyladieslavras\n  \n  \n     GitHub\n  \n  \n     Seja uma de nós\n  \n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/extensao/projetos/conectastat/index.html",
     "href": "O_que_fazemos/extensao/projetos/conectastat/index.html",
-    "title": "ConectaStat: Ciência, Estatística e Conexão",
+    "title": "ConectaStat: Ciência, Estatística e Sociedade",
     "section": "",
-    "text": "O ConectaStat é um projeto de popularização da ciência, voltado para a área de estatística. O projeto envolve o desenvolvimento de ações para conectar a Estatística da UFLA à comunidade de Lavras e região. Em outras palavras, a iniciativa será um centro de conexão entre estatísticos, projetos desenvolvidos na UFLA e a comunidade. Uma das ações será a criação de um site, que será uma plataforma integradora para facilitar o acesso ao conhecimento estatístico. Nesse site, teremos informações sobre projetos desenvolvidos na universidade, projetos de extensão, um blog para postagens de Estatística, entre outros. No decorrer do projeto também serão criados perfis em redes sociais com o mesmo propósito.\nSaiba mais »"
+    "text": "O ConectaStat é um projeto de popularização da ciência, voltado para a área de estatística. O projeto envolve o desenvolvimento de ações para conectar a Estatística da UFLA à comunidade de Lavras e região. Em outras palavras, a iniciativa será um centro de conexão entre estatísticos, projetos desenvolvidos na UFLA e a comunidade. Uma das ações será a criação de um site, que será uma plataforma integradora para facilitar o acesso ao conhecimento estatístico. Nesse site, teremos informações sobre projetos desenvolvidos na universidade, projetos de extensão, um blog para postagens de Estatística, entre outros. No decorrer do projeto também serão criados perfis em redes sociais com o mesmo propósito.\n\n  \n     @estatistica.ufla\n  \n  \n     GitHub\n  \n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/extensao/projetos/assessoria-a-prefeituras/index.html",
@@ -296,21 +296,21 @@
   {
     "objectID": "O_que_fazemos/ensino/index.html",
     "href": "O_que_fazemos/ensino/index.html",
-    "title": "Projetos de ensino, softwares e materiais didáticos",
+    "title": "Ensino",
     "section": "",
     "text": "Projetos de análise de dados feitos pelos estudantes de primeiro período da graduação, do dado bruto ao relatório final.\n\n\nLeia mais\n\n\n\n\n\n\n\n\nAplicativos, pacotes e ferramentas computacionais desenvolvidos como apoio ao ensino de Estatística.\n\n\nLeia mais\n\n\n\n\n\n\n\n\nApostilas, tutoriais e recursos didáticos abertos produzidos pelo departamento.\n\n\nLeia mais\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "O_que_fazemos/ensino/index.html#projetos-softwares-e-materiais",
-    "href": "O_que_fazemos/ensino/index.html#projetos-softwares-e-materiais",
-    "title": "Projetos de ensino, softwares e materiais didáticos",
+    "objectID": "O_que_fazemos/ensino/index.html#projetos-de-ensino-softwares-e-materiais-didáticos",
+    "href": "O_que_fazemos/ensino/index.html#projetos-de-ensino-softwares-e-materiais-didáticos",
+    "title": "Ensino",
     "section": "",
     "text": "Projetos de análise de dados feitos pelos estudantes de primeiro período da graduação, do dado bruto ao relatório final.\n\n\nLeia mais\n\n\n\n\n\n\n\n\nAplicativos, pacotes e ferramentas computacionais desenvolvidos como apoio ao ensino de Estatística.\n\n\nLeia mais\n\n\n\n\n\n\n\n\nApostilas, tutoriais e recursos didáticos abertos produzidos pelo departamento.\n\n\nLeia mais\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "O_que_fazemos/ensino/index.html#editais-de-ensino",
     "href": "O_que_fazemos/ensino/index.html#editais-de-ensino",
-    "title": "Projetos de ensino, softwares e materiais didáticos",
+    "title": "Ensino",
     "section": "Editais de Ensino",
     "text": "Editais de Ensino\n\n\n\n\n\n\n\n\n27 de jul. de 2026\n\n\nEdital Nº 006/2026 - Docência Voluntária - DES 2ºsem/2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n13 de jul. de 2026\n\n\nEdital Nº 005/2026 - Seleção de monitores remunerados para o 2º semestre de 2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria remunerada nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n6 de mai. de 2026\n\n\nEdital Nº 003/2026 - Seleção de monitores voluntários para 2026\n\n\nO Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n18 de mar. de 2026\n\n\nEdital Nº 002/2026 - Seleção de monitores voluntários para 2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n12 de jan. de 2026\n\n\nEdital Nº 001/2026 - Docência Voluntária - DES 1ºsem/2026\n\n\nO Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n27 de nov. de 2025\n\n\nEdital Nº 003/2025 - Seleção de monitores remunerados para 2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria remunerada nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\nNenhum item correspondente\n\nVer todos os editais »"
   },
@@ -324,35 +324,28 @@
   {
     "objectID": "O_que_fazemos/extensao/acoes/index.html",
     "href": "O_que_fazemos/extensao/acoes/index.html",
-    "title": "Ações de Extensão",
+    "title": "Encontros com a Comunidade",
     "section": "",
-    "text": "Atividades de extensão do Departamento de Estatística: cursos abertos, palestras em escolas, parcerias com instituições e ações de divulgação científica. As primeiras serão publicadas em breve.\n\n  \n    \n    \n  \n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Os encontros do Departamento de Estatística com a comunidade: cursos abertos, palestras em escolas, parcerias com instituições e ações de divulgação científica. Cada encontro publicado aqui entra também no Em Destaque da página inicial, junto com as notícias e os eventos. Os primeiros serão publicados em breve.\n\n  \n    \n    \n  \n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "O_que_fazemos/extensao/index.html",
     "href": "O_que_fazemos/extensao/index.html",
-    "title": "Projetos e grupos de extensão",
+    "title": "Extensão",
     "section": "",
     "text": "Izabela Regina Cardoso de Oliveira\n\n\n\nPopularização da ciência na área de estatística, em Lavras e região.\n\n\nLeia mais\n\n\n\n\n\n\n\nIzabela Regina Cardoso de Oliveira\n\n\n\nTrilha formativa de Ciência de Dados para o Ensino Médio.\n\n\nLeia mais\n\n\n\n\n\n\n\nCamilla Marques Barroso\n\n\n\nSede regional da Olimpíada Brasileira de Estatística na UFLA.\n\n\nLeia mais\n\n\n\n\n\n\n\nIzabela Regina Cardoso de Oliveira\n\n\n\nCapítulo lavrense da comunidade R-Ladies global.\n\n\nLeia mais\n\n\n\n\n\n\n\nIzabela Regina Cardoso de Oliveira\n\n\n\nCapítulo lavrense da comunidade PyLadies global.\n\n\nLeia mais\n\n\n\n\n\n\n\nJúlio Sílvio de Sousa Bueno Filho\n\n\n\nPrática e ensino do xadrez à comunidade lavrense.\n\n\nLeia mais\n\n\n\n\n\n\n\nJúlio Sílvio de Sousa Bueno Filho\n\n\n\nApoio estatístico à gestão pública municipal. Projeto em consulta.\n\n\nLeia mais\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "O_que_fazemos/extensao/index.html#projetos-de-extensão",
     "href": "O_que_fazemos/extensao/index.html#projetos-de-extensão",
-    "title": "Projetos e grupos de extensão",
+    "title": "Extensão",
     "section": "",
     "text": "Izabela Regina Cardoso de Oliveira\n\n\n\nPopularização da ciência na área de estatística, em Lavras e região.\n\n\nLeia mais\n\n\n\n\n\n\n\nIzabela Regina Cardoso de Oliveira\n\n\n\nTrilha formativa de Ciência de Dados para o Ensino Médio.\n\n\nLeia mais\n\n\n\n\n\n\n\nCamilla Marques Barroso\n\n\n\nSede regional da Olimpíada Brasileira de Estatística na UFLA.\n\n\nLeia mais\n\n\n\n\n\n\n\nIzabela Regina Cardoso de Oliveira\n\n\n\nCapítulo lavrense da comunidade R-Ladies global.\n\n\nLeia mais\n\n\n\n\n\n\n\nIzabela Regina Cardoso de Oliveira\n\n\n\nCapítulo lavrense da comunidade PyLadies global.\n\n\nLeia mais\n\n\n\n\n\n\n\nJúlio Sílvio de Sousa Bueno Filho\n\n\n\nPrática e ensino do xadrez à comunidade lavrense.\n\n\nLeia mais\n\n\n\n\n\n\n\nJúlio Sílvio de Sousa Bueno Filho\n\n\n\nApoio estatístico à gestão pública municipal. Projeto em consulta.\n\n\nLeia mais\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "O_que_fazemos/extensao/index.html#ações-de-extensão",
-    "href": "O_que_fazemos/extensao/index.html#ações-de-extensão",
-    "title": "Projetos e grupos de extensão",
-    "section": "Ações de Extensão",
-    "text": "Ações de Extensão\nVer as ações de extensão »"
-  },
-  {
     "objectID": "O_que_fazemos/extensao/index.html#editais-de-extensão",
     "href": "O_que_fazemos/extensao/index.html#editais-de-extensão",
-    "title": "Projetos e grupos de extensão",
+    "title": "Extensão",
     "section": "Editais de Extensão",
     "text": "Editais de Extensão\n\n\n\n\n\n\n\n\n31 de out. de 2025\n\n\nEdital PIBEEC 01/2025\n\n\nA Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, …\n\n\nLeia mais\n\n\n\n\n\n\n\n9 de set. de 2025\n\n\nEdital PIBEC 07/2025\n\n\nA Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa nº 074, de 16 de março de 2023, torna p…\n\n\nLeia mais\n\n\n\n\nNenhum item correspondente\n\nVer todos os editais de extensão »"
   },
@@ -361,21 +354,21 @@
     "href": "O_que_fazemos/extensao/projetos/ciencia-de-dados-na-escola/index.html",
     "title": "Ciência de dados na escola",
     "section": "",
-    "text": "Esse projeto de extensão está vinculado ao projeto “Ciência de Dados e o Pioneirismo Feminino: Uma Trilha Formativa com Abordagem STEAM”, financiado pela FAPEMIG no âmbito da chamada nº 013/2024 e com duração entre 04/08/2025 e 03/08/2028. O projeto foi inspirado nas contribuições de Florence Nightingale (1820-1910), que revolucionou o atendimento hospitalar em sua época por meio do uso adequado de dados de saúde. Remetendo ao impacto de seu trabalho na era vitoriana, propomos a criação de uma trilha formativa para o ensino de Ciência de Dados no Ensino Médio. O conteúdo abordará conceitos básicos de Estatística, Saúde Pública e Epidemiologia, linguagens de programação e questões éticas relacionadas ao uso de dados.\nSaiba mais »"
+    "text": "Esse projeto de extensão está vinculado ao projeto “Ciência de Dados e o Pioneirismo Feminino: Uma Trilha Formativa com Abordagem STEAM”, financiado pela FAPEMIG no âmbito da chamada nº 013/2024 e com duração entre 04/08/2025 e 03/08/2028. O projeto foi inspirado nas contribuições de Florence Nightingale (1820-1910), que revolucionou o atendimento hospitalar em sua época por meio do uso adequado de dados de saúde. Remetendo ao impacto de seu trabalho na era vitoriana, propomos a criação de uma trilha formativa para o ensino de Ciência de Dados no Ensino Médio. O conteúdo abordará conceitos básicos de Estatística, Saúde Pública e Epidemiologia, linguagens de programação e questões éticas relacionadas ao uso de dados.\n\n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/extensao/projetos/obe-ufla/index.html",
     "href": "O_que_fazemos/extensao/projetos/obe-ufla/index.html",
     "title": "OBE-UFLA: Sede Institucional da Olimpíada Brasileira de Estatística",
     "section": "",
-    "text": "A proposta consiste na implantação da sede institucional da Olimpíada Brasileira de Estatística na Universidade Federal de Lavras, atuando como ponto regional de articulação da olimpíada. A iniciativa envolve ações de divulgação junto às escolas, mobilização e orientação de estudantes e professores, apoio à participação nas etapas da competição e acompanhamento das atividades desenvolvidas. O projeto busca promover o letramento estatístico, estimular o interesse pela Estatística e pela Ciência de Dados e fortalecer a aproximação entre universidade e educação básica, contribuindo para a formação científica e para a disseminação do pensamento estatístico na região de Lavras e entorno.\nSaiba mais »"
+    "text": "A proposta consiste na implantação da sede institucional da Olimpíada Brasileira de Estatística na Universidade Federal de Lavras, atuando como ponto regional de articulação da olimpíada. A iniciativa envolve ações de divulgação junto às escolas, mobilização e orientação de estudantes e professores, apoio à participação nas etapas da competição e acompanhamento das atividades desenvolvidas. O projeto busca promover o letramento estatístico, estimular o interesse pela Estatística e pela Ciência de Dados e fortalecer a aproximação entre universidade e educação básica, contribuindo para a formação científica e para a disseminação do pensamento estatístico na região de Lavras e entorno.\n\n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/extensao/projetos/r-ladies-lavras/index.html",
     "href": "O_que_fazemos/extensao/projetos/r-ladies-lavras/index.html",
     "title": "R-Ladies Lavras",
     "section": "",
-    "text": "O R-Ladies Lavras é um capítulo da comunidade R-Ladies global que tem o objetivo de promover a participação de mulheres e minorias de gênero na comunidade de usuários da linguagem de programação R. Isso é feito por meio de diversas ações, como realização de eventos técnicos e sociais, treinamentos, oficinas e grupos de estudos, voltados para qualquer pessoa que deseja avançar os conhecimentos em R.\nSaiba mais »"
+    "text": "O R-Ladies Lavras é um capítulo da comunidade R-Ladies global que tem o objetivo de promover a participação de mulheres e minorias de gênero na comunidade de usuários da linguagem de programação R. Isso é feito por meio de diversas ações, como realização de eventos técnicos e sociais, treinamentos, oficinas e grupos de estudos, voltados para qualquer pessoa que deseja avançar os conhecimentos em R.\n\n\n  \n     @rladieslavras\n  \n  \n     GitHub\n  \n  \n     Meetup\n  \n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/pesquisa/editais/index.html",
@@ -389,33 +382,33 @@
     "href": "O_que_fazemos/pesquisa/grupos/gps/index.html",
     "title": "Grupo de Pesquisa em Estatística Espacial (GPS)",
     "section": "",
-    "text": "O GPS foi criado em 2015 pelos professores João Domingos Scalon, Renato Ribeiro de Lima e Marcelo Silva de Oliveira, com o objetivo de aplicar e aprofundar técnicas de análise espacial. O grupo reúne professores, ex-alunos, pesquisadores externos, estudantes de pós-graduação e alunos de graduação, além de membros de diferentes áreas do conhecimento.\nSaiba mais »"
+    "text": "O GPS foi criado em 2015 pelos professores João Domingos Scalon, Renato Ribeiro de Lima e Marcelo Silva de Oliveira, com o objetivo de aplicar e aprofundar técnicas de análise espacial. O grupo reúne professores, ex-alunos, pesquisadores externos, estudantes de pós-graduação e alunos de graduação, além de membros de diferentes áreas do conhecimento.\n\n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/pesquisa/grupos/nstats/index.html",
     "href": "O_que_fazemos/pesquisa/grupos/nstats/index.html",
     "title": "Núcleo de Estudos em Estatística e Aprendizado de Máquina (nSTATs)",
     "section": "",
-    "text": "O nSTATs visa construir, compartilhar e aprimorar conhecimentos em Estatística, Ciência de Dados e Aprendizado de Máquina, por meio de atividades colaborativas e interdisciplinares voltadas para a qualificação científica, técnica e profissional. O núcleo possui forte caráter extensionista, promovendo cursos, oficinas, palestras, seminários e eventos. Reúne estudantes de graduação e pós-graduação, docentes e profissionais interessados no desenvolvimento e aplicação de métodos estatísticos e inteligência artificial.\nSaiba mais »"
+    "text": "O nSTATs visa construir, compartilhar e aprimorar conhecimentos em Estatística, Ciência de Dados e Aprendizado de Máquina, por meio de atividades colaborativas e interdisciplinares voltadas para a qualificação científica, técnica e profissional. O núcleo possui forte caráter extensionista, promovendo cursos, oficinas, palestras, seminários e eventos. Reúne estudantes de graduação e pós-graduação, docentes e profissionais interessados no desenvolvimento e aplicação de métodos estatísticos e inteligência artificial.\n\n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/pesquisa/index.html",
     "href": "O_que_fazemos/pesquisa/index.html",
-    "title": "Projetos e grupos de pesquisa",
+    "title": "Pesquisa",
     "section": "",
     "text": "Coordenação: Tales Jesus Fernandes\n\n\n\nModelos de regressão não linear aplicados às mais diversas áreas.\n\n\nLeia mais\n\n\n\n\n\n\n\nCoordenação: Geraldo Magela da Cruz Pereira\n\n\n\nEstatística, Ciência de Dados e Aprendizado de Máquina.\n\n\nLeia mais\n\n\n\n\n\n\n\n\nAnálise de dados com dependência espacial.\n\n\nLeia mais\n\n\n\n\n\n\n\n\nModelagem e previsão de dados ao longo do tempo.\n\n\nLeia mais\n\n\n\n\n\n\n\nCoordenação: João Domingos Scalon, Renato Ribeiro de Lima e Marcelo Silva de Oliveira\n\n\n\nEstatística espacial e análise espacial aplicada.\n\n\nLeia mais\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "O_que_fazemos/pesquisa/index.html#núcleos-e-grupos-de-pesquisa",
     "href": "O_que_fazemos/pesquisa/index.html#núcleos-e-grupos-de-pesquisa",
-    "title": "Projetos e grupos de pesquisa",
+    "title": "Pesquisa",
     "section": "",
     "text": "Coordenação: Tales Jesus Fernandes\n\n\n\nModelos de regressão não linear aplicados às mais diversas áreas.\n\n\nLeia mais\n\n\n\n\n\n\n\nCoordenação: Geraldo Magela da Cruz Pereira\n\n\n\nEstatística, Ciência de Dados e Aprendizado de Máquina.\n\n\nLeia mais\n\n\n\n\n\n\n\n\nAnálise de dados com dependência espacial.\n\n\nLeia mais\n\n\n\n\n\n\n\n\nModelagem e previsão de dados ao longo do tempo.\n\n\nLeia mais\n\n\n\n\n\n\n\nCoordenação: João Domingos Scalon, Renato Ribeiro de Lima e Marcelo Silva de Oliveira\n\n\n\nEstatística espacial e análise espacial aplicada.\n\n\nLeia mais\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "O_que_fazemos/pesquisa/index.html#editais-de-pesquisa",
     "href": "O_que_fazemos/pesquisa/index.html#editais-de-pesquisa",
-    "title": "Projetos e grupos de pesquisa",
+    "title": "Pesquisa",
     "section": "Editais de Pesquisa",
     "text": "Editais de Pesquisa\n\n\n\n\n\n\n\n\n20 de mai. de 2026\n\n\nEdital PRPI Nº 03/2026 - PIBITI/CNPq\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnico(a)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em prog…\n\n\nLeia mais\n\n\n\n\n\n\n\n19 de mai. de 2026\n\n\nEdital PRPI Nº 02/2026 - PIBIC/CNPq\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnicos(as)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em pr…\n\n\nLeia mais\n\n\n\n\n\n\n\n18 de mar. de 2026\n\n\nEdital PRPI Nº 01/2026 - PIVIC/UFLA\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras torna público este edital e convida todos os servidores docentes, técnico-administrativos desta instituição e pesquisadores externos credenciados como docentes permanentes em programas de pós-graduação da UFLA, a parti…\n\n\nLeia mais\n\n\n\n\nNenhum item correspondente\n\nVer todos os editais de pesquisa »"
   },
@@ -536,7 +529,7 @@
     "href": "sobre/como-contribuir/index.html#as-demais-seções",
     "title": "Como Contribuir",
     "section": "As demais seções",
-    "text": "As demais seções\nEditais e oportunidades, cursos e eventos, softwares, materiais didáticos e ações de extensão são publicados pela equipe do ConectaStat, a pedido dos docentes e da chefia do Departamento de Estatística. O mesmo vale para as páginas de texto (núcleos de pesquisa, seções fixas), que não são conteúdo datado.\nOu seja: não há formulário nem fila de submissão para essas seções. Se você é docente, servidor ou representante de um projeto do DES e tem algo a divulgar, fale com a equipe e nós publicamos.\nFalar com a equipe »\n\nO que ajuda a adiantar\nQuando o pedido chega com essas informações, a página sai no mesmo dia:\n\n\n\n\n\n\n\nTítulo\nComo deve aparecer na página e no card\n\n\nAutoria\nNome(s), como devem aparecer\n\n\nData\nA do evento, a do edital ou a da publicação\n\n\nResumo\nDe 1 a 4 frases: é o texto que aparece no card\n\n\nLink oficial\nO edital no site do DES, a inscrição do evento, o repositório do software\n\n\nArquivos\nCapa, apostila, slides ou PDF, quando houver\n\n\n\nO costume do site é não copiar o documento inteiro: um resumo curto e o link para a fonte oficial.\n\n\nOnde cada coisa é publicada\n\n\n\nO que é\nVai parar em\nQuem publica\n\n\n\n\nUma análise feita na graduação\nOrganização e Apresentação de Dados\nquem enviou, pelo formulário\n\n\nUm edital, chamada ou vaga\nOportunidades\na equipe\n\n\nUm evento, curso ou palestra\nCursos e Eventos\na equipe\n\n\nUm programa, pacote ou aplicativo\nSoftwares\na equipe\n\n\nUma apostila, tutorial ou slides\nMateriais\na equipe\n\n\nUma ação de extensão\nAções de Extensão\na equipe"
+    "text": "As demais seções\nEditais e oportunidades, cursos e eventos, softwares, materiais didáticos e ações de extensão são publicados pela equipe do ConectaStat, a pedido dos docentes e da chefia do Departamento de Estatística. O mesmo vale para as páginas de texto (núcleos de pesquisa, seções fixas), que não são conteúdo datado.\nOu seja: não há formulário nem fila de submissão para essas seções. Se você é docente, servidor ou representante de um projeto do DES e tem algo a divulgar, fale com a equipe e nós publicamos.\nFalar com a equipe »\n\nO que ajuda a adiantar\nQuando o pedido chega com essas informações, a página sai no mesmo dia:\n\n\n\n\n\n\n\nTítulo\nComo deve aparecer na página e no card\n\n\nAutoria\nNome(s), como devem aparecer\n\n\nData\nA do evento, a do edital ou a da publicação\n\n\nResumo\nDe 1 a 4 frases: é o texto que aparece no card\n\n\nLink oficial\nO edital no site do DES, a inscrição do evento, o repositório do software\n\n\nArquivos\nCapa, apostila, slides ou PDF, quando houver\n\n\n\nO costume do site é não copiar o documento inteiro: um resumo curto e o link para a fonte oficial.\n\n\nOnde cada coisa é publicada\n\n\n\nO que é\nVai parar em\nQuem publica\n\n\n\n\nUma análise feita na graduação\nOrganização e Apresentação de Dados\nquem enviou, pelo formulário\n\n\nUm edital, chamada ou vaga\nOportunidades\na equipe\n\n\nUm evento, curso ou palestra\nCursos e Eventos\na equipe\n\n\nUm programa, pacote ou aplicativo\nSoftwares\na equipe\n\n\nUma apostila, tutorial ou slides\nMateriais\na equipe\n\n\nUma ação de extensão\nEncontros com a Comunidade\na equipe"
   },
   {
     "objectID": "sobre/como-contribuir/index.html#achou-um-erro",

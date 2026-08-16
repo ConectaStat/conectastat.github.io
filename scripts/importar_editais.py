@@ -157,7 +157,7 @@ def slug(texto: str) -> str:
 def baixa(url: str) -> str:
     """1 nova tentativa antes de desistir: o site do DES é lento às vezes,
     e uma execução agendada não tem ninguém olhando para tentar de novo."""
-    req = urllib.request.Request(url, headers={"User-Agent": "conexao-estatistica-bot"})
+    req = urllib.request.Request(url, headers={"User-Agent": "conectastat-bot"})
     for tentativa in (1, 2):
         try:
             with urllib.request.urlopen(req, timeout=30) as r:

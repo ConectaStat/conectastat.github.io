@@ -45,7 +45,7 @@ MODELOS = RAIZ / "_templates" / "areas"
 # os modelos de _templates/areas/ - o caminho esta em sobre/como-contribuir/
 # e na secao "Publicar em cada area" do README.
 AREAS = {
-    "projeto de estudante": ("projetos/ensino/organizacao-e-apresentacao-de-dados/posts",
+    "projeto de estudante": ("O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/posts",
                              "projeto-estudante.qmd", ["Análise de dados"]),
 }
 
@@ -102,7 +102,7 @@ def urls_em(texto: str) -> list[str]:
 def baixa(url: str) -> bytes:
     if "github.com" in url and "/blob/" in url:
         url = url.replace("github.com", "raw.githubusercontent.com").replace("/blob/", "/")
-    req = urllib.request.Request(url, headers={"User-Agent": "conexao-estatistica-bot"})
+    req = urllib.request.Request(url, headers={"User-Agent": "conectastat-bot"})
     with urllib.request.urlopen(req, timeout=120) as r:
         return r.read()
 

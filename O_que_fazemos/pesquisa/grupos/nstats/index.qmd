@@ -19,4 +19,10 @@ promovendo cursos, oficinas, palestras, seminários e eventos. Reúne estudantes
 de graduação e pós-graduação, docentes e profissionais interessados no
 desenvolvimento e aplicação de métodos estatísticos e inteligência artificial.
 
-[Saiba mais »](https://des.ufla.br/nucleos-de-estudo/8-institucional/140-nucleo-de-estudos-em-estatistica-e-aprendizado-de-maquina){target="_blank"}
+```{=html}
+<div class="projeto-links">
+  <a class="destaque" href="https://des.ufla.br/nucleos-de-estudo/8-institucional/140-nucleo-de-estudos-em-estatistica-e-aprendizado-de-maquina" target="_blank" rel="noopener">
+    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  </a>
+</div>
+```

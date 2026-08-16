@@ -20,4 +20,10 @@ inclusão social e o desenvolvimento cognitivo de crianças, jovens, adultos e
 idosos. O projeto também busca fortalecer o papel da universidade pública na
 promoção da cultura e educação não formal.
 
-[Saiba mais »](https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2391){target="_blank"}
+```{=html}
+<div class="projeto-links">
+  <a class="destaque" href="https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2391" target="_blank" rel="noopener">
+    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  </a>
+</div>
+```

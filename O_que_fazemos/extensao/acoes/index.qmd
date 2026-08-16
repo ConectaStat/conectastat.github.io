@@ -1,5 +1,5 @@
 ---
-title: "Ações de Extensão"
+title: "Encontros com a Comunidade"
 subtitle: "Cursos, palestras, parcerias e atividades levadas à comunidade."
 title-block-banner: true
 format:
@@ -26,18 +26,23 @@ listing:
 
 <!-- Para publicar, crie a pasta posts/AAAA-MM-DD-slug/ com um index.qmd
      (veja README.md) - ela entra sozinha na grade abaixo, do mais
-     novo ao mais velho. -->
+     novo ao mais velho, e também no rotator "Em Destaque" da home
+     (index.qmd da raiz), lado a lado com notícias e eventos. Por isso
+     um encontro segue as mesmas regras de um post de notícia: precisa
+     de title, description e date no front matter. -->
 
-Atividades de extensão do Departamento de Estatística: cursos abertos,
+Os encontros do Departamento de Estatística com a comunidade: cursos abertos,
 palestras em escolas, parcerias com instituições e ações de divulgação
-científica. As primeiras serão publicadas em breve.
+científica. Cada encontro publicado aqui entra também no **Em Destaque** da
+página inicial, junto com as notícias e os eventos. Os primeiros serão
+publicados em breve.
 
 ```{=html}
 <div class="projetos-acoes" id="projetos-acoes">
   <div class="busca-projetos">
     <i class="bi bi-search"></i>
     <input type="search" id="busca-projetos-input"
-           placeholder="Pesquisar ações..."
+           placeholder="Pesquisar encontros..."
            aria-label="Pesquisar por título, autor ou tema" />
   </div>
 </div>

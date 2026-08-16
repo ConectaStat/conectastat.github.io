@@ -123,7 +123,7 @@ ORDEM = [
     ("O Que Fazemos › Ensino › Materiais", "O_que_fazemos/ensino/materiais/index.qmd", []),
     ("O Que Fazemos › Ensino › Editais", "O_que_fazemos/ensino/editais/index.qmd", []),
     ("O Que Fazemos › Extensão", "O_que_fazemos/extensao/index.qmd", ["projetos-extensao", "topicos-extensao"]),
-    ("O Que Fazemos › Extensão › Ações de Extensão", "O_que_fazemos/extensao/acoes/index.qmd", []),
+    ("O Que Fazemos › Extensão › Encontros com a Comunidade", "O_que_fazemos/extensao/acoes/index.qmd", []),
     ("O Que Fazemos › Extensão › Editais", "O_que_fazemos/extensao/editais/index.qmd", []),
     ("Ações › Revista Científica", "acoes/revista-cientifica/index.qmd", []),
     ("Ações › Nossos Livros", "acoes/livros/index.qmd", ["livros"]),
@@ -209,7 +209,7 @@ home/
 ├── index.qmd ─────────────────── página inicial ................. §1
 │   ├── hero ........................ slogan sobre a ilustração
 │   ├── disclaimer .................. logo abaixo da hero
-│   ├── "O que é o Conexão…" ........ texto de apresentação
+│   ├── "O que é o ConectaStat…" .... texto de apresentação
 │   ├── oportunidades · cursos e eventos ..... carrosséis
 │   └── onde estamos ................ mapa + endereço
 ├── _quarto.yml ───────────────── rodapé e menu ................. §2 e §3
@@ -226,21 +226,19 @@ home/
 │       └── egressos/index.qmd ──── Painel dos Egressos
 ├── O_que_fazemos/
 │   ├── pesquisa/
-│   │   ├── index.qmd ───────────── Projetos e grupos de pesquisa (+ cards)
+│   │   ├── index.qmd ───────────── Pesquisa (+ cards)
 │   │   └── editais/index.qmd ───── Editais de Pesquisa
 │   ├── ensino/
-│   │   ├── index.qmd ───────────── Projetos de ensino, softwares e
-│   │   │                           materiais didáticos (+ cards)
+│   │   ├── index.qmd ───────────── Ensino (+ cards)
 │   │   ├── organizacao-e-apresentacao-de-dados/
 │   │   │   ├── index.qmd ───────── Organização e Apresentação de Dados
-│   │   │   ├── enviar.qmd ──────── Envie seu projeto
-│   │   │   └── posts/ ──────────── 5 projetos publicados ....... §5
+│   │   │   └── posts/ ──────────── projetos enviados ............ §5
 │   │   ├── softwares/index.qmd ─── Softwares (sem conteúdo ainda)
 │   │   ├── materiais/index.qmd ─── Materiais (sem conteúdo ainda)
 │   │   └── editais/index.qmd ───── Editais de Ensino
 │   └── extensao/
-│       ├── index.qmd ───────────── Projetos e grupos de extensão (+ cards)
-│       ├── acoes/index.qmd ─────── Ações de Extensão
+│       ├── index.qmd ───────────── Extensão (+ cards)
+│       ├── acoes/index.qmd ─────── Encontros com a Comunidade
 │       └── editais/index.qmd ───── Editais de Extensão
 │
 ├── oportunidades/  ┐  cada uma com:
@@ -257,7 +255,8 @@ home/
 L.append("## 1. Página inicial\n")
 L.append("```\nindex.qmd\n├── hero .................. slogan + ilustração\n"
          "├── o projeto ............. texto de apresentação\n"
-         "├── em destaque ........... carrossel (notícias + cursos/eventos)\n"
+         "├── em destaque ........... carrossel (notícias + cursos/eventos +\n"
+         "│                           encontros com a comunidade)\n"
          "├── oportunidades ......... carrossel\n"
          "└── onde estamos .......... mapa + endereço\n```\n")
 for titulo, texto in blocos_home():
@@ -280,7 +279,7 @@ L.append("\n**Ícones:** GitHub, Instagram e LinkedIn (os dois últimos ainda se
 L.append("\n---\n\n## 3. Menu do topo\n")
 L.append("`_quarto.yml` › `website: navbar`\n")
 L.append("\n```")
-L.append("Ciência/ Estatística/ Conexão   ← slogan à esquerda (leva à home)")
+L.append("Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)")
 L.append("")
 for nivel, rotulo in itens:
     L.append(("  " if nivel == 0 else "      └── ") + rotulo)
@@ -296,10 +295,10 @@ L.append("\n---\n\n## 5. Conteúdo datado (posts já publicados)\n")
 for rotulo, pasta in [
     ("Oportunidades", "oportunidades/posts"),
     ("Cursos e Eventos", "eventos/posts"),
-    ("Organização e Apresentação de Dados", "projetos/ensino/organizacao-e-apresentacao-de-dados/posts"),
-    ("Softwares", "projetos/ensino/softwares/posts"),
-    ("Materiais", "projetos/ensino/materiais/posts"),
-    ("Ações de Extensão", "projetos/extensao/acoes/posts"),
+    ("Organização e Apresentação de Dados", "O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/posts"),
+    ("Softwares", "O_que_fazemos/ensino/softwares/posts"),
+    ("Materiais", "O_que_fazemos/ensino/materiais/posts"),
+    ("Encontros com a Comunidade", "O_que_fazemos/extensao/acoes/posts"),
 ]:
     L.append(bloco_posts(rotulo, pasta))
 

@@ -79,7 +79,7 @@ As seções com conteúdo datado (Oportunidades, Cursos e Eventos, e Artigos) t�
 | Caminho | O que é |
 |---|---|
 | `_quarto.yml` | configuração do site: menu, rodapé, tema e automações |
-| `_assets/conexao-estatistica.scss` | tema visual (cores, tipografia, componentes) |
+| `_assets/conectastat.scss` | tema visual (cores, tipografia, componentes) |
 | `_assets/cards.ejs` | template dos cards de manchete usados nas listagens |
 | `_includes/` | JavaScript das listagens e transições entre páginas |
 | `_templates/` | modelos para começar um post novo |

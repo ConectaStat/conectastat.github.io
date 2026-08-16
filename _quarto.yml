@@ -34,7 +34,12 @@ website:
   # A barra inicial é obrigatória: sem ela o caminho é resolvido a partir da
   # pasta de cada página e vira /eventos/images/..., que não existe.
   image: /images/capa-social.png
-  favicon: images/ufla_favicon.ico
+  # Ícone da aba: a logo da ConectaStat (a mesma do perfil no GitHub), em PNG
+  # 512x512 com o fundo fora do círculo transparente - assim a marca não vira
+  # um quadrado branco na barra de abas em tema escuro. O antigo
+  # ufla_favicon.ico era um PNG de 156x80 com extensão .ico: o navegador não
+  # decodificava e caía no ícone genérico de globo.
+  favicon: images/conectastat-logo.png
   open-graph: true
   site-url: https://conectastat.github.io
   repo-url: https://github.com/ConectaStat/conectastat.github.io
@@ -109,8 +114,8 @@ website:
 
 format:
   html:
-    theme: [cosmo, _assets/conexao-estatistica.scss]
-    css: _assets/conexao-estatistica.css
+    theme: [cosmo, _assets/conectastat.scss]
+    css: _assets/conectastat.css
     include-after-body:
       - _includes/listing-cards.html
       - _includes/transitions.html

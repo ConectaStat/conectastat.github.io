@@ -17,7 +17,8 @@ toc: false
        * onde fica e horário de funcionamento;
        * contato próprio, se houver.
      Enquanto isso, a página se apresenta como "em construção", no mesmo
-     padrão das seções sem conteúdo publicado (Softwares, Ações de Extensão). -->
+     padrão das seções sem conteúdo publicado (Softwares, Encontros com a
+     Comunidade). -->
 
 ## O Laboratório
 
@@ -31,9 +32,13 @@ atendimento.
 
 ## Enquanto isso
 
+<!-- OCULTO a pedido: a chamada para a página de assessoria e consultoria
+     estatística não deve aparecer aqui. Fica guardada no código para o dia em
+     que a seção voltar a ser divulgada.
 - Demandas de **apoio estatístico a pesquisas, projetos e organizações** seguem
   pela página de [assessoria e consultoria
   estatística](../../assessoria/index.qmd), que explica como o atendimento
   funciona;
+-->
 - Para falar com a equipe do departamento, veja [entre em
   contato](../../sobre/contato/index.qmd).

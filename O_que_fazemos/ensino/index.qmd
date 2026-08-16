@@ -1,5 +1,5 @@
 ---
-title: "Projetos de ensino, softwares e materiais didáticos"
+title: "Ensino"
 subtitle: "Iniciativas que fortalecem a formação em Estatística dentro e fora da sala de aula."
 title-block-banner: true
 body-classes: cs-banner-ogiva
@@ -46,7 +46,7 @@ listing:
 
 ::: {.listing-block}
 
-## Projetos, Softwares e Materiais
+## Projetos de Ensino, Softwares e Materiais Didáticos
 
 ::: {#topicos-ensino}
 :::
