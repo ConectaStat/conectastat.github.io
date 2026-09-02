@@ -123,7 +123,7 @@
     "href": "cursos/pos-graduacao/index.html",
     "title": "Pós-Graduação",
     "section": "",
-    "text": "A UFLA abriga diversos Programas de Pós-Graduação, e o Painel de Perfil dos Ingressantes mostra quem entra no stricto sensu, por gênero, idade, região de origem e formação. Aqui tratamos com maior afinidade o de Estatística e Experimentação Agropecuária (PPGEEA), com cursos de mestrado e doutorado, formando pesquisadores e docentes com sólida base teórica e forte vocação aplicada."
+    "text": "A UFLA possui diversos Programas de Pós-Graduação, e o Painel de Perfil dos Ingressantes mostra o perfil dos ingressantes agrupados por gênero, idade, região de origem e formação. Aqui tratamos com mais detalhes sobre o Programa de Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE), que possui os níveis de mestrado e doutorado, formando pesquisadores e docentes com sólida base teórica e forte vocação aplicada."
   },
   {
     "objectID": "cursos/pos-graduacao/index.html#estatística-e-experimentação-agropecuária",
@@ -137,7 +137,7 @@
     "href": "cursos/pos-graduacao/index.html#ingresso",
     "title": "Pós-Graduação",
     "section": "Ingresso",
-    "text": "Ingresso\n\nO processo seletivo ocorre anualmente, com início do curso no primeiro semestre de cada ano. Eventualmente, também são realizados processos seletivos para o segundo semestre."
+    "text": "Ingresso\n\nO processo seletivo ocorre anualmente, com início do curso no primeiro semestre de cada ano. Eventualmente, também são realizados processos seletivos para o segundo semestre. Os editais são divulgados na página do programa."
   },
   {
     "objectID": "cursos/pos-graduacao/index.html#o-programa",
@@ -151,7 +151,7 @@
     "href": "cursos/pos-graduacao/index.html#disciplinas",
     "title": "Pós-Graduação",
     "section": "Disciplinas",
-    "text": "Disciplinas\nEntre as disciplinas oferecidas regularmente estão:\n\n\n\n\n\n\n\nDisciplina\nTema\n\n\n\n\nInferência Estatística\nEstimação, testes de hipóteses e teoria assintótica\n\n\nModelos Lineares\nTeoria e aplicação de modelos de regressão\n\n\nPlanejamento de Experimentos\nDelineamentos experimentais e análise\n\n\nEstatística Computacional\nSimulação, métodos de Monte Carlo e otimização\n\n\nModelos Mistos\nEfeitos aleatórios e dados longitudinais\n\n\nEstatística Bayesiana\nInferência bayesiana e métodos MCMC\n\n\nSéries Temporais\nModelagem e previsão de dados temporais\n\n\n\nA relação completa de disciplinas, docentes e turmas está no portal do PPGEEA no SIGAA.\n\n  \n    \n    Estatística e Experimentação Agropecuária (Mestrado e Doutorado) · Prof. Luiz Ricardo Nakamura"
+    "text": "Disciplinas\nEntre as disciplinas oferecidas regularmente estão:\n\n\n\n\n\n\n\nDisciplina\nTema\n\n\n\n\nInferência Estatística\nEstimação, testes de hipóteses e teoria assintótica\n\n\nModelos Lineares\nTeoria e aplicação de modelos de regressão\n\n\nPlanejamento de Experimentos\nDelineamentos experimentais e análise\n\n\nEstatística Computacional\nSimulação, métodos de Monte Carlo e otimização\n\n\nModelos Mistos\nEfeitos aleatórios e dados longitudinais\n\n\nEstatística Bayesiana\nInferência bayesiana e métodos MCMC\n\n\nSéries Temporais\nModelagem e previsão de dados temporais\n\n\n\nA relação completa de disciplinas, docentes e turmas está no portal do PPGEE no SIGAA.\n\n  \n    \n    Estatística e Experimentação Agropecuária (Mestrado e Doutorado) · Prof. Luiz Ricardo Nakamura"
   },
   {
     "objectID": "cursos/pos-graduacao/index.html#projetos-de-pesquisa",
@@ -249,7 +249,7 @@
     "href": "O_que_fazemos/extensao/projetos/pyladies-lavras/index.html",
     "title": "PyLadies Lavras",
     "section": "",
-    "text": "O PyLadies Lavras é um capítulo da comunidade PyLadies global que tem o objetivo de promover a participação de mulheres e minorias de gênero na comunidade de usuários da linguagem de programação Python. Isso é feito por meio de diversas ações, como realização de eventos técnicos e sociais, treinamentos, oficinas e grupos de estudos, voltados para qualquer pessoa que deseja avançar os conhecimentos em Python.\n\n\n  \n     @pyladieslavras\n  \n  \n     GitHub\n  \n  \n     Seja uma de nós\n  \n  \n     Saiba mais"
+    "text": "O PyLadies Lavras é um capítulo da comunidade PyLadies global que tem o objetivo de promover a participação de mulheres e minorias de gênero na comunidade de usuários da linguagem de programação Python. Isso é feito por meio de diversas ações, como realização de eventos técnicos e sociais, treinamentos, oficinas e grupos de estudos, voltados para qualquer pessoa que deseja avançar os conhecimentos em Python.\n\n\n  \n     lavras@pyladies.com\n  \n  \n     @pyladieslavras\n  \n  \n     @PyLadiesLavras\n  \n  \n     GitHub\n  \n  \n     Saiba mais"
   },
   {
     "objectID": "O_que_fazemos/extensao/projetos/conectastat/index.html",
@@ -579,5 +579,12 @@
     "title": "Quem Somos",
     "section": "Como o site é feito",
     "text": "Como o site é feito\nO site é aberto e público: o código, os textos e o histórico de cada alteração ficam no repositório no GitHub. Ele é construído com Quarto e publicado no GitHub Pages, o que significa que qualquer pessoa pode acompanhar, revisar e propor melhorias.\nSobre o apoio de ferramentas automatizadas na produção do conteúdo, veja a página de uso de IA."
+  },
+  {
+    "objectID": "cursos/pos-graduacao/index.html#estatística-e-experimentação-agropecuária-ppgee",
+    "href": "cursos/pos-graduacao/index.html#estatística-e-experimentação-agropecuária-ppgee",
+    "title": "Pós-Graduação",
+    "section": "Estatística e Experimentação Agropecuária (PPGEE)",
+    "text": "Estatística e Experimentação Agropecuária (PPGEE)\nO PPGEE concentra suas atividades no estudo e desenvolvimento de métodos estatísticos modernos para a análise de dados nas diversas áreas do conhecimento, mas com especial atenção em aplicações na agropecuária. O objetivo principal do programa é formar recursos humanos e garantir sua qualificação, aprimorando seus conhecimentos em estatística aplicada para o exercício de atividades de docência e de pesquisa. A maior parte dos nossos egressos são docentes em instituições de ensino, mas também temos pesquisadores em empresas, públicas ou privadas. As linhas de pesquisa são:\n\nEstatística Experimental e Aplicada;\nTeoria Matemática e Métodos Estatísticos;\nAnálise Multivariada e Estatística Espacial.\n\nSendo que estas envolvem:\n\nEstatística Experimental: planejamento de experimentos, análise de dados oriundos de estudos agropecuários e interpretação dos resultados obtidos;\nAnálise de regressão e séries temporais: estimação e predição de modelos lineares e não lineares e análise de dados cronológicos;\nTeoria e métodos estatísticos: estudos de dinâmica de populações, inferência bayesiana e modelagem estatística e métodos de comparações múltiplas;\nEstatística genética e genômica: ênfase na avaliação genética, em métodos de predição de valores genéticos e em inferências sobre parâmetros genéticos;\nMétodos multivariados: proposição e avaliação de testes e análise de estabilidade de cultivares;\nMétodos computacionais: uso de métodos computacionais intensivos, machine learning, inteligência artificial e técnicas de data science na aplicação e desenvolvimento de métodos estatísticos;\nEstatística espacial: análise de dados correlacionados espacialmente e espaço-temporalmente, em estudos de geoestatística, processos pontuais e análise de dados de áreas."
   }
 ]
