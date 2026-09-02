@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-e1f02ae3cbbbf28781c61cd2965bcff0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-0c0d1acf064362f6d46bd970811885ac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -212,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Autor</div>
+      <div class="quarto-title-meta-heading">Coordenação</div>
       <div class="quarto-title-meta-contents">
                <p>Camilla Marques Barroso </p>
             </div>
@@ -234,10 +234,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<div class="projeto-intro">
 <p>A proposta consiste na implantação da sede institucional da Olimpíada Brasileira de Estatística na Universidade Federal de Lavras, atuando como ponto regional de articulação da olimpíada. A iniciativa envolve ações de divulgação junto às escolas, mobilização e orientação de estudantes e professores, apoio à participação nas etapas da competição e acompanhamento das atividades desenvolvidas. O projeto busca promover o letramento estatístico, estimular o interesse pela Estatística e pela Ciência de Dados e fortalecer a aproximação entre universidade e educação básica, contribuindo para a formação científica e para a disseminação do pensamento estatístico na região de Lavras e entorno.</p>
+</div>
 <div class="projeto-links">
-  <a class="destaque" href="https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2458" target="_blank" rel="noopener">
-    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  <a href="mailto:camilla.barroso@ufla.br">
+    <i class="bi bi-envelope"></i> camilla.barroso@ufla.br
   </a>
 </div>
 
@@ -365,6 +367,60 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+
+  // ============================================================
+  //  Apostilas: cada item da listagem é uma referência. Abaixo da
+  //  citação, na linha das etiquetas, entram dois ícones discretos:
+  //  copiar a citação (o texto da descrição) e abrir o site do autor
+  //  (a página do material, mesmo destino do título)
+  // ============================================================
+  document.querySelectorAll(".listagem-referencias .quarto-post").forEach(function (item) {
+    var corpo = item.querySelector(".body");
+    var desc = item.querySelector(".listing-description");
+    var titulo = item.querySelector(".listing-title");
+    var link = titulo && (titulo.querySelector("a") || titulo.closest("a"));
+    if (!corpo || !desc) return;
+
+    var acoes = document.createElement("div");
+    acoes.className = "ref-acoes";
+
+    var copiar = document.createElement("button");
+    copiar.type = "button";
+    copiar.className = "ref-copiar";
+    copiar.title = "Copiar citação";
+    copiar.setAttribute("aria-label", "Copiar citação");
+    copiar.innerHTML = '<i class="bi bi-clipboard"></i>';
+    copiar.addEventListener("click", function (ev) {
+      ev.preventDefault(); ev.stopPropagation();
+      var texto = desc.textContent.replace(/\s+/g, " ").trim();
+      function feito() {
+        copiar.innerHTML = '<i class="bi bi-check2"></i>';
+        copiar.title = "Copiado";
+        setTimeout(function () { copiar.innerHTML = '<i class="bi bi-clipboard"></i>'; copiar.title = "Copiar citação"; }, 1800);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(feito);
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = texto; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        ta.remove(); feito();
+      }
+    });
+    acoes.appendChild(copiar);
+
+    if (link && link.getAttribute("href")) {
+      var acessar = document.createElement("a");
+      acessar.className = "ref-site";
+      acessar.href = link.getAttribute("href");
+      acessar.title = "Site do autor";
+      acessar.setAttribute("aria-label", "Site do autor");
+      if (/^https?:\/\//.test(acessar.href)) { acessar.target = "_blank"; acessar.rel = "noopener"; }
+      acessar.innerHTML = '<i class="bi bi-box-arrow-up-right"></i>';
+      acoes.appendChild(acessar);
+    }
+    corpo.appendChild(acoes);
+  });
 
   // ============================================================
   //  Relatório nativo: o relatório do projeto flui como parte
@@ -1014,12 +1070,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <li class="nav-item compact">
     <a class="nav-link" href="https://www.instagram.com/estatistica.ufla/">
       <i class="bi bi-instagram" role="img" aria-label="Instagram">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="../../../../#">
-      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
     </a>
   </li>  

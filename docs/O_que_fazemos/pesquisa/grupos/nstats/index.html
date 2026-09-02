@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Coordenação: Geraldo Magela da Cruz Pereira">
+<meta name="author" content="Geraldo Magela da Cruz Pereira">
 <meta name="description" content="Estatística, Ciência de Dados e Aprendizado de Máquina.">
 
 <title>Núcleo de Estudos em Estatística e Aprendizado de Máquina (nSTATs) | ConectaStat</title>
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-e1f02ae3cbbbf28781c61cd2965bcff0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-0c0d1acf064362f6d46bd970811885ac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -212,9 +212,9 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Autor</div>
+      <div class="quarto-title-meta-heading">Coordenação</div>
       <div class="quarto-title-meta-contents">
-               <p>Coordenação: Geraldo Magela da Cruz Pereira </p>
+               <p>Geraldo Magela da Cruz Pereira </p>
             </div>
     </div>
       
@@ -234,10 +234,28 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<div class="projeto-intro">
 <p>O nSTATs visa construir, compartilhar e aprimorar conhecimentos em Estatística, Ciência de Dados e Aprendizado de Máquina, por meio de atividades colaborativas e interdisciplinares voltadas para a qualificação científica, técnica e profissional. O núcleo possui forte caráter extensionista, promovendo cursos, oficinas, palestras, seminários e eventos. Reúne estudantes de graduação e pós-graduação, docentes e profissionais interessados no desenvolvimento e aplicação de métodos estatísticos e inteligência artificial.</p>
+</div>
+<div class="projeto-ficha">
+<!-- EDITAR: confirmar com o núcleo o dia, o horário e a sala dos encontros. -->
+<dl>
+<dt>Encontros</dt>
+<dd>
+Consulte o núcleo pelo e-mail
+</dd>
+<dt>Local</dt>
+<dd>
+Departamento de Estatística da UFLA
+</dd>
+</dl>
+</div>
 <div class="projeto-links">
-  <a class="destaque" href="https://des.ufla.br/nucleos-de-estudo/8-institucional/140-nucleo-de-estudos-em-estatistica-e-aprendizado-de-maquina" target="_blank" rel="noopener">
-    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  <a href="mailto:nstats@ufla.br">
+    <i class="bi bi-envelope"></i> nstats@ufla.br
+  </a>
+  <a href="https://des.ufla.br/nucleos-de-estudo/8-institucional/140-nucleo-de-estudos-em-estatistica-e-aprendizado-de-maquina" target="_blank" rel="noopener">
+    <i class="bi bi-globe"></i> Página no DES
   </a>
 </div>
 
@@ -365,6 +383,60 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+
+  // ============================================================
+  //  Apostilas: cada item da listagem é uma referência. Abaixo da
+  //  citação, na linha das etiquetas, entram dois ícones discretos:
+  //  copiar a citação (o texto da descrição) e abrir o site do autor
+  //  (a página do material, mesmo destino do título)
+  // ============================================================
+  document.querySelectorAll(".listagem-referencias .quarto-post").forEach(function (item) {
+    var corpo = item.querySelector(".body");
+    var desc = item.querySelector(".listing-description");
+    var titulo = item.querySelector(".listing-title");
+    var link = titulo && (titulo.querySelector("a") || titulo.closest("a"));
+    if (!corpo || !desc) return;
+
+    var acoes = document.createElement("div");
+    acoes.className = "ref-acoes";
+
+    var copiar = document.createElement("button");
+    copiar.type = "button";
+    copiar.className = "ref-copiar";
+    copiar.title = "Copiar citação";
+    copiar.setAttribute("aria-label", "Copiar citação");
+    copiar.innerHTML = '<i class="bi bi-clipboard"></i>';
+    copiar.addEventListener("click", function (ev) {
+      ev.preventDefault(); ev.stopPropagation();
+      var texto = desc.textContent.replace(/\s+/g, " ").trim();
+      function feito() {
+        copiar.innerHTML = '<i class="bi bi-check2"></i>';
+        copiar.title = "Copiado";
+        setTimeout(function () { copiar.innerHTML = '<i class="bi bi-clipboard"></i>'; copiar.title = "Copiar citação"; }, 1800);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(feito);
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = texto; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        ta.remove(); feito();
+      }
+    });
+    acoes.appendChild(copiar);
+
+    if (link && link.getAttribute("href")) {
+      var acessar = document.createElement("a");
+      acessar.className = "ref-site";
+      acessar.href = link.getAttribute("href");
+      acessar.title = "Site do autor";
+      acessar.setAttribute("aria-label", "Site do autor");
+      if (/^https?:\/\//.test(acessar.href)) { acessar.target = "_blank"; acessar.rel = "noopener"; }
+      acessar.innerHTML = '<i class="bi bi-box-arrow-up-right"></i>';
+      acoes.appendChild(acessar);
+    }
+    corpo.appendChild(acoes);
+  });
 
   // ============================================================
   //  Relatório nativo: o relatório do projeto flui como parte
@@ -1014,12 +1086,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <li class="nav-item compact">
     <a class="nav-link" href="https://www.instagram.com/estatistica.ufla/">
       <i class="bi bi-instagram" role="img" aria-label="Instagram">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="../../../../#">
-      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
     </a>
   </li>  

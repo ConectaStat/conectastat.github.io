@@ -30,8 +30,6 @@
     "items": [
       "/O_que_fazemos/pesquisa/grupos/nlin/index.html",
       "/O_que_fazemos/pesquisa/grupos/nstats/index.html",
-      "/O_que_fazemos/pesquisa/grupos/estatistica-espacial/index.html",
-      "/O_que_fazemos/pesquisa/grupos/series-temporais/index.html",
       "/O_que_fazemos/pesquisa/grupos/gps/index.html",
       "/oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
       "/oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
@@ -63,15 +61,8 @@
     ]
   },
   {
-    "listing": "/O_que_fazemos/extensao/index.html",
+    "listing": "/O_que_fazemos/extensao/editais/index.html",
     "items": [
-      "/O_que_fazemos/extensao/projetos/conectastat/index.html",
-      "/O_que_fazemos/extensao/projetos/ciencia-de-dados-na-escola/index.html",
-      "/O_que_fazemos/extensao/projetos/obe-ufla/index.html",
-      "/O_que_fazemos/extensao/projetos/r-ladies-lavras/index.html",
-      "/O_que_fazemos/extensao/projetos/pyladies-lavras/index.html",
-      "/O_que_fazemos/extensao/projetos/xadrez-para-todos/index.html",
-      "/O_que_fazemos/extensao/projetos/assessoria-a-prefeituras/index.html",
       "/oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
       "/oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
       "/oportunidades/posts/2026-05-20-edital-prpi-no-03-2026-pibiti-cnpq/index.html",
@@ -86,11 +77,7 @@
     ]
   },
   {
-    "listing": "/O_que_fazemos/extensao/acoes/index.html",
-    "items": []
-  },
-  {
-    "listing": "/O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.html",
+    "listing": "/O_que_fazemos/ensino/softwares/index.html",
     "items": []
   },
   {
@@ -110,6 +97,10 @@
     ]
   },
   {
+    "listing": "/O_que_fazemos/ensino/apostilas/index.html",
+    "items": []
+  },
+  {
     "listing": "/O_que_fazemos/ensino/editais/index.html",
     "items": [
       "/oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
@@ -126,16 +117,22 @@
     ]
   },
   {
-    "listing": "/O_que_fazemos/ensino/materiais/index.html",
+    "listing": "/O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.html",
     "items": []
   },
   {
-    "listing": "/O_que_fazemos/ensino/softwares/index.html",
+    "listing": "/O_que_fazemos/extensao/acoes/index.html",
     "items": []
   },
   {
-    "listing": "/O_que_fazemos/extensao/editais/index.html",
+    "listing": "/O_que_fazemos/extensao/index.html",
     "items": [
+      "/O_que_fazemos/extensao/projetos/conectastat/index.html",
+      "/O_que_fazemos/extensao/projetos/ciencia-de-dados-na-escola/index.html",
+      "/O_que_fazemos/extensao/projetos/obe-ufla/index.html",
+      "/O_que_fazemos/extensao/projetos/r-ladies-lavras/index.html",
+      "/O_que_fazemos/extensao/projetos/pyladies-lavras/index.html",
+      "/O_que_fazemos/extensao/projetos/xadrez-para-todos/index.html",
       "/oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
       "/oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
       "/oportunidades/posts/2026-05-20-edital-prpi-no-03-2026-pibiti-cnpq/index.html",

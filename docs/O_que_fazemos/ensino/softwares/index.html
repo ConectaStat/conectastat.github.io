@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Softwares | ConectaStat</title>
+<title>Softwares e pacotes | ConectaStat</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-c5a2a65614a8ae7781ec302932510bd0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d94cc5b6a3be78549909b1133b6b6e10.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -86,9 +86,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-description','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-categories","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -137,7 +137,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../../_assets/conectastat.css">
-<meta property="og:title" content="Softwares | ConectaStat">
+<meta property="og:title" content="Softwares e pacotes | ConectaStat">
 <meta property="og:description" content="Aplicativos, pacotes e ferramentas computacionais de apoio ao ensino de Estatística.">
 <meta property="og:image" content="https://conectastat.github.io/images/capa-social.png">
 <meta property="og:site_name" content="ConectaStat">
@@ -257,7 +257,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Softwares</h1>
+      <h1 class="title">Softwares e pacotes</h1>
             <p class="subtitle lead">Aplicativos, pacotes e ferramentas computacionais de apoio ao ensino de Estatística.</p>
                       </div>
   </div>
@@ -275,7 +275,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXhwZXJpbWVudGElQzMlQTclQzMlQTNv">Experimentação <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29mdHdhcmU=">Software <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V2luZG93cw==">Windows <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -283,20 +283,44 @@ window.Quarto = {
 
 
 
-<!-- Para publicar, crie a pasta posts/AAAA-MM-DD-slug/ com um index.qmd
-     (veja README.md) - ele entra sozinho na grade abaixo, do mais
-     novo ao mais velho. -->
-<p>Ferramentas computacionais desenvolvidas nos projetos de ensino do departamento. Os primeiros itens serão publicados em breve.</p>
 <div class="projetos-acoes" id="projetos-acoes">
   <div class="busca-projetos">
     <i class="bi bi-search"></i>
-    <input type="search" id="busca-projetos-input" placeholder="Pesquisar softwares..." aria-label="Pesquisar por título, autor, tema ou fonte">
+    <input type="search" id="busca-projetos-input" placeholder="Pesquisar softwares e pacotes..." aria-label="Pesquisar por título, autor ou tema">
   </div>
 </div>
-<div class="projetos-estudantes">
-<div id="listing-listagem-softwares" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
+<div class="projetos-estudantes listagem-referencias">
+<div id="listing-listagem-softwares" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="U29mdHdhcmUlMkNFeHBlcmltZW50YSVDMyVBNyVDMyVBM28lMkNXaW5kb3dz" data-listing-date-sort="1575158400000">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="https://des.ufla.br/~danielff/sisvar.html" class="no-external">Sisvar</a>
+</h3>
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmU='); return false;">Software</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RXhwZXJpbWVudGElQzMlQTclQzMlQTNv'); return false;">Experimentação</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('V2luZG93cw=='); return false;">Windows</div>
+
+</div>
+<div class="delink listing-description"><a href="https://des.ufla.br/~danielff/sisvar.html" class="no-external">
+<p>FERREIRA, Daniel Furtado. <strong>Sisvar</strong>: a computer analysis system to fixed effects split plot type designs. Brazilian Journal of Biometrics, Lavras, v. 37, n.&nbsp;4, p.&nbsp;529-535, 2019. Programa disponível em: https://des.ufla.br/~danielff/sisvar.html.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="https://des.ufla.br/~danielff/sisvar.html" class="no-external">
+<div class="listing-date">
+1 de dez. de 2019
+</div>
+<div class="listing-author">
+Daniel Furtado Ferreira
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">Nenhum item correspondente</div>
 </div>
@@ -427,6 +451,60 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+
+  // ============================================================
+  //  Apostilas: cada item da listagem é uma referência. Abaixo da
+  //  citação, na linha das etiquetas, entram dois ícones discretos:
+  //  copiar a citação (o texto da descrição) e abrir o site do autor
+  //  (a página do material, mesmo destino do título)
+  // ============================================================
+  document.querySelectorAll(".listagem-referencias .quarto-post").forEach(function (item) {
+    var corpo = item.querySelector(".body");
+    var desc = item.querySelector(".listing-description");
+    var titulo = item.querySelector(".listing-title");
+    var link = titulo && (titulo.querySelector("a") || titulo.closest("a"));
+    if (!corpo || !desc) return;
+
+    var acoes = document.createElement("div");
+    acoes.className = "ref-acoes";
+
+    var copiar = document.createElement("button");
+    copiar.type = "button";
+    copiar.className = "ref-copiar";
+    copiar.title = "Copiar citação";
+    copiar.setAttribute("aria-label", "Copiar citação");
+    copiar.innerHTML = '<i class="bi bi-clipboard"></i>';
+    copiar.addEventListener("click", function (ev) {
+      ev.preventDefault(); ev.stopPropagation();
+      var texto = desc.textContent.replace(/\s+/g, " ").trim();
+      function feito() {
+        copiar.innerHTML = '<i class="bi bi-check2"></i>';
+        copiar.title = "Copiado";
+        setTimeout(function () { copiar.innerHTML = '<i class="bi bi-clipboard"></i>'; copiar.title = "Copiar citação"; }, 1800);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(feito);
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = texto; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        ta.remove(); feito();
+      }
+    });
+    acoes.appendChild(copiar);
+
+    if (link && link.getAttribute("href")) {
+      var acessar = document.createElement("a");
+      acessar.className = "ref-site";
+      acessar.href = link.getAttribute("href");
+      acessar.title = "Site do autor";
+      acessar.setAttribute("aria-label", "Site do autor");
+      if (/^https?:\/\//.test(acessar.href)) { acessar.target = "_blank"; acessar.rel = "noopener"; }
+      acessar.innerHTML = '<i class="bi bi-box-arrow-up-right"></i>';
+      acoes.appendChild(acessar);
+    }
+    corpo.appendChild(acoes);
+  });
 
   // ============================================================
   //  Relatório nativo: o relatório do projeto flui como parte
@@ -1076,12 +1154,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <li class="nav-item compact">
     <a class="nav-link" href="https://www.instagram.com/estatistica.ufla/">
       <i class="bi bi-instagram" role="img" aria-label="Instagram">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="../../../#">
-      <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
     </a>
   </li>  
