@@ -1,0 +1,5 @@
+# Nas páginas desta pasta o nome do front matter `author` é a pessoa que
+# coordena: o bloco de título mostra "Coordenação" em vez de "Autor".
+language:
+  title-block-author-single: "Coordenação"
+  title-block-author-plural: "Coordenação"

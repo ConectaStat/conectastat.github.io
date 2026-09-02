@@ -13,13 +13,17 @@
 // domínio por redirecionamento.
 const normaliza = (p) => p.replace(/\\/g, "/").replace(/\.qmd$/, ".html");
 const ehExterno = (item) => item.externo || /^https?:\/\//.test(item.path || "");
+// `template-params: { rotulo_autor: "Coordenação" }` na listagem faz o nome
+// sair como "Coordenação: Fulano" - o padrão dos projetos e dos núcleos.
+const params = (typeof templateParams !== "undefined" && templateParams) || {};
+const rotulo = params.rotulo_autor ? params.rotulo_autor + ": " : "";
 %>
 <div class="cs-cards cs-cards-grid">
 <% for (const item of items) { %>
 <div class="cs-card">
 <% if (item.image) { %><div class="<%= item.marca ? "cs-card-thumb-logo" : "cs-card-thumb" %>"><img src="<%- item.image %>" alt="" loading="lazy"/></div><% } %>
 <% if (item.date) { %><p class="cs-card-date"><%= item.date %></p><% } %>
-<% if (item.author) { %><p class="cs-card-date"><%= item.author %></p><% } %>
+<% if (item.author) { %><p class="cs-card-date"><%= rotulo %><%= item.author %></p><% } %>
 <h3 class="cs-card-title"><%= item.title %></h3>
 <% if (item.description) { %><p class="cs-card-desc"><%= item.description %></p><% } %>
 <% if (ehExterno(item)) { %><p class="cs-card-action"><a class="cs-card-btn" href="<%- normaliza(item.path) %>" target="_blank" rel="noopener">Mais informações</a></p><% } else { %><p class="cs-card-action"><a class="cs-card-btn" href="<%- normaliza(item.path) %>">Leia mais</a></p><% } %>

@@ -10,6 +10,8 @@ sidebar: false
 toc: false
 ---
 
+::: {.projeto-intro}
+
 Esse projeto de extensão está vinculado ao projeto "Ciência de Dados e o
 Pioneirismo Feminino: Uma Trilha Formativa com Abordagem STEAM", financiado
 pela FAPEMIG no âmbito da chamada nº 013/2024 e com duração entre 04/08/2025 e
@@ -21,10 +23,12 @@ de Dados no Ensino Médio. O conteúdo abordará conceitos básicos de
 Estatística, Saúde Pública e Epidemiologia, linguagens de programação e
 questões éticas relacionadas ao uso de dados.
 
+:::
+
 ```{=html}
 <div class="projeto-links">
-  <a class="destaque" href="https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2359" target="_blank" rel="noopener">
-    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  <a href="mailto:izabela.oliveira@ufla.br">
+    <i class="bi bi-envelope"></i> izabela.oliveira@ufla.br
   </a>
 </div>
 ```

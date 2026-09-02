@@ -50,5 +50,3 @@ listing:
 
 ::: {#livros}
 :::
-
-[Ver todos os títulos na Editora UFLA »](https://www.editoraufla.com.br/){target="_blank"}

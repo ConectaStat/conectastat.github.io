@@ -24,13 +24,15 @@ toc: false
 listing:
   - id: grupos-pesquisa
     template: ../../_assets/cards-grid.ejs
+    template-params:
+      rotulo_autor: "Coordenação"
     sort: false
     contents:
       - "grupos/nlin/index.qmd"
       - "grupos/nstats/index.qmd"
-      - "grupos/estatistica-espacial/index.qmd"
-      - "grupos/series-temporais/index.qmd"
       - "grupos/gps/index.qmd"
+      # OCULTO: grupos/series-temporais/ (núcleo ainda sem página própria).
+      # Para voltar, inclua a linha aqui e tire a exclusão em _quarto.yml.
 
   - id: editais-pesquisa
     template: ../../_assets/cards-filtrado.ejs

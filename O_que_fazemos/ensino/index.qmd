@@ -10,7 +10,7 @@ toc: false
 #  1) `topicos-ensino`: cada item é um TÓPICO de ensino, exibido como card de
 #     manchete. Para criar um novo tópico, adicione um item aqui e, se ele
 #     tiver página própria, crie a pasta O_que_fazemos/ensino/<topico>/index.qmd
-#     (use softwares/ ou materiais/ como modelo).
+#     (use softwares/ ou apostilas/ como modelo).
 #  2) `editais-ensino`: os editais em si, exibidos direto na página (mesmo
 #     rotator de cards da home), sem passar por um card intermediário. Só
 #     entram os posts de oportunidades/ com "Ensino" em categories - por
@@ -26,13 +26,13 @@ listing:
         description: "Projetos de análise de dados feitos pelos estudantes de primeiro período da graduação, do dado bruto ao relatório final."
         path: organizacao-e-apresentacao-de-dados/index.html
         image: ../../images/topicos/boxplot.svg
-      - title: "Softwares"
+      - title: "Softwares e pacotes"
         description: "Aplicativos, pacotes e ferramentas computacionais desenvolvidos como apoio ao ensino de Estatística."
         path: softwares/index.html
         image: ../../images/topicos/qq.svg
-      - title: "Materiais"
-        description: "Apostilas, tutoriais e recursos didáticos abertos produzidos pelo departamento."
-        path: materiais/index.html
+      - title: "Apostilas"
+        description: "Apostilas e materiais didáticos abertos produzidos pelo departamento, em formato de referência."
+        path: apostilas/index.html
         image: ../../images/topicos/barras.svg
 
   - id: editais-ensino
@@ -46,7 +46,7 @@ listing:
 
 ::: {.listing-block}
 
-## Projetos de Ensino, Softwares e Materiais Didáticos
+## Projetos de Ensino, Softwares e Apostilas
 
 ::: {#topicos-ensino}
 :::

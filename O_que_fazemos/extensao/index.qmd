@@ -23,6 +23,8 @@ toc: false
 listing:
   - id: projetos-extensao
     template: ../../_assets/cards-grid.ejs
+    template-params:
+      rotulo_autor: "Coordenação"
     sort: false
     contents:
       - "projetos/conectastat/index.qmd"
@@ -31,7 +33,6 @@ listing:
       - "projetos/r-ladies-lavras/index.qmd"
       - "projetos/pyladies-lavras/index.qmd"
       - "projetos/xadrez-para-todos/index.qmd"
-      - "projetos/assessoria-a-prefeituras/index.qmd"
 
   - id: editais-extensao
     template: ../../_assets/cards-filtrado.ejs

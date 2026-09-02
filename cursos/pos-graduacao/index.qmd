@@ -31,7 +31,7 @@ pesquisadores em empresas, públicas ou privadas. As linhas de pesquisa são:
 2. Teoria Matemática e Métodos Estatísticos;
 3. Análise Multivariada e Estatística Espacial.
 
-Sendo que estas envolvem:
+Estas envolvem:
 
 - **Estatística Experimental:** planejamento de experimentos, análise de dados oriundos de estudos agropecuários e interpretação dos resultados obtidos;
 
@@ -49,28 +49,11 @@ Sendo que estas envolvem:
 
 ## Ingresso
 
-- O processo seletivo ocorre anualmente, com início do curso no primeiro semestre de cada ano. Eventualmente, também são realizados processos seletivos para o segundo semestre. Os editais são divulgados na [página do programa](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
+O processo seletivo ocorre anualmente, com início do curso no primeiro semestre de cada ano. Eventualmente, também são realizados processos seletivos para o segundo semestre. Os editais são divulgados na [página do programa](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
 
 ## O Programa
 
-- O programa é financiado com recursos do Programa de Apoio à Pós-Graduação (PROAP) da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), além do financiamento da maioria dos discentes, por meio de bolsas de estudos concedidas pela CAPES, Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG).
-
-## Disciplinas
-
-Entre as disciplinas oferecidas regularmente estão:
-
-| Disciplina | Tema |
-|---|---|
-| Inferência Estatística | Estimação, testes de hipóteses e teoria assintótica |
-| Modelos Lineares | Teoria e aplicação de modelos de regressão |
-| Planejamento de Experimentos | Delineamentos experimentais e análise |
-| Estatística Computacional | Simulação, métodos de Monte Carlo e otimização |
-| Modelos Mistos | Efeitos aleatórios e dados longitudinais |
-| Estatística Bayesiana | Inferência bayesiana e métodos MCMC |
-| Séries Temporais | Modelagem e previsão de dados temporais |
-
-: {tbl-colwidths="[40,60]"}
-
+O programa é financiado com recursos do Programa de Apoio à Pós-Graduação (PROAP) da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), além do financiamento da maioria dos discentes, por meio de bolsas de estudos concedidas pela CAPES, Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG).
 A relação completa de disciplinas, docentes e turmas está no
 [portal do PPGEE no SIGAA](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
 

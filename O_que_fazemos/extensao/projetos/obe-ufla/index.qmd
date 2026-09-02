@@ -11,6 +11,8 @@ sidebar: false
 toc: false
 ---
 
+::: {.projeto-intro}
+
 A proposta consiste na implantação da sede institucional da Olimpíada
 Brasileira de Estatística na Universidade Federal de Lavras, atuando como
 ponto regional de articulação da olimpíada. A iniciativa envolve ações de
@@ -22,10 +24,12 @@ fortalecer a aproximação entre universidade e educação básica, contribuindo
 para a formação científica e para a disseminação do pensamento estatístico na
 região de Lavras e entorno.
 
+:::
+
 ```{=html}
 <div class="projeto-links">
-  <a class="destaque" href="https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2458" target="_blank" rel="noopener">
-    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  <a href="mailto:camilla.barroso@ufla.br">
+    <i class="bi bi-envelope"></i> camilla.barroso@ufla.br
   </a>
 </div>
 ```

@@ -9,6 +9,9 @@ project:
     - "**/*.qmd"
     # Página de assessoria desativada (mantida no repositório, sem publicar).
     - "!assessoria/**"
+    # Núcleo ainda sem página própria: fonte mantido no repositório, fora
+    # do site e da listagem.
+    - "!O_que_fazemos/pesquisa/grupos/series-temporais/**"
   # Antes de cada render completo: gera a capa de qualquer post sem `image:`
   # (gráfico/mapa mais colorido do relatório, ou "foto" do topo da página).
   pre-render: scripts/gerar_thumbnails.py
@@ -110,9 +113,6 @@ website:
       - href: "https://www.instagram.com/estatistica.ufla/"
         icon: instagram
         aria-label: Instagram
-      - href: "#"
-        icon: linkedin
-        aria-label: LinkedIn
     right: |
       <div class="footer-assinatura"><a href="https://des.ufla.br/" aria-label="Departamento de Estatística da UFLA"><img src="/images/des-ufla-horiz-negativa.png" class="footer-assinatura-des" alt="DES - Departamento de Estatística | ICET - Instituto de Ciências Exatas e Tecnológicas | Universidade Federal de Lavras"></a></div>
 

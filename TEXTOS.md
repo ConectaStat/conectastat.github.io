@@ -362,7 +362,7 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 > 2. Teoria Matemática e Métodos Estatísticos;
 > 3. Análise Multivariada e Estatística Espacial.
 >
-> Sendo que estas envolvem:
+> Estas envolvem:
 >
 > - **Estatística Experimental:** planejamento de experimentos, análise de dados oriundos de estudos agropecuários e interpretação dos resultados obtidos;
 >
@@ -380,26 +380,11 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 >
 > ## Ingresso
 >
-> - O processo seletivo ocorre anualmente, com início do curso no primeiro semestre de cada ano. Eventualmente, também são realizados processos seletivos para o segundo semestre. Os editais são divulgados na [página do programa](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
+> O processo seletivo ocorre anualmente, com início do curso no primeiro semestre de cada ano. Eventualmente, também são realizados processos seletivos para o segundo semestre. Os editais são divulgados na [página do programa](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
 >
 > ## O Programa
 >
-> - O programa é financiado com recursos do Programa de Apoio à Pós-Graduação (PROAP) da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), além do financiamento da maioria dos discentes, por meio de bolsas de estudos concedidas pela CAPES, Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG).
->
-> ## Disciplinas
->
-> Entre as disciplinas oferecidas regularmente estão:
->
-> | Disciplina | Tema |
-> |---|---|
-> | Inferência Estatística | Estimação, testes de hipóteses e teoria assintótica |
-> | Modelos Lineares | Teoria e aplicação de modelos de regressão |
-> | Planejamento de Experimentos | Delineamentos experimentais e análise |
-> | Estatística Computacional | Simulação, métodos de Monte Carlo e otimização |
-> | Modelos Mistos | Efeitos aleatórios e dados longitudinais |
-> | Estatística Bayesiana | Inferência bayesiana e métodos MCMC |
-> | Séries Temporais | Modelagem e previsão de dados temporais |
->
+> O programa é financiado com recursos do Programa de Apoio à Pós-Graduação (PROAP) da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), além do financiamento da maioria dos discentes, por meio de bolsas de estudos concedidas pela CAPES, Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG).
 > A relação completa de disciplinas, docentes e turmas está no
 > [portal do PPGEE no SIGAA](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
 >
@@ -425,10 +410,7 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 
 **Texto da página:**
 
-> O **Painel dos Egressos** reúne, em um dashboard interativo, a trajetória
-> dos egressos da graduação e da pós-graduação em Estatística da UFLA:
-> os setores em que atuam, as regiões do país e do exterior para onde foram
-> e a formação continuada que seguiram após o curso.
+> O **Painel dos Egressos** foi elaborado a partir de uma pesquisa realizada pela coordenação do PPGEE  em 2024. A todos os egressos do programa foi enviado um questionário online, com perguntas gerais sobre sua experiência com o curso e atuação profissional.
 
 
 ### O Que Fazemos › Pesquisa
@@ -471,7 +453,7 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 
 **Texto da página:**
 
-> ## Projetos de Ensino, Softwares e Materiais Didáticos
+> ## Projetos de Ensino, Softwares e Apostilas
 >
 > ## Editais de Ensino
 >
@@ -482,11 +464,11 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 > **Organização e Apresentação de Dados**  
 > Projetos de análise de dados feitos pelos estudantes de primeiro período da graduação, do dado bruto ao relatório final.
 >
-> **Softwares**  
+> **Softwares e pacotes**  
 > Aplicativos, pacotes e ferramentas computacionais desenvolvidos como apoio ao ensino de Estatística.
 >
-> **Materiais**  
-> Apostilas, tutoriais e recursos didáticos abertos produzidos pelo departamento.
+> **Apostilas**  
+> Apostilas e materiais didáticos abertos produzidos pelo departamento, em formato de referência.
 >
 
 
@@ -508,29 +490,19 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 ### O Que Fazemos › Ensino › Softwares
 `O_que_fazemos/ensino/softwares/index.qmd`
 
-**Título (aparece no banner):** Softwares
+**Título (aparece no banner):** Softwares e pacotes
 
 **Subtítulo:** Aplicativos, pacotes e ferramentas computacionais de apoio ao ensino de Estatística.  
 *(hoje oculto no site; fica só no código)*
 
 **Texto da página:**
 
-> Ferramentas computacionais desenvolvidas nos projetos de ensino do
-> departamento. Os primeiros itens serão publicados em breve.
+> *(sem texto próprio: a página só exibe a listagem)*
 
 
 ### O Que Fazemos › Ensino › Materiais
-`O_que_fazemos/ensino/materiais/index.qmd`
 
-**Título (aparece no banner):** Materiais
-
-**Subtítulo:** Apostilas, tutoriais e recursos didáticos abertos de apoio às disciplinas.  
-*(hoje oculto no site; fica só no código)*
-
-**Texto da página:**
-
-> Materiais didáticos produzidos nos projetos de ensino do departamento.
-> Os primeiros itens serão publicados em breve.
+*(arquivo não encontrado: O_que_fazemos/ensino/materiais/index.qmd)*
 
 
 ### O Que Fazemos › Ensino › Editais
@@ -617,8 +589,6 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 > revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"}, e o envio
 > de artigos é feito pelo [sistema de submissão da
 > BJB](https://biometria.ufla.br/index.php/BBJ/login?source=%2Findex.php%2FBBJ%2Fsubmission){target="_blank"}.
->
-> [Conhecer a revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"}
 
 
 ### Ações › Nossos Livros
@@ -631,7 +601,7 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 
 **Texto da página:**
 
-> [Ver todos os títulos na Editora UFLA »](https://www.editoraufla.com.br/){target="_blank"}
+> *(sem texto próprio: a página só exibe a listagem)*
 
 
 ### Ações › Assessoria e Consultoria Estatística

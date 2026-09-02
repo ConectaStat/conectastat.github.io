@@ -10,10 +10,7 @@ toc: false
 
 <!-- INTRODUÇÃO - texto provisório: substitua pelo definitivo quando fornecido -->
 
-O **Painel dos Egressos** reúne, em um dashboard interativo, a trajetória
-dos egressos da graduação e da pós-graduação em Estatística da UFLA:
-os setores em que atuam, as regiões do país e do exterior para onde foram
-e a formação continuada que seguiram após o curso.
+O **Painel dos Egressos** foi elaborado a partir de uma pesquisa realizada pela coordenação do PPGEE  em 2024. A todos os egressos do programa foi enviado um questionário online, com perguntas gerais sobre sua experiência com o curso e atuação profissional.
 
 <!--
   DASHBOARD - o arquivo vive em cursos/pos-graduacao/dashboards/egressos.html
