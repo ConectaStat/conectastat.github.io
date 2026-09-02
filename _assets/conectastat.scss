@@ -1411,10 +1411,14 @@ body { -webkit-font-smoothing: antialiased; }
 
   // Depois de um bloco de apresentação as pílulas ganham respiro: coladas no
   // parágrafo elas leem como continuação do texto, não como ações.
-  .projeto-intro + & { margin-top: 1.9rem; }
+  .projeto-intro + &,
+  .projeto-ficha + & { margin-top: 1.9rem; }
 
-  a {
+  a, button {
     display: inline-flex;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.2;
     align-items: center;
     gap: 0.5rem;
     padding: 0.52rem 1.35rem;
@@ -1446,6 +1450,115 @@ body { -webkit-font-smoothing: antialiased; }
       background: $cs-green-dark;
       border-color: $cs-green-dark;
       color: #ffffff !important;
+    }
+  }
+}
+
+// Ficha do projeto ou núcleo: encontros, local, contato. Escrita em markdown
+// como lista de definições (rótulo, depois ": valor" na linha seguinte);
+// o rótulo segue o estilo das etiquetas verdes dos cards.
+.projeto-ficha {
+  margin: 1.5rem 0 0;
+
+  dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.5rem 1.4rem;
+    margin: 0;
+  }
+
+  dt {
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: $cs-green-dark;
+    padding-top: 0.3rem;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $ink;
+
+    p { margin: 0; }
+  }
+
+  @media (max-width: 575.98px) {
+    dl { grid-template-columns: 1fr; gap: 0.15rem; }
+    dd { margin-bottom: 0.8rem; }
+  }
+}
+
+// Lista de referências (Apostilas): cada item é uma citação, com botão para
+// copiá-la e link para a página do material. Os botões são montados pelo JS
+// em _includes/listing-cards.html a partir da listagem padrão do Quarto.
+.listagem-referencias {
+  // Cada item é uma linha: o título do material e, embaixo, as etiquetas à
+  // esquerda e dois ícones discretos à direita (copiar a citação, abrir o
+  // site do autor). A citação (description), a data e o autor ficam no
+  // HTML (a busca e o botão de copiar leem de lá) mas não aparecem.
+  .quarto-post {
+    display: block;
+    padding: 0.7rem 0;
+    margin: 0;
+    border-bottom: 1px solid $hairline;
+
+    &:first-child { border-top: 1px solid $hairline; }
+    .thumbnail, .metadata, .listing-description { display: none; }
+
+    .body {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0;
+    }
+  }
+
+  .listing-title {
+    flex: 0 0 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: $cs-blue-dark;
+    margin: 0;
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: $cs-blue; }
+  }
+
+  .listing-categories {
+    order: 2;
+    margin: 0.35rem 0 0;
+    padding: 0;
+    gap: 0.25rem;
+
+    .listing-category { font-size: 0.6rem; padding: 0.1rem 0.5rem; }
+  }
+
+  .ref-acoes {
+    order: 3;
+    display: inline-flex;
+    gap: 0.15rem;
+    margin: 0.35rem 0 0 auto;
+
+    a, button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.8rem;
+      height: 1.8rem;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: $cs-green-dark;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: background 0.15s ease, color 0.15s ease;
+
+      &:hover { background: $hairline; color: $cs-blue; }
     }
   }
 }
@@ -1897,13 +2010,19 @@ main.content table {
 // Vídeo responsivo
 .video-wrapper {
   position: relative;
+  // Cerca de 60% da coluna de texto, centrado: o vídeo acompanha a página em
+  // vez de dominá-la e deixa o destaque para as seções ao redor.
   width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid $hairline;
   box-shadow: none;
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 
   iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 }

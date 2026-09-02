@@ -28,9 +28,22 @@ revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"}, e o envio
 de artigos é feito pelo [sistema de submissão da
 BJB](https://biometria.ufla.br/index.php/BBJ/login?source=%2Findex.php%2FBBJ%2Fsubmission){target="_blank"}.
 
-::: {.button}
-[Conhecer a revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"}
-:::
+```{=html}
+<div class="projeto-links">
+  <a href="https://biometria.ufla.br/index.php/BBJ" target="_blank" rel="noopener">
+    <i class="bi bi-globe"></i> Site da revista
+  </a>
+  <a href="https://www.instagram.com/brjbiometrics/" target="_blank" rel="noopener">
+    <i class="bi bi-instagram"></i> @brjbiometrics
+  </a>
+  <a href="https://www.linkedin.com/company/brazilian-journal-of-biometrics/" target="_blank" rel="noopener">
+    <i class="bi bi-linkedin"></i> LinkedIn
+  </a>
+  <a href="https://www.researchgate.net/profile/Brazilian-Biometrics" target="_blank" rel="noopener">
+    <i class="bi bi-journal-text"></i> ResearchGate
+  </a>
+</div>
+```
 
 ::::
 

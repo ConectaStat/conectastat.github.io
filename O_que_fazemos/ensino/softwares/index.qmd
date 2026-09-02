@@ -1,5 +1,5 @@
 ---
-title: "Softwares"
+title: "Softwares e pacotes"
 subtitle: "Aplicativos, pacotes e ferramentas computacionais de apoio ao ensino de Estatística."
 title-block-banner: true
 format:
@@ -10,38 +10,39 @@ body-classes: cs-banner-qq
 page-layout: article
 sidebar: false
 toc: false
+# Mesma lista de referências de apostilas/: cada item é uma citação pronta
+# em `description` (copiada pelo botão de ícone), e `path` é a página do
+# software, destino de "Site do autor". `categories` alimenta os filtros da
+# margem e a busca. Para acrescentar um software ou pacote, copie um item.
 listing:
   id: listagem-softwares
-  contents: posts
-  sort: "date desc"
-  type: grid
-  grid-columns: 3
-  image-height: "172px"
+  type: default
+  sort: false
   categories: true
   sort-ui: false
   filter-ui: false
-  fields: [image, title, description, date]
+  fields: [title, author, date, description, categories]
+  contents:
+    - title: "Sisvar"
+      author: "Daniel Furtado Ferreira"
+      date: "2019-12-01"
+      categories: [Software, Experimentação, Windows]
+      description: "FERREIRA, Daniel Furtado. **Sisvar**: a computer analysis system to fixed effects split plot type designs. Brazilian Journal of Biometrics, Lavras, v. 37, n. 4, p. 529-535, 2019. Programa disponível em: https://des.ufla.br/~danielff/sisvar.html."
+      path: https://des.ufla.br/~danielff/sisvar.html
 ---
-
-<!-- Para publicar, crie a pasta posts/AAAA-MM-DD-slug/ com um index.qmd
-     (veja README.md) - ele entra sozinho na grade abaixo, do mais
-     novo ao mais velho. -->
-
-Ferramentas computacionais desenvolvidas nos projetos de ensino do
-departamento. Os primeiros itens serão publicados em breve.
 
 ```{=html}
 <div class="projetos-acoes" id="projetos-acoes">
   <div class="busca-projetos">
     <i class="bi bi-search"></i>
     <input type="search" id="busca-projetos-input"
-           placeholder="Pesquisar softwares..."
-           aria-label="Pesquisar por título, autor, tema ou fonte" />
+           placeholder="Pesquisar softwares e pacotes..."
+           aria-label="Pesquisar por título, autor ou tema" />
   </div>
 </div>
 ```
 
-::: {.projetos-estudantes}
+::: {.projetos-estudantes .listagem-referencias}
 ::: {#listagem-softwares}
 :::
 :::

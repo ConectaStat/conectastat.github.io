@@ -36,8 +36,5 @@ deseja avançar os conhecimentos em Python.
   <a href="https://github.com/PyLadiesLavras" target="_blank" rel="noopener">
     <i class="bi bi-github"></i> GitHub
   </a>
-  <a class="destaque" href="https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2309" target="_blank" rel="noopener">
-    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
-  </a>
 </div>
 ```

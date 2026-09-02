@@ -24,6 +24,9 @@ os conhecimentos em R.
 
 ```{=html}
 <div class="projeto-links">
+  <a href="mailto:izabela.oliveira@ufla.br">
+    <i class="bi bi-envelope"></i> izabela.oliveira@ufla.br
+  </a>
   <a href="https://www.instagram.com/rladieslavras" target="_blank" rel="noopener">
     <i class="bi bi-instagram"></i> @rladieslavras
   </a>
@@ -32,9 +35,6 @@ os conhecimentos em R.
   </a>
   <a href="https://www.meetup.com/pt-br/rladies-lavras/" target="_blank" rel="noopener">
     <i class="bi bi-people"></i> Meetup
-  </a>
-  <a class="destaque" href="https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2308" target="_blank" rel="noopener">
-    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
   </a>
 </div>
 ```

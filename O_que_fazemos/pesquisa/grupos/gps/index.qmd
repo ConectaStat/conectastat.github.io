@@ -1,7 +1,7 @@
 ---
 title: "Grupo de Pesquisa em Estatística Espacial (GPS)"
 description: "Estatística espacial e análise espacial aplicada."
-author: "Coordenação: João Domingos Scalon, Renato Ribeiro de Lima e Marcelo Silva de Oliveira"
+author: "João Domingos Scalon, Renato Ribeiro de Lima e Marcelo Silva de Oliveira"
 image: capa.png
 marca: true
 title-block-banner: true
@@ -11,16 +11,44 @@ sidebar: false
 toc: false
 ---
 
+::: {.projeto-intro}
+
 O GPS foi criado em 2015 pelos professores João Domingos Scalon, Renato
 Ribeiro de Lima e Marcelo Silva de Oliveira, com o objetivo de aplicar e
 aprofundar técnicas de análise espacial. O grupo reúne professores, ex-alunos,
 pesquisadores externos, estudantes de pós-graduação e alunos de graduação,
 além de membros de diferentes áreas do conhecimento.
 
+:::
+
+::: {.projeto-ficha}
+
+<!-- EDITAR: confirmar com o grupo o dia, o horário e a sala dos encontros. -->
+
+Encontros
+: Consulte a coordenação
+
+Local
+: Departamento de Estatística da UFLA
+
+:::
+
 ```{=html}
 <div class="projeto-links">
-  <a class="destaque" href="https://gean-damaceno.github.io/GPS" target="_blank" rel="noopener">
-    <i class="bi bi-box-arrow-up-right"></i> Saiba mais
+  <a href="mailto:scalon@ufla.br">
+    <i class="bi bi-envelope"></i> scalon@ufla.br
+  </a>
+  <a href="mailto:rrlima@ufla.br">
+    <i class="bi bi-envelope"></i> rrlima@ufla.br
+  </a>
+  <a href="mailto:geandamaceno030@gmail.com">
+    <i class="bi bi-envelope"></i> geandamaceno030@gmail.com
+  </a>
+  <a href="https://github.com/gean-damaceno/GPS" target="_blank" rel="noopener">
+    <i class="bi bi-github"></i> GitHub
+  </a>
+  <a href="https://gean-damaceno.github.io/GPS" target="_blank" rel="noopener">
+    <i class="bi bi-globe"></i> Site do grupo
   </a>
 </div>
 ```
