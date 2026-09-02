@@ -148,7 +148,6 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
   Ações
       └── Revista Científica
       └── Nossos Livros
-      └── Assessoria e Consultoria Estatística
       └── Laboratório de Análises de Dados (LAD)
       └── Cursos e Eventos
   Sobre o ConectaStat
@@ -340,17 +339,30 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 
 **Texto da página:**
 
-> A UFLA abriga diversos [Programas de Pós-Graduação](https://prpg.ufla.br/mostrapg/pt-br/ultimas-noticias/82-programas-de-pos-graduacao),
+> A UFLA possui diversos [Programas de Pós-Graduação](https://prpg.ufla.br/mostrapg/pt-br/ultimas-noticias/82-programas-de-pos-graduacao){target="_blank"},
 > e o [Painel de Perfil dos Ingressantes](https://paineis.ufla.br/pos-graduacao/120-painel/418-perfil-ingressantes-pos-graduacao-stricto-sensu){target="_blank"}
-> mostra quem entra no stricto sensu, por gênero, idade, região de origem e
-> formação. Aqui tratamos com maior afinidade o de
-> **Estatística e Experimentação Agropecuária (PPGEEA)**, com cursos de
-> **mestrado** e **doutorado**, formando pesquisadores e docentes com sólida
-> base teórica e forte vocação aplicada.
+> mostra o perfil dos ingressantes agrupados por gênero, idade, região de origem
+> e formação. Aqui tratamos com mais detalhes sobre o **Programa de
+> Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE)**, que
+> possui os níveis de **mestrado** e **doutorado**, formando pesquisadores e
+> docentes com sólida base teórica e forte vocação aplicada.
 >
-> ## Estatística e Experimentação Agropecuária
+> ## Estatística e Experimentação Agropecuária (PPGEE)
 >
-> O Programa de Pós-Graduação em Estatística e Experimentação Agropecuária concentra suas atividades no estudo e desenvolvimento de métodos estatísticos modernos para a análise de dados nas diversas áreas do conhecimento, mas com especial atenção à Estatística e Experimentação Agropecuária. O objetivo principal do programa é formar recursos humanos e garantir sua qualificação, aprimorando seus conhecimentos em Estatística e Experimentação para o exercício de atividades de docência e de pesquisa em instituições de ensino, pesquisa e em empresas, públicas ou privadas. As linhas de pesquisa são: Estatística Experimental e Aplicada, Teoria Matemática e Métodos Estatísticos, Análise Multivariada e Estatística Espacial, sendo que estas envolvem:
+> O PPGEE concentra suas atividades no estudo e desenvolvimento de métodos
+> estatísticos modernos para a análise de dados nas diversas áreas do
+> conhecimento, mas com especial atenção em aplicações na agropecuária. O
+> objetivo principal do programa é formar recursos humanos e garantir sua
+> qualificação, aprimorando seus conhecimentos em estatística aplicada para o
+> exercício de atividades de docência e de pesquisa. A maior parte dos nossos
+> egressos são docentes em instituições de ensino, mas também temos
+> pesquisadores em empresas, públicas ou privadas. As linhas de pesquisa são:
+>
+> 1. Estatística Experimental e Aplicada;
+> 2. Teoria Matemática e Métodos Estatísticos;
+> 3. Análise Multivariada e Estatística Espacial.
+>
+> Sendo que estas envolvem:
 >
 > - **Estatística Experimental:** planejamento de experimentos, análise de dados oriundos de estudos agropecuários e interpretação dos resultados obtidos;
 >
@@ -362,18 +374,17 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 >
 > - **Métodos multivariados:** proposição e avaliação de testes e análise de estabilidade de cultivares;
 >
-> - **Métodos computacionais:** uso de métodos computacionais intensivos e técnicas de data science na aplicação e desenvolvimento de métodos estatísticos;
+> - **Métodos computacionais:** uso de métodos computacionais intensivos, machine learning, inteligência artificial e técnicas de data science na aplicação e desenvolvimento de métodos estatísticos;
 >
 > - **Estatística espacial:** análise de dados correlacionados espacialmente e espaço-temporalmente, em estudos de geoestatística, processos pontuais e análise de dados de áreas.
 >
 > ## Ingresso
 >
->  - O processo seletivo ocorre anualmente, com início do curso no primeiro semestre de cada ano. Eventualmente, também são realizados processos seletivos para o segundo semestre.
+> - O processo seletivo ocorre anualmente, com início do curso no primeiro semestre de cada ano. Eventualmente, também são realizados processos seletivos para o segundo semestre. Os editais são divulgados na [página do programa](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
 >
 > ## O Programa
 >
->  - O programa é financiado com recursos do Programa de Apoio à Pós-Graduação (PROAP) da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), além do financiamento da maioria dos discentes, por meio de bolsas de estudos concedidas pela CAPES, Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG).              
->
+> - O programa é financiado com recursos do Programa de Apoio à Pós-Graduação (PROAP) da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES), além do financiamento da maioria dos discentes, por meio de bolsas de estudos concedidas pela CAPES, Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) e Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG).
 >
 > ## Disciplinas
 >
@@ -390,7 +401,7 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 > | Séries Temporais | Modelagem e previsão de dados temporais |
 >
 > A relação completa de disciplinas, docentes e turmas está no
-> [portal do PPGEEA no SIGAA](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
+> [portal do PPGEE no SIGAA](https://sigaa.ufla.br/sigaa/public/programa/portal.jsf?lc=pt_BR&id=1702){target="_blank"}.
 >
 > ## Projetos de pesquisa
 >

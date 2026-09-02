@@ -7,6 +7,8 @@ project:
   # como documentação do repositório, sem virar página pública do site.
   render:
     - "**/*.qmd"
+    # Página de assessoria desativada (mantida no repositório, sem publicar).
+    - "!assessoria/**"
   # Antes de cada render completo: gera a capa de qualquer post sem `image:`
   # (gráfico/mapa mais colorido do relatório, ou "foto" do topo da página).
   pre-render: scripts/gerar_thumbnails.py
@@ -75,8 +77,10 @@ website:
             href: acoes/revista-cientifica/index.qmd
           - text: "Nossos Livros"
             href: acoes/livros/index.qmd
-          - text: "Assessoria e Consultoria Estatística"
-            href: assessoria/index.qmd
+          # OCULTO: página de assessoria desativada por enquanto. Fonte segue
+          # em assessoria/index.qmd; reative aqui e no `render` acima.
+          # - text: "Assessoria e Consultoria Estatística"
+          #   href: assessoria/index.qmd
           - text: "Laboratório de Análises de Dados (LAD)"
             href: acoes/lad/index.qmd
           - text: "Cursos e Eventos"

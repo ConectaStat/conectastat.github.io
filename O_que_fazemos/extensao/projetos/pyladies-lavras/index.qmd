@@ -24,14 +24,17 @@ deseja avançar os conhecimentos em Python.
 
 ```{=html}
 <div class="projeto-links">
+  <a href="mailto:lavras@pyladies.com">
+    <i class="bi bi-envelope"></i> lavras@pyladies.com
+  </a>
   <a href="https://www.instagram.com/pyladieslavras/" target="_blank" rel="noopener">
     <i class="bi bi-instagram"></i> @pyladieslavras
   </a>
-  <a href="https://github.com/pyladieslavras" target="_blank" rel="noopener">
-    <i class="bi bi-github"></i> GitHub
+  <a href="https://x.com/PyLadiesLavras" target="_blank" rel="noopener">
+    <i class="bi bi-twitter-x"></i> @PyLadiesLavras
   </a>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJeNps0TkQV7iYDdt7BrsMwr_Mrd0B6bXBMAfnwISIV4R98g/viewform" target="_blank" rel="noopener">
-    <i class="bi bi-person-plus"></i> Seja uma de nós
+  <a href="https://github.com/PyLadiesLavras" target="_blank" rel="noopener">
+    <i class="bi bi-github"></i> GitHub
   </a>
   <a class="destaque" href="https://sig.ufla.br/modulos/publico/projetos_extensao/exibir.php?cod_projeto_extensao=2309" target="_blank" rel="noopener">
     <i class="bi bi-box-arrow-up-right"></i> Saiba mais
