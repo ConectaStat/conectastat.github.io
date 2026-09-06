@@ -21,18 +21,6 @@ além de membros de diferentes áreas do conhecimento.
 
 :::
 
-::: {.projeto-ficha}
-
-<!-- EDITAR: confirmar com o grupo o dia, o horário e a sala dos encontros. -->
-
-Encontros
-: Consulte a coordenação
-
-Local
-: Departamento de Estatística da UFLA
-
-:::
-
 ```{=html}
 <div class="projeto-links">
   <a href="mailto:scalon@ufla.br">
