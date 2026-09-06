@@ -23,18 +23,6 @@ desenvolvimento e aplicação de métodos estatísticos e inteligência artifici
 
 :::
 
-::: {.projeto-ficha}
-
-<!-- EDITAR: confirmar com o núcleo o dia, o horário e a sala dos encontros. -->
-
-Encontros
-: Consulte o núcleo pelo e-mail
-
-Local
-: Departamento de Estatística da UFLA
-
-:::
-
 ```{=html}
 <div class="projeto-links">
   <a href="mailto:nstats@ufla.br">
