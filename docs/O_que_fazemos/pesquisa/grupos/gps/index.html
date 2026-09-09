@@ -444,6 +444,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
+  //  Painel embutido (dashboard): o quadro cresce até a altura
+  //  real do painel quando ele não cabe - em telas estreitas o
+  //  dashboard empilha os cartões e fica mais alto que o quadro,
+  //  cortando o conteúdo. Mede de novo ao redimensionar a janela
+  //  e ao trocar de aba dentro do painel.
+  // ============================================================
+  document.querySelectorAll(".report-embed iframe").forEach(function (fr) {
+    var base = fr.style.height; // vazio: vale a altura do CSS
+
+    function ajusta() {
+      var d;
+      try { d = fr.contentDocument; } catch (e) { return; }
+      if (!d || !d.documentElement) return;
+      fr.style.height = base;                 // volta ao tamanho do CSS
+      var alvo = Math.max(d.documentElement.scrollHeight,
+                          d.body ? d.body.scrollHeight : 0);
+      var atual = fr.getBoundingClientRect().height;
+      if (alvo > atual + 8) fr.style.height = Math.ceil(alvo) + "px";
+    }
+
+    function agenda() { [50, 400, 1200, 3000].forEach(function (ms) { setTimeout(ajusta, ms); }); }
+
+    fr.addEventListener("load", function () {
+      agenda();
+      try {
+        // trocar de aba no painel muda a altura do conteúdo
+        fr.contentDocument.addEventListener("click", function () { setTimeout(ajusta, 300); });
+      } catch (e) {}
+    });
+    var t;
+    window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(ajusta, 200); });
+    agenda();
+  });
+
+  // ============================================================
   //  Relatório nativo: o relatório do projeto flui como parte
   //  da página - sem moldura, com altura automática, sem o
   //  título interno duplicado e com índice "Nesta página"
