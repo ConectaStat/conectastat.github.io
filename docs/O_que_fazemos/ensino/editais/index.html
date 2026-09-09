@@ -528,8 +528,8 @@ document.addEventListener("DOMContentLoaded", function () {
   //  Apostilas: cada item da listagem é uma referência. Abaixo da
   //  título entra o autor; na linha das etiquetas, à direita, as
   //  pílulas padrão: copiar a citação (só o ícone; copia o texto da
-  //  descrição) e "Site do autor" (a página do material, mesmo
-  //  destino do título)
+  //  descrição) e "Site do autor" (a página inicial do docente). O
+  //  título leva à página do material.
   // ============================================================
   document.querySelectorAll(".listagem-referencias .quarto-post").forEach(function (item) {
     var corpo = item.querySelector(".body");
@@ -573,26 +573,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     acoes.appendChild(copiar);
 
-    if (link && link.getAttribute("href")) {
+    // "Site do autor": a página inicial do docente (campo `site-professor`
+    // do item); sem esse campo, cai na página do material (link do título)
+    var prof = item.querySelector(".listing-site-professor");
+    var hrefAutor = (prof && /^https?:\/\//.test(prof.textContent.trim()))
+      ? prof.textContent.trim()
+      : (link && link.getAttribute("href"));
+    if (hrefAutor) {
       var acessar = document.createElement("a");
       acessar.className = "ref-site";
-      acessar.href = link.getAttribute("href");
-      acessar.title = "Site do autor";
-      acessar.setAttribute("aria-label", "Site do autor");
-      if (/^https?:\/\//.test(acessar.href)) { acessar.target = "_blank"; acessar.rel = "noopener"; }
+      acessar.href = hrefAutor;
+      if (/^https?:\/\//.test(hrefAutor)) { acessar.target = "_blank"; acessar.rel = "noopener"; }
       acessar.innerHTML = '<i class="bi bi-globe"></i> Site do autor';
       acoes.appendChild(acessar);
-    }
-
-    // página inicial do docente: campo `site-professor` do item
-    var prof = item.querySelector(".listing-site-professor");
-    if (prof && /^https?:\/\//.test(prof.textContent.trim())) {
-      var siteProf = document.createElement("a");
-      siteProf.className = "ref-professor";
-      siteProf.href = prof.textContent.trim();
-      siteProf.target = "_blank"; siteProf.rel = "noopener";
-      siteProf.innerHTML = '<i class="bi bi-person"></i> Site do professor';
-      acoes.appendChild(siteProf);
     }
     corpo.appendChild(acoes);
   });
