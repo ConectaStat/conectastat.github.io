@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -43,10 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-1b87b941be29ffcf2c6e7b7e3ae39d0b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-d3d6b340693092f02a2ffa049f0d46be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -429,6 +426,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
+  //  Painel embutido (dashboard): o quadro cresce até a altura
+  //  real do painel quando ele não cabe - em telas estreitas o
+  //  dashboard empilha os cartões e fica mais alto que o quadro,
+  //  cortando o conteúdo. Mede de novo ao redimensionar a janela
+  //  e ao trocar de aba dentro do painel.
+  // ============================================================
+  document.querySelectorAll(".report-embed iframe").forEach(function (fr) {
+    var base = fr.style.height; // vazio: vale a altura do CSS
+
+    function ajusta() {
+      var d;
+      try { d = fr.contentDocument; } catch (e) { return; }
+      if (!d || !d.documentElement) return;
+      fr.style.height = base;                 // volta ao tamanho do CSS
+      var alvo = Math.max(d.documentElement.scrollHeight,
+                          d.body ? d.body.scrollHeight : 0);
+      var atual = fr.getBoundingClientRect().height;
+      if (alvo > atual + 8) fr.style.height = Math.ceil(alvo) + "px";
+    }
+
+    function agenda() { [50, 400, 1200, 3000].forEach(function (ms) { setTimeout(ajusta, ms); }); }
+
+    fr.addEventListener("load", function () {
+      agenda();
+      try {
+        // trocar de aba no painel muda a altura do conteúdo
+        fr.contentDocument.addEventListener("click", function () { setTimeout(ajusta, 300); });
+      } catch (e) {}
+    });
+    var t;
+    window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(ajusta, 200); });
+    agenda();
+  });
+
+  // ============================================================
   //  Relatório nativo: o relatório do projeto flui como parte
   //  da página - sem moldura, com altura automática, sem o
   //  título interno duplicado e com índice "Nesta página"
@@ -601,64 +633,123 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
+
 // ============================================================
+
 //  Transições de página, camada 3: os blocos de conteúdo
+
 //  surgem suavemente conforme entram na tela (estilos em
+
 //  _assets/conectastat.scss, seção "TRANSIÇÕES DE PÁGINA").
+
 //  Sem JS ou com "reduzir movimento" ativo, nada é escondido.
+
 // ============================================================
+
 (function () {
+
   var reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   if (reduz || !("IntersectionObserver" in window)) return;
 
+
+
   // Só com esta classe o CSS esconde os blocos antes da revelação
+
   document.documentElement.classList.add("cs-js");
 
+
+
   document.addEventListener("DOMContentLoaded", function () {
+
     var alvos = [];
 
+
+
     if (document.querySelector(".hero-banner")) {
+
       // Home: os grandes blocos de seção (o hero já tem a própria montagem)
+
       document.querySelectorAll(".intro-block, .listing-block, .map-block")
+
         .forEach(function (el) { alvos.push(el); });
+
     } else {
+
       // Páginas internas: cada bloco de primeiro nível do documento
+
       var corpo = document.getElementById("quarto-document-content");
+
       if (corpo) {
+
         Array.prototype.forEach.call(corpo.children, function (el) {
+
           if (el.matches("script, style, #title-block-header, .quarto-listing")) return;
+
           alvos.push(el);
+
         });
+
         // Listagens (notícias, eventos...): cartão por cartão, em cascata
+
         corpo.querySelectorAll(".quarto-listing .quarto-grid-item")
+
           .forEach(function (el) { alvos.push(el); });
+
       }
+
     }
 
+
+
     if (!alvos.length) return;
+
     alvos.forEach(function (el) { el.classList.add("cs-reveal"); });
 
+
+
     // Blocos que entram juntos na tela revelam em cascata curta
+
     var io = new IntersectionObserver(function (entradas) {
+
       var atraso = 0;
+
       entradas.forEach(function (entrada) {
+
         if (!entrada.isIntersecting) return;
+
         var el = entrada.target;
+
         io.unobserve(el);
+
         el.style.transitionDelay = Math.min(atraso, 420) + "ms";
+
         atraso += 70;
+
         el.classList.add("cs-visivel");
+
         el.addEventListener("transitionend", function fim() {
+
           el.style.transitionDelay = "";
+
           el.removeEventListener("transitionend", fim);
+
         });
+
       });
+
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0 });
 
+
+
     alvos.forEach(function (el) { io.observe(el); });
+
   });
+
 })();
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
