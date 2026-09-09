@@ -14,7 +14,7 @@ toc: false
 # o botão "Copiar citação" copia, e o `path` é a página do material - é para
 # lá que o título e o botão "Acessar" levam. `categories` alimenta os filtros
 # da margem e a busca. `site-professor` é a página inicial do docente
-# (pílula "Site do professor"). Para acrescentar uma apostila, copie um item.
+# (pílula "Site do autor"). Para acrescentar uma apostila, copie um item.
 listing:
   id: listagem-apostilas
   type: default

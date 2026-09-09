@@ -14,7 +14,7 @@ toc: false
 # em `description` (copiada pelo botão de ícone), e `path` é a página do
 # software, destino de "Site do autor". `categories` alimenta os filtros da
 # margem e a busca. `site-professor` é a página inicial do docente (pílula
-# "Site do professor"). Para acrescentar um software ou pacote, copie um item.
+# "Site do autor"). Para acrescentar um software ou pacote, copie um item.
 listing:
   id: listagem-softwares
   type: default
