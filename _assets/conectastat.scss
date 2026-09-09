@@ -1495,10 +1495,12 @@ body { -webkit-font-smoothing: antialiased; }
 // copiá-la e link para a página do material. Os botões são montados pelo JS
 // em _includes/listing-cards.html a partir da listagem padrão do Quarto.
 .listagem-referencias {
-  // Cada item é uma linha: o título do material e, embaixo, as etiquetas à
-  // esquerda e dois ícones discretos à direita (copiar a citação, abrir o
-  // site do autor). A citação (description), a data e o autor ficam no
-  // HTML (a busca e o botão de copiar leem de lá) mas não aparecem.
+  // Cada item é uma linha: título do material, autor embaixo e, na linha
+  // seguinte, as etiquetas à esquerda e as pílulas padrão à direita (copiar
+  // a citação, só o ícone; "Site do autor"). A citação (description) e a
+  // data ficam no HTML (a busca e o botão de copiar leem de lá) mas não
+  // aparecem. O autor é movido para dentro do corpo pelo JS em
+  // _includes/listing-cards.html.
   .quarto-post {
     display: block;
     padding: 0.7rem 0;
@@ -1528,9 +1530,20 @@ body { -webkit-font-smoothing: antialiased; }
     a:hover { color: $cs-blue; }
   }
 
+  .ref-autor {
+    order: 1;
+    flex: 0 0 100%;
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: $cs-green-dark;
+    margin: 0.15rem 0 0;
+  }
+
   .listing-categories {
     order: 2;
-    margin: 0.35rem 0 0;
+    margin: 0.4rem 0 0;
     padding: 0;
     gap: 0.25rem;
 
@@ -1539,27 +1552,9 @@ body { -webkit-font-smoothing: antialiased; }
 
   .ref-acoes {
     order: 3;
-    display: inline-flex;
-    gap: 0.15rem;
-    margin: 0.35rem 0 0 auto;
+    margin: 0.4rem 0 0 auto;
 
-    a, button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 1.8rem;
-      height: 1.8rem;
-      border: 0;
-      border-radius: 50%;
-      background: transparent;
-      color: $cs-green-dark;
-      font-size: 0.95rem;
-      cursor: pointer;
-      text-decoration: none !important;
-      transition: background 0.15s ease, color 0.15s ease;
-
-      &:hover { background: $hairline; color: $cs-blue; }
-    }
+    button.ref-copiar { padding-left: 0.85rem; padding-right: 0.85rem; }
   }
 }
 

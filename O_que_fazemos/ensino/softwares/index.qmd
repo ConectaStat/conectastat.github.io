@@ -13,7 +13,8 @@ toc: false
 # Mesma lista de referências de apostilas/: cada item é uma citação pronta
 # em `description` (copiada pelo botão de ícone), e `path` é a página do
 # software, destino de "Site do autor". `categories` alimenta os filtros da
-# margem e a busca. Para acrescentar um software ou pacote, copie um item.
+# margem e a busca. `site-professor` é a página inicial do docente (pílula
+# "Site do professor"). Para acrescentar um software ou pacote, copie um item.
 listing:
   id: listagem-softwares
   type: default
@@ -21,10 +22,11 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
-  fields: [title, author, date, description, categories]
+  fields: [title, author, date, description, categories, site-professor]
   contents:
     - title: "Sisvar"
       author: "Daniel Furtado Ferreira"
+      site-professor: https://des.ufla.br/~danielff/
       date: "2019-12-01"
       categories: [Software, Experimentação, Windows]
       description: "FERREIRA, Daniel Furtado. **Sisvar**: a computer analysis system to fixed effects split plot type designs. Brazilian Journal of Biometrics, Lavras, v. 37, n. 4, p. 529-535, 2019. Programa disponível em: https://des.ufla.br/~danielff/sisvar.html."
