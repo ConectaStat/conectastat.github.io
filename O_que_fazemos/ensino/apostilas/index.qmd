@@ -13,7 +13,8 @@ toc: false
 # Cada item é uma referência: o `description` é a citação pronta (ABNT), que
 # o botão "Copiar citação" copia, e o `path` é a página do material - é para
 # lá que o título e o botão "Acessar" levam. `categories` alimenta os filtros
-# da margem e a busca. Para acrescentar uma apostila, copie um item.
+# da margem e a busca. `site-professor` é a página inicial do docente
+# (pílula "Site do professor"). Para acrescentar uma apostila, copie um item.
 listing:
   id: listagem-apostilas
   type: default
@@ -21,22 +22,25 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
-  fields: [title, author, date, description, categories]
+  fields: [title, author, date, description, categories, site-professor]
   contents:
     - title: "Estatística Computacional em Python"
       author: "Daniel Furtado Ferreira"
+      site-professor: https://des.ufla.br/~danielff/
       date: "2026-08-21"
       categories: [Python, Estatística Computacional, Pós-graduação]
       description: "FERREIRA, Daniel Furtado. **Estatística computacional em Python**: apostila da disciplina PEX 523. Lavras: Universidade Federal de Lavras, Departamento de Estatística, 2026. Disponível em: https://des.ufla.br/~danielff/estacomputpython.html."
       path: https://des.ufla.br/~danielff/estacomputpython.html
     - title: "Estatística Computacional"
       author: "Daniel Furtado Ferreira"
+      site-professor: https://des.ufla.br/~danielff/
       date: "2008-04-10"
       categories: [R, Estatística Computacional, Pós-graduação]
       description: "FERREIRA, Daniel Furtado. **Estatística computacional**: apostila da disciplina PEX 523. Lavras: Universidade Federal de Lavras, Departamento de Estatística, 2008. Disponível em: https://des.ufla.br/~danielff/estatisticacomputacional.html."
       path: https://des.ufla.br/~danielff/estatisticacomputacional.html
     - title: "Recursos Computacionais"
       author: "Daniel Furtado Ferreira"
+      site-professor: https://des.ufla.br/~danielff/
       date: "2006-03-14"
       categories: [R, SAS, Sisvar, Pós-graduação]
       description: "FERREIRA, Daniel Furtado. **Recursos computacionais**: apostila da disciplina PEX 830. Lavras: Universidade Federal de Lavras, Departamento de Estatística, 2006. Disponível em: https://des.ufla.br/~danielff/recursoscomputacionais.html."
