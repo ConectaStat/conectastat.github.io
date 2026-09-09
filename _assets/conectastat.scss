@@ -1496,8 +1496,8 @@ body { -webkit-font-smoothing: antialiased; }
 // em _includes/listing-cards.html a partir da listagem padrão do Quarto.
 .listagem-referencias {
   // Cada item é uma linha: título do material, autor embaixo e, na linha
-  // seguinte, as etiquetas à esquerda e as pílulas padrão à direita (copiar
-  // a citação, só o ícone; "Site do autor"). A citação (description) e a
+  // seguinte, as etiquetas à esquerda e as pílulas padrão à direita
+  // ("Copiar referência" e "Site do autor"). A citação (description) e a
   // data ficam no HTML (a busca e o botão de copiar leem de lá) mas não
   // aparecem. O autor é movido para dentro do corpo pelo JS em
   // _includes/listing-cards.html.
@@ -1553,8 +1553,6 @@ body { -webkit-font-smoothing: antialiased; }
   .ref-acoes {
     order: 3;
     margin: 0.4rem 0 0 auto;
-
-    button.ref-copiar { padding-left: 0.85rem; padding-right: 0.85rem; }
   }
 }
 
