@@ -27,15 +27,14 @@ python scripts/gerar_textos.py
 ```
 home/
 ├── index.qmd ─────────────────── página inicial ................. §1
-│   ├── hero ........................ slogan sobre a ilustração
-│   ├── disclaimer .................. logo abaixo da hero
+│   ├── em destaque ................. painel do topo (notícias + eventos)
 │   ├── "O que é o ConectaStat…" .... texto de apresentação
-│   ├── oportunidades · cursos e eventos ..... carrosséis
+│   ├── oportunidades ............... carrossel
 │   └── onde estamos ................ mapa + endereço
 ├── _quarto.yml ───────────────── rodapé e menu ................. §2 e §3
 │
 ├── estatistica/index.qmd ─────── Estatística .................... §4
-├── assessoria/index.qmd ──────── Assessoria e Consultoria
+├── assessoria/index.qmd ──────── Assessoria e Consultoria (oculta)
 ├── acoes/
 │   ├── revista-cientifica/index.qmd ── Revista Científica
 │   └── lad/index.qmd ───────────────── Laboratório de Análises de Dados
@@ -53,8 +52,8 @@ home/
 │   │   ├── organizacao-e-apresentacao-de-dados/
 │   │   │   ├── index.qmd ───────── Organização e Apresentação de Dados
 │   │   │   └── posts/ ──────────── projetos enviados ............ §5
-│   │   ├── softwares/index.qmd ─── Softwares (sem conteúdo ainda)
-│   │   ├── materiais/index.qmd ─── Materiais (sem conteúdo ainda)
+│   │   ├── softwares/index.qmd ─── Softwares e pacotes
+│   │   ├── apostilas/index.qmd ─── Apostilas
 │   │   └── editais/index.qmd ───── Editais de Ensino
 │   └── extensao/
 │       ├── index.qmd ───────────── Extensão (+ cards)
@@ -74,25 +73,17 @@ home/
 
 ```
 index.qmd
-├── hero .................. slogan + ilustração
+├── em destaque ........... painel do topo (notícias + cursos/
+│                           eventos + encontros com a comunidade)
 ├── o projeto ............. texto de apresentação
-├── em destaque ........... carrossel (notícias + cursos/eventos +
-│                           encontros com a comunidade)
 ├── oportunidades ......... carrossel
 └── onde estamos .......... mapa + endereço
 ```
 
 
-### Hero (topo da home)
+### Em Destaque (topo da home)
 
-> Slogan sobre a ilustração:
->
->
-
-
-### Seção da home: Em Destaque
-
-> *(sem texto próprio: a página só exibe a listagem)*
+> Painel com três retângulos: o destaque da vez no centro, maior, e o anterior e o próximo dos lados. Gira pelas notícias, cursos/eventos e encontros com a comunidade. Título, data e resumo de cada quadro vêm do próprio post (seção 5).
 
 
 ### Seção da home: Oportunidades

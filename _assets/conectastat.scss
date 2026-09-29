@@ -4,28 +4,22 @@
   em caixa alta, linhas finas (hairlines), cartões planos sem sombra, botões
   pílula. Inspiração: UI minimalista de sites de venture capital (Dribbble).
   Cores: azul e verde institucionais da UFLA sobre fundo branco.
-  Tipografia: Inter (fallback Verdana); Source Code Pro só no slogan da hero.
+  Tipografia: Inter (fallback Verdana).
 -----------------------------------------------------------------------------*/
 
 /*-- scss:defaults --*/
 
 // --- Tipografia ---------------------------------------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-// Fonte monoespaçada de `código` e blocos de código, e só dela: o slogan tem a
-// própria monoespaçada, logo abaixo. Se ninguém mais publicar código no site,
-// este import pode sair. Para trocar de família, mude aqui e no import:
+// Fonte monoespaçada de `código` e blocos de código, e só dela. Se ninguém
+// mais publicar código no site, este import pode sair. Para trocar de família, mude aqui e no import:
 // Courier Prime, Fira Code... (Consolas é local, não precisa de import).
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
-// Fonte do slogan da hero (Ciência| Estatística| Sociedade), e só dele: uma
-// monoespaçada, que é como o slogan foi desenhado. O resto do site - inclusive
-// o slogan da navbar - continua em Inter.
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
 
 $font-family-sans-serif: "Inter", Verdana, system-ui, -apple-system, "Segoe UI", sans-serif;
 $headings-font-family:   "Inter", Verdana, sans-serif;
 $headings-font-weight:   700;
 $font-mono: "JetBrains Mono", Consolas, "Courier Prime", "Courier New", monospace;
-$font-slogan: "Source Code Pro", Consolas, "Courier New", monospace;
 
 // --- Cores da marca -----------------------------------------------------------
 $cs-blue:       #0d5488;   // azul da paleta própria do projeto (Canva, jul/2026)
@@ -107,9 +101,10 @@ body { -webkit-font-smoothing: antialiased; }
     min-height: 48px;   // mantém a altura original da barra (era a do logo)
   }
 
-  // Slogan no topo esquerdo (o nome do site foi removido): mesmo texto da
-  // hero - Ciência| Estatística| Sociedade empilhados -, em Inter semibold
-  // (a monoespaçada do slogan é exclusiva da hero)
+  // Slogan no topo esquerdo (o nome do site foi removido): Ciência|
+  // Estatística| Sociedade empilhados, em Inter semibold. É o único lugar do
+  // site onde o slogan aparece desde que a home trocou a hero pelo painel
+  // Em Destaque.
   .nav-tagline {
     display: inline-block;
     font-family: $font-family-sans-serif;
@@ -166,76 +161,239 @@ body { -webkit-font-smoothing: antialiased; }
 }
 
 // =============================================================================
-//  HERO - só a ilustração, com a tagline ao lado: três linhas empilhadas
-//  (Ciência| Estatística| Sociedade) em Source Code Pro semibold,
-//  alternando azul e verde
+//  EM DESTAQUE - painel do topo da home, no lugar da antiga hero (ilustração +
+//  slogan): três cards lado a lado, o do centro maior (o destaque da vez), o
+//  anterior à esquerda e o próximo à direita, menores e alinhados pelo meio.
+//  Cada item é o card padrão das listagens (.cs-card, com contorno, capa,
+//  data, título, resumo e "Leia mais"); o título do painel é o mesmo dos
+//  títulos de seção da home; os pontos são os do carrossel (.cs-rotator-dots)
+//  e as setas usam a linguagem da pílula "Leia mais". Este bloco só cuida da
+//  disposição. Template em _assets/destaques-hero.ejs; JS em
+//  _includes/listing-cards.html.
+//  Título e resumo têm altura reservada, para o painel não mudar de altura a
+//  cada giro e a página abaixo não pular.
+//  A classe .hero-banner continua: _includes/transitions.html a usa para
+//  reconhecer a home. O respiro abaixo da navbar é margem do título, e não
+//  padding da .hero-banner: a regra "#quarto-content > *" do tema zera o
+//  padding de todo filho direto do conteúdo e vence por especificidade.
 // =============================================================================
 .hero-banner {
   background: #ffffff;
-  padding: clamp(1.5rem, 4vw, 3rem) 0 0;
+  // Na entrada do giro o card de fora desliza 28px de fora da tela: sem o
+  // corte, a página ganharia rolagem lateral por meio segundo a cada giro
+  overflow-x: clip;
 
-  .hero-grid {
-    display: grid;
-    grid-template-columns: minmax(300px, 400px) 1fr;
-    gap: 0;
-    align-items: stretch;
-    border-radius: 12px;
+  h2 { @extend %titulo-secao-home; }
+
+  // Mais específico que o molde (que zera a margem de cima e vem depois)
+  .content-container > h2 { margin: clamp(1.5rem, 3.5vw, 2.5rem) 0 1.5rem; }
+}
+
+.dq-painel {
+  --dq-dx: 28px;                    // de que lado os cards entram (JS inverte)
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.85fr) minmax(0, 1fr);
+  grid-template-areas:
+    "esq centro dir"
+    "pontos pontos pontos";
+  align-items: center;              // os três alinhados pelo meio
+  column-gap: 3rem;                 // o vão onde flutuam as setas
+  row-gap: 1.1rem;
+}
+
+// Os itens são .cs-card; aqui só a posição de cada um
+.dq-painel .dq-item {
+  display: none;                    // fora da vez: não aparece nem recebe foco
+  min-width: 0;
+
+  &[data-pos="centro"] { display: flex; grid-area: centro; }
+  &[data-pos="esq"]    { display: flex; grid-area: esq; }
+  &[data-pos="dir"]    { display: flex; grid-area: dir; }
+
+  // Entrada ao girar: os cards deslizam do lado de onde o giro vem (sem
+  // "fill" depois do fim, para o hover do card continuar funcionando)
+  &.dq-entra { animation: dq-entra 0.5s cubic-bezier(0.2, 0.8, 0.3, 1) backwards; }
+  &.dq-entra[data-pos="esq"],
+  &.dq-entra[data-pos="dir"] { animation-delay: 0.06s; }
+
+  // Título e resumo com altura fixa: três linhas cada
+  .cs-card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
+    min-height: calc(3 * 1.35em);
   }
 
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: clamp(1.75rem, 3.5vw, 2.75rem) clamp(1.5rem, 3vw, 2.25rem);
+  .cs-card-desc { min-height: calc(3 * 1.55em); }
+}
 
-    .hero-tagline {
-      // Peso 600 e entrelinha 1.3, sem aperto de tracking: é assim que o
-      // GitHub desenha um título de README, que é a referência do slogan.
-      // A monoespaçada é exclusiva daqui: a navbar segue em Inter.
-      font-family: $font-slogan;
-      font-size: clamp(1.6rem, 3vw, 2.5rem);
-      font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: normal;
-      color: $ink;
-      margin: 0;
+@keyframes dq-entra {
+  from { opacity: 0; transform: translateX(var(--dq-dx)); }
+}
 
-      > span { display: block; }        // Ciência| Estatística| Sociedade
-      .tag-verde { color: $cs-green; }
-      .tag-barra { color: $muted; font-weight: 400; }   // a "|" de cada linha
-    }
+// Capa: a mesma caixa 16:9 do card, mas com a imagem inteira sobre uma
+// cópia desfocada dela mesma, em vez de recortada
+.cs-card .dq-thumb {
+  position: relative;
+  background: $cloud;
 
-    // Entrada do texto sincronizada com a montagem da ilustração
-    .hero-tagline > span {
-      animation: hero-texto-entra 0.45s cubic-bezier(0.2, 1.3, 0.4, 1) both;
-    }
-    .hero-tagline > span:nth-child(1) { animation-delay: 0.15s; }
-    .hero-tagline > span:nth-child(2) { animation-delay: 0.26s; }
-    .hero-tagline > span:nth-child(3) { animation-delay: 0.37s; }
+  .dq-bg {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(18px) saturate(1.1);
+    transform: scale(1.15);
+    opacity: 0.55;
   }
 
-  .hero-media {
-    img {
-      display: block;
+  .dq-img {
+    position: relative;
+    object-fit: contain;
+  }
+}
+
+// Setas nos vãos entre o centro e os lados, no meio da altura dos cards, com
+// o contorno azul da pílula "Leia mais"
+.dq-seta {
+  grid-area: centro;
+  align-self: center;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid $cs-blue;
+  border-radius: 50%;
+  background: #ffffff;
+  color: $cs-blue;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: $cs-blue;
+    color: #ffffff;
+  }
+
+  // centradas no vão de 3rem: meio vão + meia seta para fora do centro
+  &.dq-ant  { justify-self: start; margin-left: calc(-1.5rem - 20px); }
+  &.dq-prox { justify-self: end;   margin-right: calc(-1.5rem - 20px); }
+}
+
+// Sem JS as setas não teriam o que fazer: só aparecem quando o JS assume
+.dq-painel:not(.dq-js) .dq-seta { display: none; }
+
+// Com dois itens, o outro está sempre à direita: uma seta basta
+.dq-n2 .dq-ant { display: none; }
+
+// Pontos de posição: os mesmos do carrossel dos cards (.cs-rotator-dots)
+.dq-pontos {
+  grid-area: pontos;
+  justify-self: center;
+  display: flex;
+  gap: 0.45rem;
+
+  button {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #d3dcd6;
+    cursor: pointer;
+
+    &.ativo { background: $cs-green; }
+
+    &:focus-visible {
+      outline: 2px solid $cs-blue;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// Tablet: vão menor
+@media (max-width: 991.98px) {
+  .dq-painel { column-gap: 2.25rem; }
+
+  .dq-seta {
+    width: 36px;
+    height: 36px;
+
+    &.dq-ant  { margin-left: calc(-1.125rem - 18px); }
+    &.dq-prox { margin-right: calc(-1.125rem - 18px); }
+  }
+}
+
+// Celular: o card do centro ocupa quase tudo; os lados viram faixas estreitas
+// só com a capa, da mesma altura da capa do centro, ainda visíveis. O texto
+// dos lados sai da tela mas continua para leitor de tela (visually-hidden).
+// Com colunas 0.4fr / 2.6fr, a faixa precisa de proporção 0,4 : 2,6·9/16, e
+// as setas vão para o meio da capa do centro (em item de grade, margem em %
+// é relativa à largura da área: 28,125% = metade da altura de uma capa 16:9).
+@media (max-width: 767.98px) {
+  .dq-painel {
+    grid-template-columns: minmax(0, 0.4fr) minmax(0, 2.6fr) minmax(0, 0.4fr);
+    align-items: start;
+    column-gap: 0.5rem;
+  }
+
+  .dq-painel .dq-item[data-pos="esq"],
+  .dq-painel .dq-item[data-pos="dir"] {
+    padding: 0;
+
+    .cs-card-thumb {
       width: 100%;
-      height: 100%;
-      min-height: clamp(300px, 34vw, 400px);
-      object-fit: cover;
-      object-position: center 65%;
-      border-radius: 12px;
       margin: 0;
+      border-bottom: 0;
+      border-radius: 11px;
+      aspect-ratio: 16 / 58.5;       // 0,4 : 2,6·9/16
+
+      .dq-bg { display: none; }
+      .dq-img { height: 100%; aspect-ratio: auto; object-fit: cover; }
+    }
+
+    .cs-card-date,
+    .cs-card-title,
+    .cs-card-desc,
+    .cs-card-action {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+      min-height: 0;
     }
   }
+
+  .dq-seta {
+    align-self: start;
+    width: 34px;
+    height: 34px;
+    margin-top: calc(28.125% - 17px);
+
+    &.dq-ant  { margin-left: calc(-0.25rem - 17px); }
+    &.dq-prox { margin-right: calc(-0.25rem - 17px); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dq-painel .dq-item.dq-entra { animation: none; }
 }
 
 @keyframes hero-texto-entra {
   from { opacity: 0; transform: translateY(18px); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-banner .hero-tagline > span { animation: none; }
-}
 
 // =============================================================================
 //  IPÊS DA HOME - pétalas amarelas caem pela página (atrás do conteúdo)
@@ -399,21 +557,25 @@ body { -webkit-font-smoothing: antialiased; }
 // =============================================================================
 //  TÍTULOS DE SEÇÃO DA HOME - centrados, com subtítulo (estilo imersivo)
 // =============================================================================
+// Molde do título: usado pelas seções abaixo e pelo painel Em Destaque do
+// topo (.hero-banner h2), para os dois não se afastarem com o tempo
+%titulo-secao-home {
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: $cs-green-dark;
+  border: none;
+  padding: 0;
+  margin: 0 0 0.55rem;
+}
+
 .listing-block,
 .map-block {
   margin: clamp(3rem, 6vw, 4.5rem) auto;
 
-  h2 {
-    text-align: center;
-    font-size: 0.92rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.24em;
-    color: $cs-green-dark;
-    border: none;
-    padding: 0;
-    margin: 0 0 0.55rem;
-  }
+  h2 { @extend %titulo-secao-home; }
 
   .sec-sub {
     display: block;
@@ -2487,10 +2649,6 @@ main.content table {
 //  RESPONSIVO
 // =============================================================================
 @media (max-width: 767.98px) {
-  .hero-banner {
-    .hero-grid { grid-template-columns: 1fr; }   // no celular, título sobre a imagem
-    .hero-media img { height: 240px; }
-  }
   .map-block .map-info { margin-top: 1rem; }
   .nav-footer .nav-footer-right { text-align: center; }
   .nav-footer .footer-assinatura { justify-content: center; }

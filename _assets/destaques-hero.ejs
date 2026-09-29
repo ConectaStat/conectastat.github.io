@@ -1,0 +1,46 @@
+<%
+// Painel "Em Destaque" do topo da home: três cards lado a lado, o do centro
+// maior (o destaque da vez), o anterior à esquerda e o próximo à direita,
+// menores e alinhados pelo meio. Cada item é o MESMO card das listagens do
+// site (.cs-card: contorno, capa no topo, data, título, resumo e "Leia
+// mais" - veja cards.ejs); o painel só cuida da disposição. Setas nos vãos
+// giram para cada lado, e o painel também gira sozinho a cada 9 s até a
+// pessoa assumir o controle (setas, pontos ou teclado). Todos os itens da
+// listagem entram no HTML, do mais novo ao mais antigo; o JS (em
+// _includes/listing-cards.html) só troca a posição (data-pos) de cada um.
+// Sem JS, o painel já abre montado - o 1º no centro, o 2º à direita e o
+// último à esquerda - e as setas ficam escondidas.
+//
+// Atenção: sem indentação e com tags inline abertas e fechadas na mesma
+// linha, porque o Pandoc reprocessa este HTML como markdown (veja cards.ejs).
+// Cada botão fica inteiro numa linha só.
+//
+// Na capa, a imagem entra inteira (contain) sobre uma cópia desfocada dela
+// mesma, na mesma caixa 16:9 da capa dos cards: capas de evento são cartazes
+// centralizados e a capa de livro é em pé - recortar cortaria o título do
+// cartaz ou metade do livro.
+const normaliza = (p) => p.replace(/\\/g, "/").replace(/\.qmd$/, ".html");
+const barra = (p) => p.replace(/\\/g, "/");
+const total = items.length;
+const posicao = (i) => i === 0 ? "centro" : (i === 1 ? "dir" : (total > 2 && i === total - 1 ? "esq" : ""));
+%>
+<% if (total) { %>
+<div class="dq-painel dq-n<%= Math.min(total, 3) %>" data-dq role="region" aria-roledescription="carrossel" aria-label="Em destaque">
+<% if (total > 1) { %>
+<button type="button" class="dq-seta dq-ant" aria-label="Destaque anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+<% } %>
+<% items.forEach((item, i) => { %>
+<article class="cs-card dq-item" data-pos="<%= posicao(i) %>" aria-roledescription="slide" aria-label="<%= (i + 1) + ' de ' + total %>">
+<% if (item.image) { %><div class="cs-card-thumb dq-thumb"><img class="dq-bg" src="<%- barra(item.image) %>" alt="" aria-hidden="true" loading="<%= posicao(i) ? 'eager' : 'lazy' %>"/><img class="dq-img" src="<%- barra(item.image) %>" alt="" loading="<%= posicao(i) ? 'eager' : 'lazy' %>"/></div><% } %>
+<% if (item.date) { %><p class="cs-card-date"><%= item.date %></p><% } %>
+<h3 class="cs-card-title"><%= item.title %></h3>
+<% if (item.description) { %><p class="cs-card-desc"><%= item.description %></p><% } %>
+<p class="cs-card-action"><a class="cs-card-btn" href="<%- normaliza(item.path) %>"<%- posicao(i) === 'centro' ? '' : ' tabindex="-1"' %>>Leia mais</a></p>
+</article>
+<% }) %>
+<% if (total > 1) { %>
+<button type="button" class="dq-seta dq-prox" aria-label="Próximo destaque"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+<p class="visually-hidden dq-aviso" aria-live="polite"></p>
+<% } %>
+</div>
+<% } %>

@@ -54,15 +54,12 @@ def blocos_home():
     fm, corpo = separa(txt)
     saida = []
 
-    # hero: tagline + disclaimer
-    tag = re.findall(r'<span[^>]*>([^<]+)<span class="tag-barra">/</span></span>|<span>([^<]+)<span class="hero-cursor"', txt)
-    linhas = [a or b for a, b in tag]
-    disc = re.search(r'<p class="hero-disclaimer">(.*?)</p>', txt, re.S)
-    saida.append(("Hero (topo da home)",
-                  "Slogan sobre a ilustração:\n\n" +
-                  "\n".join(f"  {l}/" if i < 2 else f"  {l}" for i, l in enumerate(linhas))))
-    if disc:
-        saida.append(("Disclaimer abaixo da hero", " ".join(disc.group(1).split())))
+    # topo: painel Em Destaque (os textos vêm de cada post, não do index)
+    saida.append(("Em Destaque (topo da home)",
+                  "Painel com três retângulos: o destaque da vez no centro, maior, "
+                  "e o anterior e o próximo dos lados. Gira pelas notícias, cursos/"
+                  "eventos e encontros com a comunidade. Título, data e resumo de "
+                  "cada quadro vêm do próprio post (seção 5)."))
 
     # secoes: corta o corpo limpo em pedacos que comecam com "## "
     for pedaco in re.split(r"(?m)^(?=## )", limpa_corpo(corpo)):
@@ -207,15 +204,14 @@ python scripts/gerar_textos.py
 ```
 home/
 ├── index.qmd ─────────────────── página inicial ................. §1
-│   ├── hero ........................ slogan sobre a ilustração
-│   ├── disclaimer .................. logo abaixo da hero
+│   ├── em destaque ................. painel do topo (notícias + eventos)
 │   ├── "O que é o ConectaStat…" .... texto de apresentação
-│   ├── oportunidades · cursos e eventos ..... carrosséis
+│   ├── oportunidades ............... carrossel
 │   └── onde estamos ................ mapa + endereço
 ├── _quarto.yml ───────────────── rodapé e menu ................. §2 e §3
 │
 ├── estatistica/index.qmd ─────── Estatística .................... §4
-├── assessoria/index.qmd ──────── Assessoria e Consultoria
+├── assessoria/index.qmd ──────── Assessoria e Consultoria (oculta)
 ├── acoes/
 │   ├── revista-cientifica/index.qmd ── Revista Científica
 │   └── lad/index.qmd ───────────────── Laboratório de Análises de Dados
@@ -233,8 +229,8 @@ home/
 │   │   ├── organizacao-e-apresentacao-de-dados/
 │   │   │   ├── index.qmd ───────── Organização e Apresentação de Dados
 │   │   │   └── posts/ ──────────── projetos enviados ............ §5
-│   │   ├── softwares/index.qmd ─── Softwares (sem conteúdo ainda)
-│   │   ├── materiais/index.qmd ─── Materiais (sem conteúdo ainda)
+│   │   ├── softwares/index.qmd ─── Softwares e pacotes
+│   │   ├── apostilas/index.qmd ─── Apostilas
 │   │   └── editais/index.qmd ───── Editais de Ensino
 │   └── extensao/
 │       ├── index.qmd ───────────── Extensão (+ cards)
@@ -253,10 +249,9 @@ home/
 
 # ---- home
 L.append("## 1. Página inicial\n")
-L.append("```\nindex.qmd\n├── hero .................. slogan + ilustração\n"
+L.append("```\nindex.qmd\n├── em destaque ........... painel do topo (notícias + cursos/\n"
+         "│                           eventos + encontros com a comunidade)\n"
          "├── o projeto ............. texto de apresentação\n"
-         "├── em destaque ........... carrossel (notícias + cursos/eventos +\n"
-         "│                           encontros com a comunidade)\n"
          "├── oportunidades ......... carrossel\n"
          "└── onde estamos .......... mapa + endereço\n```\n")
 for titulo, texto in blocos_home():
