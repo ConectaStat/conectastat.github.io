@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,13 +13,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -46,10 +43,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5bd41f179b2a4399758dea6f6e69986e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7565f2b876d0782ecb2ef2bbd988e270.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -136,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -660,14 +657,33 @@ A Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal
       <p id="rota-status" class="route-status" role="status"></p>
     </div>
   </div>
+  <!-- Índice do mapa, ao lado dele: o que é cada número. Os números seguem a
+       ordem dos pontos da camada "Prédio do departamento" no Google My Maps;
+       se um ponto mudar lá, atualize aqui também. -->
   <div class="g-col-12 g-col-lg-5">
+    <div class="mapa-indice">
+      <p class="mapa-indice-titulo"><i class="bi bi-list-ol"></i> O que é cada número no mapa</p>
+      <ol>
+        <li><span class="mapa-num">1</span><span class="mapa-txt"><strong>Departamento de Estatística</strong><span>DES · ICET</span></span></li>
+        <li><span class="mapa-num">2</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13A e DES 14A</span></span></li>
+        <li><span class="mapa-num">3</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13B e DES 14B</span></span></li>
+        <li><span class="mapa-num">4</span><span class="mapa-txt"><strong>Salas de aula da Pós-graduação</strong></span></li>
+        <li><span class="mapa-num">5</span><span class="mapa-txt"><strong>Sala de Monitoria de Estatística</strong></span></li>
+        <li><span class="mapa-num mapa-area" aria-hidden="true"></span><span class="mapa-txt"><strong>Área verde</strong><span>Departamento de Ciências Exatas, sede do curso no ICET</span></span></li>
+      </ol>
+    </div>
+  </div>
+  <!-- Endereço e botões de rota: card de largura total, embaixo -->
+  <div class="g-col-12">
     <div class="map-info">
+      <div class="map-endereco">
       <h3><i class="bi bi-geo-alt-fill"></i> Departamento de Estatística da UFLA</h3>
       <p>
         Trevo Rotatório Professor Edmir Sá Santos, s/n<br>
         Campus Universitário, Lavras/MG<br>
         CEP 37203-202 · Caixa Postal 3037
       </p>
+      </div>
       <div class="map-actions">
         <a class="btn-rota" href="https://www.google.com/maps/dir/?api=1&amp;destination=-21.2275%2C-44.9770" target="_blank" rel="noopener">
           <i class="bi bi-car-front"></i> Rota no Maps
@@ -679,22 +695,6 @@ A Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal
           <i class="bi bi-phone"></i> Enviar para o celular
         </button>
       </div>
-    </div>
-  </div>
-  <!-- Índice do mapa: o que é cada número. Os números seguem a ordem dos
-       pontos da camada "Prédio do departamento" no Google My Maps; se um
-       ponto mudar lá, atualize aqui também. -->
-  <div class="g-col-12">
-    <div class="mapa-indice">
-      <p class="mapa-indice-titulo"><i class="bi bi-list-ol"></i> O que é cada número no mapa</p>
-      <ol>
-        <li><span class="mapa-num">1</span><span class="mapa-txt"><strong>Departamento de Estatística</strong><span>DES · ICET</span></span></li>
-        <li><span class="mapa-num">2</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13A e DES 14A</span></span></li>
-        <li><span class="mapa-num">3</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13B e DES 14B</span></span></li>
-        <li><span class="mapa-num">4</span><span class="mapa-txt"><strong>Salas de aula da Pós-graduação</strong></span></li>
-        <li><span class="mapa-num">5</span><span class="mapa-txt"><strong>Sala de Monitoria de Estatística</strong></span></li>
-        <li><span class="mapa-num mapa-area" aria-hidden="true"></span><span class="mapa-txt"><strong>Área verde</strong><span>Departamento de Ciências Exatas, sede do curso no ICET</span></span></li>
-      </ol>
     </div>
   </div>
 </div>
@@ -1700,64 +1700,123 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
+
 // ============================================================
+
 //  Transições de página, camada 3: os blocos de conteúdo
+
 //  surgem suavemente conforme entram na tela (estilos em
+
 //  _assets/conectastat.scss, seção "TRANSIÇÕES DE PÁGINA").
+
 //  Sem JS ou com "reduzir movimento" ativo, nada é escondido.
+
 // ============================================================
+
 (function () {
+
   var reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   if (reduz || !("IntersectionObserver" in window)) return;
 
+
+
   // Só com esta classe o CSS esconde os blocos antes da revelação
+
   document.documentElement.classList.add("cs-js");
 
+
+
   document.addEventListener("DOMContentLoaded", function () {
+
     var alvos = [];
 
+
+
     if (document.querySelector(".hero-banner")) {
+
       // Home: os grandes blocos de seção (o hero já tem a própria montagem)
+
       document.querySelectorAll(".intro-block, .listing-block, .map-block")
+
         .forEach(function (el) { alvos.push(el); });
+
     } else {
+
       // Páginas internas: cada bloco de primeiro nível do documento
+
       var corpo = document.getElementById("quarto-document-content");
+
       if (corpo) {
+
         Array.prototype.forEach.call(corpo.children, function (el) {
+
           if (el.matches("script, style, #title-block-header, .quarto-listing")) return;
+
           alvos.push(el);
+
         });
+
         // Listagens (notícias, eventos...): cartão por cartão, em cascata
+
         corpo.querySelectorAll(".quarto-listing .quarto-grid-item")
+
           .forEach(function (el) { alvos.push(el); });
+
       }
+
     }
 
+
+
     if (!alvos.length) return;
+
     alvos.forEach(function (el) { el.classList.add("cs-reveal"); });
 
+
+
     // Blocos que entram juntos na tela revelam em cascata curta
+
     var io = new IntersectionObserver(function (entradas) {
+
       var atraso = 0;
+
       entradas.forEach(function (entrada) {
+
         if (!entrada.isIntersecting) return;
+
         var el = entrada.target;
+
         io.unobserve(el);
+
         el.style.transitionDelay = Math.min(atraso, 420) + "ms";
+
         atraso += 70;
+
         el.classList.add("cs-visivel");
+
         el.addEventListener("transitionend", function fim() {
+
           el.style.transitionDelay = "";
+
           el.removeEventListener("transitionend", fim);
+
         });
+
       });
+
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0 });
 
+
+
     alvos.forEach(function (el) { io.observe(el); });
+
   });
+
 })();
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
