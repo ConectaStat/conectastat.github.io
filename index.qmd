@@ -41,7 +41,11 @@ toc: false
 ::: {.hero-banner}
 ::: {.content-container}
 ```{=html}
-<h2>Em Destaque</h2>
+<!-- OCULTO a pedido: o título visível "Em Destaque" saiu do topo da home.
+     Para voltar a mostrá-lo, tire o comentário da linha abaixo e apague a
+     linha "visually-hidden" logo depois dela. -->
+<!-- <h2>Em Destaque</h2> -->
+<h2 class="visually-hidden">Em Destaque</h2>
 ```
 ::: {#destaques}
 :::
