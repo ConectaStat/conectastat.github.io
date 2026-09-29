@@ -97,7 +97,7 @@ Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](ht
     <div class="map-frame">
       <iframe id="mapa-ufla"
         title="Mapa do campus da UFLA: Departamento de Estatística"
-        src="https://www.google.com/maps/d/embed?mid=1tNF2ofgHMWI2jcaueiX4lIZBgSF4Nss&ehbc=2E312F&noprof=1&ll=-21.226939%2C-44.978586&z=18"
+        src="https://www.google.com/maps/d/embed?mid=1tNF2ofgHMWI2jcaueiX4lIZBgSF4Nss&ehbc=2E312F&noprof=1&ll=-21.226939%2C-44.978586&z=19"
         loading="lazy"></iframe>
     </div>
     <div class="map-frame route-frame" id="rota-frame" hidden>
@@ -141,20 +141,22 @@ Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](ht
           <i class="bi bi-phone"></i> Enviar para o celular
         </button>
       </div>
-      <!-- Índice do mapa: o que é cada número. Os números seguem a ordem dos
-           pontos da camada "Prédio do departamento" no Google My Maps; se um
-           ponto mudar lá, atualize aqui também. -->
-      <div class="mapa-indice">
-        <p class="mapa-indice-titulo">O que é cada número no mapa</p>
-        <ol>
-          <li><span class="mapa-num">1</span><span><strong>Departamento de Estatística</strong> (DES/ICET)</span></li>
-          <li><span class="mapa-num">2</span><span><strong>Salas de aula da Graduação</strong>: DES 13A e DES 14A</span></li>
-          <li><span class="mapa-num">3</span><span><strong>Salas de aula da Graduação</strong>: DES 13B e DES 14B</span></li>
-          <li><span class="mapa-num">4</span><span><strong>Salas de aula da Pós-graduação</strong></span></li>
-          <li><span class="mapa-num">5</span><span><strong>Sala de Monitoria de Estatística</strong></span></li>
-          <li class="mapa-area"><span class="mapa-swatch" aria-hidden="true"></span><span><strong>Área verde</strong>: Departamento de Ciências Exatas, sede do curso de Estatística no ICET</span></li>
-        </ol>
-      </div>
+    </div>
+  </div>
+  <!-- Índice do mapa: o que é cada número. Os números seguem a ordem dos
+       pontos da camada "Prédio do departamento" no Google My Maps; se um
+       ponto mudar lá, atualize aqui também. -->
+  <div class="g-col-12">
+    <div class="mapa-indice">
+      <p class="mapa-indice-titulo"><i class="bi bi-list-ol"></i> O que é cada número no mapa</p>
+      <ol>
+        <li><span class="mapa-num">1</span><span class="mapa-txt"><strong>Departamento de Estatística</strong><span>DES · ICET</span></span></li>
+        <li><span class="mapa-num">2</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13A e DES 14A</span></span></li>
+        <li><span class="mapa-num">3</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13B e DES 14B</span></span></li>
+        <li><span class="mapa-num">4</span><span class="mapa-txt"><strong>Salas de aula da Pós-graduação</strong></span></li>
+        <li><span class="mapa-num">5</span><span class="mapa-txt"><strong>Sala de Monitoria de Estatística</strong></span></li>
+        <li><span class="mapa-num mapa-area" aria-hidden="true"></span><span class="mapa-txt"><strong>Área verde</strong><span>Departamento de Ciências Exatas, sede do curso no ICET</span></span></li>
+      </ol>
     </div>
   </div>
 </div>
