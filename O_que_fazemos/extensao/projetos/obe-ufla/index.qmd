@@ -28,8 +28,8 @@ região de Lavras e entorno.
 
 ```{=html}
 <div class="projeto-links">
-  <a href="mailto:camilla.barroso@ufla.br">
-    <i class="bi bi-envelope"></i> camilla.barroso@ufla.br
+  <a href="mailto:camilla.barroso@ufla.br" aria-label="Enviar e-mail para a coordenação do projeto">
+    <i class="bi bi-envelope"></i> E-mail da coordenação
   </a>
 </div>
 ```

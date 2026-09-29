@@ -26,8 +26,8 @@ promoção da cultura e educação não formal.
 
 ```{=html}
 <div class="projeto-links">
-  <a href="mailto:jssbueno@ufla.br">
-    <i class="bi bi-envelope"></i> jssbueno@ufla.br
+  <a href="mailto:jssbueno@ufla.br" aria-label="Enviar e-mail para a coordenação do projeto">
+    <i class="bi bi-envelope"></i> E-mail da coordenação
   </a>
 </div>
 ```
