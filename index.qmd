@@ -10,18 +10,19 @@ description: |
   ConectaStat - Ciência, Estatística e Sociedade.
 image: /images/capa-social.png
 listing:
-  # "Em Destaque" reúne, num rotator só, as notícias, os cursos/eventos e os
-  # encontros com a comunidade (extensão): são pastas de posts diferentes, mas
-  # para quem chega na home é tudo "o que está acontecendo agora", da data mais
-  # recente à mais antiga. Um encontro entra aqui pelas mesmas regras de uma
-  # notícia - basta ter title, description e date.
+  # "Em Destaque" é o painel do topo da home: um destaque grande e dois
+  # menores, girando por todos os itens. Reúne as notícias, os cursos/eventos e
+  # os encontros com a comunidade (extensão): são pastas de posts diferentes,
+  # mas para quem chega na home é tudo "o que está acontecendo agora", da data
+  # mais recente à mais antiga. Um item entra aqui pelas mesmas regras de uma
+  # notícia - basta ter title, description e date (e, de preferência, image).
   - id: destaques
     contents:
       - /noticias/posts
       - /eventos/posts
       - /O_que_fazemos/extensao/acoes/posts
     sort: "date desc"
-    template: _assets/cards.ejs
+    template: _assets/destaques-hero.ejs
 
   - id: oportunidades
     contents: /oportunidades/posts
@@ -32,30 +33,20 @@ toc: false
 ---
 
 <!-- ============================================================= -->
-<!--  HERO - só a ilustração + o slogan ao lado, em três linhas    -->
-<!--  (Ciência| Estatística| Sociedade), alternando azul e verde   -->
+<!--  EM DESTAQUE - painel do topo: um destaque grande e dois      -->
+<!--  menores, girando pelas notícias e eventos (JS em             -->
+<!--  _includes/listing-cards.html). A classe hero-banner fica: é  -->
+<!--  por ela que _includes/transitions.html reconhece a home.     -->
 <!-- ============================================================= -->
+::: {.hero-banner}
+::: {.content-container}
 ```{=html}
-<div class="hero-banner">
-  <div class="content-container">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <p class="hero-tagline">
-          <span>Ciência<span class="tag-barra">|</span></span>
-          <span class="tag-verde">Estatística<span class="tag-barra">|</span></span>
-          <span>Sociedade</span>
-        </p>
-      </div>
-      <div class="hero-media">
-        <img src="images/hero-serrinha.svg"
-             alt="Ilustração da Serrinha da UFLA: casa histórica ao lado de um ipê-amarelo florido" />
-      </div>
-    </div>
-    <!-- O disclaimer do projeto vive só no rodapé (ver _quarto.yml): repetido
-         aqui no topo, roubava a entrada da home. -->
-  </div>
-</div>
+<h2>Em Destaque</h2>
 ```
+::: {#destaques}
+:::
+:::
+:::
 
 <!-- ============================================================= -->
 <!--  O PROJETO - texto simples e clean (só existe aqui na home)   -->
@@ -65,20 +56,6 @@ toc: false
 
 Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](https://des.ufla.br/) da [Universidade Federal de Lavras](https://ufla.br/). Aqui conectamos Ciência, Estatística e Sociedade, tornando o conhecimento científico mais acessível, promovendo o letramento estatístico e aproximando a universidade da comunidade de Lavras e região.
 
-
-:::
-:::
-
-<!-- ============================================================= -->
-<!--  EM DESTAQUE - notícias e cursos/eventos no mesmo rotator     -->
-<!-- ============================================================= -->
-::: {.content-container}
-::: {.listing-block}
-
-## Em Destaque
-
-::: {#destaques}
-:::
 
 :::
 :::

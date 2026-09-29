@@ -52,9 +52,9 @@ website:
   navbar:
     toggle-position: right
     background: "#0a3f66"
-    # Sem o nome do site: só o slogan no topo esquerdo, com o mesmo texto da
-    # hero (Ciência| Estatística| Sociedade empilhados). A hero desenha o
-    # slogan em Source Code Pro; aqui ele segue em Inter semibold.
+    # Sem o nome do site: só o slogan no topo esquerdo (Ciência| Estatística|
+    # Sociedade empilhados), em Inter semibold. É o único lugar do site onde o
+    # slogan aparece: a home trocou a hero pelo painel Em Destaque.
     title: '<span class="nav-tagline"><span>Ciência<span class="tag-barra">|</span></span> <span class="tag-verde">Estatística<span class="tag-barra">|</span></span> <span>Sociedade</span></span>'
     collapse-below: lg
     right:
