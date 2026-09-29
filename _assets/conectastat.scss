@@ -183,10 +183,17 @@ body { -webkit-font-smoothing: antialiased; }
   // corte, a página ganharia rolagem lateral por meio segundo a cada giro
   overflow-x: clip;
 
+  // Respiro abaixo da navbar. Fica no container (e não na .hero-banner nem
+  // na margem do título) porque vale com o título visível ou oculto, e o
+  // container não é filho direto do conteúdo - a regra do tema não o zera.
+  > .content-container { padding-top: clamp(1.5rem, 3.5vw, 2.5rem); }
+
+  // Título do painel, no estilo dos títulos de seção da home. Hoje está
+  // oculto (só para leitor de tela); para mostrar, veja o index.qmd.
   h2 { @extend %titulo-secao-home; }
 
-  // Mais específico que o molde (que zera a margem de cima e vem depois)
-  .content-container > h2 { margin: clamp(1.5rem, 3.5vw, 2.5rem) 0 1.5rem; }
+  // Mais específico que o molde (que vem depois no arquivo)
+  .content-container > h2 { margin: 0 0 1.5rem; }
 }
 
 .dq-painel {
