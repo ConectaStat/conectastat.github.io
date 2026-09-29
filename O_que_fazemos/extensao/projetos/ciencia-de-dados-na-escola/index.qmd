@@ -27,8 +27,8 @@ questões éticas relacionadas ao uso de dados.
 
 ```{=html}
 <div class="projeto-links">
-  <a href="mailto:izabela.oliveira@ufla.br">
-    <i class="bi bi-envelope"></i> izabela.oliveira@ufla.br
+  <a href="mailto:izabela.oliveira@ufla.br" aria-label="Enviar e-mail para a coordenação do projeto">
+    <i class="bi bi-envelope"></i> E-mail da coordenação
   </a>
 </div>
 ```

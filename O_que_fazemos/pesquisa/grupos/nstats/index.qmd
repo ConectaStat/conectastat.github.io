@@ -25,8 +25,8 @@ desenvolvimento e aplicação de métodos estatísticos e inteligência artifici
 
 ```{=html}
 <div class="projeto-links">
-  <a href="mailto:nstats@ufla.br">
-    <i class="bi bi-envelope"></i> nstats@ufla.br
+  <a href="mailto:nstats@ufla.br" aria-label="Enviar e-mail para o nSTATs">
+    <i class="bi bi-envelope"></i> E-mail do núcleo
   </a>
   <a href="https://des.ufla.br/nucleos-de-estudo/8-institucional/140-nucleo-de-estudos-em-estatistica-e-aprendizado-de-maquina" target="_blank" rel="noopener">
     <i class="bi bi-globe"></i> Página no DES

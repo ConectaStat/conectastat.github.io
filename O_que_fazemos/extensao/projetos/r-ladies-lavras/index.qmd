@@ -24,8 +24,8 @@ os conhecimentos em R.
 
 ```{=html}
 <div class="projeto-links">
-  <a href="mailto:izabela.oliveira@ufla.br">
-    <i class="bi bi-envelope"></i> izabela.oliveira@ufla.br
+  <a href="mailto:izabela.oliveira@ufla.br" aria-label="Enviar e-mail para a coordenação do projeto">
+    <i class="bi bi-envelope"></i> E-mail da coordenação
   </a>
   <a href="https://www.instagram.com/rladieslavras" target="_blank" rel="noopener">
     <i class="bi bi-instagram"></i> @rladieslavras

@@ -24,8 +24,8 @@ deseja avançar os conhecimentos em Python.
 
 ```{=html}
 <div class="projeto-links">
-  <a href="mailto:lavras@pyladies.com">
-    <i class="bi bi-envelope"></i> lavras@pyladies.com
+  <a href="mailto:lavras@pyladies.com" aria-label="Enviar e-mail para o PyLadies Lavras">
+    <i class="bi bi-envelope"></i> E-mail do PyLadies
   </a>
   <a href="https://www.instagram.com/pyladieslavras/" target="_blank" rel="noopener">
     <i class="bi bi-instagram"></i> @pyladieslavras

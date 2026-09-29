@@ -23,14 +23,14 @@ além de membros de diferentes áreas do conhecimento.
 
 ```{=html}
 <div class="projeto-links">
-  <a href="mailto:scalon@ufla.br">
-    <i class="bi bi-envelope"></i> scalon@ufla.br
+  <a href="mailto:scalon@ufla.br" aria-label="Enviar e-mail para João Domingos Scalon">
+    <i class="bi bi-envelope"></i> João Scalon
   </a>
-  <a href="mailto:rrlima@ufla.br">
-    <i class="bi bi-envelope"></i> rrlima@ufla.br
+  <a href="mailto:rrlima@ufla.br" aria-label="Enviar e-mail para Renato Ribeiro de Lima">
+    <i class="bi bi-envelope"></i> Renato Lima
   </a>
-  <a href="mailto:geandamaceno030@gmail.com">
-    <i class="bi bi-envelope"></i> geandamaceno030@gmail.com
+  <a href="mailto:geandamaceno030@gmail.com" aria-label="Enviar e-mail para Gean Damaceno">
+    <i class="bi bi-envelope"></i> Gean Damaceno
   </a>
   <a href="https://github.com/gean-damaceno/GPS" target="_blank" rel="noopener">
     <i class="bi bi-github"></i> GitHub
