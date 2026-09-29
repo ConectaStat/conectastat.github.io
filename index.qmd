@@ -118,14 +118,33 @@ Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](ht
       <p id="rota-status" class="route-status" role="status"></p>
     </div>
   </div>
+  <!-- Índice do mapa, ao lado dele: o que é cada número. Os números seguem a
+       ordem dos pontos da camada "Prédio do departamento" no Google My Maps;
+       se um ponto mudar lá, atualize aqui também. -->
   <div class="g-col-12 g-col-lg-5">
+    <div class="mapa-indice">
+      <p class="mapa-indice-titulo"><i class="bi bi-list-ol"></i> O que é cada número no mapa</p>
+      <ol>
+        <li><span class="mapa-num">1</span><span class="mapa-txt"><strong>Departamento de Estatística</strong><span>DES · ICET</span></span></li>
+        <li><span class="mapa-num">2</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13A e DES 14A</span></span></li>
+        <li><span class="mapa-num">3</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13B e DES 14B</span></span></li>
+        <li><span class="mapa-num">4</span><span class="mapa-txt"><strong>Salas de aula da Pós-graduação</strong></span></li>
+        <li><span class="mapa-num">5</span><span class="mapa-txt"><strong>Sala de Monitoria de Estatística</strong></span></li>
+        <li><span class="mapa-num mapa-area" aria-hidden="true"></span><span class="mapa-txt"><strong>Área verde</strong><span>Departamento de Ciências Exatas, sede do curso no ICET</span></span></li>
+      </ol>
+    </div>
+  </div>
+  <!-- Endereço e botões de rota: card de largura total, embaixo -->
+  <div class="g-col-12">
     <div class="map-info">
+      <div class="map-endereco">
       <h3><i class="bi bi-geo-alt-fill"></i> Departamento de Estatística da UFLA</h3>
       <p>
         Trevo Rotatório Professor Edmir Sá Santos, s/n<br/>
         Campus Universitário, Lavras/MG<br/>
         CEP 37203-202 · Caixa Postal 3037
       </p>
+      </div>
       <div class="map-actions">
         <a class="btn-rota"
            href="https://www.google.com/maps/dir/?api=1&destination=-21.2275%2C-44.9770"
@@ -141,22 +160,6 @@ Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](ht
           <i class="bi bi-phone"></i> Enviar para o celular
         </button>
       </div>
-    </div>
-  </div>
-  <!-- Índice do mapa: o que é cada número. Os números seguem a ordem dos
-       pontos da camada "Prédio do departamento" no Google My Maps; se um
-       ponto mudar lá, atualize aqui também. -->
-  <div class="g-col-12">
-    <div class="mapa-indice">
-      <p class="mapa-indice-titulo"><i class="bi bi-list-ol"></i> O que é cada número no mapa</p>
-      <ol>
-        <li><span class="mapa-num">1</span><span class="mapa-txt"><strong>Departamento de Estatística</strong><span>DES · ICET</span></span></li>
-        <li><span class="mapa-num">2</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13A e DES 14A</span></span></li>
-        <li><span class="mapa-num">3</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13B e DES 14B</span></span></li>
-        <li><span class="mapa-num">4</span><span class="mapa-txt"><strong>Salas de aula da Pós-graduação</strong></span></li>
-        <li><span class="mapa-num">5</span><span class="mapa-txt"><strong>Sala de Monitoria de Estatística</strong></span></li>
-        <li><span class="mapa-num mapa-area" aria-hidden="true"></span><span class="mapa-txt"><strong>Área verde</strong><span>Departamento de Ciências Exatas, sede do curso no ICET</span></span></li>
-      </ol>
     </div>
   </div>
 </div>

@@ -1103,12 +1103,15 @@ body { -webkit-font-smoothing: antialiased; }
     }
   }
 
+  // Endereço e botões de rota: card de largura total, abaixo do mapa e do
+  // índice - endereço à esquerda, botões à direita (empilham no celular)
   .map-info {
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1.6rem 1.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    padding: 1.4rem 1.75rem;
     background: #ffffff;
     border-radius: 12px;
     border: 1px solid $hairline;
@@ -1123,13 +1126,20 @@ body { -webkit-font-smoothing: antialiased; }
       .bi { color: $cs-green-dark; }
     }
 
-    p { color: $muted; font-size: 0.92rem; line-height: 1.7; }
+    p { color: $muted; font-size: 0.92rem; line-height: 1.7; margin-bottom: 0; }
 
+    // Botões empilhados, da mesma largura, à direita do endereço; no
+    // celular voltam a ficar lado a lado, quebrando linha
     .map-actions {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: stretch;
       gap: 0.55rem;
-      margin-top: 0.75rem;
+
+      @media (max-width: 767.98px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
 
       a, button {
         display: inline-flex;
@@ -1160,11 +1170,15 @@ body { -webkit-font-smoothing: antialiased; }
 
   }
 
-  // Índice do mapa: card no mesmo padrão do card de rota (.route-panel), com
-  // cada número no mesmo círculo verde dos marcadores do My Maps e a área
-  // verde com uma amostra da cor do polígono. Três colunas no desktop.
+  // Índice do mapa: na coluna ao lado dele, com a mesma altura, no padrão do
+  // card de rota (.route-panel); cada número no mesmo círculo verde dos
+  // marcadores do My Maps e a área verde com uma amostra da cor do polígono
   .mapa-indice {
-    padding: 1.15rem 1.25rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.4rem 1.6rem;
     background: #ffffff;
     border: 1px solid $hairline;
     border-radius: 12px;
@@ -1180,11 +1194,7 @@ body { -webkit-font-smoothing: antialiased; }
       margin: 0;
       padding: 0;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.85rem 1.5rem;
-
-      @media (max-width: 991.98px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      @media (max-width: 575.98px) { grid-template-columns: minmax(0, 1fr); }
+      gap: 0.95rem;
     }
 
     li {
@@ -2726,7 +2736,6 @@ main.content table {
 //  RESPONSIVO
 // =============================================================================
 @media (max-width: 767.98px) {
-  .map-block .map-info { margin-top: 1rem; }
   .nav-footer .nav-footer-right { text-align: center; }
   .nav-footer .footer-assinatura { justify-content: center; }
 }
