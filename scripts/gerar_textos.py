@@ -57,10 +57,11 @@ def blocos_home():
     # topo: painel Em Destaque (os textos vêm de cada post, não do index)
     saida.append(("Em Destaque (topo da home)",
                   "Slogan (Ciência| Estatística| Sociedade) à esquerda e, à direita, "
-                  "o painel Em Destaque: um card por vez, entre os três destaques "
-                  "mais recentes (notícias, cursos/eventos e encontros com a "
-                  "comunidade), 5 s cada, do mais novo ao mais velho. Título, data "
-                  "e resumo de cada card vêm do próprio post (seção 5)."))
+                  "o painel Em Destaque: os três destaques mais recentes (notícias, "
+                  "cursos/eventos e encontros com a comunidade) como três cards, o "
+                  "da vez no centro e os outros dois atrás, menores; 5 s cada, do "
+                  "mais novo ao mais velho. Título, data e resumo de cada card vêm "
+                  "do próprio post (seção 5)."))
 
     # secoes: corta o corpo limpo em pedacos que comecam com "## "
     for pedaco in re.split(r"(?m)^(?=## )", limpa_corpo(corpo)):

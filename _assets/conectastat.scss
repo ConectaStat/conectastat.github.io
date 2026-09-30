@@ -85,8 +85,10 @@ body { -webkit-font-smoothing: antialiased; }
     align-items: center;
   }
 
+  // A logo tem a altura que o slogan de três linhas tinha na barra (52px):
+  // assim a barra e os botões do menu ficam exatamente onde estavam
   img.navbar-logo {
-    max-height: 48px;
+    max-height: 52px;
     width: auto;
     margin-right: 0.65rem;
   }
@@ -103,7 +105,7 @@ body { -webkit-font-smoothing: antialiased; }
     line-height: 1;
     color: #ffffff;
     text-transform: none !important;
-    min-height: 48px;   // mantém a altura original da barra (era a do logo)
+    min-height: 52px;   // mantém a altura original da barra (81px)
   }
 
   .nav-link {
@@ -151,39 +153,43 @@ body { -webkit-font-smoothing: antialiased; }
 //  TOPO DA HOME - as medidas da hero original (slogan à esquerda, na coluna
 //  de 300-400px, em Source Code Pro) com o painel Em Destaque no lugar da
 //  ilustração, do mesmo tamanho dela (~590 x 400px no desktop).
-//  O painel mostra um destaque por vez, entre os três mais recentes, do mais
-//  novo ao mais velho: cada um fica 5 s na tela, marcados por uma linha verde
-//  fina na base do card; setas dos dois lados trocam na hora. Template em
-//  _assets/destaques-hero.ejs; JS em _includes/listing-cards.html.
-//  O card é o card padrão das listagens (.cs-card); aqui ficam só a
-//  disposição e o que muda para caber na altura da hero (sem o resumo na
-//  tela - ele continua para leitor de tela).
+//  O painel mostra os três destaques mais recentes como três cards: o da
+//  vez no centro, em destaque, e os outros dois atrás, menores. Cada um fica
+//  5 s no centro, do mais novo ao mais velho, marcados por uma linha verde
+//  fina na base do card; os pontos e o clique num card de trás trocam na
+//  hora. Template em _assets/destaques-hero.ejs; JS em
+//  _includes/listing-cards.html.
+//  O card é o card padrão das listagens (.cs-card), do mesmo tamanho e com
+//  o mesmo conteúdo que tinha no carrossel Em Destaque antigo (capa, data,
+//  título, resumo e "Leia mais", 315px de largura); aqui fica só a
+//  disposição.
 //  A classe .hero-banner continua: _includes/transitions.html a usa para
-//  reconhecer a home. O respiro abaixo da navbar fica no container: a regra
-//  "#quarto-content > *" do tema zera o padding de todo filho direto do
-//  conteúdo e vence por especificidade.
+//  reconhecer a home.
 // =============================================================================
 .hero-banner {
   background: #ffffff;
-  // Na entrada do giro o card de fora desliza 28px: sem o corte, a página
-  // ganharia rolagem lateral por meio segundo a cada giro
+  // No celular, na troca, o card que sai e o que entra deslizam para fora
+  // da coluna: sem o corte, a página ganharia rolagem lateral a cada giro
   overflow-x: clip;
-
-  > .content-container { padding-top: clamp(1rem, 2.5vw, 1.75rem); }
 
   .hero-grid {
     display: grid;
     grid-template-columns: minmax(300px, 400px) 1fr;
     gap: 0;
-    align-items: center;
+    align-items: start;
   }
 
+  // O slogan fica exatamente onde ficava na hero original: centrado numa
+  // faixa da altura da antiga ilustração (clamp 300-400px), colada na
+  // navbar - e não centrado na altura do card, que é maior
   .hero-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: clamp(300px, 34vw, 400px);
     padding: clamp(1.75rem, 3.5vw, 2.75rem) clamp(1.5rem, 3vw, 2.25rem);
   }
+
 
   // Slogan: peso 600 e entrelinha 1.3, sem aperto de tracking (a referência
   // é o título de um README no GitHub), alternando azul e verde
@@ -211,6 +217,7 @@ body { -webkit-font-smoothing: antialiased; }
   // Celular: o slogan em cima, o painel embaixo (como na hero antiga)
   @media (max-width: 767.98px) {
     .hero-grid { grid-template-columns: 1fr; }
+    .hero-text { min-height: 0; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -223,33 +230,86 @@ body { -webkit-font-smoothing: antialiased; }
 
   // Mais específico que o molde (que vem depois no arquivo)
   .hero-destaques > h2 { margin: 0 0 1.5rem; }
+
+  // Sem o respiro que o Quarto põe embaixo de toda listagem: o vão até o
+  // texto de boas-vindas fica só a margem dele, como era com a ilustração
+  .hero-destaques .quarto-listing { padding-bottom: 0; }
 }
+
+// O painel ocupa a coluna da antiga ilustração, colado na navbar como ela.
+// Três cards padrão (.cs-card, 315px, sem nenhuma mudança de layout)
+// empilhados no mesmo lugar da grade: o da vez no centro, em tamanho normal
+// e na frente; o anterior e o próximo atrás, menores (82%), encostados nas
+// bordas da coluna - aparecem pela metade. Clicar num deles o traz para o
+// centro. Como os três ocupam a mesma célula da grade, a altura do painel é
+// a do card do centro (a escala dos de trás não mexe no layout).
+//
+// Giro contínuo: os três ficam sempre centrados na grade e só se deslocam
+// (translate) e encolhem (scale), que o navegador anima - cada card desliza
+// até a posição nova em vez de saltar para ela. O deslocamento vem da
+// largura do próprio painel (100cqw; o painel é um container): a 82%, o card
+// de trás encosta na borda da coluna.
+$dq-escala: 0.82;
+$dq-tempo: 0.75s;
+$dq-curva: cubic-bezier(0.4, 0, 0.2, 1);   // sai macio e assenta devagar
+$dq-giro: translate $dq-tempo $dq-curva, scale $dq-tempo $dq-curva,
+  z-index $dq-tempo $dq-curva, opacity $dq-tempo $dq-curva;
+$dq-hover: transform 0.18s ease, border-color 0.18s ease;
 
 .dq-painel {
-  --dq-dx: 28px;                    // de que lado o card entra (JS inverte)
   position: relative;
+  container-type: inline-size;
   display: grid;
-  // Um card só, no meio; as colunas dos lados guardam o lugar das setas
-  grid-template-columns: minmax(3.25rem, 1fr) minmax(0, 400px) minmax(3.25rem, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    ". centro ."
-    ". pontos .";
-  align-items: start;
-  row-gap: 0.75rem;
+    "palco"
+    "pontos";
+  align-items: center;
+  row-gap: 0.6rem;
 }
 
-// O item é .cs-card; aqui só a posição e o que muda para caber na hero
 .dq-painel .dq-item {
+  --dq-card: min(315px, 100cqw);    // a largura do card (max-width: 100%)
+  --dq-lado: calc((100cqw - var(--dq-card) * #{$dq-escala}) / 2);   // centro → borda
   display: none;                    // fora da vez: não aparece nem recebe foco
+  grid-area: palco;
+  justify-self: center;
+  width: 315px;                     // a largura do card padrão
+  max-width: 100%;
   min-width: 0;
+  // translate/scale fazem o giro; o transform fica livre para o "levantar"
+  // do hover do .cs-card (0.18s, como em todo card do site). O z-index
+  // acompanha o giro: o card que chega passa à frente do que sai no meio do
+  // caminho, quando os dois estão do mesmo tamanho. O visibility (celular)
+  // muda na hora para o card que aparece - o foco do teclado passa para ele
+  // no mesmo instante - e só no fim para o que some (veja lá embaixo).
+  transition: $dq-giro, visibility 0s, $dq-hover;
 
-  &[data-pos="centro"] { display: flex; grid-area: centro; }
+  &[data-pos="centro"],
+  &[data-pos="esq"],
+  &[data-pos="dir"] { display: flex; }
 
-  // Entrada ao trocar: o card desliza do lado de onde a troca vem (sem
-  // "fill" depois do fim, para o hover do card continuar funcionando)
-  &.dq-entra { animation: dq-entra 0.5s cubic-bezier(0.2, 0.8, 0.3, 1) backwards; }
+  &[data-pos="centro"] { z-index: 10; }
 
-  // Título com três linhas reservadas, para a altura não mudar a cada troca
+  &[data-pos="esq"],
+  &[data-pos="dir"] {
+    z-index: 2;
+    scale: $dq-escala;
+    cursor: pointer;
+  }
+
+  &[data-pos="esq"] { translate: calc(-1 * var(--dq-lado)) 0; }
+  &[data-pos="dir"] { translate: var(--dq-lado) 0; }
+
+  // O card que dá a volta, de um lado para o outro (o JS marca), passa por
+  // trás dos outros dois, esmaecendo no meio do caminho
+  &.dq-volta {
+    z-index: 1;
+    animation: dq-volta $dq-tempo $dq-curva;
+  }
+
+  // Título e resumo com altura reservada, para a altura do painel não mudar
+  // a cada troca (e a página abaixo não pular)
   .cs-card-title {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -258,92 +318,49 @@ body { -webkit-font-smoothing: antialiased; }
     min-height: calc(3 * 1.35em);
   }
 
-  // Sem o resumo na tela, para caber na altura da hero (continua para
-  // leitor de tela)
   .cs-card-desc {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    -webkit-line-clamp: 2;
+    min-height: calc(2 * 1.55em);
   }
 }
 
-@keyframes dq-entra {
-  from { opacity: 0; transform: translateX(var(--dq-dx)); }
+@keyframes dq-volta {
+  50% { opacity: 0.25; }
 }
 
-// Capa: a mesma caixa 16:9 do card, com a imagem inteira sobre uma cópia
-// desfocada dela mesma, em vez de recortada
-.cs-card .dq-thumb {
-  position: relative;
-  background: $cloud;
+// Navegador sem container queries ou sem translate/scale avulsos (versões
+// anteriores a 2023): o arranjo fixo, cards de trás presos às bordas, sem
+// o deslizar
+@supports not ((width: 1cqw) and (scale: 1)) {
+  .dq-painel .dq-item {
+    transition: opacity $dq-tempo $dq-curva, visibility 0s, $dq-hover;
 
-  .dq-bg {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(18px) saturate(1.1);
-    transform: scale(1.15);
-    opacity: 0.55;
-  }
+    &.dq-volta { animation: none; }
 
-  .dq-img {
-    position: relative;
-    object-fit: contain;
+    &[data-pos="esq"],
+    &[data-pos="dir"] {
+      translate: none;
+      scale: none;
+      transform: scale($dq-escala);
+    }
+
+    &[data-pos="esq"] { justify-self: start; transform-origin: left center; }
+    &[data-pos="dir"] { justify-self: end; transform-origin: right center; }
   }
 }
 
-// Setas dos dois lados do card, na altura do meio da capa (em item de grade,
-// margem em % é relativa à largura da área: 28,125% = metade da capa 16:9),
-// com o contorno azul da pílula "Leia mais"
-.dq-seta {
-  grid-area: centro;
-  align-self: start;
-  z-index: 3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  margin-top: calc(28.125% - 20px);
-  padding: 0;
-  border: 1px solid $cs-blue;
-  border-radius: 50%;
-  background: #ffffff;
-  color: $cs-blue;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
-
-  &:hover,
-  &:focus-visible {
-    background: $cs-blue;
-    color: #ffffff;
-  }
-
-  // fora do card, a 0,6rem da borda
-  &.dq-ant  { justify-self: start; margin-left: calc(-40px - 0.6rem); }
-  &.dq-prox { justify-self: end;   margin-right: calc(-40px - 0.6rem); }
-}
-
-// Sem JS as setas não teriam o que fazer: só aparecem quando o JS assume
-.dq-painel:not(.dq-js) .dq-seta { display: none; }
-
-// Tempo de exibição: uma linha verde fina na base do card, que enche em 5 s.
-// O fim dela é o que troca o destaque (JS), e pausá-la pausa o painel
-// (mouse em cima, foco de teclado, aba oculta).
+// Tempo de exibição: uma linha verde fina na base do card do centro, que
+// enche em 5 s. O fim dela é o que troca o destaque (JS), e pausá-la pausa
+// o painel (mouse em cima, foco de teclado, aba oculta).
 .dq-progresso {
-  grid-area: centro;
+  grid-area: palco;
   align-self: end;
-  z-index: 2;
+  justify-self: center;
+  z-index: 11;                      // acima do card do centro (10)
+  width: calc(315px - 2px);
+  max-width: calc(100% - 2px);
   height: 3px;
-  margin: 0 1px 1px;                // dentro da borda do card
+  margin-bottom: 1px;               // dentro da borda do card
   border-radius: 0 0 11px 11px;
   overflow: hidden;
   pointer-events: none;
@@ -362,6 +379,16 @@ body { -webkit-font-smoothing: antialiased; }
   animation: dq-progresso 5s linear forwards;
 }
 
+// Enquanto o card desliza para o centro, a linha (que já começou a correr)
+// fica apagada; acende quando ele chega
+.dq-painel.dq-girando .dq-progresso {
+  animation: dq-progresso-acende $dq-tempo ease-out;
+}
+
+@keyframes dq-progresso-acende {
+  0%, 70% { opacity: 0; }
+}
+
 .dq-painel.dq-pausado .dq-progresso span { animation-play-state: paused; }
 
 @keyframes dq-progresso {
@@ -374,6 +401,7 @@ body { -webkit-font-smoothing: antialiased; }
   grid-area: pontos;
   justify-self: center;
   display: flex;
+  align-items: center;
   gap: 0.45rem;
 
   button {
@@ -394,25 +422,52 @@ body { -webkit-font-smoothing: antialiased; }
   }
 }
 
-// Celular: o card ocupa a largura toda e as setas ficam por cima da capa,
-// junto às bordas
+// Celular: não há largura para os cards de trás; fica só o do centro, na
+// largura toda. Na troca, o que sai desliza e some para o lado dele e o que
+// entra vem do outro lado, aparecendo (os de trás ficam invisíveis)
 @media (max-width: 575.98px) {
-  .dq-painel { grid-template-columns: 0 minmax(0, 1fr) 0; }
+  .dq-painel .dq-item {
+    width: 100%;
 
-  .dq-seta {
-    width: 34px;
-    height: 34px;
-    margin-top: calc(28.125% - 17px);
+    &[data-pos="esq"],
+    &[data-pos="dir"] {
+      scale: 0.94;
+      opacity: 0;
+      visibility: hidden;           // no fim do giro, depois de sumir
+      pointer-events: none;
+      transition: $dq-giro, visibility 0s linear $dq-tempo, $dq-hover;
+    }
 
-    &.dq-ant  { margin-left: 0.5rem; }
-    &.dq-prox { margin-right: 0.5rem; }
+    &[data-pos="esq"] { translate: -35% 0; }
+    &[data-pos="dir"] { translate: 35% 0; }
+
+    &.dq-volta { animation: none; }
   }
+
+  // Sem o deslizar completo ou sem o corte do .hero-banner (Safari até o
+  // 15), o card de trás deslocado daria rolagem lateral: fica só o do
+  // centro, como era, e a troca é na hora
+  @supports not ((width: 1cqw) and (scale: 1) and (overflow-x: clip)) {
+    .dq-painel .dq-item {
+      &[data-pos="esq"],
+      &[data-pos="dir"] { display: none; }
+    }
+  }
+
+  .dq-progresso { width: calc(100% - 2px); }
 }
 
-// Menos movimento: sem entrada animada e sem troca automática (sem a linha
-// correndo, o fim dela nunca chega)
+// Menos movimento: sem deslizar (a troca é na hora) e sem troca automática
+// (sem a linha correndo, o fim dela nunca chega)
 @media (prefers-reduced-motion: reduce) {
-  .dq-painel .dq-item.dq-entra { animation: none; }
+  .dq-painel .dq-item {
+    // [data-pos] vence também a regra dos cards de trás do celular
+    &,
+    &[data-pos] { transition: none; }
+
+    &.dq-volta { animation: none; }
+  }
+
   .dq-progresso { display: none; }
 }
 

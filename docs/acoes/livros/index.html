@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -45,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d6de1dc71690de77851c9137bd0218ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-abd1756e7b053c38c9d9e3724c5b8d09.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -107,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -475,38 +472,40 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
-  //  Em Destaque (topo da home): um destaque por vez, do mais novo
-  //  ao mais velho, e volta ao primeiro. Cada um fica 5 s na tela,
+  //  Em Destaque (topo da home): três cards, o da vez no centro e
+  //  o anterior e o próximo atrás, menores. Cada um fica 5 s no
+  //  centro, do mais novo ao mais velho, e volta ao primeiro -
   //  marcados pela linha verde da base do card: o fim da animação
   //  da linha (CSS) é o que troca o destaque, e pausar a linha
   //  pausa o painel - mouse em cima, foco de TECLADO e aba oculta
-  //  pausam. As setas e os pontos trocam na hora e reiniciam os 5 s.
-  //  Quem pediu menos movimento no sistema não tem troca automática.
+  //  pausam. Os pontos, o clique num card de trás e as setas do
+  //  teclado trocam na hora e reiniciam os 5 s. Quem pediu menos movimento
+  //  no sistema não tem troca automática.
   // ============================================================
   document.querySelectorAll("[data-dq]").forEach(function (painel) {
     var itens = Array.prototype.slice.call(painel.querySelectorAll(".dq-item"));
     var n = itens.length;
     if (n < 2) return;
-    painel.classList.add("dq-js");       // as setas só aparecem com JS
+    painel.classList.add("dq-js");
 
     var mqReduz = window.matchMedia("(prefers-reduced-motion: reduce)");
     var reduz = mqReduz.matches;
     var barra = painel.querySelector(".dq-progresso span");
     var aviso = painel.querySelector(".dq-aviso");
-    var ant = painel.querySelector(".dq-ant");
-    var prox = painel.querySelector(".dq-prox");
     var idx = 0;
     var mouse = false, foco = false;
 
     // Um ponto por item, embaixo do painel
     var pontos = document.createElement("div");
     pontos.className = "dq-pontos";
+    var bolinhas = [];
     itens.forEach(function (it, i) {
       var b = document.createElement("button");
       b.type = "button";
       b.setAttribute("aria-label", "Ir para o destaque " + (i + 1) + " de " + n);
-      b.addEventListener("click", function () { mostra(i, i < idx ? -1 : 1, true); });
+      b.addEventListener("click", function () { mostra(i, true); });
       pontos.appendChild(b);
+      bolinhas.push(b);
     });
     painel.appendChild(pontos);
 
@@ -522,12 +521,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Busca já a imagem do próximo (os fora da vez são lazy e, escondidos,
     // o navegador não os carrega sozinho)
     function preCarrega(k) {
-      var im = itens[k].querySelector(".dq-img");
+      var im = itens[k].querySelector(".cs-card-thumb img");
       if (im && !im.complete) { im.loading = "eager"; new Image().src = im.src; }
     }
 
-    // sentido: 1 = veio da direita (próximo), -1 = da esquerda, 0 = sem animação
-    function mostra(i, sentido, anuncia) {
+    // Põe o item i no centro. Só a posição (data-pos) de cada card muda; o
+    // CSS o faz deslizar até ela. Os cards não mudam de lugar no HTML
+    // (mover um elemento corta a transição dele): a ordem de leitura fica
+    // a do mais novo ao mais velho.
+    function mostra(i, anuncia) {
       var novo = ((i % n) + n) % n;
 
       // Se o foco está no card que sai, ele passa para o card que entra
@@ -535,29 +537,49 @@ document.addEventListener("DOMContentLoaded", function () {
       var focoNumCard = itens.some(function (it) { return it.contains(ativo); });
 
       idx = novo;
-      painel.style.setProperty("--dq-dx", (sentido < 0 ? -28 : 28) + "px");
 
+      var pos = {};
+      pos[novo] = "centro";
+      pos[(novo + 1) % n] = "dir";
+      if (n > 2) pos[(novo - 1 + n) % n] = "esq";
+
+      var volta = [];
       itens.forEach(function (it, k) {
-        var naVez = k === novo;
-        it.classList.remove("dq-entra");
-        it.setAttribute("data-pos", naVez ? "centro" : "");
+        var antes = it.getAttribute("data-pos") || "";
+        var p = pos[k] || "";
+        if (it.classList.contains("dq-volta")) {
+          // se a volta ainda está no meio, o card sai do esmaecer a partir
+          // da opacidade em que está (a transição de opacity o leva a 1),
+          // em vez de saltar para 1 de uma vez
+          var o = parseFloat(getComputedStyle(it).opacity);
+          it.classList.remove("dq-volta");
+          if (o < 1) {
+            it.style.opacity = o;
+            void it.offsetWidth;
+            it.style.opacity = "";
+          }
+        }
+        // o card que passa de um lado para o outro vai por trás dos demais
+        if ((antes === "esq" && p === "dir") || (antes === "dir" && p === "esq")) volta.push(it);
+        it.setAttribute("data-pos", p);
         var link = it.querySelector(".cs-card-btn");
         if (link) {
-          if (naVez) link.removeAttribute("tabindex");
+          // só o card do centro entra no Tab; os de trás, pelos pontos
+          if (p === "centro") link.removeAttribute("tabindex");
           else link.setAttribute("tabindex", "-1");
         }
-        if (sentido && naVez && !reduz) {
-          void it.offsetWidth;           // reinicia a entrada
-          it.classList.add("dq-entra");
-        }
       });
+      if (volta.length && !reduz) {
+        void painel.offsetWidth;         // reinicia o esmaecer da volta
+        volta.forEach(function (it) { it.classList.add("dq-volta"); });
+      }
 
       if (focoNumCard) {
         var l = itens[novo].querySelector(".cs-card-btn");
         if (l) l.focus({ preventScroll: true });
       }
 
-      Array.prototype.forEach.call(pontos.children, function (b, k) {
+      bolinhas.forEach(function (b, k) {
         b.classList.toggle("ativo", k === novo);
         if (k === novo) b.setAttribute("aria-current", "true");
         else b.removeAttribute("aria-current");
@@ -578,24 +600,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (barra) {
       barra.addEventListener("animationend", function (e) {
-        if (e.target === barra) mostra(idx + 1, 1, false);
+        if (e.target === barra) mostra(idx + 1, false);
       });
     }
 
-    if (prox) prox.addEventListener("click", function () { mostra(idx + 1, 1, true); });
-    if (ant) ant.addEventListener("click", function () { mostra(idx - 1, -1, true); });
+    // Clicar num card de trás o traz para o centro (em vez de abrir a
+    // notícia); o card do centro continua abrindo a notícia
+    itens.forEach(function (it, k) {
+      it.addEventListener("click", function (e) {
+        var p = it.getAttribute("data-pos");
+        if (p !== "esq" && p !== "dir") return;
+        e.preventDefault();
+        e.stopPropagation();
+        mostra(k, true);
+      }, true);
+    });
 
     // Setas do teclado com o foco dentro do painel (sem roubar Alt+←,
     // o "voltar" do navegador, nem outros atalhos com modificador)
     painel.addEventListener("keydown", function (e) {
       if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
-      if (e.key === "ArrowRight") { mostra(idx + 1, 1, true); e.preventDefault(); }
-      else if (e.key === "ArrowLeft") { mostra(idx - 1, -1, true); e.preventDefault(); }
+      if (e.key === "ArrowRight") { mostra(idx + 1, true); e.preventDefault(); }
+      else if (e.key === "ArrowLeft") { mostra(idx - 1, true); e.preventDefault(); }
     });
 
     // Pausa: só mouse de verdade (o toque dispara "mouseenter" de mentira e
-    // deixaria o painel pausado) e só foco vindo do teclado (clicar numa
-    // seta põe o foco nela, mas isso não é "estar lendo" o card)
+    // deixaria o painel pausado) e só foco vindo do teclado (clicar num
+    // ponto põe o foco nele, mas isso não é "estar lendo" o card)
     painel.addEventListener("pointerenter", function (e) {
       if (e.pointerType === "mouse") { mouse = true; atualizaPausa(); }
     });
@@ -616,7 +647,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (mqReduz.addEventListener) mqReduz.addEventListener("change", aoMudarMovimento);
     else if (mqReduz.addListener) mqReduz.addListener(aoMudarMovimento);
 
-    mostra(0, 1, false);
+    mostra(0, false);
     atualizaPausa();                     // a página pode abrir numa aba oculta
   });
 
@@ -933,64 +964,123 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
+
 // ============================================================
+
 //  Transições de página, camada 3: os blocos de conteúdo
+
 //  surgem suavemente conforme entram na tela (estilos em
+
 //  _assets/conectastat.scss, seção "TRANSIÇÕES DE PÁGINA").
+
 //  Sem JS ou com "reduzir movimento" ativo, nada é escondido.
+
 // ============================================================
+
 (function () {
+
   var reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   if (reduz || !("IntersectionObserver" in window)) return;
 
+
+
   // Só com esta classe o CSS esconde os blocos antes da revelação
+
   document.documentElement.classList.add("cs-js");
 
+
+
   document.addEventListener("DOMContentLoaded", function () {
+
     var alvos = [];
 
+
+
     if (document.querySelector(".hero-banner")) {
+
       // Home: os grandes blocos de seção (o hero já tem a própria montagem)
+
       document.querySelectorAll(".intro-block, .listing-block, .map-block")
+
         .forEach(function (el) { alvos.push(el); });
+
     } else {
+
       // Páginas internas: cada bloco de primeiro nível do documento
+
       var corpo = document.getElementById("quarto-document-content");
+
       if (corpo) {
+
         Array.prototype.forEach.call(corpo.children, function (el) {
+
           if (el.matches("script, style, #title-block-header, .quarto-listing")) return;
+
           alvos.push(el);
+
         });
+
         // Listagens (notícias, eventos...): cartão por cartão, em cascata
+
         corpo.querySelectorAll(".quarto-listing .quarto-grid-item")
+
           .forEach(function (el) { alvos.push(el); });
+
       }
+
     }
 
+
+
     if (!alvos.length) return;
+
     alvos.forEach(function (el) { el.classList.add("cs-reveal"); });
 
+
+
     // Blocos que entram juntos na tela revelam em cascata curta
+
     var io = new IntersectionObserver(function (entradas) {
+
       var atraso = 0;
+
       entradas.forEach(function (entrada) {
+
         if (!entrada.isIntersecting) return;
+
         var el = entrada.target;
+
         io.unobserve(el);
+
         el.style.transitionDelay = Math.min(atraso, 420) + "ms";
+
         atraso += 70;
+
         el.classList.add("cs-visivel");
+
         el.addEventListener("transitionend", function fim() {
+
           el.style.transitionDelay = "";
+
           el.removeEventListener("transitionend", fim);
+
         });
+
       });
+
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0 });
 
+
+
     alvos.forEach(function (el) { io.observe(el); });
+
   });
+
 })();
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

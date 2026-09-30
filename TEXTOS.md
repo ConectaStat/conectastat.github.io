@@ -83,7 +83,7 @@ index.qmd
 
 ### Em Destaque (topo da home)
 
-> Slogan (Ciência| Estatística| Sociedade) à esquerda e, à direita, o painel Em Destaque: um card por vez, entre os três destaques mais recentes (notícias, cursos/eventos e encontros com a comunidade), 5 s cada, do mais novo ao mais velho. Título, data e resumo de cada card vêm do próprio post (seção 5).
+> Slogan (Ciência| Estatística| Sociedade) à esquerda e, à direita, o painel Em Destaque: os três destaques mais recentes (notícias, cursos/eventos e encontros com a comunidade) como três cards, o da vez no centro e os outros dois atrás, menores; 5 s cada, do mais novo ao mais velho. Título, data e resumo de cada card vêm do próprio post (seção 5).
 
 
 ### Seção da home: Oportunidades
