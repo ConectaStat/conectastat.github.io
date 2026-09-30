@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,13 +13,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -46,10 +43,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c4bf8ea358f724c405228e156b5ae7a1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1d60f04de3b3f35f4e0c43cd28e916c3.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -136,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -181,8 +178,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title"><span class="nav-tagline"><span>Ciência<span class="tag-barra">|</span></span> <span class="tag-verde">Estatística<span class="tag-barra">|</span></span> <span>Sociedade</span></span></span>
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/conectastat-logo.png" alt="ConectaStat - página inicial" class="navbar-logo light-content">
+    <img src="./images/conectastat-logo.png" alt="ConectaStat - página inicial" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Procurar"></div>
@@ -292,13 +290,23 @@ window.Quarto = {
 
 
 <!-- ============================================================= -->
-<!--  EM DESTAQUE - painel do topo: um destaque grande e dois      -->
-<!--  menores, girando pelas notícias e eventos (JS em             -->
-<!--  _includes/listing-cards.html). A classe hero-banner fica: é  -->
-<!--  por ela que _includes/transitions.html reconhece a home.     -->
+<!--  TOPO DA HOME - o slogan (Ciência| Estatística| Sociedade) à  -->
+<!--  esquerda e o painel Em Destaque à direita: os três destaques -->
+<!--  mais recentes, girando (JS em _includes/listing-cards.html). -->
+<!--  A classe hero-banner fica: é por ela que                     -->
+<!--  _includes/transitions.html reconhece a home.                 -->
 <!-- ============================================================= -->
 <div class="hero-banner">
 <div class="content-container">
+<div class="hero-grid">
+<div class="hero-text">
+<p class="hero-tagline">
+  <span>Ciência<span class="tag-barra">|</span></span>
+  <span class="tag-verde">Estatística<span class="tag-barra">|</span></span>
+  <span>Sociedade</span>
+</p>
+</div>
+<div class="hero-destaques">
 <!-- OCULTO a pedido: o título visível "Em Destaque" saiu do topo da home.
      Para voltar a mostrá-lo, tire o comentário da linha abaixo e apague a
      linha "visually-hidden" logo depois dela. -->
@@ -309,7 +317,7 @@ window.Quarto = {
 <button type="button" class="dq-seta dq-ant" aria-label="Destaque anterior">
 <i class="bi bi-chevron-left" aria-hidden="true"></i>
 </button>
-<article class="cs-card dq-item" data-pos="centro" aria-roledescription="slide" aria-label="1 de 6">
+<article class="cs-card dq-item" data-pos="centro" aria-roledescription="slide" aria-label="1 de 3">
 <div class="cs-card-thumb dq-thumb">
 <img class="dq-bg" src="./noticias/posts/2026-08-04-doutoranda-premio-biometria/thumbnail.jpg" alt="" aria-hidden="true" loading="eager"><img class="dq-img" src="./noticias/posts/2026-08-04-doutoranda-premio-biometria/thumbnail.jpg" alt="" loading="eager">
 </div>
@@ -326,7 +334,7 @@ Viviane Costa Silva, doutoranda do PPGEE/UFLA, recebeu o IBS Travel Award da Int
 <a class="cs-card-btn" href="./noticias/posts/2026-08-04-doutoranda-premio-biometria/index.html">Leia mais</a>
 </p>
 </article>
-<article class="cs-card dq-item" data-pos="dir" aria-roledescription="slide" aria-label="2 de 6">
+<article class="cs-card dq-item" data-pos="dir" aria-roledescription="slide" aria-label="2 de 3">
 <div class="cs-card-thumb dq-thumb">
 <img class="dq-bg" src="./eventos/posts/2026-01-15-programa-de-verao-2026/thumbnail.png" alt="" aria-hidden="true" loading="eager"><img class="dq-img" src="./eventos/posts/2026-01-15-programa-de-verao-2026/thumbnail.png" alt="" loading="eager">
 </div>
@@ -343,9 +351,9 @@ Edição 2026 do tradicional Programa de Verão do Departamento de Estatística,
 <a class="cs-card-btn" href="./eventos/posts/2026-01-15-programa-de-verao-2026/index.html" tabindex="&quot;-1&quot;">Leia mais</a>
 </p>
 </article>
-<article class="cs-card dq-item" data-pos="" aria-roledescription="slide" aria-label="3 de 6">
+<article class="cs-card dq-item" data-pos="esq" aria-roledescription="slide" aria-label="3 de 3">
 <div class="cs-card-thumb dq-thumb">
-<img class="dq-bg" src="./eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/thumbnail.png" alt="" aria-hidden="true" loading="lazy"><img class="dq-img" src="./eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/thumbnail.png" alt="" loading="lazy">
+<img class="dq-bg" src="./eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/thumbnail.png" alt="" aria-hidden="true" loading="eager"><img class="dq-img" src="./eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/thumbnail.png" alt="" loading="eager">
 </div>
 <p class="cs-card-date">
 5 de nov. de 2025
@@ -360,57 +368,6 @@ Evento bienal que, desde 1999, reúne profissionais, docentes e estudantes da á
 <a class="cs-card-btn" href="./eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/index.html" tabindex="&quot;-1&quot;">Leia mais</a>
 </p>
 </article>
-<article class="cs-card dq-item" data-pos="" aria-roledescription="slide" aria-label="4 de 6">
-<div class="cs-card-thumb dq-thumb">
-<img class="dq-bg" src="./images/livros/analise-dados-espaciais.png" alt="" aria-hidden="true" loading="lazy"><img class="dq-img" src="./images/livros/analise-dados-espaciais.png" alt="" loading="lazy">
-</div>
-<p class="cs-card-date">
-22 de jul. de 2025
-</p>
-<h3 class="cs-card-title">
-Prêmio Jabuti Acadêmico 2025: livro de professor do DES é finalista
-</h3>
-<p class="cs-card-desc">
-Análise de Dados Espaciais com Aplicações em R, de João Domingos Scalon (DES/UFLA), está entre os finalistas do Prêmio Jabuti Acadêmico 2025 na categoria Matemática, Probabilidade e Estatística.
-</p>
-<p class="cs-card-action">
-<a class="cs-card-btn" href="./noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/index.html" tabindex="&quot;-1&quot;">Leia mais</a>
-</p>
-</article>
-<article class="cs-card dq-item" data-pos="" aria-roledescription="slide" aria-label="5 de 6">
-<div class="cs-card-thumb dq-thumb">
-<img class="dq-bg" src="./eventos/posts/2025-05-20-v-workshop-data-science/thumbnail.png" alt="" aria-hidden="true" loading="lazy"><img class="dq-img" src="./eventos/posts/2025-05-20-v-workshop-data-science/thumbnail.png" alt="" loading="lazy">
-</div>
-<p class="cs-card-date">
-20 de mai. de 2025
-</p>
-<h3 class="cs-card-title">
-V Workshop em Data Science
-</h3>
-<p class="cs-card-desc">
-Workshop voltado à Ciência de Dados, com palestras e atividades sobre métodos estatísticos e aplicações.
-</p>
-<p class="cs-card-action">
-<a class="cs-card-btn" href="./eventos/posts/2025-05-20-v-workshop-data-science/index.html" tabindex="&quot;-1&quot;">Leia mais</a>
-</p>
-</article>
-<article class="cs-card dq-item" data-pos="esq" aria-roledescription="slide" aria-label="6 de 6">
-<div class="cs-card-thumb dq-thumb">
-<img class="dq-bg" src="./images/capa-padrao-azul.png" alt="" aria-hidden="true" loading="eager"><img class="dq-img" src="./images/capa-padrao-azul.png" alt="" loading="eager">
-</div>
-<p class="cs-card-date">
-1 de set. de 2024
-</p>
-<h3 class="cs-card-title">
-Curso de Extensão: Introdução ao Software R
-</h3>
-<p class="cs-card-desc">
-Curso de extensão de introdução ao R, ambiente livre para análise estatística e visualização de dados.
-</p>
-<p class="cs-card-action">
-<a class="cs-card-btn" href="./eventos/posts/2024-09-01-curso-introducao-software-r/index.html" tabindex="&quot;-1&quot;">Leia mais</a>
-</p>
-</article>
 <button type="button" class="dq-seta dq-prox" aria-label="Próximo destaque">
 <i class="bi bi-chevron-right" aria-hidden="true"></i>
 </button>
@@ -418,6 +375,8 @@ Curso de extensão de introdução ao R, ambiente livre para análise estatísti
 </p>
 </div>
 <div class="listing-no-matching d-none">Nenhum item correspondente</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -672,7 +631,7 @@ A Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal
         <li><span class="mapa-num">3</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13B e DES 14B</span></span></li>
         <li><span class="mapa-num">4</span><span class="mapa-txt"><strong>Salas de aula da Pós-graduação</strong></span></li>
         <li><span class="mapa-num">5</span><span class="mapa-txt"><strong>Sala de Monitoria de Estatística</strong></span></li>
-        <li><span class="mapa-num mapa-area" aria-hidden="true"></span><span class="mapa-txt"><strong>Área verde</strong><span>Departamento de Ciências Exatas, sede do curso no ICET</span></span></li>
+        <li><span class="mapa-num mapa-area" aria-hidden="true"></span><span class="mapa-txt"><strong>Área verde</strong><span>Prédio do Instituto de Ciências Exatas e Tecnológicas (ICET)</span></span></li>
       </ol>
     </div>
   </div>
@@ -1703,64 +1662,123 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
+
 // ============================================================
+
 //  Transições de página, camada 3: os blocos de conteúdo
+
 //  surgem suavemente conforme entram na tela (estilos em
+
 //  _assets/conectastat.scss, seção "TRANSIÇÕES DE PÁGINA").
+
 //  Sem JS ou com "reduzir movimento" ativo, nada é escondido.
+
 // ============================================================
+
 (function () {
+
   var reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   if (reduz || !("IntersectionObserver" in window)) return;
 
+
+
   // Só com esta classe o CSS esconde os blocos antes da revelação
+
   document.documentElement.classList.add("cs-js");
 
+
+
   document.addEventListener("DOMContentLoaded", function () {
+
     var alvos = [];
 
+
+
     if (document.querySelector(".hero-banner")) {
+
       // Home: os grandes blocos de seção (o hero já tem a própria montagem)
+
       document.querySelectorAll(".intro-block, .listing-block, .map-block")
+
         .forEach(function (el) { alvos.push(el); });
+
     } else {
+
       // Páginas internas: cada bloco de primeiro nível do documento
+
       var corpo = document.getElementById("quarto-document-content");
+
       if (corpo) {
+
         Array.prototype.forEach.call(corpo.children, function (el) {
+
           if (el.matches("script, style, #title-block-header, .quarto-listing")) return;
+
           alvos.push(el);
+
         });
+
         // Listagens (notícias, eventos...): cartão por cartão, em cascata
+
         corpo.querySelectorAll(".quarto-listing .quarto-grid-item")
+
           .forEach(function (el) { alvos.push(el); });
+
       }
+
     }
 
+
+
     if (!alvos.length) return;
+
     alvos.forEach(function (el) { el.classList.add("cs-reveal"); });
 
+
+
     // Blocos que entram juntos na tela revelam em cascata curta
+
     var io = new IntersectionObserver(function (entradas) {
+
       var atraso = 0;
+
       entradas.forEach(function (entrada) {
+
         if (!entrada.isIntersecting) return;
+
         var el = entrada.target;
+
         io.unobserve(el);
+
         el.style.transitionDelay = Math.min(atraso, 420) + "ms";
+
         atraso += 70;
+
         el.classList.add("cs-visivel");
+
         el.addEventListener("transitionend", function fim() {
+
           el.style.transitionDelay = "";
+
           el.removeEventListener("transitionend", fim);
+
         });
+
       });
+
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0 });
 
+
+
     alvos.forEach(function (el) { io.observe(el); });
+
   });
+
 })();
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

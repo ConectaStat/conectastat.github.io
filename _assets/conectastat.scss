@@ -4,7 +4,8 @@
   em caixa alta, linhas finas (hairlines), cartões planos sem sombra, botões
   pílula. Inspiração: UI minimalista de sites de venture capital (Dribbble).
   Cores: azul e verde institucionais da UFLA sobre fundo branco.
-  Tipografia: Inter (fallback Verdana).
+  Tipografia: Inter (fallback Verdana); Source Code Pro só no slogan do topo
+  da home.
 -----------------------------------------------------------------------------*/
 
 /*-- scss:defaults --*/
@@ -15,11 +16,15 @@
 // mais publicar código no site, este import pode sair. Para trocar de família, mude aqui e no import:
 // Courier Prime, Fira Code... (Consolas é local, não precisa de import).
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+// Fonte do slogan do topo da home (Ciência| Estatística| Sociedade), e só
+// dele: uma monoespaçada, que é como o slogan foi desenhado.
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
 
 $font-family-sans-serif: "Inter", Verdana, system-ui, -apple-system, "Segoe UI", sans-serif;
 $headings-font-family:   "Inter", Verdana, sans-serif;
 $headings-font-weight:   700;
 $font-mono: "JetBrains Mono", Consolas, "Courier Prime", "Courier New", monospace;
+$font-slogan: "Source Code Pro", Consolas, "Courier New", monospace;
 
 // --- Cores da marca -----------------------------------------------------------
 $cs-blue:       #0d5488;   // azul da paleta própria do projeto (Canva, jul/2026)
@@ -66,7 +71,7 @@ body { -webkit-font-smoothing: antialiased; }
 }
 
 // =============================================================================
-//  NAVBAR - azul UFLA escuro, marca branca, tagline verde
+//  NAVBAR - azul UFLA escuro, logo do ConectaStat à esquerda
 // =============================================================================
 .navbar {
   background-color: $cs-blue-dark !important;
@@ -99,24 +104,6 @@ body { -webkit-font-smoothing: antialiased; }
     color: #ffffff;
     text-transform: none !important;
     min-height: 48px;   // mantém a altura original da barra (era a do logo)
-  }
-
-  // Slogan no topo esquerdo (o nome do site foi removido): Ciência|
-  // Estatística| Sociedade empilhados, em Inter semibold. É o único lugar do
-  // site onde o slogan aparece desde que a home trocou a hero pelo painel
-  // Em Destaque.
-  .nav-tagline {
-    display: inline-block;
-    font-family: $font-family-sans-serif;
-    font-size: 0.78rem;
-    line-height: 1.3;
-    font-weight: 600;
-    letter-spacing: normal;
-    color: #ffffff;
-
-    > span { display: block; }        // Ciência| Estatística| Sociedade
-    .tag-verde { color: #7dd3a8; }    // tint do verde UFLA legível sobre o azul escuro
-    .tag-barra { color: rgba(255, 255, 255, 0.55); font-weight: 400; }
   }
 
   .nav-link {
@@ -161,55 +148,103 @@ body { -webkit-font-smoothing: antialiased; }
 }
 
 // =============================================================================
-//  EM DESTAQUE - painel do topo da home, no lugar da antiga hero (ilustração +
-//  slogan): três cards lado a lado, o do centro maior (o destaque da vez), o
-//  anterior à esquerda e o próximo à direita, menores e alinhados pelo meio.
-//  Cada item é o card padrão das listagens (.cs-card, com contorno, capa,
-//  data, título, resumo e "Leia mais"); o título do painel é o mesmo dos
-//  títulos de seção da home; os pontos são os do carrossel (.cs-rotator-dots)
-//  e as setas usam a linguagem da pílula "Leia mais". Este bloco só cuida da
-//  disposição. Template em _assets/destaques-hero.ejs; JS em
-//  _includes/listing-cards.html.
-//  Título e resumo têm altura reservada, para o painel não mudar de altura a
-//  cada giro e a página abaixo não pular.
+//  TOPO DA HOME - as medidas da hero original (slogan à esquerda, na coluna
+//  de 300-400px, em Source Code Pro) com o painel Em Destaque no lugar da
+//  ilustração, do mesmo tamanho dela (~590 x 400px no desktop).
+//  O painel mostra os três destaques mais recentes: o da vez no centro, em
+//  card completo, e o anterior e o próximo dos lados, como faixas só com a
+//  capa - menores, mas ainda visíveis. Setas nos vãos giram para cada lado;
+//  o painel também gira sozinho até a pessoa assumir o controle. Template em
+//  _assets/destaques-hero.ejs; JS em _includes/listing-cards.html.
+//  O card do centro é o card padrão das listagens (.cs-card); aqui ficam só
+//  a disposição e o que muda para caber na altura da hero (sem o resumo na
+//  tela - ele continua para leitor de tela).
 //  A classe .hero-banner continua: _includes/transitions.html a usa para
-//  reconhecer a home. O respiro abaixo da navbar é margem do título, e não
-//  padding da .hero-banner: a regra "#quarto-content > *" do tema zera o
-//  padding de todo filho direto do conteúdo e vence por especificidade.
+//  reconhecer a home. O respiro abaixo da navbar fica no container: a regra
+//  "#quarto-content > *" do tema zera o padding de todo filho direto do
+//  conteúdo e vence por especificidade.
+//
+//  Contas (em item de grade, margem em % é relativa à LARGURA da área): com
+//  colunas 0,6 / 2,6 / 0,6, a faixa lateral tem a altura da capa 16:9 do
+//  centro se a proporção dela for 0,6 : 2,6·9/16 = 16 : 39; o meio da capa do
+//  centro fica a 28,125% da largura dele (metade de 56,25%).
 // =============================================================================
 .hero-banner {
   background: #ffffff;
-  // Na entrada do giro o card de fora desliza 28px de fora da tela: sem o
-  // corte, a página ganharia rolagem lateral por meio segundo a cada giro
+  // Na entrada do giro o card de fora desliza 28px: sem o corte, a página
+  // ganharia rolagem lateral por meio segundo a cada giro
   overflow-x: clip;
 
-  // Respiro abaixo da navbar. Fica no container (e não na .hero-banner nem
-  // na margem do título) porque vale com o título visível ou oculto, e o
-  // container não é filho direto do conteúdo - a regra do tema não o zera.
-  > .content-container { padding-top: clamp(1.5rem, 3.5vw, 2.5rem); }
+  > .content-container { padding-top: clamp(1rem, 2.5vw, 1.75rem); }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(300px, 400px) 1fr;
+    gap: 0;
+    align-items: center;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(1.75rem, 3.5vw, 2.75rem) clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  // Slogan: peso 600 e entrelinha 1.3, sem aperto de tracking (a referência
+  // é o título de um README no GitHub), alternando azul e verde
+  .hero-tagline {
+    font-family: $font-slogan;
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: normal;
+    color: $ink;
+    margin: 0;
+
+    > span {
+      display: block;                 // Ciência| Estatística| Sociedade
+      animation: hero-texto-entra 0.45s cubic-bezier(0.2, 1.3, 0.4, 1) both;
+    }
+    > span:nth-child(1) { animation-delay: 0.15s; }
+    > span:nth-child(2) { animation-delay: 0.26s; }
+    > span:nth-child(3) { animation-delay: 0.37s; }
+
+    .tag-verde { color: $cs-green; }
+    .tag-barra { color: $muted; font-weight: 400; }   // a "|" de cada linha
+  }
+
+  // Celular: o slogan em cima, o painel embaixo (como na hero antiga)
+  @media (max-width: 767.98px) {
+    .hero-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-tagline > span { animation: none; }
+  }
 
   // Título do painel, no estilo dos títulos de seção da home. Hoje está
   // oculto (só para leitor de tela); para mostrar, veja o index.qmd.
   h2 { @extend %titulo-secao-home; }
 
   // Mais específico que o molde (que vem depois no arquivo)
-  .content-container > h2 { margin: 0 0 1.5rem; }
+  .hero-destaques > h2 { margin: 0 0 1.5rem; }
 }
 
 .dq-painel {
   --dq-dx: 28px;                    // de que lado os cards entram (JS inverte)
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.85fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.6fr) minmax(0, 2.6fr) minmax(0, 0.6fr);
   grid-template-areas:
     "esq centro dir"
     "pontos pontos pontos";
-  align-items: center;              // os três alinhados pelo meio
-  column-gap: 3rem;                 // o vão onde flutuam as setas
-  row-gap: 1.1rem;
+  align-items: start;
+  column-gap: 2.25rem;              // o vão onde flutuam as setas
+  row-gap: 0.75rem;
 }
 
-// Os itens são .cs-card; aqui só a posição de cada um
+// Os itens são .cs-card; aqui só a posição e o formato de cada um
 .dq-painel .dq-item {
   display: none;                    // fora da vez: não aparece nem recebe foco
   min-width: 0;
@@ -223,8 +258,29 @@ body { -webkit-font-smoothing: antialiased; }
   &.dq-entra { animation: dq-entra 0.5s cubic-bezier(0.2, 0.8, 0.3, 1) backwards; }
   &.dq-entra[data-pos="esq"],
   &.dq-entra[data-pos="dir"] { animation-delay: 0.06s; }
+}
 
-  // Título e resumo com altura fixa: três linhas cada
+@keyframes dq-entra {
+  from { opacity: 0; transform: translateX(var(--dq-dx)); }
+}
+
+// Texto fora da tela, mas presente para leitor de tela
+%dq-so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  min-height: 0;
+}
+
+// Centro: o card padrão, sem o resumo na tela; título com três linhas
+// reservadas, para a altura não mudar a cada giro
+.dq-painel .dq-item[data-pos="centro"] {
   .cs-card-title {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -233,15 +289,33 @@ body { -webkit-font-smoothing: antialiased; }
     min-height: calc(3 * 1.35em);
   }
 
-  .cs-card-desc { min-height: calc(3 * 1.55em); }
+  .cs-card-desc { @extend %dq-so-leitor; }
 }
 
-@keyframes dq-entra {
-  from { opacity: 0; transform: translateX(var(--dq-dx)); }
+// Lados: faixas só com a capa, da altura da capa do centro
+.dq-painel .dq-item[data-pos="esq"],
+.dq-painel .dq-item[data-pos="dir"] {
+  padding: 0;
+
+  .cs-card-thumb {
+    width: 100%;
+    margin: 0;
+    border-bottom: 0;
+    border-radius: 11px;
+    aspect-ratio: 16 / 39;          // 0,6 : 2,6·9/16
+
+    .dq-bg { display: none; }
+    .dq-img { height: 100%; aspect-ratio: auto; object-fit: cover; }
+  }
+
+  .cs-card-date,
+  .cs-card-title,
+  .cs-card-desc,
+  .cs-card-action { @extend %dq-so-leitor; }
 }
 
-// Capa: a mesma caixa 16:9 do card, mas com a imagem inteira sobre uma
-// cópia desfocada dela mesma, em vez de recortada
+// Capa: a mesma caixa 16:9 do card, com a imagem inteira sobre uma cópia
+// desfocada dela mesma, em vez de recortada
 .cs-card .dq-thumb {
   position: relative;
   background: $cloud;
@@ -262,23 +336,24 @@ body { -webkit-font-smoothing: antialiased; }
   }
 }
 
-// Setas nos vãos entre o centro e os lados, no meio da altura dos cards, com
-// o contorno azul da pílula "Leia mais"
+// Setas nos vãos, no meio da altura da capa do centro, com o contorno azul
+// da pílula "Leia mais"
 .dq-seta {
   grid-area: centro;
-  align-self: center;
+  align-self: start;
   z-index: 3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
+  margin-top: calc(28.125% - 18px);
   padding: 0;
   border: 1px solid $cs-blue;
   border-radius: 50%;
   background: #ffffff;
   color: $cs-blue;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
 
@@ -288,9 +363,9 @@ body { -webkit-font-smoothing: antialiased; }
     color: #ffffff;
   }
 
-  // centradas no vão de 3rem: meio vão + meia seta para fora do centro
-  &.dq-ant  { justify-self: start; margin-left: calc(-1.5rem - 20px); }
-  &.dq-prox { justify-self: end;   margin-right: calc(-1.5rem - 20px); }
+  // centradas no vão de 2,25rem: meio vão + meia seta para fora do centro
+  &.dq-ant  { justify-self: start; margin-left: calc(-1.125rem - 18px); }
+  &.dq-prox { justify-self: end;   margin-right: calc(-1.125rem - 18px); }
 }
 
 // Sem JS as setas não teriam o que fazer: só aparecem quando o JS assume
@@ -324,66 +399,39 @@ body { -webkit-font-smoothing: antialiased; }
   }
 }
 
-// Tablet: vão menor
-@media (max-width: 991.98px) {
-  .dq-painel { column-gap: 2.25rem; }
+// Tablet (o slogan ainda ao lado, na coluna de 300px): faixas laterais bem
+// estreitas (0,35 / 2,9 / 0,35 -> 16 : 74,57) para o card do centro caber
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .dq-painel {
+    grid-template-columns: minmax(0, 0.35fr) minmax(0, 2.9fr) minmax(0, 0.35fr);
+    column-gap: 1.5rem;
+  }
+
+  .dq-painel .dq-item[data-pos="esq"] .cs-card-thumb,
+  .dq-painel .dq-item[data-pos="dir"] .cs-card-thumb { aspect-ratio: 16 / 74.57; }
 
   .dq-seta {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
+    margin-top: calc(28.125% - 16px);
 
-    &.dq-ant  { margin-left: calc(-1.125rem - 18px); }
-    &.dq-prox { margin-right: calc(-1.125rem - 18px); }
+    &.dq-ant  { margin-left: calc(-0.75rem - 16px); }
+    &.dq-prox { margin-right: calc(-0.75rem - 16px); }
   }
 }
 
-// Celular: o card do centro ocupa quase tudo; os lados viram faixas estreitas
-// só com a capa, da mesma altura da capa do centro, ainda visíveis. O texto
-// dos lados sai da tela mas continua para leitor de tela (visually-hidden).
-// Com colunas 0.4fr / 2.6fr, a faixa precisa de proporção 0,4 : 2,6·9/16, e
-// as setas vão para o meio da capa do centro (em item de grade, margem em %
-// é relativa à largura da área: 28,125% = metade da altura de uma capa 16:9).
+// Celular: faixas laterais mais estreitas (0,4 / 2,6 / 0,4 -> 16 : 58,5) e
+// setas por cima das bordas delas
 @media (max-width: 767.98px) {
   .dq-painel {
     grid-template-columns: minmax(0, 0.4fr) minmax(0, 2.6fr) minmax(0, 0.4fr);
-    align-items: start;
     column-gap: 0.5rem;
   }
 
-  .dq-painel .dq-item[data-pos="esq"],
-  .dq-painel .dq-item[data-pos="dir"] {
-    padding: 0;
-
-    .cs-card-thumb {
-      width: 100%;
-      margin: 0;
-      border-bottom: 0;
-      border-radius: 11px;
-      aspect-ratio: 16 / 58.5;       // 0,4 : 2,6·9/16
-
-      .dq-bg { display: none; }
-      .dq-img { height: 100%; aspect-ratio: auto; object-fit: cover; }
-    }
-
-    .cs-card-date,
-    .cs-card-title,
-    .cs-card-desc,
-    .cs-card-action {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-      min-height: 0;
-    }
-  }
+  .dq-painel .dq-item[data-pos="esq"] .cs-card-thumb,
+  .dq-painel .dq-item[data-pos="dir"] .cs-card-thumb { aspect-ratio: 16 / 58.5; }
 
   .dq-seta {
-    align-self: start;
     width: 34px;
     height: 34px;
     margin-top: calc(28.125% - 17px);
@@ -1170,37 +1218,40 @@ body { -webkit-font-smoothing: antialiased; }
 
   }
 
-  // Índice do mapa: na coluna ao lado dele, com a mesma altura, no padrão do
-  // card de rota (.route-panel); cada número no mesmo círculo verde dos
-  // marcadores do My Maps e a área verde com uma amostra da cor do polígono
+  // Índice do mapa: na coluna ao lado dele, com a mesma altura. Os itens se
+  // distribuem pela altura toda do card, em tamanho de leitura (no celular a
+  // altura é a do conteúdo). Cada número no mesmo círculo verde dos
+  // marcadores do My Maps; a área verde com uma amostra da cor do polígono.
   .mapa-indice {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 1.4rem 1.6rem;
+    padding: 1.75rem 2rem;
     background: #ffffff;
     border: 1px solid $hairline;
     border-radius: 12px;
 
     .mapa-indice-titulo {
       @extend %eyebrow;
-      font-size: 0.68rem;
-      margin: 0 0 0.9rem;
+      font-size: 0.72rem;
+      margin: 0 0 1.4rem;
     }
 
     ol {
+      flex: 1 1 auto;
       list-style: none;
       margin: 0;
       padding: 0;
-      display: grid;
-      gap: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
     li {
       display: flex;
-      align-items: flex-start;
-      gap: 0.65rem;
+      align-items: center;
+      gap: 0.95rem;
     }
 
     .mapa-num {
@@ -1208,19 +1259,19 @@ body { -webkit-font-smoothing: antialiased; }
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 2.1rem;
+      height: 2.1rem;
       border-radius: 50%;
       background: $cs-green-dark;
       color: #ffffff;
-      font-size: 0.72rem;
+      font-size: 0.88rem;
       font-weight: 700;
       line-height: 1;
     }
 
     // Área verde: mesma caixa do número, quadrada, na cor do polígono
     .mapa-num.mapa-area {
-      border-radius: 4px;
+      border-radius: 6px;
       border: 2px solid $cs-green-dark;
       background: rgba($cs-green, 0.35);
     }
@@ -1228,56 +1279,13 @@ body { -webkit-font-smoothing: antialiased; }
     .mapa-txt {
       display: flex;
       flex-direction: column;
-      gap: 0.1rem;
-      padding-top: 0.12rem;
-      font-size: 0.88rem;
-      line-height: 1.4;
+      gap: 0.15rem;
+      font-size: 1rem;
+      line-height: 1.35;
 
       strong { color: $ink; font-weight: 600; }
-      span { color: $muted; font-size: 0.82rem; }
+      span { color: $muted; font-size: 0.88rem; }
     }
-  }
-
-}
-
-// =============================================================================
-//  BOTÃO GENÉRICO - pílula escura
-// =============================================================================
-.button a {
-  display: inline-block;
-  margin-top: 1.25rem;
-  background: $cs-blue;
-  color: #ffffff !important;
-  padding: 0.6rem 1.6rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  transition: background 0.15s ease;
-
-  &::after { content: " →"; }
-  &:hover { background: $cs-green-dark; }
-}
-
-// =============================================================================
-//  LOGO DE REVISTA - imagem de marca embutida no conteúdo (Revista Científica)
-// =============================================================================
-// Capa completa (retrato, com os logos da UFLA e da RBras) ao lado do texto:
-// o texto de apresentação à esquerda, a revista à direita, como quem mostra
-// o exemplar enquanto fala dele. Em telas estreitas os dois empilham, com a
-// capa em cima - numa coluna só, a imagem é o que identifica a página.
-.cs-revista-lado-a-lado {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
-  gap: clamp(1.5rem, 4vw, 2.75rem);
-  align-items: center;
-  margin-bottom: 1.5rem;
-
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 }
 
