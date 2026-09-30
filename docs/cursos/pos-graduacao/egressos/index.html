@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,13 +12,10 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
+code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: 1.5em;}
-div.column{flex: auto;}
-@media screen {
-div.columns{gap: min(4vw, 1.5em);}
-div.column{overflow-x: auto;}
-}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -43,10 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-f4fe163e49da9b39ce6aab5e592fa1cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-894dcd2d1da4c9b0e867e914c5d402b1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -325,14 +322,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ============================================================
-  //  Em Destaque (topo da home): o card da vez no centro, o
-  //  anterior à esquerda e o próximo à direita. As setas giram
-  //  para cada lado; o painel também gira sozinho a cada 9 s até
-  //  a pessoa assumir o controle (setas, pontos ou teclado) - daí
-  //  em diante só gira quando ela manda (WCAG 2.2.2).
-  //  Mouse em cima, foco de TECLADO e aba oculta pausam, como no
-  //  carrossel dos cards; quem pediu menos movimento no sistema
-  //  não tem giro automático.
+  //  Em Destaque (topo da home): um destaque por vez, do mais novo
+  //  ao mais velho, e volta ao primeiro. Cada um fica 5 s na tela,
+  //  marcados pela linha verde da base do card: o fim da animação
+  //  da linha (CSS) é o que troca o destaque, e pausar a linha
+  //  pausa o painel - mouse em cima, foco de TECLADO e aba oculta
+  //  pausam. As setas e os pontos trocam na hora e reiniciam os 5 s.
+  //  Quem pediu menos movimento no sistema não tem troca automática.
   // ============================================================
   document.querySelectorAll("[data-dq]").forEach(function (painel) {
     var itens = Array.prototype.slice.call(painel.querySelectorAll(".dq-item"));
@@ -340,14 +336,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (n < 2) return;
     painel.classList.add("dq-js");       // as setas só aparecem com JS
 
-    var ESPERA = 9000;                   // 9 s por giro, o mesmo do carrossel dos cards
     var mqReduz = window.matchMedia("(prefers-reduced-motion: reduce)");
     var reduz = mqReduz.matches;
+    var barra = painel.querySelector(".dq-progresso span");
     var aviso = painel.querySelector(".dq-aviso");
     var ant = painel.querySelector(".dq-ant");
     var prox = painel.querySelector(".dq-prox");
-    var idx = 0, timer = null;
-    var mouse = false, foco = false, manual = false;
+    var idx = 0;
+    var mouse = false, foco = false;
 
     // Um ponto por item, embaixo do painel
     var pontos = document.createElement("div");
@@ -356,67 +352,49 @@ document.addEventListener("DOMContentLoaded", function () {
       var b = document.createElement("button");
       b.type = "button";
       b.setAttribute("aria-label", "Ir para o destaque " + (i + 1) + " de " + n);
-      b.addEventListener("click", function () { assume(); mostra(i, sentidoAte(i), true); });
+      b.addEventListener("click", function () { mostra(i, i < idx ? -1 : 1, true); });
       pontos.appendChild(b);
     });
     painel.appendChild(pontos);
 
-    // Lado de onde o giro vem: pelo caminho mais curto na roda
-    function sentidoAte(i) {
-      if (n === 2) return 1;             // o outro item está sempre à direita
-      var d = (i - idx + n) % n;
-      return d === 0 ? 0 : (d <= n / 2 ? 1 : -1);
+    // Recomeça a linha do tempo (5 s) do destaque que acabou de entrar
+    function reiniciaBarra() {
+      if (!barra) return;
+      painel.classList.remove("dq-girando");
+      if (reduz) return;
+      void barra.offsetWidth;
+      painel.classList.add("dq-girando");
     }
 
-    function assume() { manual = true; agenda(); }
-
-    // Próximo giro automático (ou nenhum, se algo pausa)
-    function agenda() {
-      clearTimeout(timer);
-      timer = null;
-      if (reduz || manual || mouse || foco || document.hidden) return;
-      timer = setTimeout(function () { mostra(idx + 1, 1, false); }, ESPERA);
-    }
-
-    // Busca já a imagem de quem vai entrar no próximo giro (as fora da vez
-    // são lazy e, escondidas, o navegador não as carrega sozinho)
+    // Busca já a imagem do próximo (os fora da vez são lazy e, escondidos,
+    // o navegador não os carrega sozinho)
     function preCarrega(k) {
       var im = itens[k].querySelector(".dq-img");
       if (im && !im.complete) { im.loading = "eager"; new Image().src = im.src; }
     }
 
-    // sentido: 1 = girou para a direita, -1 = para a esquerda, 0 = sem animação
+    // sentido: 1 = veio da direita (próximo), -1 = da esquerda, 0 = sem animação
     function mostra(i, sentido, anuncia) {
       var novo = ((i % n) + n) % n;
-      var pos = {};
-      pos[novo] = "centro";
-      pos[(novo + 1) % n] = "dir";
-      if (n > 2) pos[(novo - 1 + n) % n] = "esq";
 
-      // Se o foco está num card, ele acompanha o novo centro (o card que sai
-      // do centro pode ficar escondido, e o foco cairia no <body>)
+      // Se o foco está no card que sai, ele passa para o card que entra
       var ativo = document.activeElement;
       var focoNumCard = itens.some(function (it) { return it.contains(ativo); });
 
       idx = novo;
       painel.style.setProperty("--dq-dx", (sentido < 0 ? -28 : 28) + "px");
 
-      // Ordem no HTML = ordem visual (leitura e Tab): esq, centro, dir
-      var ordem = n > 2 ? [(novo - 1 + n) % n, novo, (novo + 1) % n] : [novo, (novo + 1) % n];
-      ordem.forEach(function (k) { painel.insertBefore(itens[k], prox); });
-
       itens.forEach(function (it, k) {
-        var p = pos[k] || "";
+        var naVez = k === novo;
         it.classList.remove("dq-entra");
-        it.setAttribute("data-pos", p);
+        it.setAttribute("data-pos", naVez ? "centro" : "");
         var link = it.querySelector(".cs-card-btn");
         if (link) {
-          // só o card do centro entra no Tab; os lados se alcançam pelas setas
-          if (p === "centro") link.removeAttribute("tabindex");
+          if (naVez) link.removeAttribute("tabindex");
           else link.setAttribute("tabindex", "-1");
         }
-        if (sentido && p && !reduz) {
-          void it.offsetWidth;           // reinicia a entrada de quem só mudou de lugar
+        if (sentido && naVez && !reduz) {
+          void it.offsetWidth;           // reinicia a entrada
           it.classList.add("dq-entra");
         }
       });
@@ -437,46 +415,56 @@ document.addEventListener("DOMContentLoaded", function () {
         aviso.textContent = "Destaque " + (novo + 1) + " de " + n + (t ? ": " + t.textContent.trim() : "");
       }
 
-      preCarrega((novo + 2) % n);
-      preCarrega((novo - 2 + n) % n);
-      agenda();
+      preCarrega((novo + 1) % n);
+      reiniciaBarra();
     }
 
-    if (prox) prox.addEventListener("click", function () { assume(); mostra(idx + 1, 1, true); });
-    if (ant) ant.addEventListener("click", function () { assume(); mostra(idx - 1, n === 2 ? 1 : -1, true); });
+    function atualizaPausa() {
+      painel.classList.toggle("dq-pausado", mouse || foco || document.hidden);
+    }
+
+    if (barra) {
+      barra.addEventListener("animationend", function (e) {
+        if (e.target === barra) mostra(idx + 1, 1, false);
+      });
+    }
+
+    if (prox) prox.addEventListener("click", function () { mostra(idx + 1, 1, true); });
+    if (ant) ant.addEventListener("click", function () { mostra(idx - 1, -1, true); });
 
     // Setas do teclado com o foco dentro do painel (sem roubar Alt+←,
     // o "voltar" do navegador, nem outros atalhos com modificador)
     painel.addEventListener("keydown", function (e) {
       if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
-      if (e.key === "ArrowRight") { assume(); mostra(idx + 1, 1, true); e.preventDefault(); }
-      else if (e.key === "ArrowLeft") { assume(); mostra(idx - 1, n === 2 ? 1 : -1, true); e.preventDefault(); }
+      if (e.key === "ArrowRight") { mostra(idx + 1, 1, true); e.preventDefault(); }
+      else if (e.key === "ArrowLeft") { mostra(idx - 1, -1, true); e.preventDefault(); }
     });
 
     // Pausa: só mouse de verdade (o toque dispara "mouseenter" de mentira e
     // deixaria o painel pausado) e só foco vindo do teclado (clicar numa
     // seta põe o foco nela, mas isso não é "estar lendo" o card)
     painel.addEventListener("pointerenter", function (e) {
-      if (e.pointerType === "mouse") { mouse = true; agenda(); }
+      if (e.pointerType === "mouse") { mouse = true; atualizaPausa(); }
     });
     painel.addEventListener("pointerleave", function (e) {
-      if (e.pointerType === "mouse") { mouse = false; agenda(); }
+      if (e.pointerType === "mouse") { mouse = false; atualizaPausa(); }
     });
     painel.addEventListener("focusin", function (e) {
       foco = e.target.matches(":focus-visible");
-      agenda();
+      atualizaPausa();
     });
     painel.addEventListener("focusout", function (e) {
-      if (!painel.contains(e.relatedTarget)) { foco = false; agenda(); }
+      if (!painel.contains(e.relatedTarget)) { foco = false; atualizaPausa(); }
     });
-    document.addEventListener("visibilitychange", agenda);
+    document.addEventListener("visibilitychange", atualizaPausa);
 
     // Se a pessoa mudar a preferência de movimento com a página aberta
-    var aoMudarMovimento = function (e) { reduz = e.matches; agenda(); };
+    var aoMudarMovimento = function (e) { reduz = e.matches; reiniciaBarra(); };
     if (mqReduz.addEventListener) mqReduz.addEventListener("change", aoMudarMovimento);
     else if (mqReduz.addListener) mqReduz.addListener(aoMudarMovimento);
 
     mostra(0, 1, false);
+    atualizaPausa();                     // a página pode abrir numa aba oculta
   });
 
   // ============================================================
@@ -792,64 +780,123 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
+
 // ============================================================
+
 //  Transições de página, camada 3: os blocos de conteúdo
+
 //  surgem suavemente conforme entram na tela (estilos em
+
 //  _assets/conectastat.scss, seção "TRANSIÇÕES DE PÁGINA").
+
 //  Sem JS ou com "reduzir movimento" ativo, nada é escondido.
+
 // ============================================================
+
 (function () {
+
   var reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   if (reduz || !("IntersectionObserver" in window)) return;
 
+
+
   // Só com esta classe o CSS esconde os blocos antes da revelação
+
   document.documentElement.classList.add("cs-js");
 
+
+
   document.addEventListener("DOMContentLoaded", function () {
+
     var alvos = [];
 
+
+
     if (document.querySelector(".hero-banner")) {
+
       // Home: os grandes blocos de seção (o hero já tem a própria montagem)
+
       document.querySelectorAll(".intro-block, .listing-block, .map-block")
+
         .forEach(function (el) { alvos.push(el); });
+
     } else {
+
       // Páginas internas: cada bloco de primeiro nível do documento
+
       var corpo = document.getElementById("quarto-document-content");
+
       if (corpo) {
+
         Array.prototype.forEach.call(corpo.children, function (el) {
+
           if (el.matches("script, style, #title-block-header, .quarto-listing")) return;
+
           alvos.push(el);
+
         });
+
         // Listagens (notícias, eventos...): cartão por cartão, em cascata
+
         corpo.querySelectorAll(".quarto-listing .quarto-grid-item")
+
           .forEach(function (el) { alvos.push(el); });
+
       }
+
     }
 
+
+
     if (!alvos.length) return;
+
     alvos.forEach(function (el) { el.classList.add("cs-reveal"); });
 
+
+
     // Blocos que entram juntos na tela revelam em cascata curta
+
     var io = new IntersectionObserver(function (entradas) {
+
       var atraso = 0;
+
       entradas.forEach(function (entrada) {
+
         if (!entrada.isIntersecting) return;
+
         var el = entrada.target;
+
         io.unobserve(el);
+
         el.style.transitionDelay = Math.min(atraso, 420) + "ms";
+
         atraso += 70;
+
         el.classList.add("cs-visivel");
+
         el.addEventListener("transitionend", function fim() {
+
           el.style.transitionDelay = "";
+
           el.removeEventListener("transitionend", fim);
+
         });
+
       });
+
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0 });
 
+
+
     alvos.forEach(function (el) { io.observe(el); });
+
   });
+
 })();
+
 </script>
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
