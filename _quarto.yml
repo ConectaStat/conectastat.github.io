@@ -52,10 +52,12 @@ website:
   navbar:
     toggle-position: right
     background: "#0a3f66"
-    # Sem o nome do site: só o slogan no topo esquerdo (Ciência| Estatística|
-    # Sociedade empilhados), em Inter semibold. É o único lugar do site onde o
-    # slogan aparece: a home trocou a hero pelo painel Em Destaque.
-    title: '<span class="nav-tagline"><span>Ciência<span class="tag-barra">|</span></span> <span class="tag-verde">Estatística<span class="tag-barra">|</span></span> <span>Sociedade</span></span>'
+    # Topo esquerdo: a logo do ConectaStat (a mesma do ícone da aba), sem
+    # texto ao lado. O slogan Ciência| Estatística| Sociedade fica no topo da
+    # home, ao lado do painel Em Destaque.
+    logo: images/conectastat-logo.png
+    logo-alt: "ConectaStat - página inicial"
+    title: false
     collapse-below: lg
     right:
       - text: "A Estatística"

@@ -22,6 +22,8 @@ listing:
       - /eventos/posts
       - /O_que_fazemos/extensao/acoes/posts
     sort: "date desc"
+    # Só os três mais recentes: o do centro e os dois dos lados
+    max-items: 3
     template: _assets/destaques-hero.ejs
 
   - id: oportunidades
@@ -33,13 +35,25 @@ toc: false
 ---
 
 <!-- ============================================================= -->
-<!--  EM DESTAQUE - painel do topo: um destaque grande e dois      -->
-<!--  menores, girando pelas notícias e eventos (JS em             -->
-<!--  _includes/listing-cards.html). A classe hero-banner fica: é  -->
-<!--  por ela que _includes/transitions.html reconhece a home.     -->
+<!--  TOPO DA HOME - o slogan (Ciência| Estatística| Sociedade) à  -->
+<!--  esquerda e o painel Em Destaque à direita: os três destaques -->
+<!--  mais recentes, girando (JS em _includes/listing-cards.html). -->
+<!--  A classe hero-banner fica: é por ela que                     -->
+<!--  _includes/transitions.html reconhece a home.                 -->
 <!-- ============================================================= -->
 ::: {.hero-banner}
 ::: {.content-container}
+::: {.hero-grid}
+::: {.hero-text}
+```{=html}
+<p class="hero-tagline">
+  <span>Ciência<span class="tag-barra">|</span></span>
+  <span class="tag-verde">Estatística<span class="tag-barra">|</span></span>
+  <span>Sociedade</span>
+</p>
+```
+:::
+::: {.hero-destaques}
 ```{=html}
 <!-- OCULTO a pedido: o título visível "Em Destaque" saiu do topo da home.
      Para voltar a mostrá-lo, tire o comentário da linha abaixo e apague a
@@ -48,6 +62,8 @@ toc: false
 <h2 class="visually-hidden">Em Destaque</h2>
 ```
 ::: {#destaques}
+:::
+:::
 :::
 :::
 :::
@@ -130,7 +146,7 @@ Bem-vindo(a) ao **ConectaStat**, um projeto do [Departamento de Estatística](ht
         <li><span class="mapa-num">3</span><span class="mapa-txt"><strong>Salas de aula da Graduação</strong><span>DES 13B e DES 14B</span></span></li>
         <li><span class="mapa-num">4</span><span class="mapa-txt"><strong>Salas de aula da Pós-graduação</strong></span></li>
         <li><span class="mapa-num">5</span><span class="mapa-txt"><strong>Sala de Monitoria de Estatística</strong></span></li>
-        <li><span class="mapa-num mapa-area" aria-hidden="true"></span><span class="mapa-txt"><strong>Área verde</strong><span>Departamento de Ciências Exatas, sede do curso no ICET</span></span></li>
+        <li><span class="mapa-num mapa-area" aria-hidden="true"></span><span class="mapa-txt"><strong>Área verde</strong><span>Prédio do Instituto de Ciências Exatas e Tecnológicas (ICET)</span></span></li>
       </ol>
     </div>
   </div>

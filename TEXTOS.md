@@ -27,7 +27,7 @@ python scripts/gerar_textos.py
 ```
 home/
 ├── index.qmd ─────────────────── página inicial ................. §1
-│   ├── em destaque ................. painel do topo (notícias + eventos)
+│   ├── topo ........................ slogan + em destaque (3 mais recentes)
 │   ├── "O que é o ConectaStat…" .... texto de apresentação
 │   ├── oportunidades ............... carrossel
 │   └── onde estamos ................ mapa + endereço
@@ -73,8 +73,8 @@ home/
 
 ```
 index.qmd
-├── em destaque ........... painel do topo (notícias + cursos/
-│                           eventos + encontros com a comunidade)
+├── topo .................. slogan + em destaque (os 3 mais
+│                           recentes: notícias, cursos/eventos, encontros)
 ├── o projeto ............. texto de apresentação
 ├── oportunidades ......... carrossel
 └── onde estamos .......... mapa + endereço
@@ -83,7 +83,7 @@ index.qmd
 
 ### Em Destaque (topo da home)
 
-> Painel com três retângulos: o destaque da vez no centro, maior, e o anterior e o próximo dos lados. Gira pelas notícias, cursos/eventos e encontros com a comunidade. Título, data e resumo de cada quadro vêm do próprio post (seção 5).
+> Slogan (Ciência| Estatística| Sociedade) à esquerda e, à direita, o painel com os três destaques mais recentes - notícias, cursos/eventos e encontros com a comunidade: o da vez no centro, maior, e os outros dois dos lados. Título, data e resumo de cada card vêm do próprio post (seção 5).
 
 
 ### Seção da home: Oportunidades
