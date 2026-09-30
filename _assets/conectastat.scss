@@ -151,23 +151,17 @@ body { -webkit-font-smoothing: antialiased; }
 //  TOPO DA HOME - as medidas da hero original (slogan à esquerda, na coluna
 //  de 300-400px, em Source Code Pro) com o painel Em Destaque no lugar da
 //  ilustração, do mesmo tamanho dela (~590 x 400px no desktop).
-//  O painel mostra os três destaques mais recentes: o da vez no centro, em
-//  card completo, e o anterior e o próximo dos lados, como faixas só com a
-//  capa - menores, mas ainda visíveis. Setas nos vãos giram para cada lado;
-//  o painel também gira sozinho até a pessoa assumir o controle. Template em
+//  O painel mostra um destaque por vez, entre os três mais recentes, do mais
+//  novo ao mais velho: cada um fica 5 s na tela, marcados por uma linha verde
+//  fina na base do card; setas dos dois lados trocam na hora. Template em
 //  _assets/destaques-hero.ejs; JS em _includes/listing-cards.html.
-//  O card do centro é o card padrão das listagens (.cs-card); aqui ficam só
-//  a disposição e o que muda para caber na altura da hero (sem o resumo na
+//  O card é o card padrão das listagens (.cs-card); aqui ficam só a
+//  disposição e o que muda para caber na altura da hero (sem o resumo na
 //  tela - ele continua para leitor de tela).
 //  A classe .hero-banner continua: _includes/transitions.html a usa para
 //  reconhecer a home. O respiro abaixo da navbar fica no container: a regra
 //  "#quarto-content > *" do tema zera o padding de todo filho direto do
 //  conteúdo e vence por especificidade.
-//
-//  Contas (em item de grade, margem em % é relativa à LARGURA da área): com
-//  colunas 0,6 / 2,6 / 0,6, a faixa lateral tem a altura da capa 16:9 do
-//  centro se a proporção dela for 0,6 : 2,6·9/16 = 16 : 39; o meio da capa do
-//  centro fica a 28,125% da largura dele (metade de 56,25%).
 // =============================================================================
 .hero-banner {
   background: #ffffff;
@@ -232,55 +226,30 @@ body { -webkit-font-smoothing: antialiased; }
 }
 
 .dq-painel {
-  --dq-dx: 28px;                    // de que lado os cards entram (JS inverte)
+  --dq-dx: 28px;                    // de que lado o card entra (JS inverte)
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.6fr) minmax(0, 2.6fr) minmax(0, 0.6fr);
+  // Um card só, no meio; as colunas dos lados guardam o lugar das setas
+  grid-template-columns: minmax(3.25rem, 1fr) minmax(0, 400px) minmax(3.25rem, 1fr);
   grid-template-areas:
-    "esq centro dir"
-    "pontos pontos pontos";
+    ". centro ."
+    ". pontos .";
   align-items: start;
-  column-gap: 2.25rem;              // o vão onde flutuam as setas
   row-gap: 0.75rem;
 }
 
-// Os itens são .cs-card; aqui só a posição e o formato de cada um
+// O item é .cs-card; aqui só a posição e o que muda para caber na hero
 .dq-painel .dq-item {
   display: none;                    // fora da vez: não aparece nem recebe foco
   min-width: 0;
 
   &[data-pos="centro"] { display: flex; grid-area: centro; }
-  &[data-pos="esq"]    { display: flex; grid-area: esq; }
-  &[data-pos="dir"]    { display: flex; grid-area: dir; }
 
-  // Entrada ao girar: os cards deslizam do lado de onde o giro vem (sem
+  // Entrada ao trocar: o card desliza do lado de onde a troca vem (sem
   // "fill" depois do fim, para o hover do card continuar funcionando)
   &.dq-entra { animation: dq-entra 0.5s cubic-bezier(0.2, 0.8, 0.3, 1) backwards; }
-  &.dq-entra[data-pos="esq"],
-  &.dq-entra[data-pos="dir"] { animation-delay: 0.06s; }
-}
 
-@keyframes dq-entra {
-  from { opacity: 0; transform: translateX(var(--dq-dx)); }
-}
-
-// Texto fora da tela, mas presente para leitor de tela
-%dq-so-leitor {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-  min-height: 0;
-}
-
-// Centro: o card padrão, sem o resumo na tela; título com três linhas
-// reservadas, para a altura não mudar a cada giro
-.dq-painel .dq-item[data-pos="centro"] {
+  // Título com três linhas reservadas, para a altura não mudar a cada troca
   .cs-card-title {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -289,29 +258,23 @@ body { -webkit-font-smoothing: antialiased; }
     min-height: calc(3 * 1.35em);
   }
 
-  .cs-card-desc { @extend %dq-so-leitor; }
+  // Sem o resumo na tela, para caber na altura da hero (continua para
+  // leitor de tela)
+  .cs-card-desc {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 }
 
-// Lados: faixas só com a capa, da altura da capa do centro
-.dq-painel .dq-item[data-pos="esq"],
-.dq-painel .dq-item[data-pos="dir"] {
-  padding: 0;
-
-  .cs-card-thumb {
-    width: 100%;
-    margin: 0;
-    border-bottom: 0;
-    border-radius: 11px;
-    aspect-ratio: 16 / 39;          // 0,6 : 2,6·9/16
-
-    .dq-bg { display: none; }
-    .dq-img { height: 100%; aspect-ratio: auto; object-fit: cover; }
-  }
-
-  .cs-card-date,
-  .cs-card-title,
-  .cs-card-desc,
-  .cs-card-action { @extend %dq-so-leitor; }
+@keyframes dq-entra {
+  from { opacity: 0; transform: translateX(var(--dq-dx)); }
 }
 
 // Capa: a mesma caixa 16:9 do card, com a imagem inteira sobre uma cópia
@@ -336,8 +299,9 @@ body { -webkit-font-smoothing: antialiased; }
   }
 }
 
-// Setas nos vãos, no meio da altura da capa do centro, com o contorno azul
-// da pílula "Leia mais"
+// Setas dos dois lados do card, na altura do meio da capa (em item de grade,
+// margem em % é relativa à largura da área: 28,125% = metade da capa 16:9),
+// com o contorno azul da pílula "Leia mais"
 .dq-seta {
   grid-area: centro;
   align-self: start;
@@ -345,15 +309,15 @@ body { -webkit-font-smoothing: antialiased; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  margin-top: calc(28.125% - 18px);
+  width: 40px;
+  height: 40px;
+  margin-top: calc(28.125% - 20px);
   padding: 0;
   border: 1px solid $cs-blue;
   border-radius: 50%;
   background: #ffffff;
   color: $cs-blue;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
 
@@ -363,16 +327,47 @@ body { -webkit-font-smoothing: antialiased; }
     color: #ffffff;
   }
 
-  // centradas no vão de 2,25rem: meio vão + meia seta para fora do centro
-  &.dq-ant  { justify-self: start; margin-left: calc(-1.125rem - 18px); }
-  &.dq-prox { justify-self: end;   margin-right: calc(-1.125rem - 18px); }
+  // fora do card, a 0,6rem da borda
+  &.dq-ant  { justify-self: start; margin-left: calc(-40px - 0.6rem); }
+  &.dq-prox { justify-self: end;   margin-right: calc(-40px - 0.6rem); }
 }
 
 // Sem JS as setas não teriam o que fazer: só aparecem quando o JS assume
 .dq-painel:not(.dq-js) .dq-seta { display: none; }
 
-// Com dois itens, o outro está sempre à direita: uma seta basta
-.dq-n2 .dq-ant { display: none; }
+// Tempo de exibição: uma linha verde fina na base do card, que enche em 5 s.
+// O fim dela é o que troca o destaque (JS), e pausá-la pausa o painel
+// (mouse em cima, foco de teclado, aba oculta).
+.dq-progresso {
+  grid-area: centro;
+  align-self: end;
+  z-index: 2;
+  height: 3px;
+  margin: 0 1px 1px;                // dentro da borda do card
+  border-radius: 0 0 11px 11px;
+  overflow: hidden;
+  pointer-events: none;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $cs-green;
+    transform-origin: left center;
+    transform: scaleX(0);
+  }
+}
+
+.dq-painel.dq-girando .dq-progresso span {
+  animation: dq-progresso 5s linear forwards;
+}
+
+.dq-painel.dq-pausado .dq-progresso span { animation-play-state: paused; }
+
+@keyframes dq-progresso {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
 
 // Pontos de posição: os mesmos do carrossel dos cards (.cs-rotator-dots)
 .dq-pontos {
@@ -399,50 +394,26 @@ body { -webkit-font-smoothing: antialiased; }
   }
 }
 
-// Tablet (o slogan ainda ao lado, na coluna de 300px): faixas laterais bem
-// estreitas (0,35 / 2,9 / 0,35 -> 16 : 74,57) para o card do centro caber
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .dq-painel {
-    grid-template-columns: minmax(0, 0.35fr) minmax(0, 2.9fr) minmax(0, 0.35fr);
-    column-gap: 1.5rem;
-  }
-
-  .dq-painel .dq-item[data-pos="esq"] .cs-card-thumb,
-  .dq-painel .dq-item[data-pos="dir"] .cs-card-thumb { aspect-ratio: 16 / 74.57; }
-
-  .dq-seta {
-    width: 32px;
-    height: 32px;
-    margin-top: calc(28.125% - 16px);
-
-    &.dq-ant  { margin-left: calc(-0.75rem - 16px); }
-    &.dq-prox { margin-right: calc(-0.75rem - 16px); }
-  }
-}
-
-// Celular: faixas laterais mais estreitas (0,4 / 2,6 / 0,4 -> 16 : 58,5) e
-// setas por cima das bordas delas
-@media (max-width: 767.98px) {
-  .dq-painel {
-    grid-template-columns: minmax(0, 0.4fr) minmax(0, 2.6fr) minmax(0, 0.4fr);
-    column-gap: 0.5rem;
-  }
-
-  .dq-painel .dq-item[data-pos="esq"] .cs-card-thumb,
-  .dq-painel .dq-item[data-pos="dir"] .cs-card-thumb { aspect-ratio: 16 / 58.5; }
+// Celular: o card ocupa a largura toda e as setas ficam por cima da capa,
+// junto às bordas
+@media (max-width: 575.98px) {
+  .dq-painel { grid-template-columns: 0 minmax(0, 1fr) 0; }
 
   .dq-seta {
     width: 34px;
     height: 34px;
     margin-top: calc(28.125% - 17px);
 
-    &.dq-ant  { margin-left: calc(-0.25rem - 17px); }
-    &.dq-prox { margin-right: calc(-0.25rem - 17px); }
+    &.dq-ant  { margin-left: 0.5rem; }
+    &.dq-prox { margin-right: 0.5rem; }
   }
 }
 
+// Menos movimento: sem entrada animada e sem troca automática (sem a linha
+// correndo, o fim dela nunca chega)
 @media (prefers-reduced-motion: reduce) {
   .dq-painel .dq-item.dq-entra { animation: none; }
+  .dq-progresso { display: none; }
 }
 
 @keyframes hero-texto-entra {

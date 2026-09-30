@@ -1,15 +1,12 @@
 <%
-// Painel "Em Destaque" do topo da home: três cards lado a lado, o do centro
-// maior (o destaque da vez), o anterior à esquerda e o próximo à direita,
-// menores e alinhados pelo meio. Cada item é o MESMO card das listagens do
-// site (.cs-card: contorno, capa no topo, data, título, resumo e "Leia
-// mais" - veja cards.ejs); o painel só cuida da disposição. Setas nos vãos
-// giram para cada lado, e o painel também gira sozinho a cada 9 s até a
-// pessoa assumir o controle (setas, pontos ou teclado). Todos os itens da
-// listagem entram no HTML, do mais novo ao mais antigo; o JS (em
-// _includes/listing-cards.html) só troca a posição (data-pos) de cada um.
-// Sem JS, o painel já abre montado - o 1º no centro, o 2º à direita e o
-// último à esquerda - e as setas ficam escondidas.
+// Painel "Em Destaque" do topo da home: um destaque por vez, entre os três
+// mais recentes (max-items no index.qmd), do mais novo ao mais velho. Cada
+// um fica 5 s na tela, marcados por uma linha verde fina na base do card, e
+// as setas dos dois lados trocam na hora. O item é o MESMO card das
+// listagens do site (.cs-card: contorno, capa, data, título e "Leia mais" -
+// veja cards.ejs); o painel só cuida da disposição. Todos os itens entram
+// no HTML; o JS (em _includes/listing-cards.html) só marca qual está na vez
+// (data-pos="centro"). Sem JS, o painel abre no mais novo, sem setas.
 //
 // Atenção: sem indentação e com tags inline abertas e fechadas na mesma
 // linha, porque o Pandoc reprocessa este HTML como markdown (veja cards.ejs).
@@ -22,7 +19,7 @@
 const normaliza = (p) => p.replace(/\\/g, "/").replace(/\.qmd$/, ".html");
 const barra = (p) => p.replace(/\\/g, "/");
 const total = items.length;
-const posicao = (i) => i === 0 ? "centro" : (i === 1 ? "dir" : (total > 2 && i === total - 1 ? "esq" : ""));
+const posicao = (i) => i === 0 ? "centro" : "";
 %>
 <% if (total) { %>
 <div class="dq-painel dq-n<%= Math.min(total, 3) %>" data-dq role="region" aria-roledescription="carrossel" aria-label="Em destaque">
@@ -40,6 +37,7 @@ const posicao = (i) => i === 0 ? "centro" : (i === 1 ? "dir" : (total > 2 && i =
 <% }) %>
 <% if (total > 1) { %>
 <button type="button" class="dq-seta dq-prox" aria-label="Próximo destaque"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+<div class="dq-progresso" aria-hidden="true"><span></span></div>
 <p class="visually-hidden dq-aviso" aria-live="polite"></p>
 <% } %>
 </div>
