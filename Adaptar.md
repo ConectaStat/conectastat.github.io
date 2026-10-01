@@ -37,7 +37,7 @@ conectastat.github.io/
 ├── O_que_fazemos/
 │   ├── ensino/
 │   │   ├── index.qmd
-│   │   ├── organizacao-e-apresentacao-de-dados/
+│   │   ├── Galeria/
 │   │   └── softwares/  materiais/  editais/
 │   ├── pesquisa/
 │   │   ├── index.qmd
@@ -114,7 +114,7 @@ Nada além disso. Você nunca precisa editar o menu nem cadastrar o conteúdo em
 |---|---|
 | Edital, chamada, vaga de monitoria | `oportunidades/posts/` |
 | Evento, curso, workshop, palestra futura | `eventos/posts/` |
-| Projeto de análise feito por estudante | `O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/posts/` |
+| Projeto de análise feito por estudante | `O_que_fazemos/ensino/Galeria/posts/` |
 | Programa, pacote ou app do departamento | `O_que_fazemos/ensino/softwares/posts/` |
 | Apostila, tutorial, material didático | `O_que_fazemos/ensino/materiais/posts/` |
 | Núcleo ou grupo de pesquisa | `O_que_fazemos/pesquisa/grupos/<sigla>/` |
@@ -141,7 +141,7 @@ Não use `image-placeholder:` nas listagens: o Quarto só o aplica nos templates
 
 Duas seções ganham capa automática no próximo render completo, quando o post não tem `image:`:
 
-- **Organização e Apresentação de Dados**: a capa sai recortada de um gráfico do próprio relatório. Ali o desenho de verdade vale mais que a capa genérica.
+- **Galeria**: a capa sai recortada de um gráfico do próprio relatório. Ali o desenho de verdade vale mais que a capa genérica.
 - **Cursos e Eventos**: solte o cartaz de divulgação na pasta do post (`cartaz.jpg`, `poster.png`, ou qualquer imagem) que ele vira a capa. Cartaz costuma ser quadrado ou em pé, e o card é 16:9 - recortar cortaria justamente o título e as datas, então o cartaz entra inteiro, centralizado, sobre um fundo feito dele mesmo, ampliado e desfocado.
 
 As demais seções não têm geração automática.
@@ -160,7 +160,7 @@ As duas capas de post são 1200 por 675, a mesma proporção dos cards. O `image
 
 Qualquer área aceita um documento: relatório, apostila, slides, tutorial. Quando a submissão traz um, a página **exibe o arquivo inteiro**, em vez de mostrar um botão que leva o leitor para fora do site. É o campo "Documento para exibir na página" do formulário, e ele aceita tanto um link de arquivo no GitHub quanto o arquivo arrastado direto na issue.
 
-O robô baixa o arquivo para `relatorios/` dentro da pasta do post. HTML precisa vir compactado em `.zip`; PDF pode vir direto. Em Organização e Apresentação de Dados o documento é obrigatório: sem relatório não há projeto. Nas demais áreas é opcional, e sem ele a página fica só com o texto e os links.
+O robô baixa o arquivo para `relatorios/` dentro da pasta do post. HTML precisa vir compactado em `.zip`; PDF pode vir direto. Na Galeria o documento é obrigatório: sem relatório não há projeto. Nas demais áreas é opcional, e sem ele a página fica só com o texto e os links.
 
 **HTML e PDF são exibidos de formas diferentes**, e o modelo escolhe sozinho pela extensão do arquivo.
 
@@ -226,7 +226,7 @@ Descrição do evento: público, formato, inscrições.
 
 Para minicursos e capacitações, use `categories: [Cursos]`.
 
-### Organização e Apresentação de Dados
+### Galeria
 
 É por aqui que chega a maior parte das contribuições de fora, e o caminho tem duas pontas: o estudante envia pelo formulário do site, e alguém da equipe publica.
 
@@ -258,7 +258,7 @@ A sua decisão é um clique. Ao mesclar, o site republica sozinho e o crédito e
 Esta é a única área com anexos pesados. A pasta fica assim:
 
 ```
-O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/posts/2026-08-12-nome-do-projeto/
+O_que_fazemos/ensino/Galeria/posts/2026-08-12-nome-do-projeto/
 ├── index.qmd
 ├── thumbnail.png
 └── relatorios/
@@ -372,7 +372,7 @@ O `_quarto.yml` registra três scripts Python que rodam sozinhos a cada `quarto 
 
 | Quando | Script | O que faz |
 |---|---|---|
-| antes | `scripts/gerar_thumbnails.py` | recorta a capa de um gráfico do relatório (Organização e Apresentação de Dados) e monta a capa a partir do cartaz (Cursos e Eventos) |
+| antes | `scripts/gerar_thumbnails.py` | recorta a capa de um gráfico do relatório (Galeria) e monta a capa a partir do cartaz (Cursos e Eventos) |
 | depois | `scripts/ajustar_titulos.py` | ajusta o separador dos títulos e normaliza os redirecionamentos |
 | depois | `scripts/gerar_textos.py` | refaz o `TEXTOS.md`, o mapa de textos usado na revisão editorial |
 

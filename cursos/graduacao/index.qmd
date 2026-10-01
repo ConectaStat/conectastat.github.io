@@ -17,8 +17,8 @@ semestre 2024/1 e forma profissionais preparados para atuar com análise de
 dados, modelagem estatística e ciência de dados em empresas, instituições de
 pesquisa e órgãos públicos.
 
-Com uma ampla formação os alunos são expostos aos mais variados tipos de situações, alguns exemplos são os projetos de **Organização e Apresentação de Dados** em que cada aluno escolhe uma base de dados publica para desenvolver uma analise exploratória e desenvolver um relatório do assunto, isso tudo desde o primeiro período! Esses projetos podem ser visualizados
-[aqui](../../O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd).
+Com uma ampla formação, os alunos são expostos aos mais variados tipos de situações. Alguns exemplos são os projetos presentes na **Galeria**, em que cada aluno escolhe um tema de análise ou projeto e realiza a elaboração de um relatório seguindo as boas práticas presentes no curso: **Produção de textos para popularização da ciência**, gratuito e disponível em: [Campus Virtual](https://campusvirtual2.ufla.br/openufla/course/view.php?id=7). Esses projetos podem ser visualizados
+[aqui](../../O_que_fazemos/ensino/Galeria/index.qmd).
 
 ## Matriz curricular
 

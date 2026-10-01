@@ -22,9 +22,9 @@ listing:
     template: ../../_assets/cards-grid.ejs
     sort: false
     contents:
-      - title: "Organização e Apresentação de Dados"
-        description: "Projetos de análise de dados feitos pelos estudantes de primeiro período da graduação, do dado bruto ao relatório final."
-        path: organizacao-e-apresentacao-de-dados/index.html
+      - title: "Galeria"
+        description: "Projetos e Análises realizadas pelos estudantes de Estatística."
+        path: Galeria/index.html
         image: ../../images/topicos/boxplot.svg
       - title: "Softwares e pacotes"
         description: "Aplicativos, pacotes e ferramentas computacionais desenvolvidos como apoio ao ensino de Estatística."

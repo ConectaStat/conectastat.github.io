@@ -38,15 +38,7 @@ da Universidade**: a comunicação oficial do departamento continua em
 ## Quem faz
 
 O ConectaStat é feito por docentes, estudantes e servidores do Departamento de
-Estatística, com a colaboração de quem envia conteúdo pelo site. Toda
-contribuição aceita entra na lista pública de contribuidores do projeto, seja
-ela conteúdo publicado, código ou coordenação.
-
-A lista completa, sempre atualizada, fica no repositório do projeto:
-
-[Ver a lista de contribuidores »](https://github.com/ConectaStat/conectastat.github.io#contribuidores)
-
-Quer entrar nela? Veja [como contribuir](../como-contribuir/index.qmd).
+Estatística, com a colaboração de quem envia conteúdo pelo site. 
 
 ## Como o site é feito
 
