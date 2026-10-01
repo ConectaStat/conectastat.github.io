@@ -81,26 +81,6 @@
     "items": []
   },
   {
-    "listing": "/O_que_fazemos/ensino/index.html",
-    "items": [
-      "/oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
-      "/oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
-      "/oportunidades/posts/2026-05-20-edital-prpi-no-03-2026-pibiti-cnpq/index.html",
-      "/oportunidades/posts/2026-05-19-edital-prpi-no-02-2026-pibic-cnpq/index.html",
-      "/oportunidades/posts/2026-05-06-edital-no-003-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
-      "/oportunidades/posts/2026-03-18-edital-no-002-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
-      "/oportunidades/posts/2026-03-18-edital-prpi-no-01-2026-pivic-ufla/index.html",
-      "/oportunidades/posts/2026-01-12-edital-no-001-2026-docencia-voluntaria-des-1osem-2026/index.html",
-      "/oportunidades/posts/2025-11-27-edital-no-003-2025-selecao-de-monitores-remunerados-para-2026/index.html",
-      "/oportunidades/posts/2025-10-31-edital-pibeec-01-2025/index.html",
-      "/oportunidades/posts/2025-09-09-edital-pibec-07-2025/index.html"
-    ]
-  },
-  {
-    "listing": "/O_que_fazemos/ensino/apostilas/index.html",
-    "items": []
-  },
-  {
     "listing": "/O_que_fazemos/ensino/editais/index.html",
     "items": [
       "/oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
@@ -117,8 +97,28 @@
     ]
   },
   {
-    "listing": "/O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.html",
+    "listing": "/O_que_fazemos/ensino/Galeria/index.html",
     "items": []
+  },
+  {
+    "listing": "/O_que_fazemos/ensino/apostilas/index.html",
+    "items": []
+  },
+  {
+    "listing": "/O_que_fazemos/ensino/index.html",
+    "items": [
+      "/oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
+      "/oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
+      "/oportunidades/posts/2026-05-20-edital-prpi-no-03-2026-pibiti-cnpq/index.html",
+      "/oportunidades/posts/2026-05-19-edital-prpi-no-02-2026-pibic-cnpq/index.html",
+      "/oportunidades/posts/2026-05-06-edital-no-003-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
+      "/oportunidades/posts/2026-03-18-edital-no-002-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
+      "/oportunidades/posts/2026-03-18-edital-prpi-no-01-2026-pivic-ufla/index.html",
+      "/oportunidades/posts/2026-01-12-edital-no-001-2026-docencia-voluntaria-des-1osem-2026/index.html",
+      "/oportunidades/posts/2025-11-27-edital-no-003-2025-selecao-de-monitores-remunerados-para-2026/index.html",
+      "/oportunidades/posts/2025-10-31-edital-pibeec-01-2025/index.html",
+      "/oportunidades/posts/2025-09-09-edital-pibec-07-2025/index.html"
+    ]
   },
   {
     "listing": "/O_que_fazemos/extensao/acoes/index.html",
