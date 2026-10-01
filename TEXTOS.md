@@ -49,8 +49,8 @@ home/
 │   │   └── editais/index.qmd ───── Editais de Pesquisa
 │   ├── ensino/
 │   │   ├── index.qmd ───────────── Ensino (+ cards)
-│   │   ├── organizacao-e-apresentacao-de-dados/
-│   │   │   ├── index.qmd ───────── Organização e Apresentação de Dados
+│   │   ├── Galeria/
+│   │   │   ├── index.qmd ───────── Galeria
 │   │   │   └── posts/ ──────────── projetos enviados ............ §5
 │   │   ├── softwares/index.qmd ─── Softwares e pacotes
 │   │   ├── apostilas/index.qmd ─── Apostilas
@@ -232,8 +232,8 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 > dados, modelagem estatística e ciência de dados em empresas, instituições de
 > pesquisa e órgãos públicos.
 >
-> Com uma ampla formação os alunos são expostos aos mais variados tipos de situações, alguns exemplos são os projetos de **Organização e Apresentação de Dados** em que cada aluno escolhe uma base de dados publica para desenvolver uma analise exploratória e desenvolver um relatório do assunto, isso tudo desde o primeiro período! Esses projetos podem ser visualizados
-> [aqui](../../O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd).
+> Com uma ampla formação, os alunos são expostos aos mais variados tipos de situações. Alguns exemplos são os projetos presentes na **Galeria**, em que cada aluno escolhe um tema de análise ou projeto e realiza a elaboração de um relatório seguindo as boas práticas presentes no curso: **Produção de textos para popularização da ciência**, gratuito e disponível em: [Campus Virtual](https://campusvirtual2.ufla.br/openufla/course/view.php?id=7). Esses projetos podem ser visualizados
+> [aqui](../../O_que_fazemos/ensino/Galeria/index.qmd).
 >
 > ## Matriz curricular
 >
@@ -452,8 +452,8 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 
 **Cards de tópico desta página:**
 
-> **Organização e Apresentação de Dados**  
-> Projetos de análise de dados feitos pelos estudantes de primeiro período da graduação, do dado bruto ao relatório final.
+> **Galeria**  
+> Projetos e Análises realizadas pelos estudantes de Estatística.
 >
 > **Softwares e pacotes**  
 > Aplicativos, pacotes e ferramentas computacionais desenvolvidos como apoio ao ensino de Estatística.
@@ -463,19 +463,19 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 >
 
 
-### O Que Fazemos › Ensino › Organização e Apresentação de Dados
-`O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd`
+### O Que Fazemos › Ensino › Galeria
+`O_que_fazemos/ensino/Galeria/index.qmd`
 
-**Título (aparece no banner):** Organização e Apresentação de Dados
+**Título (aparece no banner):** Galeria
 
-**Subtítulo:** Análises e projetos desenvolvidos pelos estudantes de Estatística da UFLA desde o primeiro período.  
+**Subtítulo:** Análises e projetos desenvolvidos pelos estudantes de Graduação Bacharelado Estatística e Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA.  
 *(hoje oculto no site; fica só no código)*
 
 **Texto da página:**
 
-> Cada card abaixo é um projeto publicado: análises de dados reais feitas
-> pelos nossos estudantes, do dado bruto ao relatório final. Explore os
-> trabalhos e, quando estiver pronto, envie o seu.
+> Página dedicada ao envio de análises e projetos desenvolvidos pelos estudantes de Graduação Bacharelado Estatística e Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA.
+>
+> [Saiba como participar »](../../../enviar.qmd){.listing-mais}
 
 
 ### O Que Fazemos › Ensino › Softwares
@@ -662,37 +662,33 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 
 **Título (aparece no banner):** Envie seu projeto
 
-**Subtítulo:** Publique a sua análise em Organização e Apresentação de Dados.  
+**Subtítulo:** Envie análises e projetos para a Galeria.  
 *(hoje oculto no site; fica só no código)*
 
 **Texto da página:**
 
-> ## Como funciona
+> ## Requisitos para a publicação na Galeria
 >
-> Este formulário publica em **Projetos › Ensino › [Organização e Apresentação de
-> Dados](O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd)**, a
-> seção dos projetos de análise feitos pelos estudantes da graduação. É o único
-> caminho automatizado do site.
+> ### Quem pode enviar
 >
-> Editais, eventos, softwares, materiais didáticos e ações de extensão **não
-> passam por aqui**: são publicados pela equipe do site, a pedido dos docentes e
-> da chefia do departamento. Veja [Como
-> Contribuir](sobre/como-contribuir/index.qmd).
+> -
+> -
 >
-> Preencha o formulário abaixo **sem sair do site**. Ao enviar, o GitHub abre em
-> outra aba com a submissão **já preenchida**: é só revisar, anexar os arquivos
-> e confirmar. Basta estar logado no GitHub (a conta é gratuita).
+> ### O que deve acompanhar o envio
 >
-> A partir daí o robô monta a página sozinho e a equipe do departamento revisa
-> antes de publicar. Você recebe a resposta na própria submissão.
+> -
+> -
+> -
 >
-> Os **arquivos** são anexados na tela do GitHub que abre: a imagem de capa e o
-> relatório, em `.html` (compactado em `.zip`) ou `.pdf`. Basta arrastar cada um
-> para o campo correspondente antes de clicar em *Create*. O relatório aparece
-> **inteiro dentro da página** do projeto, e não como um link para sair dela.
-> Havendo escolha, prefira `.html`: ele se integra à página, com índice na
-> lateral, enquanto o `.pdf` fica dentro de uma moldura e não abre embutido em
-> boa parte dos celulares.
+> ### Formato do relatório
+>
+> -
+> -
+> -
+>
+> ### Como enviar
+>
+> -
 
 
 ---

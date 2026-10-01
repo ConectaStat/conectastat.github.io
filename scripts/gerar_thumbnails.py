@@ -6,7 +6,7 @@ Cada post é um "page bundle": <seção>/posts/AAAA-MM-DD-slug/index.qmd, com a
 capa e os anexos na mesma pasta. Quem manda é a lista SECOES, mais abaixo;
 hoje só uma seção entra, e o resto do site usa capa padrão fixa.
 
-  • Organização e Apresentação de Dados (modo "relatorio")
+  • Galeria (modo "relatorio")
       Abre o relatório HTML embutido no post (iframe de relatorios/...) e
       fotografa o elemento mais colorido (gráfico, mapa, figura).
 
@@ -92,7 +92,7 @@ if not SITE.is_absolute():
 # azul (images/capa-padrao-azul.svg), declarada como image-placeholder na
 # listagem.
 SECOES = [
-    {"pasta": "O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados", "modo": "relatorio"},
+    {"pasta": "O_que_fazemos/ensino/Galeria", "modo": "relatorio"},
     {"pasta": "eventos", "modo": "cartaz"},
 ]
 

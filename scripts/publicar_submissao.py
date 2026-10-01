@@ -12,7 +12,7 @@ de _templates/areas/ e escreve:
         ├── relatorio.html
         └── apresentacao.html
 
-Hoje a unica area com submissao aberta e Organizacao e Apresentacao de Dados
+Hoje a unica area com submissao aberta e a Galeria
 (ver AREAS, abaixo), e nela o relatorio e obrigatorio: a pagina o exibe
 embutido, em vez de so apontar um link.
 
@@ -40,12 +40,12 @@ MODELOS = RAIZ / "_templates" / "areas"
 
 # area escolhida no formulario -> pasta de destino, modelo e categorias fixas
 #
-# So Organizacao e Apresentacao de Dados passa pelo robo: e a unica secao com
+# So a Galeria passa pelo robo: e a unica secao com
 # submissao aberta ao publico. As demais sao publicadas a mao pela equipe, com
 # os modelos de _templates/areas/ - o caminho esta em sobre/como-contribuir/
 # e na secao "Publicar em cada area" do README.
 AREAS = {
-    "projeto de estudante": ("O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/posts",
+    "projeto de estudante": ("O_que_fazemos/ensino/Galeria/posts",
                              "projeto-estudante.qmd", ["Análise de dados"]),
 }
 

@@ -117,7 +117,7 @@ ORDEM = [
     ("O Que Fazemos › Pesquisa", "O_que_fazemos/pesquisa/index.qmd", ["grupos-pesquisa"]),
     ("O Que Fazemos › Pesquisa › Editais", "O_que_fazemos/pesquisa/editais/index.qmd", []),
     ("O Que Fazemos › Ensino", "O_que_fazemos/ensino/index.qmd", ["topicos-ensino"]),
-    ("O Que Fazemos › Ensino › Organização e Apresentação de Dados", "O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.qmd", []),
+    ("O Que Fazemos › Ensino › Galeria", "O_que_fazemos/ensino/Galeria/index.qmd", []),
     ("O Que Fazemos › Ensino › Softwares", "O_que_fazemos/ensino/softwares/index.qmd", []),
     ("O Que Fazemos › Ensino › Materiais", "O_que_fazemos/ensino/materiais/index.qmd", []),
     ("O Que Fazemos › Ensino › Editais", "O_que_fazemos/ensino/editais/index.qmd", []),
@@ -228,8 +228,8 @@ home/
 │   │   └── editais/index.qmd ───── Editais de Pesquisa
 │   ├── ensino/
 │   │   ├── index.qmd ───────────── Ensino (+ cards)
-│   │   ├── organizacao-e-apresentacao-de-dados/
-│   │   │   ├── index.qmd ───────── Organização e Apresentação de Dados
+│   │   ├── Galeria/
+│   │   │   ├── index.qmd ───────── Galeria
 │   │   │   └── posts/ ──────────── projetos enviados ............ §5
 │   │   ├── softwares/index.qmd ─── Softwares e pacotes
 │   │   ├── apostilas/index.qmd ─── Apostilas
@@ -292,7 +292,7 @@ L.append("\n---\n\n## 5. Conteúdo datado (posts já publicados)\n")
 for rotulo, pasta in [
     ("Oportunidades", "oportunidades/posts"),
     ("Cursos e Eventos", "eventos/posts"),
-    ("Organização e Apresentação de Dados", "O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/posts"),
+    ("Galeria", "O_que_fazemos/ensino/Galeria/posts"),
     ("Softwares", "O_que_fazemos/ensino/softwares/posts"),
     ("Materiais", "O_que_fazemos/ensino/materiais/posts"),
     ("Encontros com a Comunidade", "O_que_fazemos/extensao/acoes/posts"),
