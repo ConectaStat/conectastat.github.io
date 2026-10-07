@@ -2188,6 +2188,41 @@ $cs-banners: (
 }
 
 // =============================================================================
+//  PÁGINAS DE POST (editais, notícias, eventos): mesmos elementos do cabeçalho
+//  padrão do Quarto, em outra ordem - etiquetas, título, resumo, autor/data -,
+//  com autor e data em negrito, título menor e um pouco mais de espaço entre
+//  letras e palavras. Só nas páginas com categorias; as de seção usam o banner.
+// =============================================================================
+main.content:has(> #title-block-header .quarto-categories) {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.02em;
+  word-spacing: 0.08em;
+
+  // Os blocos do cabeçalho passam a ser itens da própria página, para poderem
+  // mudar de ordem; o texto e o link do post seguem depois deles
+  > #title-block-header,
+  > #title-block-header .quarto-title,
+  > #title-block-header > div:has(> .description) { display: contents; }
+
+  .quarto-categories { order: -4; }
+  .title             { order: -3; }
+  .description       { order: -2; }
+  .quarto-title-meta { order: -1; }
+
+  #title-block-header h1.title {
+    font-size: 1.55rem;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  .quarto-title-meta-contents { font-weight: 600; }
+
+  // O espaço de 1rem que o cabeçalho dava antes do texto
+  > p:first-of-type { margin-top: 1rem; }
+}
+
+// =============================================================================
 //  TRANSIÇÕES DE PÁGINA - três camadas discretas, na linguagem do hero:
 //  1) crossfade rápido entre páginas (View Transitions; só CSS, os navegadores
 //     sem suporte apenas navegam normalmente);
