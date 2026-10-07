@@ -366,23 +366,9 @@
   {
     "objectID": "acoes/lad/index.html",
     "href": "acoes/lad/index.html",
-    "title": "LAD",
+    "title": "Laboratório de Análises de Dados",
     "section": "",
-    "text": "O Laboratório de Análises de Dados (LAD) é uma das ações do Departamento de Estatística da Universidade Federal de Lavras.\nEsta página está em construção. Em breve ficam aqui a apresentação do laboratório, as atividades que ele desenvolve e a forma de solicitar atendimento."
-  },
-  {
-    "objectID": "acoes/lad/index.html#o-laboratório",
-    "href": "acoes/lad/index.html#o-laboratório",
-    "title": "LAD",
-    "section": "",
-    "text": "O Laboratório de Análises de Dados (LAD) é uma das ações do Departamento de Estatística da Universidade Federal de Lavras.\nEsta página está em construção. Em breve ficam aqui a apresentação do laboratório, as atividades que ele desenvolve e a forma de solicitar atendimento."
-  },
-  {
-    "objectID": "acoes/lad/index.html#enquanto-isso",
-    "href": "acoes/lad/index.html#enquanto-isso",
-    "title": "LAD",
-    "section": "Enquanto isso",
-    "text": "Enquanto isso\n\n\nPara falar com a equipe do departamento, veja entre em contato."
+    "text": "O Laboratório de Análises de Dados (LAD) do Departamento de Estatística da Universidade Federal de Lavras. Disponibiliza uma infraestrutura computacional composta por diferentes configurações de hardware, permitindo a execução de aplicações em Estatística, Ciência de Dados, Inteligência Artificial, Machine Learning, processamento paralelo, simulações computacionais e outras atividades que demandam elevado poder de processamento.\nAtualmente, a infraestrutura do LAD é composta por oito máquinas, dentre elas computadores de alto desempenho. A estrutura permite atender desde análises estatísticas tradicionais até aplicações computacionalmente intensivas, incluindo simulações de Monte Carlo, processamento de grandes conjuntos de dados, treinamento e avaliação de modelos de Machine Learning e Deep Learning, processamento paralelo e utilização de tecnologias de computação acelerada por GPU/CUDA.\nO LAD busca contribuir para o fortalecimento da pesquisa científica e da formação acadêmica na UFLA, oferecendo aos pesquisadores, estudantes e colaboradores um ambiente computacional capaz de apoiar projetos que envolvam análise de dados, desenvolvimento metodológico e aplicações de Inteligência Artificial."
   },
   {
     "objectID": "acoes/revista-cientifica/index.html",
