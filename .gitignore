@@ -16,5 +16,8 @@
 .DS_Store
 Thumbs.db
 
-# --- Claude Code --------------------------------------------------------------
+# --- Instruções de IA ---------------------------------------------------------
 .claude/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
