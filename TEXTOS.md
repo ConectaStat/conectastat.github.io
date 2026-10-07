@@ -608,27 +608,20 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 ### Ações › Laboratório de Análises de Dados (LAD)
 `acoes/lad/index.qmd`
 
-**Título (aparece no banner):** LAD
+**Título (aparece no banner):** Laboratório de Análises de Dados
 
 **Subtítulo:** Laboratório de Análises de Dados do Departamento de Estatística da UFLA.  
 *(hoje oculto no site; fica só no código)*
 
 **Texto da página:**
 
-> ## O Laboratório
->
-> O **Laboratório de Análises de Dados (LAD)** é uma das ações do
+> O **Laboratório de Análises de Dados (LAD)** do
 > [Departamento de Estatística](https://des.ufla.br/) da Universidade Federal
-> de Lavras.
+> de Lavras. Disponibiliza uma infraestrutura computacional composta por diferentes configurações de hardware, permitindo a execução de aplicações em Estatística, Ciência de Dados, Inteligência Artificial, Machine Learning, processamento paralelo, simulações computacionais e outras atividades que demandam elevado poder de processamento.
 >
-> Esta página está em construção. Em breve ficam aqui a apresentação do
-> laboratório, as atividades que ele desenvolve e a forma de solicitar
-> atendimento.
+> Atualmente, a infraestrutura do LAD é composta por oito máquinas, dentre elas computadores de alto desempenho. A estrutura permite atender desde análises estatísticas tradicionais até aplicações computacionalmente intensivas, incluindo simulações de Monte Carlo, processamento de grandes conjuntos de dados, treinamento e avaliação de modelos de Machine Learning e Deep Learning, processamento paralelo e utilização de tecnologias de computação acelerada por GPU/CUDA.
 >
-> ## Enquanto isso
->
-> - Para falar com a equipe do departamento, veja [entre em
->   contato](../../sobre/contato/index.qmd).
+> O LAD busca contribuir para o fortalecimento da pesquisa científica e da formação acadêmica na UFLA, oferecendo aos pesquisadores, estudantes e colaboradores um ambiente computacional capaz de apoiar projetos que envolvam análise de dados, desenvolvimento metodológico e aplicações de Inteligência Artificial.
 
 
 ### Ações › Cursos e Eventos (arquivo)
