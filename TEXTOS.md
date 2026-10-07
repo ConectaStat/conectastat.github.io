@@ -689,8 +689,17 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 ## 5. Conteúdo datado (posts já publicados)
 
 
-### Oportunidades: posts publicados (11)
+### Oportunidades: posts publicados (12)
 
+
+#### Edital PRPI Nº 04/2026 - PIBIC/UFLA (em breve)
+`oportunidades/posts/2026-10-02-edital-prpi-no-04-2026-pibic-ufla-em-breve/index.qmd`
+
+**Resumo (aparece no card):** A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa Nº 074, de 16 de março de 2023, e Portaria PRPI N...
+
+> A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa Nº 074, de 16 de março de 2023, e Portaria PRPI N...
+>
+> [Ler o edital completo »](https://prpi.ufla.br/noticias-prpi/653-oportunidade-de-bolsa-ic-aberto-edital-pibic-ufla)
 
 #### Edital Nº 006/2026 - Docência Voluntária - DES 2ºsem/2026
 `oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.qmd`
