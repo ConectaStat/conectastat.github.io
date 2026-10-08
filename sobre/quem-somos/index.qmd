@@ -1,5 +1,5 @@
 ---
-title: "Quem Somos"
+title: "O Projeto"
 subtitle: "O ConectaStat é o projeto de popularização da ciência do Departamento de Estatística da UFLA."
 title-block-banner: true
 body-classes: cs-banner-rede
@@ -8,46 +8,98 @@ sidebar: false
 toc: false
 ---
 
-## O projeto
+O **ConectaStat** é um projeto de extensão e de popularização científica do
+[Departamento de Estatística](https://des.ufla.br/) (DES) da [Universidade
+Federal de Lavras](https://ufla.br/). Nosso propósito é conectar **Ciência,
+Estatística e Sociedade**, com foco na comunidade de Lavras e região.
 
-O **ConectaStat** é uma iniciativa do [Departamento de
-Estatística](https://des.ufla.br/) (DES) da [Universidade Federal de
-Lavras](https://ufla.br/) que conecta **Ciência, Estatística e Sociedade**.
-A proposta é tornar o conhecimento científico mais acessível, promover o
-letramento estatístico e aproximar a universidade da comunidade.
+Nossos objetivos são:
 
-Este é um site de projeto vinculado ao DES/UFLA. **Não é um site institucional
-da Universidade**: a comunicação oficial do departamento continua em
-[des.ufla.br](https://des.ufla.br/) e a da UFLA, em
-[ufla.br](https://ufla.br/).
+- Contribuir para a popularização da Ciência Estatística em Lavras e região.
+- Divulgar ações e projetos desenvolvidos por estatísticos da UFLA,
+  conectando a universidade com a comunidade.
+- Criar um hub de estatísticos e analistas de dados, promovendo networking e
+  possibilidades de colaboração entre profissionais, estudantes e
+  interessados na área.
+- Oferecer conteúdo educativo e informativo, por meio do nosso blog com
+  postagens que envolvem aplicações da Estatística e Ciência de Dados.
+- Fomentar o interesse pela Estatística na nossa região, incentivando mais
+  pessoas a se desenvolverem na área, seja na academia ou no mercado de
+  trabalho.
+- Realizar ações de divulgação da Estatística em praças, escolas, feiras ou
+  em eventos de extensão que acontecem no município.
 
 ## O que você encontra aqui
 
-- **[Estatística](../../estatistica/index.qmd)**: o que é a área, onde atua o
-  profissional e por que ela está no centro da ciência de dados;
-- **[Nossos Cursos](../../cursos/graduacao/index.qmd)**: a graduação e a
-  pós-graduação em Estatística da UFLA;
-- **[Projetos](../../O_que_fazemos/ensino/index.qmd)**: as frentes de ensino,
-  pesquisa e extensão do departamento, com seus editais abertos;
-- **[Ações](../../acoes/revista-cientifica/index.qmd)**: a revista científica,
-  a assessoria e consultoria estatística e a agenda de
-  [cursos e eventos](../../eventos/index.qmd);
-- **[Oportunidades](../../oportunidades/index.qmd)**: os editais e as chamadas
-  em aberto do departamento.
+- **[Estatística](../../estatistica/index.qmd)**: uma breve apresentação da
+  nossa área, com informações sobre a atuação profissional;
+- **[Nossos Cursos](../../cursos/graduacao/index.qmd)**: informações
+  práticas sobre os cursos de graduação e pós-graduação em Estatística da
+  UFLA;
+- **[O que fazemos](../../O_que_fazemos/ensino/index.qmd)**: projetos e
+  conteúdos desenvolvidos pela Estatística da UFLA apresentados separadamente
+  por ensino, pesquisa e extensão;
+- **[Ações](../../acoes/revista-cientifica/index.qmd)**: apresentamos nossa
+  infraestrutura, livros publicados, cursos e eventos que realizamos, dentre
+  outras ações;
+- **[Oportunidades](../../oportunidades/index.qmd)**: reunimos editais de
+  pesquisa, ensino e extensão que possam ser de interesse para nossos
+  estudantes e apresentamos de forma fácil e intuitiva.
 
-## Quem faz
+## Quem faz o ConectaStat
 
-O ConectaStat é feito por docentes, estudantes e servidores do Departamento de
-Estatística, com a colaboração de quem envia conteúdo pelo site. 
+O ConectaStat tem a participação de professores e estudantes de Estatística
+da UFLA, seja na criação de conteúdo para nosso site, redes sociais ou em
+ações de divulgação da Estatística realizadas em Lavras e região. Essas
+participações são pontuais, mas de extrema importância para nosso projeto e
+para a formação de nossos estudantes.
 
-## Como o site é feito
+A equipe abaixo é responsável pela gestão do projeto e do ecossistema
+ConectaStat, que envolve esse site, nossas redes sociais e outras ações de
+divulgação da Estatística na nossa comunidade.
 
-O site é **aberto e público**: o código, os textos e o histórico de cada
-alteração ficam no
-[repositório no GitHub](https://github.com/ConectaStat/conectastat.github.io).
-Ele é construído com [Quarto](https://quarto.org/) e publicado no GitHub
-Pages, o que significa que qualquer pessoa pode acompanhar, revisar e propor
-melhorias.
+```{=html}
+<ul class="equipe" aria-label="Equipe do ConectaStat">
+  <li class="equipe-membro">
+    <p class="equipe-nome">Izabela R. C. Oliveira</p>
+    <p class="equipe-vinculo">Professora do Departamento de Estatística (DES/UFLA)</p>
+  </li>
+  <li class="equipe-membro">
+    <p class="equipe-nome">Camilla Marques Barroso</p>
+    <p class="equipe-vinculo">Professora do Departamento de Estatística (DES/UFLA)</p>
+  </li>
+  <li class="equipe-membro">
+    <p class="equipe-nome">Tales de Jesus Fernandes</p>
+    <p class="equipe-vinculo">Professor do Departamento de Estatística (DES/UFLA)</p>
+  </li>
+  <li class="equipe-membro">
+    <p class="equipe-nome">Leonardo</p>
+    <p class="equipe-vinculo">Graduando em Estatística (UFLA)</p>
+  </li>
+  <li class="equipe-membro">
+    <p class="equipe-nome">Maria Clara</p>
+    <p class="equipe-vinculo">Graduando em Estatística (UFLA)</p>
+  </li>
+</ul>
+```
 
-Sobre o apoio de ferramentas automatizadas na produção do conteúdo, veja a
-página de [uso de IA](../uso-de-ia/index.qmd).
+## O site
+
+Este site foi desenvolvido em [Quarto](https://quarto.org/) e está em um
+[repositório público do
+GitHub](https://github.com/ConectaStat/conectastat.github.io). Isso significa
+que qualquer pessoa pode acompanhar o desenvolvimento e propor melhorias nos
+códigos. No desenvolvimento do site, usamos a IA generativa Claude, da
+Anthropic (modelos da família Opus), para auxílio na geração dos códigos em R
+ou Python e para a criação do estilo (scss).
+
+Para saber mais sobre o site ou sobre como contribuir com conteúdo, acesse
+[Como contribuir](../como-contribuir/index.qmd) ou entre em contato.
+
+```{=html}
+<div class="projeto-links">
+  <a href="mailto:conectastat@gmail.com" aria-label="Enviar e-mail para o ConectaStat">
+    <i class="bi bi-envelope"></i> E-mail do ConectaStat
+  </a>
+</div>
+```

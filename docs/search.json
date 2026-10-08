@@ -1,108 +1,157 @@
 [
   {
-    "objectID": "sobre/contato/index.html",
-    "href": "sobre/contato/index.html",
-    "title": "Entre em Contato",
+    "objectID": "sobre/quem-somos/index.html",
+    "href": "sobre/quem-somos/index.html",
+    "title": "O Projeto",
     "section": "",
-    "text": "Erro de digitação, link quebrado ou informação desatualizada:\nAbrir uma issue no GitHub »"
+    "text": "O ConectaStat é um projeto de extensão e de popularização científica do Departamento de Estatística (DES) da Universidade Federal de Lavras. Nosso propósito é conectar Ciência, Estatística e Sociedade, com foco na comunidade de Lavras e região.\nNossos objetivos são:"
   },
   {
-    "objectID": "sobre/contato/index.html#encontrou-um-erro-no-site",
-    "href": "sobre/contato/index.html#encontrou-um-erro-no-site",
-    "title": "Entre em Contato",
+    "objectID": "sobre/quem-somos/index.html#o-que-você-encontra-aqui",
+    "href": "sobre/quem-somos/index.html#o-que-você-encontra-aqui",
+    "title": "O Projeto",
+    "section": "O que você encontra aqui",
+    "text": "O que você encontra aqui\n\nEstatística: uma breve apresentação da nossa área, com informações sobre a atuação profissional;\nNossos Cursos: informações práticas sobre os cursos de graduação e pós-graduação em Estatística da UFLA;\nO que fazemos: projetos e conteúdos desenvolvidos pela Estatística da UFLA apresentados separadamente por ensino, pesquisa e extensão;\nAções: apresentamos nossa infraestrutura, livros publicados, cursos e eventos que realizamos, dentre outras ações;\nOportunidades: reunimos editais de pesquisa, ensino e extensão que possam ser de interesse para nossos estudantes e apresentamos de forma fácil e intuitiva."
+  },
+  {
+    "objectID": "sobre/quem-somos/index.html#quem-faz-o-conectastat",
+    "href": "sobre/quem-somos/index.html#quem-faz-o-conectastat",
+    "title": "O Projeto",
+    "section": "Quem faz o ConectaStat",
+    "text": "Quem faz o ConectaStat\nO ConectaStat tem a participação de professores e estudantes de Estatística da UFLA, seja na criação de conteúdo para nosso site, redes sociais ou em ações de divulgação da Estatística realizadas em Lavras e região. Essas participações são pontuais, mas de extrema importância para nosso projeto e para a formação de nossos estudantes.\nA equipe abaixo é responsável pela gestão do projeto e do ecossistema ConectaStat, que envolve esse site, nossas redes sociais e outras ações de divulgação da Estatística na nossa comunidade.\n\n  \n    Izabela R. C. Oliveira\n    Professora do Departamento de Estatística (DES/UFLA)\n  \n  \n    Camilla Marques Barroso\n    Professora do Departamento de Estatística (DES/UFLA)\n  \n  \n    Tales de Jesus Fernandes\n    Professor do Departamento de Estatística (DES/UFLA)\n  \n  \n    Leonardo\n    Graduando em Estatística (UFLA)\n  \n  \n    Maria Clara\n    Graduando em Estatística (UFLA)"
+  },
+  {
+    "objectID": "sobre/quem-somos/index.html#o-site",
+    "href": "sobre/quem-somos/index.html#o-site",
+    "title": "O Projeto",
+    "section": "O site",
+    "text": "O site\nEste site foi desenvolvido em Quarto e está em um repositório público do GitHub. Isso significa que qualquer pessoa pode acompanhar o desenvolvimento e propor melhorias nos códigos. No desenvolvimento do site, usamos a IA generativa Claude, da Anthropic (modelos da família Opus), para auxílio na geração dos códigos em R ou Python e para a criação do estilo (scss).\nPara saber mais sobre o site ou sobre como contribuir com conteúdo, acesse Como contribuir ou entre em contato.\n\n  \n     E-mail do ConectaStat"
+  },
+  {
+    "objectID": "sobre/como-contribuir/index.html",
+    "href": "sobre/como-contribuir/index.html",
+    "title": "Como Contribuir",
     "section": "",
-    "text": "Erro de digitação, link quebrado ou informação desatualizada:\nAbrir uma issue no GitHub »"
+    "text": "Se você deseja contribuir com alguma notícia, divulgação de curso, evento, informações de projetos, materiais didáticos ou qualquer outro conteúdo relacionado às seções do site, envie um e-mail para o ConectaStat."
   },
   {
-    "objectID": "sobre/contato/index.html#canais",
-    "href": "sobre/contato/index.html#canais",
-    "title": "Entre em Contato",
-    "section": "Canais",
-    "text": "Canais\n\nSite oficial do departamento: des.ufla.br\nRepositório do projeto: github.com/ConectaStat com código, histórico e discussões abertas.\nUniversidade Federal de Lavras: ufla.br"
+    "objectID": "sobre/como-contribuir/index.html#publicações-na-galeria",
+    "href": "sobre/como-contribuir/index.html#publicações-na-galeria",
+    "title": "Como Contribuir",
+    "section": "Publicações na galeria",
+    "text": "Publicações na galeria\nA Galeria do ConectaStat é um espaço colaborativo em formato de blog dedicado à publicação de relatórios de análise de dados, data stories e notebooks desenvolvidos por nossa comunidade acadêmica. Nosso objetivo é dar visibilidade aos projetos desenvolvidos em disciplinas, projetos e grupos de pesquisa, incentivando a prática da comunicação científica e a democratização da estatística.\nAceitamos produções desenvolvidas em disciplinas, trabalhos de conclusão de cursos, projetos, entre outros, desde que apresentem um foco claro em Estatística e Análise de Dados. Exemplos:\n\nAnálises exploratórias de dados sobre temas de interesse público;\nNotebooks explicativos demonstrando a aplicação de técnicas estatísticas ou algoritmos;\nTutoriais práticos de R, Python, Julia, Quarto ou outras linguagens;\nEstudo de caso com dados reais com aplicações nas mais diversas áreas do conhecimento.\n\nConvidamos a submeter contribuições:\n\nEstudantes de graduação e pós-graduação do Departamento de Estatística (DES/UFLA)\nDocentes do Departamento de Estatística (DES/UFLA)\nEstudantes, docentes ou pesquisadores de outros cursos da UFLA ou instituições parceiras que tenham cursado ou estejam cursando alguma disciplina oferecida pelo Departamento de Estatística da UFLA.\n\nAs contribuições aprovadas e publicadas na Galeria podem gerar Certificado de Participação em Projeto de Extensão.\nPara ter direito à certificação, o autor principal deve atender a dois requisitos simples:\n\nConcluir o curso “Produção de textos para popularização da ciência”, disponível gratuitamente na plataforma OPEN UFLA.\nSeguir integralmente as diretrizes e recomendações apresentadas no Guia para os autores.\n\nNota: O certificado será emitido após a aprovação final e publicação do material no site."
   },
   {
-    "objectID": "sobre/contato/index.html#onde-estamos",
-    "href": "sobre/contato/index.html#onde-estamos",
-    "title": "Entre em Contato",
-    "section": "Onde estamos",
-    "text": "Onde estamos\nDepartamento de Estatística (DES/ICET/UFLA)\nTrevo Rotatório Professor Edmir Sá Santos, s/n\nCampus Universitário, Lavras/MG\nCEP 37203-202 · Caixa Postal 3037"
+    "objectID": "sobre/como-contribuir/index.html#uso-de-ia-nas-submissões",
+    "href": "sobre/como-contribuir/index.html#uso-de-ia-nas-submissões",
+    "title": "Como Contribuir",
+    "section": "Uso de IA nas submissões",
+    "text": "Uso de IA nas submissões\nReconhecemos que ferramentas de IA generativa têm sido amplamente utilizadas no ambiente acadêmico e no processo de análises de dados. No ConectaStat, incentivamos uma abordagem transparente em relação ao uso dessas ferramentas. Para isso, solicitamos que os autores incluam uma declaração explicitando onde e como a IA foi usada no desenvolvimento da sua submissão."
   },
   {
-    "objectID": "oportunidades/posts/2026-10-02-edital-prpi-no-04-2026-pibic-ufla-em-breve/index.html",
-    "href": "oportunidades/posts/2026-10-02-edital-prpi-no-04-2026-pibic-ufla-em-breve/index.html",
-    "title": "Edital PRPI Nº 04/2026 - PIBIC/UFLA (em breve)",
+    "objectID": "sobre/como-contribuir/index.html#guia-para-os-autores",
+    "href": "sobre/como-contribuir/index.html#guia-para-os-autores",
+    "title": "Como Contribuir",
+    "section": "Guia para os autores",
+    "text": "Guia para os autores\nPara garantir a qualidade, acessibilidade e engajamento das publicações, inspiramo-nos em boas práticas internacionais de divulgação científica na área de Ciência de Dados (Real World Data Science).\n\nLinguagem\nAo escrever o seu texto, imagine que você está apresentando sua análise para um colega de outro curso ou para um público curioso. Evite o tom estritamente formal de um artigo acadêmico tradicional.\nTermos técnicos (ex: p-valor, intervalo de confiança, regressão LASSO) devem ser explicados brevemente de forma intuitiva, ou acompanhados de links de referência para leitores iniciantes.\n\n\nEstrutura do texto\nCada publicação deve contar uma “história com dados”. Recomendamos a seguinte estrutura:\n\nTítulo Atrativo e Subtítulo (Resumo): Um título direto e uma frase de impacto resumindo a pergunta central da análise.\nIntrodução / A Pergunta: Qual é a motivação do trabalho e qual problema ou pergunta os dados ajudam a responder?\nOs Dados e a Metodologia: De onde vêm os dados? Que tratamento e métodos foram aplicados?\nResultados e Visualizações: Apresentação clara das descobertas com o apoio de gráficos e tabelas.\nConclusão / Principais Achados: O que aprendemos com isso? Quais os impactos ou limitações da análise?\n\n\n\nBoas práticas para gráficos e visualizações\nGráficos devem ter títulos legíveis, eixos identificados e legendas claras. Utilize paletas de cores acessíveis e agradáveis (evite saturação visual). Lembre-se de que todo gráfico deve ter uma breve legenda explicativa no texto contextualizando o que o leitor deve observar.\n\n\nFormato e reprodutibilidade\nIncentivamos o envio de arquivos nos formatos: Quarto (.qmd) (formato preferencial) ou Jupyter Notebook (.ipynb). Para documentos sem códigos, recomendamos o uso de documento de texto (.docx ou Google Docs).\nSempre informe a fonte dos dados utilizados. Se os dados forem públicos, forneça o link direto ou inclua a base no repositório do trabalho.\nSe for apresentar código, ele deve estar bem comentado e organizado. Se o objetivo da postagem for a leitura do texto e não o código, podemos omitir blocos de código extensos na visualização final do site.\n\n\nÉtica e licença\n\nAs submissões devem ser trabalhos originais do(s) autor(es). Plágio ou uso não citado de fontes não serão tolerados.\nCertifique-se de ter permissão para compartilhar os dados utilizados no trabalho.\nAo publicar no ConectaStat, os autores mantêm os direitos autorais do trabalho, mas concordam em compartilhá-lo sob uma licença livre (Creative Commons CC-BY), permitindo a leitura e citação com os devidos créditos aos autores e ao ConectaStat."
+  },
+  {
+    "objectID": "sobre/como-contribuir/index.html#passo-a-passo-para-submissão",
+    "href": "sobre/como-contribuir/index.html#passo-a-passo-para-submissão",
+    "title": "Como Contribuir",
+    "section": "Passo a Passo para Submissão",
+    "text": "Passo a Passo para Submissão\n\nInscrição no Curso: Se desejar o certificado de extensão, conclua o curso “Produção de textos para popularização da ciência” na plataforma OPEN UFLA.\nPreparação do Material: Organize seu texto, código, gráficos e dados conforme as orientações deste guia.\nEnvio da Submissão: Envie seu arquivo para o e-mail oficial do projeto (em breve, também pelo Formulário de Submissão da Galeria ConectaStat) anexando:\n\nO arquivo do texto/notebook (.qmd, .ipynb, .doc ou .docx);\nTags ou palavras-chave que identificam o seu conteúdo. Podem estar associadas à disciplina na qual o trabalho foi desenvolvido. Exemplos: Graduação; Visualização de Dados; GES139\nO certificado de conclusão do curso na OPEN UFLA (se for solicitar certificado);\nUma breve biografia de 2 a 3 linhas sobre você (nome, curso/vínculo, e-mail e redes/LinkedIn/GitHub, se desejar).\n\nRevisão Editorial: A equipe editorial do ConectaStat fará uma leitura técnica e pedagógica do material, podendo sugerir pequenos ajustes de linguagem, formatação ou gráficos.\nAprovação e Publicação: Após os ajustes, o texto será programado para publicação na Galeria, divulgado nas redes do ConectaStat e o certificado de extensão será emitido.\n\n💡 Dúvidas ou quer validar uma ideia de post antes de escrever? Entre em contato com a equipe pelo e-mail do ConectaStat!\n\n  \n     E-mail do ConectaStat"
+  },
+  {
+    "objectID": "oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
+    "href": "oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
+    "title": "Edital Nº 006/2026 - Docência Voluntária - DES 2ºsem/2026",
     "section": "",
-    "text": "A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa Nº 074, de 16 de março de 2023, e Portaria PRPI N…\nLer o edital completo »"
+    "text": "O Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\nLer o edital completo »"
   },
   {
-    "objectID": "oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
-    "href": "oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
-    "title": "Edital Nº 005/2026 - Seleção de monitores remunerados para o 2º semestre de 2026",
+    "objectID": "oportunidades/posts/2026-05-20-edital-prpi-no-03-2026-pibiti-cnpq/index.html",
+    "href": "oportunidades/posts/2026-05-20-edital-prpi-no-03-2026-pibiti-cnpq/index.html",
+    "title": "Edital PRPI Nº 03/2026 - PIBITI/CNPq",
+    "section": "",
+    "text": "A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnico(a)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em prog…\nLer o edital completo »"
+  },
+  {
+    "objectID": "oportunidades/posts/2026-05-06-edital-no-003-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
+    "href": "oportunidades/posts/2026-05-06-edital-no-003-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
+    "title": "Edital Nº 003/2026 - Seleção de monitores voluntários para 2026",
+    "section": "",
+    "text": "O Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\nLer o edital completo »"
+  },
+  {
+    "objectID": "oportunidades/posts/2026-03-18-edital-no-002-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
+    "href": "oportunidades/posts/2026-03-18-edital-no-002-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
+    "title": "Edital Nº 002/2026 - Seleção de monitores voluntários para 2026",
+    "section": "",
+    "text": "O Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\nLer o edital completo »"
+  },
+  {
+    "objectID": "oportunidades/posts/2025-11-27-edital-no-003-2025-selecao-de-monitores-remunerados-para-2026/index.html",
+    "href": "oportunidades/posts/2025-11-27-edital-no-003-2025-selecao-de-monitores-remunerados-para-2026/index.html",
+    "title": "Edital Nº 003/2025 - Seleção de monitores remunerados para 2026",
     "section": "",
     "text": "O Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria remunerada nos Componentes Curriculares listados no quadro a seguir.\nLer o edital completo »"
   },
   {
-    "objectID": "oportunidades/posts/2026-05-19-edital-prpi-no-02-2026-pibic-cnpq/index.html",
-    "href": "oportunidades/posts/2026-05-19-edital-prpi-no-02-2026-pibic-cnpq/index.html",
-    "title": "Edital PRPI Nº 02/2026 - PIBIC/CNPq",
+    "objectID": "oportunidades/posts/2025-09-09-edital-pibec-07-2025/index.html",
+    "href": "oportunidades/posts/2025-09-09-edital-pibec-07-2025/index.html",
+    "title": "Edital PIBEC 07/2025",
     "section": "",
-    "text": "A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnicos(as)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em pr…\nLer o edital completo »"
+    "text": "A Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa nº 074, de 16 de março de 2023, torna p…\nLer o edital completo »"
   },
   {
-    "objectID": "oportunidades/posts/2026-03-18-edital-prpi-no-01-2026-pivic-ufla/index.html",
-    "href": "oportunidades/posts/2026-03-18-edital-prpi-no-01-2026-pivic-ufla/index.html",
-    "title": "Edital PRPI Nº 01/2026 - PIVIC/UFLA",
+    "objectID": "noticias/posts/2026-08-04-doutoranda-premio-biometria/index.html",
+    "href": "noticias/posts/2026-08-04-doutoranda-premio-biometria/index.html",
+    "title": "Doutoranda da UFLA recebe prêmio internacional de biometria e estatística",
     "section": "",
-    "text": "A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras torna público este edital e convida todos os servidores docentes, técnico-administrativos desta instituição e pesquisadores externos credenciados como docentes permanentes em programas de pós-graduação da UFLA, a parti…\nLer o edital completo »"
+    "text": "Viviane Costa Silva, doutoranda do Programa de Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA, recebeu o IBS Travel Award, prêmio concedido pela International Biometric Society durante a 33ª International Biometric Conference (IBC), realizada de 12 a 16 de julho de 2026 em Seul, na Coreia do Sul, com 996 participantes de 44 países.\nA pesquisa premiada, “GARMA modelling for count time series: incidence of dengue in Lavras, Brazil”, é o capítulo de abertura de sua tese de doutorado, orientada pelo professor Luiz Ricardo Nakamura e coorientada pelo professor Luiz Otávio de Oliveira Pala.\nLeia a notícia completa no site da UFLA »"
   },
   {
-    "objectID": "oportunidades/posts/2026-01-12-edital-no-001-2026-docencia-voluntaria-des-1osem-2026/index.html",
-    "href": "oportunidades/posts/2026-01-12-edital-no-001-2026-docencia-voluntaria-des-1osem-2026/index.html",
-    "title": "Edital Nº 001/2026 - Docência Voluntária - DES 1ºsem/2026",
+    "objectID": "eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/index.html",
+    "href": "eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/index.html",
+    "title": "XVII Encontro Mineiro de Estatística (MGEST) 2025",
     "section": "",
-    "text": "O Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\nLer o edital completo »"
+    "text": "O Encontro Mineiro de Estatística (MGEST) é um evento bienal que, desde 1999, reúne profissionais, docentes e estudantes para a troca de conhecimento e a divulgação de pesquisas na área de Estatística.\nSaiba mais »"
   },
   {
-    "objectID": "oportunidades/posts/2025-10-31-edital-pibeec-01-2025/index.html",
-    "href": "oportunidades/posts/2025-10-31-edital-pibeec-01-2025/index.html",
-    "title": "Edital PIBEEC 01/2025",
+    "objectID": "eventos/posts/2024-09-01-curso-introducao-software-r/index.html",
+    "href": "eventos/posts/2024-09-01-curso-introducao-software-r/index.html",
+    "title": "Curso de Extensão: Introdução ao Software R",
     "section": "",
-    "text": "A Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, …\nLer o edital completo »"
+    "text": "Curso de extensão de introdução ao R, ambiente livre e gratuito amplamente utilizado para análise estatística, modelagem e visualização de dados.\nSaiba mais »"
   },
   {
-    "objectID": "oportunidades/index.html",
-    "href": "oportunidades/index.html",
-    "title": "Oportunidades",
+    "objectID": "estatistica/index.html",
+    "href": "estatistica/index.html",
+    "title": "A Estatística",
     "section": "",
-    "text": "2 de out. de 2026\n\n\nEdital PRPI Nº 04/2026 - PIBIC/UFLA (em breve)\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa Nº 074, de 16 de março de 2023, e Portaria PRPI N…\n\n\nLeia mais\n\n\n\n\n\n\n\n27 de jul. de 2026\n\n\nEdital Nº 006/2026 - Docência Voluntária - DES 2ºsem/2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n13 de jul. de 2026\n\n\nEdital Nº 005/2026 - Seleção de monitores remunerados para o 2º semestre de 2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria remunerada nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n20 de mai. de 2026\n\n\nEdital PRPI Nº 03/2026 - PIBITI/CNPq\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnico(a)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em prog…\n\n\nLeia mais\n\n\n\n\n\n\n\n19 de mai. de 2026\n\n\nEdital PRPI Nº 02/2026 - PIBIC/CNPq\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnicos(as)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em pr…\n\n\nLeia mais\n\n\n\n\n\n\n\n6 de mai. de 2026\n\n\nEdital Nº 003/2026 - Seleção de monitores voluntários para 2026\n\n\nO Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n18 de mar. de 2026\n\n\nEdital Nº 002/2026 - Seleção de monitores voluntários para 2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n18 de mar. de 2026\n\n\nEdital PRPI Nº 01/2026 - PIVIC/UFLA\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras torna público este edital e convida todos os servidores docentes, técnico-administrativos desta instituição e pesquisadores externos credenciados como docentes permanentes em programas de pós-graduação da UFLA, a parti…\n\n\nLeia mais\n\n\n\n\n\n\n\n12 de jan. de 2026\n\n\nEdital Nº 001/2026 - Docência Voluntária - DES 1ºsem/2026\n\n\nO Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n27 de nov. de 2025\n\n\nEdital Nº 003/2025 - Seleção de monitores remunerados para 2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria remunerada nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n31 de out. de 2025\n\n\nEdital PIBEEC 01/2025\n\n\nA Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, …\n\n\nLeia mais\n\n\n\n\n\n\n\n9 de set. de 2025\n\n\nEdital PIBEC 07/2025\n\n\nA Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa nº 074, de 16 de março de 2023, torna p…\n\n\nLeia mais\n\n\n\n\nNenhum item correspondente"
+    "text": "A Estatística é a ciência que desenvolve e aplica métodos para coletar, organizar, analisar e interpretar dados, transformando informação em conhecimento e apoiando decisões em condições de incerteza. Ela é a base fundamental da Ciência de Dados e está presente em praticamente todas as áreas do conhecimento: agricultura, saúde, indústria, finanças, esportes, políticas públicas e inteligência artificial."
   },
   {
-    "objectID": "noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/index.html",
-    "href": "noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/index.html",
-    "title": "Prêmio Jabuti Acadêmico 2025: livro de professor do DES é finalista",
+    "objectID": "estatistica/index.html#o-que-é-a-estatística",
+    "href": "estatistica/index.html#o-que-é-a-estatística",
+    "title": "A Estatística",
     "section": "",
-    "text": "O livro Análise de Dados Espaciais com Aplicações em R, do professor João Domingos Scalon, do Departamento de Estatística da UFLA, é um dos finalistas do Prêmio Jabuti Acadêmico 2025, na categoria Matemática, Probabilidade e Estatística. Publicada pela Editora UFLA, a obra apresenta métodos de estatística espacial e sua implementação no R, servindo como texto introdutório para pesquisadores de estatística, geografia, epidemiologia e ciências ambientais.\nA UFLA também levou outro título à lista de finalistas, Aplicações da genética quantitativa no melhoramento de plantas autógamas, na categoria Ciências Agrárias e Ciências Ambientais. Os vencedores recebem R$ 5 mil e o troféu Jabuti, em cerimônia prevista para 5 de agosto de 2025.\nConheça o livro na página Nossos Livros »\nLeia a notícia completa no site da UFLA »"
+    "text": "A Estatística é a ciência que desenvolve e aplica métodos para coletar, organizar, analisar e interpretar dados, transformando informação em conhecimento e apoiando decisões em condições de incerteza. Ela é a base fundamental da Ciência de Dados e está presente em praticamente todas as áreas do conhecimento: agricultura, saúde, indústria, finanças, esportes, políticas públicas e inteligência artificial."
   },
   {
-    "objectID": "eventos/posts/2026-01-15-programa-de-verao-2026/index.html",
-    "href": "eventos/posts/2026-01-15-programa-de-verao-2026/index.html",
-    "title": "XVII Programa de Verão DES-ICET/UFLA 2026",
-    "section": "",
-    "text": "O Programa de Verão do DES-ICET/UFLA chega à sua XVII edição, oferecendo disciplinas e atividades de aperfeiçoamento em Estatística durante o período de verão.\nSaiba mais »"
+    "objectID": "estatistica/index.html#onde-atua-o-estatístico",
+    "href": "estatistica/index.html#onde-atua-o-estatístico",
+    "title": "A Estatística",
+    "section": "Onde atua o estatístico?",
+    "text": "Onde atua o estatístico?\nO profissional de Estatística atua em um mercado amplo e em expansão:\n\nCiência de Dados e Inteligência Artificial: modelagem preditiva, aprendizado de máquina e análise de grandes volumes de dados;\nAgronegócio e experimentação: planejamento e análise de experimentos, melhoramento genético e agricultura de precisão;\nSaúde e bioestatística: ensaios clínicos, epidemiologia e vigilância em saúde pública;\nMercado financeiro e seguros: análise de risco, precificação e modelagem atuarial;\nIndústria e qualidade: controle estatístico de processos e confiabilidade;\nPesquisa e academia: desenvolvimento de novos métodos e formação de pessoas.\n\nPesquisas de mercado apontam a carreira de estatístico e de cientista de dados entre as melhores e mais bem remuneradas profissões da era digital, com demanda muito superior à oferta de profissionais qualificados."
   },
   {
-    "objectID": "eventos/posts/2025-05-20-v-workshop-data-science/index.html",
-    "href": "eventos/posts/2025-05-20-v-workshop-data-science/index.html",
-    "title": "V Workshop em Data Science",
-    "section": "",
-    "text": "O Workshop em Data Science promove discussões sobre métodos estatísticos, aprendizado de máquina e aplicações de Ciência de Dados.\nSaiba mais »"
-  },
-  {
-    "objectID": "eventos/index.html",
-    "href": "eventos/index.html",
-    "title": "Cursos e Eventos",
-    "section": "",
-    "text": "Cursos\n\n\n\n\n\n\n\n\n1 de set. de 2024\n\n\nCurso de Extensão: Introdução ao Software R\n\n\nCurso de extensão de introdução ao R, ambiente livre para análise estatística e visualização de dados.\n\n\nLeia mais\n\n\n\n\n\nEventos\n\n\n\n\n\n\n\n\n15 de jan. de 2026\n\n\nXVII Programa de Verão DES-ICET/UFLA 2026\n\n\nEdição 2026 do tradicional Programa de Verão do Departamento de Estatística, com disciplinas e atividades de formação.\n\n\nLeia mais\n\n\n\n\n\n\n\n5 de nov. de 2025\n\n\nXVII Encontro Mineiro de Estatística (MGEST) 2025\n\n\nEvento bienal que, desde 1999, reúne profissionais, docentes e estudantes da área de Estatística de Minas Gerais e do Brasil.\n\n\nLeia mais\n\n\n\n\n\n\n\n20 de mai. de 2025\n\n\nV Workshop em Data Science\n\n\nWorkshop voltado à Ciência de Dados, com palestras e atividades sobre métodos estatísticos e aplicações.\n\n\nLeia mais\n\n\n\n\nNenhum item correspondente"
+    "objectID": "estatistica/index.html#estude-estatística-na-ufla",
+    "href": "estatistica/index.html#estude-estatística-na-ufla",
+    "title": "A Estatística",
+    "section": "Estude Estatística na UFLA",
+    "text": "Estude Estatística na UFLA\n\n  \n    \n    Bacharelado em Estatística com ênfase em Ciência de Dados · Prof. Júlio Bueno\n  \n\n\n\nGraduação: foco em Ciência de Dados\nEmbora seja um Bacharelado em Estatística, o curso de graduação da UFLA tem forte ênfase em Ciência de Dados: além da base sólida em probabilidade e inferência, o estudante aprende programação, bancos de dados e aprendizado de máquina para extrair conhecimento de grandes volumes de dados. É o caminho de quem quer partir de dados reais, chegar a modelos preditivos e ir muito além.\n\n\nPós-graduação: foco em Estatística e Experimentação Agropecuária\nO Programa de Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEEA) oferece mestrado e doutorado com tradição em estatística e experimentação agropecuária: planejamento e análise de experimentos, melhoramento genético e agricultura de precisão. É a formação de quem transforma dados de campo, como as safras de café da região de Lavras, em decisões com rigor científico."
   },
   {
     "objectID": "cursos/pos-graduacao/egressos/index.html",
@@ -116,7 +165,7 @@
     "href": "acoes/revista-cientifica/index.html",
     "title": "Revista Científica",
     "section": "",
-    "text": "O Departamento de Estatística da UFLA é responsável pela publicação da Brazilian Journal of Biometrics (BJB), revista oficial da Região Brasileira da Sociedade Internacional de Biometria (RBras).\nO objetivo geral da BJB é publicar artigos de pesquisa originais que explorem, promovam e ampliem métodos de ciência de dados, estatística e matemática aplicados às ciências biológicas.\nA BJB não cobra taxa de submissão nem de publicação: os modelos em Word e LaTeX estão disponíveis no site da revista, e o envio de artigos é feito pelo sistema de submissão da BJB.\n\n  \n     Site da revista\n  \n  \n     @brjbiometrics\n  \n  \n     LinkedIn\n  \n  \n     ResearchGate"
+    "text": "O Departamento de Estatística da UFLA é responsável pela publicação da Brazilian Journal of Biometrics (BJB), revista oficial da Região Brasileira da Sociedade Internacional de Biometria (RBras).\nO objetivo geral da BJB é publicar artigos de pesquisa originais que explorem, promovam e ampliem métodos de ciência de dados, estatística e matemática aplicados às ciências biológicas.\nA BJB não cobra taxa de submissão nem de publicação: os modelos em Word e LaTeX estão disponíveis no site da revista, e o envio de artigos é feito pelo sistema de submissão da BJB.\n\n\n\n\n\n\n  \n     Site da revista\n  \n  \n     @brjbiometrics\n  \n  \n     LinkedIn\n  \n  \n     ResearchGate"
   },
   {
     "objectID": "acoes/lad/index.html",
@@ -221,7 +270,7 @@
     "href": "O_que_fazemos/ensino/Galeria/index.html",
     "title": "Galeria",
     "section": "",
-    "text": "Página dedicada ao envio de análises e projetos desenvolvidos pelos estudantes de Graduação Bacharelado Estatística e Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA.\nSaiba como participar »\n\n  \n     Participe!\n  \n  \n    \n    \n  \n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Este espaço é dedicado para projetos desenvolvidos em disciplinas, notebooks, relatórios de análise de dados e tutoriais desenvolvidos pelos nossos estudantes.\nSaiba como participar »\n\n  \n     Participe!\n  \n  \n    \n    \n  \n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "O_que_fazemos/ensino/editais/index.html",
@@ -371,143 +420,87 @@
     "text": "Painel dos Egressos\nA trajetória dos nossos egressos (setores de atuação, regiões e formação continuada) está reunida em um dashboard interativo: o Painel dos Egressos."
   },
   {
-    "objectID": "estatistica/index.html",
-    "href": "estatistica/index.html",
-    "title": "A Estatística",
+    "objectID": "eventos/index.html",
+    "href": "eventos/index.html",
+    "title": "Notícias",
     "section": "",
-    "text": "A Estatística é a ciência que desenvolve e aplica métodos para coletar, organizar, analisar e interpretar dados, transformando informação em conhecimento e apoiando decisões em condições de incerteza. Ela é a base fundamental da Ciência de Dados e está presente em praticamente todas as áreas do conhecimento: agricultura, saúde, indústria, finanças, esportes, políticas públicas e inteligência artificial."
+    "text": "Notícias\n\n\n\n\n\n\n\n\n4 de ago. de 2026\n\n\nDoutoranda da UFLA recebe prêmio internacional de biometria e estatística\n\n\nViviane Costa Silva, doutoranda do PPGEE/UFLA, recebeu o IBS Travel Award da International Biometric Society na 33ª International Biometric Conference, em Seul, na Coreia do Sul.\n\n\nLeia mais\n\n\n\n\n\n\n\n22 de jul. de 2025\n\n\nPrêmio Jabuti Acadêmico 2025: livro de professor do DES é finalista\n\n\nAnálise de Dados Espaciais com Aplicações em R, de João Domingos Scalon (DES/UFLA), está entre os finalistas do Prêmio Jabuti Acadêmico 2025 na categoria Matemática, Probabilidade e Estatística.\n\n\nLeia mais\n\n\n\n\n\nCursos\n\n\n\n\n\n\n\n\n1 de set. de 2024\n\n\nCurso de Extensão: Introdução ao Software R\n\n\nCurso de extensão de introdução ao R, ambiente livre para análise estatística e visualização de dados.\n\n\nLeia mais\n\n\n\n\n\nEventos\n\n\n\n\n\n\n\n\n15 de jan. de 2026\n\n\nXVII Programa de Verão DES-ICET/UFLA 2026\n\n\nEdição 2026 do tradicional Programa de Verão do Departamento de Estatística, com disciplinas e atividades de formação.\n\n\nLeia mais\n\n\n\n\n\n\n\n5 de nov. de 2025\n\n\nXVII Encontro Mineiro de Estatística (MGEST) 2025\n\n\nEvento bienal que, desde 1999, reúne profissionais, docentes e estudantes da área de Estatística de Minas Gerais e do Brasil.\n\n\nLeia mais\n\n\n\n\n\n\n\n20 de mai. de 2025\n\n\nV Workshop em Data Science\n\n\nWorkshop voltado à Ciência de Dados, com palestras e atividades sobre métodos estatísticos e aplicações.\n\n\nLeia mais\n\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "estatistica/index.html#o-que-é-a-estatística",
-    "href": "estatistica/index.html#o-que-é-a-estatística",
-    "title": "A Estatística",
+    "objectID": "eventos/posts/2025-05-20-v-workshop-data-science/index.html",
+    "href": "eventos/posts/2025-05-20-v-workshop-data-science/index.html",
+    "title": "V Workshop em Data Science",
     "section": "",
-    "text": "A Estatística é a ciência que desenvolve e aplica métodos para coletar, organizar, analisar e interpretar dados, transformando informação em conhecimento e apoiando decisões em condições de incerteza. Ela é a base fundamental da Ciência de Dados e está presente em praticamente todas as áreas do conhecimento: agricultura, saúde, indústria, finanças, esportes, políticas públicas e inteligência artificial."
+    "text": "O Workshop em Data Science promove discussões sobre métodos estatísticos, aprendizado de máquina e aplicações de Ciência de Dados.\nSaiba mais »"
   },
   {
-    "objectID": "estatistica/index.html#onde-atua-o-estatístico",
-    "href": "estatistica/index.html#onde-atua-o-estatístico",
-    "title": "A Estatística",
-    "section": "Onde atua o estatístico?",
-    "text": "Onde atua o estatístico?\nO profissional de Estatística atua em um mercado amplo e em expansão:\n\nCiência de Dados e Inteligência Artificial: modelagem preditiva, aprendizado de máquina e análise de grandes volumes de dados;\nAgronegócio e experimentação: planejamento e análise de experimentos, melhoramento genético e agricultura de precisão;\nSaúde e bioestatística: ensaios clínicos, epidemiologia e vigilância em saúde pública;\nMercado financeiro e seguros: análise de risco, precificação e modelagem atuarial;\nIndústria e qualidade: controle estatístico de processos e confiabilidade;\nPesquisa e academia: desenvolvimento de novos métodos e formação de pessoas.\n\nPesquisas de mercado apontam a carreira de estatístico e de cientista de dados entre as melhores e mais bem remuneradas profissões da era digital, com demanda muito superior à oferta de profissionais qualificados."
-  },
-  {
-    "objectID": "estatistica/index.html#estude-estatística-na-ufla",
-    "href": "estatistica/index.html#estude-estatística-na-ufla",
-    "title": "A Estatística",
-    "section": "Estude Estatística na UFLA",
-    "text": "Estude Estatística na UFLA\n\n  \n    \n    Bacharelado em Estatística com ênfase em Ciência de Dados · Prof. Júlio Bueno\n  \n\n\n\nGraduação: foco em Ciência de Dados\nEmbora seja um Bacharelado em Estatística, o curso de graduação da UFLA tem forte ênfase em Ciência de Dados: além da base sólida em probabilidade e inferência, o estudante aprende programação, bancos de dados e aprendizado de máquina para extrair conhecimento de grandes volumes de dados. É o caminho de quem quer partir de dados reais, chegar a modelos preditivos e ir muito além.\n\n\nPós-graduação: foco em Estatística e Experimentação Agropecuária\nO Programa de Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEEA) oferece mestrado e doutorado com tradição em estatística e experimentação agropecuária: planejamento e análise de experimentos, melhoramento genético e agricultura de precisão. É a formação de quem transforma dados de campo, como as safras de café da região de Lavras, em decisões com rigor científico."
-  },
-  {
-    "objectID": "eventos/posts/2024-09-01-curso-introducao-software-r/index.html",
-    "href": "eventos/posts/2024-09-01-curso-introducao-software-r/index.html",
-    "title": "Curso de Extensão: Introdução ao Software R",
+    "objectID": "eventos/posts/2026-01-15-programa-de-verao-2026/index.html",
+    "href": "eventos/posts/2026-01-15-programa-de-verao-2026/index.html",
+    "title": "XVII Programa de Verão DES-ICET/UFLA 2026",
     "section": "",
-    "text": "Curso de extensão de introdução ao R, ambiente livre e gratuito amplamente utilizado para análise estatística, modelagem e visualização de dados.\nSaiba mais »"
+    "text": "O Programa de Verão do DES-ICET/UFLA chega à sua XVII edição, oferecendo disciplinas e atividades de aperfeiçoamento em Estatística durante o período de verão.\nSaiba mais »"
   },
   {
-    "objectID": "eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/index.html",
-    "href": "eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/index.html",
-    "title": "XVII Encontro Mineiro de Estatística (MGEST) 2025",
+    "objectID": "noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/index.html",
+    "href": "noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/index.html",
+    "title": "Prêmio Jabuti Acadêmico 2025: livro de professor do DES é finalista",
     "section": "",
-    "text": "O Encontro Mineiro de Estatística (MGEST) é um evento bienal que, desde 1999, reúne profissionais, docentes e estudantes para a troca de conhecimento e a divulgação de pesquisas na área de Estatística.\nSaiba mais »"
+    "text": "O livro Análise de Dados Espaciais com Aplicações em R, do professor João Domingos Scalon, do Departamento de Estatística da UFLA, é um dos finalistas do Prêmio Jabuti Acadêmico 2025, na categoria Matemática, Probabilidade e Estatística. Publicada pela Editora UFLA, a obra apresenta métodos de estatística espacial e sua implementação no R, servindo como texto introdutório para pesquisadores de estatística, geografia, epidemiologia e ciências ambientais.\nA UFLA também levou outro título à lista de finalistas, Aplicações da genética quantitativa no melhoramento de plantas autógamas, na categoria Ciências Agrárias e Ciências Ambientais. Os vencedores recebem R$ 5 mil e o troféu Jabuti, em cerimônia prevista para 5 de agosto de 2025.\nConheça o livro na página Nossos Livros »\nLeia a notícia completa no site da UFLA »"
   },
   {
-    "objectID": "noticias/posts/2026-08-04-doutoranda-premio-biometria/index.html",
-    "href": "noticias/posts/2026-08-04-doutoranda-premio-biometria/index.html",
-    "title": "Doutoranda da UFLA recebe prêmio internacional de biometria e estatística",
+    "objectID": "oportunidades/index.html",
+    "href": "oportunidades/index.html",
+    "title": "Oportunidades",
     "section": "",
-    "text": "Viviane Costa Silva, doutoranda do Programa de Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA, recebeu o IBS Travel Award, prêmio concedido pela International Biometric Society durante a 33ª International Biometric Conference (IBC), realizada de 12 a 16 de julho de 2026 em Seul, na Coreia do Sul, com 996 participantes de 44 países.\nA pesquisa premiada, “GARMA modelling for count time series: incidence of dengue in Lavras, Brazil”, é o capítulo de abertura de sua tese de doutorado, orientada pelo professor Luiz Ricardo Nakamura e coorientada pelo professor Luiz Otávio de Oliveira Pala.\nLeia a notícia completa no site da UFLA »"
+    "text": "2 de out. de 2026\n\n\nEdital PRPI Nº 04/2026 - PIBIC/UFLA (em breve)\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa Nº 074, de 16 de março de 2023, e Portaria PRPI N…\n\n\nLeia mais\n\n\n\n\n\n\n\n27 de jul. de 2026\n\n\nEdital Nº 006/2026 - Docência Voluntária - DES 2ºsem/2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n13 de jul. de 2026\n\n\nEdital Nº 005/2026 - Seleção de monitores remunerados para o 2º semestre de 2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria remunerada nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n20 de mai. de 2026\n\n\nEdital PRPI Nº 03/2026 - PIBITI/CNPq\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnico(a)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em prog…\n\n\nLeia mais\n\n\n\n\n\n\n\n19 de mai. de 2026\n\n\nEdital PRPI Nº 02/2026 - PIBIC/CNPq\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnicos(as)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em pr…\n\n\nLeia mais\n\n\n\n\n\n\n\n6 de mai. de 2026\n\n\nEdital Nº 003/2026 - Seleção de monitores voluntários para 2026\n\n\nO Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n18 de mar. de 2026\n\n\nEdital Nº 002/2026 - Seleção de monitores voluntários para 2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n18 de mar. de 2026\n\n\nEdital PRPI Nº 01/2026 - PIVIC/UFLA\n\n\nA Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras torna público este edital e convida todos os servidores docentes, técnico-administrativos desta instituição e pesquisadores externos credenciados como docentes permanentes em programas de pós-graduação da UFLA, a parti…\n\n\nLeia mais\n\n\n\n\n\n\n\n12 de jan. de 2026\n\n\nEdital Nº 001/2026 - Docência Voluntária - DES 1ºsem/2026\n\n\nO Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n27 de nov. de 2025\n\n\nEdital Nº 003/2025 - Seleção de monitores remunerados para 2026\n\n\nO Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria remunerada nos Componentes Curriculares listados no quadro a seguir.\n\n\nLeia mais\n\n\n\n\n\n\n\n31 de out. de 2025\n\n\nEdital PIBEEC 01/2025\n\n\nA Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, …\n\n\nLeia mais\n\n\n\n\n\n\n\n9 de set. de 2025\n\n\nEdital PIBEC 07/2025\n\n\nA Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa nº 074, de 16 de março de 2023, torna p…\n\n\nLeia mais\n\n\n\n\nNenhum item correspondente"
   },
   {
-    "objectID": "oportunidades/posts/2025-09-09-edital-pibec-07-2025/index.html",
-    "href": "oportunidades/posts/2025-09-09-edital-pibec-07-2025/index.html",
-    "title": "Edital PIBEC 07/2025",
+    "objectID": "oportunidades/posts/2025-10-31-edital-pibeec-01-2025/index.html",
+    "href": "oportunidades/posts/2025-10-31-edital-pibeec-01-2025/index.html",
+    "title": "Edital PIBEEC 01/2025",
     "section": "",
-    "text": "A Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa nº 074, de 16 de março de 2023, torna p…\nLer o edital completo »"
+    "text": "A Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, …\nLer o edital completo »"
   },
   {
-    "objectID": "oportunidades/posts/2025-11-27-edital-no-003-2025-selecao-de-monitores-remunerados-para-2026/index.html",
-    "href": "oportunidades/posts/2025-11-27-edital-no-003-2025-selecao-de-monitores-remunerados-para-2026/index.html",
-    "title": "Edital Nº 003/2025 - Seleção de monitores remunerados para 2026",
+    "objectID": "oportunidades/posts/2026-01-12-edital-no-001-2026-docencia-voluntaria-des-1osem-2026/index.html",
+    "href": "oportunidades/posts/2026-01-12-edital-no-001-2026-docencia-voluntaria-des-1osem-2026/index.html",
+    "title": "Edital Nº 001/2026 - Docência Voluntária - DES 1ºsem/2026",
+    "section": "",
+    "text": "O Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\nLer o edital completo »"
+  },
+  {
+    "objectID": "oportunidades/posts/2026-03-18-edital-prpi-no-01-2026-pivic-ufla/index.html",
+    "href": "oportunidades/posts/2026-03-18-edital-prpi-no-01-2026-pivic-ufla/index.html",
+    "title": "Edital PRPI Nº 01/2026 - PIVIC/UFLA",
+    "section": "",
+    "text": "A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras torna público este edital e convida todos os servidores docentes, técnico-administrativos desta instituição e pesquisadores externos credenciados como docentes permanentes em programas de pós-graduação da UFLA, a parti…\nLer o edital completo »"
+  },
+  {
+    "objectID": "oportunidades/posts/2026-05-19-edital-prpi-no-02-2026-pibic-cnpq/index.html",
+    "href": "oportunidades/posts/2026-05-19-edital-prpi-no-02-2026-pibic-cnpq/index.html",
+    "title": "Edital PRPI Nº 02/2026 - PIBIC/CNPq",
+    "section": "",
+    "text": "A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnicos(as)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em pr…\nLer o edital completo »"
+  },
+  {
+    "objectID": "oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
+    "href": "oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
+    "title": "Edital Nº 005/2026 - Seleção de monitores remunerados para o 2º semestre de 2026",
     "section": "",
     "text": "O Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria remunerada nos Componentes Curriculares listados no quadro a seguir.\nLer o edital completo »"
   },
   {
-    "objectID": "oportunidades/posts/2026-03-18-edital-no-002-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
-    "href": "oportunidades/posts/2026-03-18-edital-no-002-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
-    "title": "Edital Nº 002/2026 - Seleção de monitores voluntários para 2026",
+    "objectID": "oportunidades/posts/2026-10-02-edital-prpi-no-04-2026-pibic-ufla-em-breve/index.html",
+    "href": "oportunidades/posts/2026-10-02-edital-prpi-no-04-2026-pibic-ufla-em-breve/index.html",
+    "title": "Edital PRPI Nº 04/2026 - PIBIC/UFLA (em breve)",
     "section": "",
-    "text": "O Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\nLer o edital completo »"
+    "text": "A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa Nº 074, de 16 de março de 2023, e Portaria PRPI N…\nLer o edital completo »"
   },
   {
-    "objectID": "oportunidades/posts/2026-05-06-edital-no-003-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
-    "href": "oportunidades/posts/2026-05-06-edital-no-003-2026-selecao-de-monitores-voluntarios-para-2026/index.html",
-    "title": "Edital Nº 003/2026 - Seleção de monitores voluntários para 2026",
+    "objectID": "sobre/contato/index.html",
+    "href": "sobre/contato/index.html",
+    "title": "Entre em Contato",
     "section": "",
-    "text": "O Chefe em exercício do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a monitoria voluntária nos Componentes Curriculares listados no quadro a seguir.\nLer o edital completo »"
-  },
-  {
-    "objectID": "oportunidades/posts/2026-05-20-edital-prpi-no-03-2026-pibiti-cnpq/index.html",
-    "href": "oportunidades/posts/2026-05-20-edital-prpi-no-03-2026-pibiti-cnpq/index.html",
-    "title": "Edital PRPI Nº 03/2026 - PIBITI/CNPq",
-    "section": "",
-    "text": "A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida todos(as) os(as) servidores(as) docentes e técnico(a)-administrativos(as) desta instituição e pesquisadores(as) externos(as) credenciados(as) como docentes permanentes em prog…\nLer o edital completo »"
-  },
-  {
-    "objectID": "oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
-    "href": "oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
-    "title": "Edital Nº 006/2026 - Docência Voluntária - DES 2ºsem/2026",
-    "section": "",
-    "text": "O Chefe do Departamento de Estatística do Instituto de Ciências Exatas e Tecnológicas da Universidade Federal de Lavras torna pública a abertura das inscrições para a docência voluntária no Componente Curricular listado no quadro a seguir.\nLer o edital completo »"
-  },
-  {
-    "objectID": "sobre/como-contribuir/index.html",
-    "href": "sobre/como-contribuir/index.html",
-    "title": "Como Contribuir",
-    "section": "",
-    "text": "O envio é limitado à Galeria e é exclusivo para estudantes publicarem o produto final, padronizado, depois de concluir o curso Produção de textos para popularização da ciência. Os requisitos ficam em:\nEnvie o seu projeto ou análise »"
-  },
-  {
-    "objectID": "sobre/como-contribuir/index.html#envio-projetos-e-análises-realizadas",
-    "href": "sobre/como-contribuir/index.html#envio-projetos-e-análises-realizadas",
-    "title": "Como Contribuir",
-    "section": "",
-    "text": "O envio é limitado à Galeria e é exclusivo para estudantes publicarem o produto final, padronizado, depois de concluir o curso Produção de textos para popularização da ciência. Os requisitos ficam em:\nEnvie o seu projeto ou análise »"
-  },
-  {
-    "objectID": "sobre/quem-somos/index.html",
-    "href": "sobre/quem-somos/index.html",
-    "title": "Quem Somos",
-    "section": "",
-    "text": "O ConectaStat é uma iniciativa do Departamento de Estatística (DES) da Universidade Federal de Lavras que conecta Ciência, Estatística e Sociedade. A proposta é tornar o conhecimento científico mais acessível, promover o letramento estatístico e aproximar a universidade da comunidade.\nEste é um site de projeto vinculado ao DES/UFLA. Não é um site institucional da Universidade: a comunicação oficial do departamento continua em des.ufla.br e a da UFLA, em ufla.br."
-  },
-  {
-    "objectID": "sobre/quem-somos/index.html#o-projeto",
-    "href": "sobre/quem-somos/index.html#o-projeto",
-    "title": "Quem Somos",
-    "section": "",
-    "text": "O ConectaStat é uma iniciativa do Departamento de Estatística (DES) da Universidade Federal de Lavras que conecta Ciência, Estatística e Sociedade. A proposta é tornar o conhecimento científico mais acessível, promover o letramento estatístico e aproximar a universidade da comunidade.\nEste é um site de projeto vinculado ao DES/UFLA. Não é um site institucional da Universidade: a comunicação oficial do departamento continua em des.ufla.br e a da UFLA, em ufla.br."
-  },
-  {
-    "objectID": "sobre/quem-somos/index.html#o-que-você-encontra-aqui",
-    "href": "sobre/quem-somos/index.html#o-que-você-encontra-aqui",
-    "title": "Quem Somos",
-    "section": "O que você encontra aqui",
-    "text": "O que você encontra aqui\n\nEstatística: o que é a área, onde atua o profissional e por que ela está no centro da ciência de dados;\nNossos Cursos: a graduação e a pós-graduação em Estatística da UFLA;\nProjetos: as frentes de ensino, pesquisa e extensão do departamento, com seus editais abertos;\nAções: a revista científica, a assessoria e consultoria estatística e a agenda de cursos e eventos;\nOportunidades: os editais e as chamadas em aberto do departamento."
-  },
-  {
-    "objectID": "sobre/quem-somos/index.html#quem-faz",
-    "href": "sobre/quem-somos/index.html#quem-faz",
-    "title": "Quem Somos",
-    "section": "Quem faz",
-    "text": "Quem faz\nO ConectaStat é feito por docentes, estudantes e servidores do Departamento de Estatística, com a colaboração de quem envia conteúdo pelo site."
-  },
-  {
-    "objectID": "sobre/quem-somos/index.html#como-o-site-é-feito",
-    "href": "sobre/quem-somos/index.html#como-o-site-é-feito",
-    "title": "Quem Somos",
-    "section": "Como o site é feito",
-    "text": "Como o site é feito\nO site é aberto e público: o código, os textos e o histórico de cada alteração ficam no repositório no GitHub. Ele é construído com Quarto e publicado no GitHub Pages, o que significa que qualquer pessoa pode acompanhar, revisar e propor melhorias.\nSobre o apoio de ferramentas automatizadas na produção do conteúdo, veja a página de uso de IA."
+    "text": "E-mail do ConectaStat"
   }
 ]

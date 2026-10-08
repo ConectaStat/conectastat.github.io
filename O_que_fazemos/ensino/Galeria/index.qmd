@@ -1,6 +1,5 @@
 ---
 title: "Galeria"
-subtitle: "Análises e projetos desenvolvidos pelos estudantes de Graduação Bacharelado Estatística e Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA."
 title-block-banner: true
 aliases:
   - /O_que_fazemos/ensino/organizacao-e-apresentacao-de-dados/index.html
@@ -18,14 +17,14 @@ listing:
   fields: [image, title, description, author, date]
 ---
 
-Página dedicada ao envio de análises e projetos desenvolvidos pelos estudantes de Graduação Bacharelado Estatística e Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA.
+Este espaço é dedicado para projetos desenvolvidos em disciplinas, notebooks, relatórios de análise de dados e tutoriais desenvolvidos pelos nossos estudantes.
 
-[Saiba como participar »](../../../enviar.qmd){.listing-mais}
+[Saiba como participar »](../../../sobre/como-contribuir/index.qmd){.listing-mais}
 
 
 ```{=html}
 <div class="projetos-acoes" id="projetos-acoes">
-  <a class="btn-enviar-projeto" href="../../../enviar.html">
+  <a class="btn-enviar-projeto" href="../../../sobre/como-contribuir/index.html">
     <i class="bi bi-send"></i> Participe!
   </a>
   <div class="busca-projetos">

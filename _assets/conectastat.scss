@@ -71,7 +71,7 @@ body { -webkit-font-smoothing: antialiased; }
 }
 
 // =============================================================================
-//  NAVBAR - azul UFLA escuro, logo do ConectaStat à esquerda
+//  NAVBAR - azul UFLA escuro, o nome ConectaStat em negrito à esquerda
 // =============================================================================
 .navbar {
   background-color: $cs-blue-dark !important;
@@ -83,14 +83,6 @@ body { -webkit-font-smoothing: antialiased; }
   .navbar-brand-container {
     display: flex;
     align-items: center;
-  }
-
-  // A logo tem a altura que o slogan de três linhas tinha na barra (52px):
-  // assim a barra e os botões do menu ficam exatamente onde estavam
-  img.navbar-logo {
-    max-height: 52px;
-    width: auto;
-    margin-right: 0.65rem;
   }
 
   .navbar-brand {
@@ -166,6 +158,9 @@ body { -webkit-font-smoothing: antialiased; }
 //  A classe .hero-banner continua: _includes/transitions.html a usa para
 //  reconhecer a home.
 // =============================================================================
+$hero-pad-x: clamp(1.5rem, 3vw, 2.25rem);   // margem lateral do slogan
+$hero-respiro: 1.25rem;                     // folga entre o fundo e o conteúdo
+
 .hero-banner {
   background: #ffffff;
   // No celular, na troca, o card que sai e o que entra deslizam para fora
@@ -173,10 +168,31 @@ body { -webkit-font-smoothing: antialiased; }
   overflow-x: clip;
 
   .hero-grid {
+    position: relative;
+    isolation: isolate;               // o fundo (z -1) fica só atrás da grade
     display: grid;
     grid-template-columns: minmax(300px, 400px) 1fr;
     gap: 0;
     align-items: start;
+
+    // Fundo suave ($cloud) com contorno fino, delimitando o topo da home sem
+    // destoar. Recortado com a mesma folga dos quatro lados: da borda ao
+    // slogan, na esquerda, é a mesma que da borda aos cards em cima, embaixo
+    // e na direita. Desenhado por trás, não mexe no slogan nem nos cards.
+    // Em cima fica colado na navbar, como o resto do topo.
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: calc(#{$hero-pad-x} - #{$hero-respiro});
+      right: calc(-1 * #{$hero-respiro});
+      background: $cloud;
+      border: 1px solid $hairline;
+      border-top: 0;
+      border-radius: 0 0 12px 12px;
+    }
   }
 
   // O slogan fica exatamente onde ficava na hero original: centrado numa
@@ -187,7 +203,7 @@ body { -webkit-font-smoothing: antialiased; }
     flex-direction: column;
     justify-content: center;
     min-height: clamp(300px, 34vw, 400px);
-    padding: clamp(1.75rem, 3.5vw, 2.75rem) clamp(1.5rem, 3vw, 2.25rem);
+    padding: clamp(1.75rem, 3.5vw, 2.75rem) $hero-pad-x;
   }
 
 
@@ -214,9 +230,14 @@ body { -webkit-font-smoothing: antialiased; }
     .tag-barra { color: $muted; font-weight: 400; }   // a "|" de cada linha
   }
 
-  // Celular: o slogan em cima, o painel embaixo (como na hero antiga)
+  // Celular: o slogan em cima, o painel embaixo (como na hero antiga). Sem
+  // largura para o recorte, o fundo suave vira uma faixa de ponta a ponta
   @media (max-width: 767.98px) {
+    background: $cloud;
+    border-bottom: 1px solid $hairline;
+
     .hero-grid { grid-template-columns: 1fr; }
+    .hero-grid::before { content: none; }
     .hero-text { min-height: 0; }
   }
 
@@ -230,6 +251,10 @@ body { -webkit-font-smoothing: antialiased; }
 
   // Mais específico que o molde (que vem depois no arquivo)
   .hero-destaques > h2 { margin: 0 0 1.5rem; }
+
+  // Respiro dos cards dentro do fundo: não ficam colados na navbar nem na
+  // borda de baixo (o slogan, na outra coluna, não sai do lugar)
+  .hero-destaques { padding: $hero-respiro 0; }
 
   // Sem o respiro que o Quarto põe embaixo de toda listagem: o vão até o
   // texto de boas-vindas fica só a margem dele, como era com a ilustração
@@ -1324,9 +1349,11 @@ $dq-hover: transform 0.18s ease, border-color 0.18s ease;
   @media (max-width: 767px) { order: 2; }
 }
 
+// A capa vem depois dos textos, com um respiro maior
 .cs-revista-capa {
   text-align: center;
   min-width: 0;
+  margin-top: 2.5rem;
 
   @media (max-width: 767px) { order: 1; }
 }
@@ -1695,7 +1722,8 @@ $dq-hover: transform 0.18s ease, border-color 0.18s ease;
   // Depois de um bloco de apresentação as pílulas ganham respiro: coladas no
   // parágrafo elas leem como continuação do texto, não como ações.
   .projeto-intro + &,
-  .projeto-ficha + & { margin-top: 1.9rem; }
+  .projeto-ficha + &,
+  .cs-revista-lado-a-lado + & { margin-top: 1.9rem; }
 
   a, button {
     display: inline-flex;
@@ -2797,6 +2825,46 @@ main.content table {
   .card-attribution {
     @extend %eyebrow;
     font-size: 0.64rem;
+  }
+}
+
+// =============================================================================
+//  EQUIPE - O Projeto (sobre/quem-somos): um cartão por pessoa, no plano dos cards do site
+//  (hairline, cantos de 12px), nome em azul e o vínculo em cinza.
+// =============================================================================
+.equipe {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));   // professores em cima, estudantes embaixo
+  gap: 1rem;
+  padding: 0;
+  margin: 1.5rem 0 2rem;
+
+  @media (max-width: 767.98px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 479.98px) { grid-template-columns: minmax(0, 1fr); }
+}
+
+.equipe-membro {
+  padding: 1.1rem 1.25rem 1.2rem;
+  border: 1px solid $hairline;
+  border-radius: 12px;
+  background: #ffffff;
+
+  p { margin: 0; }
+
+  .equipe-nome {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+    color: $cs-blue;
+  }
+
+  .equipe-vinculo {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: $muted;
   }
 }
 

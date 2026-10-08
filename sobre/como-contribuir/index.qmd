@@ -1,6 +1,5 @@
 ---
 title: "Como Contribuir"
-subtitle: "Uma seção do site recebe envios de qualquer pessoa. O resto é publicado pela equipe."
 title-block-banner: true
 body-classes: cs-banner-barras
 page-layout: article
@@ -8,9 +7,157 @@ sidebar: false
 toc: false
 ---
 
-## Envio projetos e análises realizadas
+Se você deseja contribuir com alguma notícia, divulgação de curso, evento,
+informações de projetos, materiais didáticos ou qualquer outro conteúdo
+relacionado às seções do site, envie um e-mail para o ConectaStat.
 
-O envio é limitado à **Galeria** e é exclusivo para estudantes publicarem o produto final, padronizado, depois de concluir o curso **Produção de textos para popularização da ciência**. Os requisitos ficam em:
+## Publicações na galeria
 
-[Envie o seu projeto ou análise »](../../enviar.qmd){.listing-mais}
+A [Galeria do ConectaStat](../../O_que_fazemos/ensino/Galeria/index.qmd) é um
+espaço colaborativo em formato de blog dedicado à publicação de relatórios de
+análise de dados, data stories e notebooks desenvolvidos por nossa comunidade
+acadêmica. Nosso objetivo é dar visibilidade aos projetos desenvolvidos em
+disciplinas, projetos e grupos de pesquisa, incentivando a prática da
+comunicação científica e a democratização da estatística.
 
+Aceitamos produções desenvolvidas em disciplinas, trabalhos de conclusão de
+cursos, projetos, entre outros, desde que apresentem um foco claro em
+Estatística e Análise de Dados. Exemplos:
+
+- Análises exploratórias de dados sobre temas de interesse público;
+- Notebooks explicativos demonstrando a aplicação de técnicas estatísticas ou
+  algoritmos;
+- Tutoriais práticos de R, Python, Julia, Quarto ou outras linguagens;
+- Estudo de caso com dados reais com aplicações nas mais diversas áreas do
+  conhecimento.
+
+Convidamos a submeter contribuições:
+
+- Estudantes de graduação e pós-graduação do Departamento de Estatística
+  (DES/UFLA)
+- Docentes do Departamento de Estatística (DES/UFLA)
+- Estudantes, docentes ou pesquisadores de outros cursos da UFLA ou
+  instituições parceiras que tenham cursado ou estejam cursando alguma
+  disciplina oferecida pelo Departamento de Estatística da UFLA.
+
+As contribuições aprovadas e publicadas na Galeria podem gerar Certificado de
+Participação em Projeto de Extensão.
+
+Para ter direito à certificação, o autor principal deve atender a dois
+requisitos simples:
+
+1. Concluir o curso
+   "[Produção de textos para popularização da ciência](https://campusvirtual2.ufla.br/openufla/)",
+   disponível gratuitamente na plataforma OPEN UFLA.
+2. Seguir integralmente as diretrizes e recomendações apresentadas no
+   [Guia para os autores](#guia-para-os-autores).
+
+**Nota:** O certificado será emitido após a aprovação final e publicação do
+material no site.
+
+## Uso de IA nas submissões
+
+Reconhecemos que ferramentas de IA generativa têm sido amplamente utilizadas
+no ambiente acadêmico e no processo de análises de dados. No ConectaStat,
+incentivamos uma abordagem transparente em relação ao uso dessas ferramentas.
+Para isso, solicitamos que os autores incluam uma declaração explicitando onde
+e como a IA foi usada no desenvolvimento da sua submissão.
+
+## Guia para os autores
+
+Para garantir a qualidade, acessibilidade e engajamento das publicações,
+inspiramo-nos em boas práticas internacionais de divulgação científica na área
+de Ciência de Dados ([Real World Data Science](https://realworlddatascience.net/)).
+
+### Linguagem
+
+Ao escrever o seu texto, imagine que você está apresentando sua análise para
+um colega de outro curso ou para um público curioso. Evite o tom estritamente
+formal de um artigo acadêmico tradicional.
+
+Termos técnicos (ex: p-valor, intervalo de confiança, regressão LASSO) devem
+ser explicados brevemente de forma intuitiva, ou acompanhados de links de
+referência para leitores iniciantes.
+
+### Estrutura do texto
+
+Cada publicação deve contar uma "história com dados". Recomendamos a seguinte
+estrutura:
+
+- **Título Atrativo e Subtítulo (Resumo):** Um título direto e uma frase de
+  impacto resumindo a pergunta central da análise.
+- **Introdução / A Pergunta:** Qual é a motivação do trabalho e qual problema
+  ou pergunta os dados ajudam a responder?
+- **Os Dados e a Metodologia:** De onde vêm os dados? Que tratamento e métodos
+  foram aplicados?
+- **Resultados e Visualizações:** Apresentação clara das descobertas com o
+  apoio de gráficos e tabelas.
+- **Conclusão / Principais Achados:** O que aprendemos com isso? Quais os
+  impactos ou limitações da análise?
+
+### Boas práticas para gráficos e visualizações
+
+Gráficos devem ter títulos legíveis, eixos identificados e legendas claras.
+Utilize paletas de cores acessíveis e agradáveis (evite saturação visual).
+Lembre-se de que todo gráfico deve ter uma breve legenda explicativa no texto
+contextualizando o que o leitor deve observar.
+
+### Formato e reprodutibilidade
+
+Incentivamos o envio de arquivos nos formatos: Quarto (.qmd) (formato
+preferencial) ou Jupyter Notebook (.ipynb). Para documentos sem códigos,
+recomendamos o uso de documento de texto (.docx ou Google Docs).
+
+Sempre informe a fonte dos dados utilizados. Se os dados forem públicos,
+forneça o link direto ou inclua a base no repositório do trabalho.
+
+Se for apresentar código, ele deve estar bem comentado e organizado. Se o
+objetivo da postagem for a leitura do texto e não o código, podemos omitir
+blocos de código extensos na visualização final do site.
+
+### Ética e licença
+
+- As submissões devem ser trabalhos originais do(s) autor(es). Plágio ou uso
+  não citado de fontes não serão tolerados.
+- Certifique-se de ter permissão para compartilhar os dados utilizados no
+  trabalho.
+- Ao publicar no ConectaStat, os autores mantêm os direitos autorais do
+  trabalho, mas concordam em compartilhá-lo sob uma licença livre (Creative
+  Commons CC-BY), permitindo a leitura e citação com os devidos créditos aos
+  autores e ao ConectaStat.
+
+## Passo a Passo para Submissão
+
+1. **Inscrição no Curso:** Se desejar o certificado de extensão, conclua o
+   curso "[Produção de textos para popularização da ciência](https://campusvirtual2.ufla.br/openufla/)" na
+   plataforma OPEN UFLA.
+2. **Preparação do Material:** Organize seu texto, código, gráficos e dados
+   conforme as orientações deste guia.
+3. **Envio da Submissão:** Envie seu arquivo para o e-mail oficial do
+   projeto (em breve, também pelo Formulário de Submissão da Galeria
+   ConectaStat) anexando:
+    1. O arquivo do texto/notebook (.qmd, .ipynb, .doc ou .docx);
+    2. Tags ou palavras-chave que identificam o seu conteúdo. Podem estar
+       associadas à disciplina na qual o trabalho foi desenvolvido. Exemplos:
+       Graduação; Visualização de Dados; GES139
+    3. O certificado de conclusão do curso na OPEN UFLA (se for solicitar
+       certificado);
+    4. Uma breve biografia de 2 a 3 linhas sobre você (nome, curso/vínculo,
+       e-mail e redes/LinkedIn/GitHub, se desejar).
+4. **Revisão Editorial:** A equipe editorial do ConectaStat fará uma leitura
+   técnica e pedagógica do material, podendo sugerir pequenos ajustes de
+   linguagem, formatação ou gráficos.
+5. **Aprovação e Publicação:** Após os ajustes, o texto será programado para
+   publicação na Galeria, divulgado nas redes do ConectaStat e o certificado
+   de extensão será emitido.
+
+💡 Dúvidas ou quer validar uma ideia de post antes de escrever? Entre em
+contato com a equipe pelo e-mail do ConectaStat!
+
+```{=html}
+<div class="projeto-links">
+  <a href="mailto:conectastat@gmail.com" aria-label="Enviar e-mail para o ConectaStat">
+    <i class="bi bi-envelope"></i> E-mail do ConectaStat
+  </a>
+</div>
+```

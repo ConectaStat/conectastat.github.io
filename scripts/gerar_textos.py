@@ -128,9 +128,9 @@ ORDEM = [
     ("Ações › Nossos Livros", "acoes/livros/index.qmd", ["livros"]),
     ("Ações › Assessoria e Consultoria Estatística", "assessoria/index.qmd", []),
     ("Ações › Laboratório de Análises de Dados (LAD)", "acoes/lad/index.qmd", []),
-    ("Ações › Cursos e Eventos (arquivo)", "eventos/index.qmd", []),
+    ("Ações › Notícias (arquivo)", "eventos/index.qmd", []),
     ("Oportunidades (arquivo)", "oportunidades/index.qmd", []),
-    ("Enviar conteúdo (formulário do site)", "enviar.qmd", []),
+    ("Enviar conteúdo (fora do site)", "enviar.qmd", []),
 ]
 
 def cards_do_frontmatter(fm):
@@ -291,6 +291,7 @@ for rotulo, rel, ids in ORDEM:
 L.append("\n---\n\n## 5. Conteúdo datado (posts já publicados)\n")
 for rotulo, pasta in [
     ("Oportunidades", "oportunidades/posts"),
+    ("Notícias", "noticias/posts"),
     ("Cursos e Eventos", "eventos/posts"),
     ("Galeria", "O_que_fazemos/ensino/Galeria/posts"),
     ("Softwares", "O_que_fazemos/ensino/softwares/posts"),

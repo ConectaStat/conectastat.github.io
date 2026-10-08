@@ -14,8 +14,29 @@
 <title>ConectaStat</title>
 <link>https://conectastat.github.io/eventos/</link>
 </image>
-<generator>quarto-1.10.19</generator>
-<lastBuildDate>Thu, 15 Jan 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Tue, 04 Aug 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Doutoranda da UFLA recebe prêmio internacional de biometria e estatística</title>
+  <dc:creator>Departamento de Estatística da UFLA</dc:creator>
+  <link>https://conectastat.github.io/noticias/posts/2026-08-04-doutoranda-premio-biometria/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Viviane Costa Silva, doutoranda do Programa de Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA, recebeu o <strong>IBS Travel Award</strong>, prêmio concedido pela International Biometric Society durante a 33ª International Biometric Conference (IBC), realizada de 12 a 16 de julho de 2026 em Seul, na Coreia do Sul, com 996 participantes de 44 países.</p>
+<p>A pesquisa premiada, “GARMA modelling for count time series: incidence of dengue in Lavras, Brazil”, é o capítulo de abertura de sua tese de doutorado, orientada pelo professor Luiz Ricardo Nakamura e coorientada pelo professor Luiz Otávio de Oliveira Pala.</p>
+<p><a href="https://ufla.br/noticias/internacionalizacao/18735-doutoranda-da-ufla-recebe-premio-internacional-de-biometria-e-estatistica">Leia a notícia completa no site da UFLA »</a></p>
+
+
+
+ ]]></description>
+  <category>Notícias</category>
+  <guid>https://conectastat.github.io/noticias/posts/2026-08-04-doutoranda-premio-biometria/</guid>
+  <pubDate>Tue, 04 Aug 2026 03:00:00 GMT</pubDate>
+  <media:content url="https://conectastat.github.io/noticias/posts/2026-08-04-doutoranda-premio-biometria/thumbnail.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>XVII Programa de Verão DES-ICET/UFLA 2026</title>
   <dc:creator>Departamento de Estatística da UFLA</dc:creator>
@@ -33,7 +54,7 @@
  ]]></description>
   <category>Eventos</category>
   <guid>https://conectastat.github.io/eventos/posts/2026-01-15-programa-de-verao-2026/</guid>
-  <pubDate>Thu, 15 Jan 2026 00:00:00 GMT</pubDate>
+  <pubDate>Thu, 15 Jan 2026 03:00:00 GMT</pubDate>
   <media:content url="https://conectastat.github.io/eventos/posts/2026-01-15-programa-de-verao-2026/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
@@ -53,8 +74,30 @@
  ]]></description>
   <category>Eventos</category>
   <guid>https://conectastat.github.io/eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/</guid>
-  <pubDate>Wed, 05 Nov 2025 00:00:00 GMT</pubDate>
+  <pubDate>Wed, 05 Nov 2025 03:00:00 GMT</pubDate>
   <media:content url="https://conectastat.github.io/eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Prêmio Jabuti Acadêmico 2025: livro de professor do DES é finalista</title>
+  <dc:creator>Departamento de Estatística da UFLA</dc:creator>
+  <link>https://conectastat.github.io/noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>O livro <strong>Análise de Dados Espaciais com Aplicações em R</strong>, do professor João Domingos Scalon, do Departamento de Estatística da UFLA, é um dos finalistas do Prêmio Jabuti Acadêmico 2025, na categoria Matemática, Probabilidade e Estatística. Publicada pela Editora UFLA, a obra apresenta métodos de estatística espacial e sua implementação no R, servindo como texto introdutório para pesquisadores de estatística, geografia, epidemiologia e ciências ambientais.</p>
+<p>A UFLA também levou outro título à lista de finalistas, <em>Aplicações da genética quantitativa no melhoramento de plantas autógamas</em>, na categoria Ciências Agrárias e Ciências Ambientais. Os vencedores recebem R$ 5 mil e o troféu Jabuti, em cerimônia prevista para 5 de agosto de 2025.</p>
+<p><a href="../../../acoes/livros/index.html">Conheça o livro na página Nossos Livros »</a></p>
+<p><a href="https://ufla.br/noticias/institucional/17803-premio-jabuti-academico-2025-dois-livros-publicados-pela-editora-ufla-sao-finalistas">Leia a notícia completa no site da UFLA »</a></p>
+
+
+
+ ]]></description>
+  <category>Notícias</category>
+  <guid>https://conectastat.github.io/noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/</guid>
+  <pubDate>Tue, 22 Jul 2025 03:00:00 GMT</pubDate>
+  <media:content url="https://conectastat.github.io/images/livros/analise-dados-espaciais.png" medium="image" type="image/png" height="202" width="144"/>
 </item>
 <item>
   <title>V Workshop em Data Science</title>
@@ -73,7 +116,7 @@
  ]]></description>
   <category>Eventos</category>
   <guid>https://conectastat.github.io/eventos/posts/2025-05-20-v-workshop-data-science/</guid>
-  <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 20 May 2025 03:00:00 GMT</pubDate>
   <media:content url="https://conectastat.github.io/eventos/posts/2025-05-20-v-workshop-data-science/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
@@ -94,7 +137,7 @@
   <category>Eventos</category>
   <category>Cursos</category>
   <guid>https://conectastat.github.io/eventos/posts/2024-09-01-curso-introducao-software-r/</guid>
-  <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
+  <pubDate>Sun, 01 Sep 2024 03:00:00 GMT</pubDate>
   <media:content url="https://conectastat.github.io/images/capa-padrao-azul.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 </channel>

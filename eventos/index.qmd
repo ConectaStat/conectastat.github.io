@@ -1,10 +1,14 @@
 ---
-title: "Cursos e Eventos"
-subtitle: "Cursos, minicursos, seminários, palestras, workshops e defesas."
+title: "Notícias"
 title-block-banner: true
 listing:
   id: lista-eventos
-  contents: posts
+  # As notícias moram em noticias/posts; os cursos e eventos, aqui em posts.
+  # As duas fontes no mesmo formato (padrão de arquivos): misturar uma pasta
+  # ("posts") com um padrão fazia o Quarto ignorar as notícias.
+  contents:
+    - "posts/*/index.qmd"
+    - "../noticias/posts/*/index.qmd"
   sort: "date desc"
   template: ../_assets/cards-cursos-eventos.ejs
   feed: true
