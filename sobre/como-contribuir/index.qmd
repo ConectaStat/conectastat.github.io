@@ -151,9 +151,6 @@ blocos de código extensos na visualização final do site.
    publicação na Galeria, divulgado nas redes do ConectaStat e o certificado
    de extensão será emitido.
 
-💡 Dúvidas ou quer validar uma ideia de post antes de escrever? Entre em
-contato com a equipe pelo e-mail do ConectaStat!
-
 ```{=html}
 <div class="projeto-links">
   <a href="mailto:conectastat@gmail.com" aria-label="Enviar e-mail para o ConectaStat">
