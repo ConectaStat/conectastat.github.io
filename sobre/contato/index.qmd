@@ -7,6 +7,9 @@ sidebar: false
 toc: false
 ---
 
+💡 Dúvidas ou quer validar uma ideia de post antes de escrever? Entre em
+contato com a equipe pelo e-mail do ConectaStat!
+
 ```{=html}
 <div class="projeto-links">
   <a href="mailto:conectastat@gmail.com" aria-label="Enviar e-mail para o ConectaStat">
