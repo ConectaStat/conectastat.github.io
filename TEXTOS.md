@@ -140,10 +140,9 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
       └── Revista Científica
       └── Nossos Livros
       └── Laboratório de Análises de Dados (LAD)
-      └── Cursos e Eventos
+      └── Notícias
   Sobre o ConectaStat
-      └── Quem Somos
-      └── Uso de IA
+      └── O Projeto
       └── Como Contribuir
       └── Entre em Contato
 ```
@@ -468,14 +467,11 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 
 **Título (aparece no banner):** Galeria
 
-**Subtítulo:** Análises e projetos desenvolvidos pelos estudantes de Graduação Bacharelado Estatística e Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA.  
-*(hoje oculto no site; fica só no código)*
-
 **Texto da página:**
 
-> Página dedicada ao envio de análises e projetos desenvolvidos pelos estudantes de Graduação Bacharelado Estatística e Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA.
+> Este espaço é dedicado para projetos desenvolvidos em disciplinas, notebooks, relatórios de análise de dados e tutoriais desenvolvidos pelos nossos estudantes.
 >
-> [Saiba como participar »](../../../enviar.qmd){.listing-mais}
+> [Saiba como participar »](../../../sobre/como-contribuir/index.qmd){.listing-mais}
 
 
 ### O Que Fazemos › Ensino › Softwares
@@ -624,13 +620,10 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 > O LAD busca contribuir para o fortalecimento da pesquisa científica e da formação acadêmica na UFLA, oferecendo aos pesquisadores, estudantes e colaboradores um ambiente computacional capaz de apoiar projetos que envolvam análise de dados, desenvolvimento metodológico e aplicações de Inteligência Artificial.
 
 
-### Ações › Cursos e Eventos (arquivo)
+### Ações › Notícias (arquivo)
 `eventos/index.qmd`
 
-**Título (aparece no banner):** Cursos e Eventos
-
-**Subtítulo:** Cursos, minicursos, seminários, palestras, workshops e defesas.  
-*(hoje oculto no site; fica só no código)*
+**Título (aparece no banner):** Notícias
 
 **Texto da página:**
 
@@ -650,7 +643,7 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 > *(sem texto próprio: a página só exibe a listagem)*
 
 
-### Enviar conteúdo (formulário do site)
+### Enviar conteúdo (fora do site)
 `enviar.qmd`
 
 **Título (aparece no banner):** Envie seu projeto
@@ -799,6 +792,34 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 > A Pró-Reitoria de Extensão, Esporte e Cultura (PROEEC) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa nº 074, de 16 de março de 2023, torna p...
 >
 > [Ler o edital completo »](https://proeec.ufla.br/editais/programa-institucional-de-bolsas-de-extensao/648-edital-pibec-07-2025)
+
+
+### Notícias: posts publicados (2)
+
+
+#### Doutoranda da UFLA recebe prêmio internacional de biometria e estatística
+`noticias/posts/2026-08-04-doutoranda-premio-biometria/index.qmd`
+
+**Resumo (aparece no card):** Viviane Costa Silva, doutoranda do PPGEE/UFLA, recebeu o IBS Travel Award da International Biometric Society na 33ª International Biometric Conference, em Seul, na Coreia do Sul.
+
+> Viviane Costa Silva, doutoranda do Programa de Pós-Graduação em Estatística e Experimentação Agropecuária (PPGEE) da UFLA, recebeu o **IBS Travel Award**, prêmio concedido pela International Biometric Society durante a 33ª International Biometric Conference (IBC), realizada de 12 a 16 de julho de 2026 em Seul, na Coreia do Sul, com 996 participantes de 44 países.
+>
+> A pesquisa premiada, "GARMA modelling for count time series: incidence of dengue in Lavras, Brazil", é o capítulo de abertura de sua tese de doutorado, orientada pelo professor Luiz Ricardo Nakamura e coorientada pelo professor Luiz Otávio de Oliveira Pala.
+>
+> [Leia a notícia completa no site da UFLA »](https://ufla.br/noticias/internacionalizacao/18735-doutoranda-da-ufla-recebe-premio-internacional-de-biometria-e-estatistica)
+
+#### Prêmio Jabuti Acadêmico 2025: livro de professor do DES é finalista
+`noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/index.qmd`
+
+**Resumo (aparece no card):** Análise de Dados Espaciais com Aplicações em R, de João Domingos Scalon (DES/UFLA), está entre os finalistas do Prêmio Jabuti Acadêmico 2025 na categoria Matemática, Probabilidade e Estatística.
+
+> O livro **Análise de Dados Espaciais com Aplicações em R**, do professor João Domingos Scalon, do Departamento de Estatística da UFLA, é um dos finalistas do Prêmio Jabuti Acadêmico 2025, na categoria Matemática, Probabilidade e Estatística. Publicada pela Editora UFLA, a obra apresenta métodos de estatística espacial e sua implementação no R, servindo como texto introdutório para pesquisadores de estatística, geografia, epidemiologia e ciências ambientais.
+>
+> A UFLA também levou outro título à lista de finalistas, *Aplicações da genética quantitativa no melhoramento de plantas autógamas*, na categoria Ciências Agrárias e Ciências Ambientais. Os vencedores recebem R$ 5 mil e o troféu Jabuti, em cerimônia prevista para 5 de agosto de 2025.
+>
+> [Conheça o livro na página Nossos Livros »](../../../acoes/livros/index.qmd)
+>
+> [Leia a notícia completa no site da UFLA »](https://ufla.br/noticias/institucional/17803-premio-jabuti-academico-2025-dois-livros-publicados-pela-editora-ufla-sao-finalistas)
 
 
 ### Cursos e Eventos: posts publicados (4)

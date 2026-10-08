@@ -1,9 +1,10 @@
 <%
-// Variante de cards.ejs para a página Cursos e Eventos: mesmos cards, mas
-// divididos em dois grupos - Cursos e Eventos - a partir da categoria
-// "Cursos" do front matter de cada post (ver Adaptar.md). Quem não tiver
-// essa categoria cai em Eventos. Só essa página usa esta variante; as
-// demais listagens continuam em cards.ejs.
+// Variante de cards.ejs para a página Notícias (eventos/index.qmd): mesmos
+// cards, mas divididos em três grupos - Notícias, Cursos e Eventos, nessa
+// ordem - a partir da categoria do front matter de cada post ("Notícias" ou
+// "Cursos"; ver Adaptar.md). Quem não tiver nenhuma das duas cai em Eventos.
+// Só essa página usa esta variante; as demais listagens continuam em
+// cards.ejs.
 // Atenção: sem indentação e com tags inline (<a>, <span>) abertas e fechadas
 // na mesma linha: o Pandoc reprocessa este HTML como markdown.
 //
@@ -12,10 +13,12 @@
 // invertida sozinho, mas o HTML publicado não pode depender disso - nem sair
 // diferente conforme a máquina que rodou o build. Daí o normaliza().
 const normaliza = (p) => p.replace(/\\/g, "/").replace(/\.qmd$/, ".html");
-const ehCurso = (item) => (item.categories || []).includes("Cursos");
+const ehNoticia = (item) => (item.categories || []).includes("Notícias");
+const ehCurso = (item) => !ehNoticia(item) && (item.categories || []).includes("Cursos");
 const grupos = [
+  { titulo: "Notícias", lista: items.filter(ehNoticia) },
   { titulo: "Cursos", lista: items.filter(ehCurso) },
-  { titulo: "Eventos", lista: items.filter((item) => !ehCurso(item)) },
+  { titulo: "Eventos", lista: items.filter((item) => !ehNoticia(item) && !ehCurso(item)) },
 ];
 %>
 <% for (const grupo of grupos) { %>

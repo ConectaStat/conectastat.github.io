@@ -1,7 +1,13 @@
 [
   {
-    "listing": "/oportunidades/index.html",
+    "listing": "/index.html",
     "items": [
+      "/noticias/posts/2026-08-04-doutoranda-premio-biometria/index.html",
+      "/eventos/posts/2026-01-15-programa-de-verao-2026/index.html",
+      "/eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/index.html",
+      "/noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/index.html",
+      "/eventos/posts/2025-05-20-v-workshop-data-science/index.html",
+      "/eventos/posts/2024-09-01-curso-introducao-software-r/index.html",
       "/oportunidades/posts/2026-10-02-edital-prpi-no-04-2026-pibic-ufla-em-breve/index.html",
       "/oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
       "/oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",
@@ -14,15 +20,6 @@
       "/oportunidades/posts/2025-11-27-edital-no-003-2025-selecao-de-monitores-remunerados-para-2026/index.html",
       "/oportunidades/posts/2025-10-31-edital-pibeec-01-2025/index.html",
       "/oportunidades/posts/2025-09-09-edital-pibec-07-2025/index.html"
-    ]
-  },
-  {
-    "listing": "/eventos/index.html",
-    "items": [
-      "/eventos/posts/2026-01-15-programa-de-verao-2026/index.html",
-      "/eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/index.html",
-      "/eventos/posts/2025-05-20-v-workshop-data-science/index.html",
-      "/eventos/posts/2024-09-01-curso-introducao-software-r/index.html"
     ]
   },
   {
@@ -157,14 +154,19 @@
     "items": []
   },
   {
-    "listing": "/index.html",
+    "listing": "/eventos/index.html",
     "items": [
       "/noticias/posts/2026-08-04-doutoranda-premio-biometria/index.html",
       "/eventos/posts/2026-01-15-programa-de-verao-2026/index.html",
       "/eventos/posts/2025-11-05-xvii-encontro-mineiro-estatistica/index.html",
       "/noticias/posts/2025-07-22-jabuti-academico-2025-livro-estatistica/index.html",
       "/eventos/posts/2025-05-20-v-workshop-data-science/index.html",
-      "/eventos/posts/2024-09-01-curso-introducao-software-r/index.html",
+      "/eventos/posts/2024-09-01-curso-introducao-software-r/index.html"
+    ]
+  },
+  {
+    "listing": "/oportunidades/index.html",
+    "items": [
       "/oportunidades/posts/2026-10-02-edital-prpi-no-04-2026-pibic-ufla-em-breve/index.html",
       "/oportunidades/posts/2026-07-27-edital-no-006-2026-docencia-voluntaria-des-2osem-2026/index.html",
       "/oportunidades/posts/2026-07-13-edital-no-005-2026-selecao-de-monitores-remunerados-para-o-2o-semestre/index.html",

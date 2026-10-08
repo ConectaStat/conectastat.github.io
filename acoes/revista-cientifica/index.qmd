@@ -28,6 +28,16 @@ revista](https://biometria.ufla.br/index.php/BBJ){target="_blank"}, e o envio
 de artigos é feito pelo [sistema de submissão da
 BJB](https://biometria.ufla.br/index.php/BBJ/login?source=%2Findex.php%2FBBJ%2Fsubmission){target="_blank"}.
 
+::::
+
+:::: {.cs-revista-capa}
+```{=html}
+<img src="/images/logos/bjb-poster.jpg" alt="Capa do Brazilian Journal of Biometrics, com os logos da UFLA e da RBras" class="cs-poster-revista">
+```
+::::
+
+:::::
+
 ```{=html}
 <div class="projeto-links">
   <a href="https://biometria.ufla.br/index.php/BBJ" target="_blank" rel="noopener">
@@ -44,13 +54,3 @@ BJB](https://biometria.ufla.br/index.php/BBJ/login?source=%2Findex.php%2FBBJ%2Fs
   </a>
 </div>
 ```
-
-::::
-
-:::: {.cs-revista-capa}
-```{=html}
-<img src="/images/logos/bjb-poster.jpg" alt="Capa do Brazilian Journal of Biometrics, com os logos da UFLA e da RBras" class="cs-poster-revista">
-```
-::::
-
-:::::

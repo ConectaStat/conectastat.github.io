@@ -9,6 +9,11 @@ project:
     - "**/*.qmd"
     # Página de assessoria desativada (mantida no repositório, sem publicar).
     - "!assessoria/**"
+    # "Uso de IA" e "Envie seu projeto" retiradas do site (fontes mantidas no
+    # repositório, sem publicar). O envio para a Galeria é explicado em
+    # sobre/como-contribuir.
+    - "!sobre/uso-de-ia/**"
+    - "!enviar.qmd"
     # Núcleo ainda sem página própria: fonte mantido no repositório, fora
     # do site e da listagem.
     - "!O_que_fazemos/pesquisa/grupos/series-temporais/**"
@@ -52,12 +57,10 @@ website:
   navbar:
     toggle-position: right
     background: "#0a3f66"
-    # Topo esquerdo: a logo do ConectaStat (a mesma do ícone da aba), sem
-    # texto ao lado. O slogan Ciência| Estatística| Sociedade fica no topo da
-    # home, ao lado do painel Em Destaque.
-    logo: images/conectastat-logo.png
-    logo-alt: "ConectaStat - página inicial"
-    title: false
+    # Topo esquerdo: o nome ConectaStat em negrito, em texto (sem a logo),
+    # como nas primeiras versões do site. O slogan Ciência| Estatística|
+    # Sociedade fica no topo da home, ao lado do painel Em Destaque.
+    title: "ConectaStat"
     collapse-below: lg
     right:
       - text: "A Estatística"
@@ -88,14 +91,17 @@ website:
           #   href: assessoria/index.qmd
           - text: "Laboratório de Análises de Dados (LAD)"
             href: acoes/lad/index.qmd
-          - text: "Cursos e Eventos"
+          - text: "Notícias"
             href: eventos/index.qmd
       - text: "Sobre o ConectaStat"
         menu:
-          - text: "Quem Somos"
+          - text: "O Projeto"
             href: sobre/quem-somos/index.qmd
-          - text: "Uso de IA"
-            href: sobre/uso-de-ia/index.qmd
+          # OCULTO: página "Uso de IA" retirada do menu e do site. Fonte segue
+          # em sobre/uso-de-ia/index.qmd; para voltar, descomente as duas
+          # linhas e tire a exclusão do `render` acima.
+          # - text: "Uso de IA"
+          #   href: sobre/uso-de-ia/index.qmd
           - text: "Como Contribuir"
             href: sobre/como-contribuir/index.qmd
           - text: "Entre em Contato"
