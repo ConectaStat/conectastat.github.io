@@ -274,12 +274,47 @@ def administrativo(titulo: str) -> bool:
 
 
 # ---------------------------------------------------------------- escrita
-def ja_importado(fonte: dict, id_fonte: str) -> bool:
+def post_importado(fonte: dict, id_fonte: str) -> Path | None:
+    """O index.qmd do edital já importado (achado pela marca de fonte), ou None."""
     marca = f"fonte: {fonte['nome']}-editais-{id_fonte} "
     for post in DESTINO.glob("*/index.qmd"):
         if marca in post.read_text(encoding="utf-8"):
-            return True
-    return False
+            return post
+    return None
+
+
+def ja_importado(fonte: dict, id_fonte: str) -> bool:
+    return post_importado(fonte, id_fonte) is not None
+
+
+def atualiza_importado(post: Path, url: str, titulo: str, dry_run: bool) -> str | None:
+    """Edital já publicado cuja fonte mudou o título ou o endereço (ex.: a PRPI
+    anuncia "Edital ... (em breve)" e, quando abre, tira o "(em breve)"): o
+    post acompanha a fonte. A pasta do post não muda, para o endereço da
+    página no site continuar o mesmo."""
+    texto = post.read_text(encoding="utf-8")
+    novo, mudou = texto, []
+
+    titulo_fonte = titulo.replace('"', "'")
+    m = re.search(r'^title: "(.*)"$', novo, re.M)
+    if m and m.group(1) != titulo_fonte:
+        novo = novo[:m.start(1)] + titulo_fonte + novo[m.end(1):]
+        mudou.append(f'título "{m.group(1)}" -> "{titulo_fonte}"')
+
+    m = re.search(r"\[Ler o edital completo »\]\(([^)]*)\)", novo)
+    if m and m.group(1) != url:
+        novo = novo[:m.start(1)] + url + novo[m.end(1):]
+        mudou.append("link")
+
+    if not mudou:
+        return None
+    rotulo = f"{post.parent.relative_to(RAIZ).as_posix()} ({'; '.join(mudou)})"
+    if dry_run:
+        print(f"[dry-run] atualizaria {rotulo}")
+    else:
+        post.write_text(novo, encoding="utf-8", newline="\n")
+        print(f"[~~] atualizado {rotulo}")
+    return rotulo
 
 
 def preenche(modelo: str, valores: dict[str, str]) -> str:
@@ -339,8 +374,9 @@ def importa_um(fonte: dict, id_fonte: str, url: str, titulo: str,
     return rotulo
 
 
-def importa_fonte(fonte: dict, dry_run: bool) -> list[str]:
+def importa_fonte(fonte: dict, dry_run: bool) -> tuple[list[str], list[str]]:
     importados: list[str] = []
+    atualizados: list[str] = []
     print(f"\n--- {fonte['nome'].upper()}: {fonte.get('lista') or fonte['indice']}")
 
     for numero, endereco in enumerate(paginas_da_fonte(fonte), start=1):
@@ -355,7 +391,11 @@ def importa_fonte(fonte: dict, dry_run: bool) -> list[str]:
 
         parou = False
         for id_fonte, url, titulo in itens:
-            if ja_importado(fonte, id_fonte):
+            post = post_importado(fonte, id_fonte)
+            if post:
+                resultado = atualiza_importado(post, url, titulo, dry_run)
+                if resultado:
+                    atualizados.append(resultado)
                 continue
             if administrativo(titulo):
                 print(f"[--] pulado (edital administrativo): {titulo}")
@@ -369,7 +409,7 @@ def importa_fonte(fonte: dict, dry_run: bool) -> list[str]:
             time.sleep(0.4)   # cortesia com o site da fonte, não é nosso
         if parou:
             break
-    return importados
+    return importados, atualizados
 
 
 def main() -> int:
@@ -380,17 +420,22 @@ def main() -> int:
         so_esta = sys.argv[sys.argv.index("--fonte") + 1]
 
     importados: list[str] = []
+    atualizados: list[str] = []
     for fonte in FONTES:
         if so_esta and fonte["nome"] != so_esta:
             continue
         try:
-            importados += importa_fonte(fonte, dry_run)
+            novos, mudados = importa_fonte(fonte, dry_run)
+            importados += novos
+            atualizados += mudados
         except Exception as e:
             # uma fonte fora do ar não pode derrubar a importação das outras
             print(f"[!!] fonte {fonte['nome']} falhou ({e}); sigo para a próxima")
 
     print(f"\n{len(importados)} edital(is) {'a importar' if dry_run else 'importado(s)'}.")
+    print(f"{len(atualizados)} edital(is) {'a atualizar' if dry_run else 'atualizado(s)'}.")
     anota("importados", str(len(importados)))
+    anota("atualizados", str(len(atualizados)))
     anota("lista", "; ".join(importados))
     return 0
 

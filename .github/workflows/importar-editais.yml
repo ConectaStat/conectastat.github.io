@@ -4,14 +4,16 @@ name: Importar editais da UFLA
 # fontes oficiais (DES, PRPI e PROEEC; ver scripts/importar_editais.py).
 # Quando acha algum que ainda não está no site, commita o(s) post(s) direto
 # na master e dispara a publicação: o edital vai ao ar sem precisar de
-# aprovação manual.
+# aprovação manual. Editais já publicados também acompanham a fonte: se ela
+# muda o título (ex.: tira o "(em breve)") ou o endereço, o post é corrigido
+# e republicado do mesmo jeito.
 #
 # O push feito com o GITHUB_TOKEN não dispara o publicar.yml sozinho (regra
 # do GitHub para evitar loop), por isso o último passo chama a publicação
 # explicitamente.
 #
-# Sem edital novo, não commita nada: silêncio é o resultado normal na
-# maioria das semanas.
+# Sem edital novo nem mudança, não commita nada: silêncio é o resultado
+# normal na maioria das semanas.
 
 on:
   schedule:
@@ -40,12 +42,13 @@ jobs:
         id: busca
         run: python3 scripts/importar_editais.py
 
-      - name: Publica os editais novos
-        if: steps.busca.outputs.importados != '0'
+      - name: Publica os editais novos ou atualizados
+        if: steps.busca.outputs.importados != '0' || steps.busca.outputs.atualizados != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git add oportunidades/posts
+          git diff --cached --quiet && exit 0
           git commit -m "Editais"
           git pull --rebase origin master
           git push origin HEAD:master
