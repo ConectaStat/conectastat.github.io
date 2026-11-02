@@ -682,10 +682,37 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 ## 5. Conteúdo datado (posts já publicados)
 
 
-### Oportunidades: posts publicados (12)
+### Oportunidades: posts publicados (15)
 
 
-#### Edital PRPI Nº 04/2026 - PIBIC/UFLA (em breve)
+#### Edital PRPI Nº 06/2026 - BIC Júnior
+`oportunidades/posts/2026-10-22-edital-prpi-no-06-2026-bic-junior/index.qmd`
+
+**Resumo (aparece no card):** A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida as escolas estaduais de Lavras e de São Sebastião do Paraíso a inscreverem seus estudantes que estarão no ensino médio em 2027, para concorrerem às bolsas do Programa de Bolsa...
+
+> A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA) torna público este edital e convida as escolas estaduais de Lavras e de São Sebastião do Paraíso a inscreverem seus estudantes que estarão no ensino médio em 2027, para concorrerem às bolsas do Programa de Bolsa...
+>
+> [Ler o edital completo »](https://prpi.ufla.br/noticias-prpi/657-aberto-edital-bic-junior-2027-inscricao-de-candidatos-nas-escolas)
+
+#### Edital PRPI Nº 05/2026 - PIBIC/FAPEMIG
+`oportunidades/posts/2026-10-22-edital-prpi-no-05-2026-pibic-fapemig/index.qmd`
+
+**Resumo (aparece no card):** A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras torna público o presente edital e convida docentes, técnico-administrativos desta instituição e pesquisadores externos credenciados como docentes permanentes em programas de pós-graduação da UFLA, a apresentarem propos...
+
+> A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras torna público o presente edital e convida docentes, técnico-administrativos desta instituição e pesquisadores externos credenciados como docentes permanentes em programas de pós-graduação da UFLA, a apresentarem propos...
+>
+> [Ler o edital completo »](https://prpi.ufla.br/noticias-prpi/656-oportunidade-de-bolsa-aberto-edital-prpi-n-5-2026-pibic-fapemig)
+
+#### Edital PIBEEC 01/2026
+`oportunidades/posts/2026-10-08-edital-pibeec-01-2026/index.qmd`
+
+**Resumo (aparece no card):** A Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, ...
+
+> A Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, ...
+>
+> [Ler o edital completo »](https://proeec.ufla.br/editais/47-teste-prog-proj/673-edital-pibeec-01-2025)
+
+#### Edital PRPI Nº 04/2026 - PIBIC/UFLA
 `oportunidades/posts/2026-10-02-edital-prpi-no-04-2026-pibic-ufla-em-breve/index.qmd`
 
 **Resumo (aparece no card):** A Pró-Reitoria de Pesquisa e Inovação (PRPI) da Universidade Federal de Lavras (UFLA), considerando o disposto, e em conformidade com a Resolução Normativa Nº 028 do Conselho Universitário, de 06 de junho de 2022, alterada pela Resolução Normativa Nº 074, de 16 de março de 2023, e Portaria PRPI N...
