@@ -809,7 +809,7 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 
 > A Pró-Reitoria de Extensão e Cultura da Universidade Federal de Lavras torna público este edital e convida os discentes desta instituição a participarem do Programa Institucional de Bolsas de Extensão, Esporte e Cultura, em conformidade com o que estabelece este edital e a Resolução CUNI Nº 028, ...
 >
-> [Ler o edital completo »](https://proeec.ufla.br/editais/47-teste-prog-proj/659-edital-pibeec-01-2025)
+> [Ler o edital completo »](https://proeec.ufla.br/editais/programa-institucional-de-bolsas-de-extensao/659-edital-pibeec-01-2025)
 
 #### Edital PIBEC 07/2025
 `oportunidades/posts/2025-09-09-edital-pibec-07-2025/index.qmd`
