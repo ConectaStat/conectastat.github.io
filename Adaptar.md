@@ -378,15 +378,16 @@ O `_quarto.yml` registra três scripts Python que rodam sozinhos a cada `quarto 
 
 Só o primeiro tem requisitos extras (`pillow` sempre; Chrome e `selenium` apenas para a capa tirada do relatório). Os outros dois usam apenas a biblioteca padrão.
 
-Além desses, três workflows cuidam do repositório sozinhos:
+Além desses, quatro workflows cuidam do repositório sozinhos:
 
 | Arquivo | Quando roda | O que faz |
 |---|---|---|
 | `.github/workflows/publicar.yml` | a cada envio para a `master` | renderiza o site e atualiza a pasta publicada |
 | `.github/workflows/receber-submissao.yml` | quando chega uma submissão | monta a página na seção escolhida, credita quem enviou e abre o pull request |
 | `.github/workflows/contribuidores.yml` | ao mesclar um pull request | credita quem teve a contribuição aceita |
+| `.github/workflows/importar-editais.yml` | toda segunda de manhã | busca editais novos no DES, na PRPI e na PROEEC e publica direto no site, sem aprovação |
 
-Quatro scripts dão apoio a esses workflows:
+Cinco scripts dão apoio a esses workflows:
 
 | Script | O que faz |
 |---|---|
@@ -394,6 +395,7 @@ Quatro scripts dão apoio a esses workflows:
 | `scripts/creditar_submissao.py` | deduz os tipos de contribuição a partir do vínculo declarado |
 | `scripts/creditar_contribuidor.py` | soma o novo tipo aos que a pessoa já tinha, em vez de substituir |
 | `scripts/ordenar_contribuidores.py` | coloca a coordenação no topo da lista antes de regenerar a tabela |
+| `scripts/importar_editais.py` | lê as listas de editais das três fontes e monta a pasta de cada edital novo |
 
 Os modelos de página de cada área ficam em `_templates/areas/`, um `.qmd` por seção. Neles, `{{campo}}` é substituído pelo dado do formulário e os trechos entre `<!--se:campo-->` e `<!--/se-->` somem quando o campo vem vazio. Para mudar como uma seção é publicada, basta editar o modelo dela.
 

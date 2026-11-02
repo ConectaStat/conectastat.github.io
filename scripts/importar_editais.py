@@ -248,11 +248,15 @@ def data_publicacao(html: str) -> date | None:
 def resumo_do_corpo(html: str, fonte: dict) -> str:
     """Primeiro parágrafo com conteúdo de verdade. O corpo costuma começar
     com <p> de imagem, de espaçador ou de uma linha só ('Confira:'), que não
-    servem de descrição no card - por isso o parágrafo mínimo de 40 letras."""
+    servem de descrição no card - por isso o parágrafo mínimo de 40 letras.
+    Também pula a linha que só repete o nome do edital ("Edital PRPI nº
+    5/2026 - Programa ..."), que algumas páginas da PRPI trazem no topo do
+    corpo: ela não diz nada além do título do card."""
     corpo = html.split("documentByLine", 1)[-1]
     for m in re.finditer(r"<p[^>]*>(.*?)</p>", corpo, re.S):
         resumo = texto_limpo(m.group(1))
-        if len(resumo) >= 40:
+        so_o_nome = sem_acento(resumo).lower().startswith("edital") and len(resumo) < 160
+        if len(resumo) >= 40 and not so_o_nome:
             return (resumo[:297] + "...") if len(resumo) > 300 else resumo
     return f"Confira os detalhes completos no site da {fonte['autor']}."
 
