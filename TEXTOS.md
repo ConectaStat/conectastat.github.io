@@ -682,8 +682,17 @@ Ciência| Estatística| Sociedade   ← slogan à esquerda (leva à home)
 ## 5. Conteúdo datado (posts já publicados)
 
 
-### Oportunidades: posts publicados (15)
+### Oportunidades: posts publicados (16)
 
+
+#### Edital PRPI Nº 07/2026 - BIC Júnior
+`oportunidades/posts/2026-11-04-edital-prpi-no-07-2026-bic-junior/index.qmd`
+
+**Resumo (aparece no card):** Está aberto edital de chamada de pesquisadores interessados em orientar bolsistas BIC Júnior no ano de 2027.
+
+> Está aberto edital de chamada de pesquisadores interessados em orientar bolsistas BIC Júnior no ano de 2027.
+>
+> [Ler o edital completo »](https://prpi.ufla.br/noticias-prpi/659-inscreva-se-chamada-de-orientadores-bic-jr-2027)
 
 #### Edital PRPI Nº 06/2026 - BIC Júnior
 `oportunidades/posts/2026-10-22-edital-prpi-no-06-2026-bic-junior/index.qmd`

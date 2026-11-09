@@ -13,8 +13,10 @@
 <url>https://conectastat.github.io/images/capa-social.png</url>
 <title>ConectaStat</title>
 <link>https://conectastat.github.io/eventos/</link>
+<height>76</height>
+<width>144</width>
 </image>
-<generator>quarto-1.10.20</generator>
+<generator>quarto-1.11.9</generator>
 <lastBuildDate>Tue, 04 Aug 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Doutoranda da UFLA recebe prêmio internacional de biometria e estatística</title>
@@ -35,7 +37,7 @@
   <category>Notícias</category>
   <guid>https://conectastat.github.io/noticias/posts/2026-08-04-doutoranda-premio-biometria/</guid>
   <pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://conectastat.github.io/noticias/posts/2026-08-04-doutoranda-premio-biometria/thumbnail.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://conectastat.github.io/noticias/posts/2026-08-04-doutoranda-premio-biometria/thumbnail.jpg" medium="image" type="image/jpeg" height="81" width="144"/>
 </item>
 <item>
   <title>XVII Programa de Verão DES-ICET/UFLA 2026</title>
