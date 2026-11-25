@@ -34,6 +34,9 @@ sociais com o mesmo propósito.
   <a href="https://www.instagram.com/estatistica.ufla/" target="_blank" rel="noopener">
     <i class="bi bi-instagram"></i> @estatistica.ufla
   </a>
+  <a href="https://www.linkedin.com/company/https-conectastat.github.io-/" target="_blank" rel="noopener">
+    <i class="bi bi-linkedin"></i> LinkedIn
+  </a>
   <a href="https://github.com/ConectaStat" target="_blank" rel="noopener">
     <i class="bi bi-github"></i> GitHub
   </a>
